@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Artisan;
 use Illuminate\Http\Request;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StoredLocationsController;
-use Yajra\DataTables\Facades\DataTables;
+use Yajra\DataTables\Facades\DataTables; 
 use App\Models\Booking;
 use App\Models\User;
 use Illuminate\Support\Str;
