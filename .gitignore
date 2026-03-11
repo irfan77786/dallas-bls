@@ -22,3 +22,9 @@ Thumbs.db
 /new_template
 old-project/dallascars/
 /old-project
+/vendor
+/node_modules
+.env
+*.zip
+/storage/*.key
+/.well-known
