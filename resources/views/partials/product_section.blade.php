@@ -24,12 +24,11 @@ return !in_array($feature['text'], $desktopHiddenFeatureTexts, true);
     }
 
     .collapseCardBody {
-        padding: 0 1rem 0px !important;
+        padding: 0 0rem 0px !important;
         border: none !important;
-
-        margin-left: -1rem;
-        margin-right: -1rem;
-        width: calc(100% + 2rem);
+        margin-left: 0.2rem;
+        margin-right: 0rem;
+        width: calc(100% + 0rem);
         box-sizing: border-box;
     }
 
@@ -49,13 +48,14 @@ return !in_array($feature['text'], $desktopHiddenFeatureTexts, true);
         background: linear-gradient(90deg, #e52c43, #ff6c00) !important;
         border: none !important;
         box-shadow: none !important;
+
     }
 
     .vehical-card {
         border: 1.5px solid #ccc;
         border-radius: 8px;
         cursor: pointer;
-        padding: 24px 54px 18px 15px;
+        padding: 24px 23px 18px 15px;
         margin-bottom: 10px;
         position: relative;
         transition: border-color 0.3s ease, background-color 0.3s ease;
@@ -110,8 +110,9 @@ return !in_array($feature['text'], $desktopHiddenFeatureTexts, true);
 
     .vehicle-continue-btn {
         white-space: nowrap;
-        padding: 0.5rem 1rem;
+        padding: 10px 20px;
         font-size: 0.9rem;
+        min-width: 185px;
     }
 
     .vehicle-continue-btn.disabled,
@@ -213,7 +214,7 @@ return !in_array($feature['text'], $desktopHiddenFeatureTexts, true);
         display: flex;
         align-items: center;
         flex-wrap: nowrap;
-        gap: 12px 37px;
+        gap: 12px 40px;
         margin-top: 15px;
         margin-left: 0px !important;
         font-size: 0.85rem;
@@ -442,7 +443,7 @@ return !in_array($feature['text'], $desktopHiddenFeatureTexts, true);
         }
 
         .pricing_summary_price {
-            font-size: 18px;
+            font-size: 1.25rem;
         }
 
         .car-price .pricing_summary_price {
@@ -877,9 +878,10 @@ return !in_array($feature['text'], $desktopHiddenFeatureTexts, true);
     }
 
     .mbs-price-number {
-        font-weight: 800;
+        font-weight: 700;
         font-size: 1.25rem;
         color: #000;
+        font-family: "Inter", sans-serif;
     }
 
     /* ================= ACTIONS ================= */
@@ -947,6 +949,29 @@ return !in_array($feature['text'], $desktopHiddenFeatureTexts, true);
     .container-xxl {
         max-width: 1172px;
     }
+
+
+    a.btn.btn-primary.vehicle-continue-btn {
+        border-radius: 4px;
+    }
+
+    .cta-button {
+        border-radius: 4px !important;
+    }
+
+    .info-card {
+        border-radius: 4px !important;
+    }
+
+    .benefits-section {
+        background: #fff;
+        border-radius: 6px !important;
+    }
+
+    .hourly-min {
+        color: red;
+        font-size: 25px;
+    }
 </style>
 
 
@@ -1003,8 +1028,8 @@ return !in_array($feature['text'], $desktopHiddenFeatureTexts, true);
                                             <div class="car-price">
                                                 @if($requiresMoreHours)
                                                 <h4 class="mt-4 mb-1">
-                                                    <span class="pricing_summary_price">{{ $requiredMinHours }} Hr
-                                                        Min.</span>
+                                                    <span class="pricing_summary_price hourly-min">Min. {{
+                                                        $requiredMinHours }} Hour</span>
                                                 </h4>
                                                 @else
                                                 @php
@@ -1153,7 +1178,7 @@ return !in_array($feature['text'], $desktopHiddenFeatureTexts, true);
                 <div class="mbs-gratuity">
                     <i class="bi bi-check-circle-fill"></i> Price includes taxes, tolls & tip.
                 </div>
-                <h4 class="mbs-price-number"></h4>
+                <h4 class="mbs-price-number tt"></h4>
             </div>
             <div class="mbs-actions-row">
                 <button type="button" class="btn mbs-back">BACK</button>

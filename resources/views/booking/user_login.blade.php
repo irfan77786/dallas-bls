@@ -39,13 +39,28 @@ $step = 3;
     }
 
     .passenger-info-container {
-        max-width: 1200px;
+        max-width: 1160px;
         margin: 0 auto;
         padding: 50px 15px 100px 15px;
         width: 100%;
         box-sizing: border-box;
         overflow-x: hidden;
     }
+
+
+.container.step-wrapper.md-py-3 {
+    max-width: 1160px;
+    margin: 0px auto;
+    width: 100%;
+    padding: 0 0 0 0 !important;
+}
+
+
+
+.stepper::before {
+   
+    width: 102%;
+}
 
     .info-card {
         background: #fff;
@@ -302,8 +317,7 @@ $step = 3;
                     <!-- Email -->
                     <div class="floating-bordered-input position-relative">
                         <span class="floating-label">Email address *</span>
-                        <input type="email" id="guest_email" name="email"
-                            value="{{ old('email', session('email') ?? data_get(session('guest'), 'email', '')) }}"
+                        <input type="email" id="guest_email" name="email" value="{{ old('email', session('email') ?? data_get(session('guest'), 'email', '')) }}"
                             class="form-control" placeholder=" " autocomplete="email" required>
                         <div class="mt-1 text-danger small" id="error_email"></div>
                     </div>
@@ -314,8 +328,8 @@ $step = 3;
                             <div class="floating-bordered-input position-relative">
                                 <span class="floating-label">First name *</span>
                                 <input type="text" id="first_name" name="first_name"
-                                    value="{{ old('first_name', session('first_name') ?? data_get(session('guest'), 'first_name', '')) }}"
-                                    class="form-control" placeholder=" " autocomplete="given-name" required>
+                                    value="{{ old('first_name', session('first_name') ?? data_get(session('guest'), 'first_name', '')) }}" class="form-control"
+                                    placeholder=" " autocomplete="given-name" required>
                                 <div class="mt-1 text-danger small" id="error_first_name"></div>
                                 @error('first_name')<div class="mt-1 text-danger small">{{ $message }}</div>@enderror
                             </div>
@@ -324,8 +338,8 @@ $step = 3;
                             <div class="floating-bordered-input position-relative">
                                 <span class="floating-label">Last name *</span>
                                 <input type="text" id="last_name" name="last_name"
-                                    value="{{ old('last_name', session('last_name') ?? data_get(session('guest'), 'last_name', '')) }}"
-                                    class="form-control" placeholder=" " autocomplete="family-name" required>
+                                    value="{{ old('last_name', session('last_name') ?? data_get(session('guest'), 'last_name', '')) }}" class="form-control"
+                                    placeholder=" " autocomplete="family-name" required>
                                 <div class="mt-1 text-danger small" id="error_last_name"></div>
                                 @error('last_name')<div class="mt-1 text-danger small">{{ $message }}</div>@enderror
                             </div>
@@ -336,8 +350,7 @@ $step = 3;
                     <div class="phone-field-wrapper">
                         <div class="floating-bordered-input position-relative phone-input-wrapper">
                             <span class="floating-label">Phone *</span>
-                            <input type="tel" id="number"
-                                value="{{ old('number', session('number') ?? data_get(session('guest'), 'number', '')) }}"
+                            <input type="tel" id="number" value="{{ old('number', session('number') ?? data_get(session('guest'), 'number', '')) }}"
                                 class="form-control phone-with-country" placeholder=" " autocomplete="tel" required>
                             <input type="hidden" name="number" id="number_full">
                         </div>
@@ -354,7 +367,7 @@ $step = 3;
                     <input type="text" name="type" value="guest" hidden>
 
                     <button type="submit" class="continue-btn btn btn-primary btn-uniform w-100 cta-button"
-                        style="padding: .575rem .75rem !important; text-transform: uppercase;">CONTINUE AS
+                        style="text-transform: uppercase;">CONTINUE AS
                         GUEST</button>
                 </form>
             </div>

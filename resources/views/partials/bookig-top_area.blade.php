@@ -278,7 +278,7 @@ session()->has('price') || ($currentStep >= 3)))
         flex: 0 1 auto;
         min-width: 0;
         max-width: 320px;
-        padding: 0 50px;
+        padding: 0 30px;
     }
 
     .booking-summary-desktop .return-item:first-child {
@@ -289,20 +289,10 @@ session()->has('price') || ($currentStep >= 3)))
         padding-right: 0;
     }
 
-    .booking-summary-desktop .return-item .summary_label {
-        margin-bottom: 6px !important;
-    }
-
     .booking-summary-desktop .return-item .summary_text {
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-        white-space: normal;
-        margin-top: 4px !important;
-        margin-bottom: 10px !important;
-    }
-
-    .booking-summary-desktop .return-item .summary_text:last-child {
-        margin-bottom: 0 !important;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     .return-item-label {
@@ -391,10 +381,6 @@ session()->has('price') || ($currentStep >= 3)))
             display: none;
         }
 
-        footer.footer.bg-blue {
-            display: none !important;
-        }
-
 
 
 
@@ -470,27 +456,31 @@ session()->has('price') || ($currentStep >= 3)))
             color: #9ca3af;
         }
 
-        .summary-row {
+        .mob_top_summary .summary-row {
             flex-wrap: wrap;
             align-items: flex-start;
             gap: 0;
             margin-bottom: 10px;
         }
 
-        .summary-label-inline {
+        .mob_top_summary .summary-label-inline {
             flex: 0 0 100%;
             margin-bottom: 2px;
+            font-size: 0.8rem !important;
+            font-weight: 600;
+            color: #000 !important;
         }
 
-        .summary-leader {
-            display: none;
+        .mob_top_summary .summary-leader {
+            display: none !important;
         }
 
-        .summary-value-inline {
+        .mob_top_summary .summary-value-inline {
             flex: 0 0 100%;
             white-space: normal;
             overflow: visible;
             text-overflow: clip;
+            font-size: 0.8rem !important;
             color: #6b7280 !important;
         }
 

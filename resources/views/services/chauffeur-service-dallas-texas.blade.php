@@ -81,7 +81,7 @@
                     </div>
                     <div class="col-12 col-md-4 h-100">
                         <div class="img-holder ms-md-auto">
-                            <img loading="lazy" decoding="async" src="../../assets/why-choose-dallas-black-limo-service.webp" width="406" height="233" class="img-fluid" alt="Uniformed chauffeur for executive travel Dallas">
+                            <img loading="lazy" decoding="async" src="{{asset('assets/new_theme/img/why-choose-dallas-black-limo-service.webp')}}" width="406" height="233" class="img-fluid" alt="Uniformed chauffeur for executive travel Dallas">
                         </div>
                     </div>
                 </div>
@@ -148,7 +148,7 @@
                     </div>
                     <div class="col-12 col-md-4 h-100">
                         <div class="img-holder ms-md-auto">
-                            <img loading="lazy" decoding="async" src="../../assets/dfw-and-love-field-airport-transportation.webp" width="407" height="210" class="img-fluid" alt="Luxury black car at Dallas Love Field Airport">
+                            <img loading="lazy" decoding="async" src="{{asset('assets/new_theme/img/dfw-and-love-field-airport -transportation.webp')}}" width="407" height="210" class="img-fluid" alt="Luxury black car at Dallas Love Field Airport">
                         </div>
                     </div>
                 </div>
@@ -161,7 +161,7 @@
                     </div>
                     <div class="col-12 col-md-4 h-100">
                         <div class="img-holder">
-                            <img loading="lazy" decoding="async" src="../../assets/executive-black-car-service-for-business-meetings.webp" width="407" height="210" class="img-fluid" alt="Professional chauffeur for black car service Dallas">
+                            <img loading="lazy" decoding="async" src="{{ asset('assets/new_theme/img/executive-black-car-service-for-business-meetings.webp') }}" width="407" height="210" class="img-fluid" alt="Professional chauffeur for black car service Dallas">
                         </div>
                     </div>
                 </div>
@@ -174,7 +174,7 @@
                     </div>
                     <div class="col-12 col-md-4 h-100">
                         <div class="img-holder">
-                            <img loading="lazy" decoding="async" src="../../assets/luxury-black-car-airport-transfer-will-rogers-world-airport.webp" width="407" height="210" class="img-fluid" alt="Professional chauffeur for black car service Dallas">
+                            <img loading="lazy" decoding="async" src="{{ asset('assets/new_theme/img/executive-black-car-service-for-business-meetings.webp') }}" width="407" height="210" class="img-fluid" alt="Professional chauffeur for black car service Dallas">
                         </div>
                     </div>
                 </div>
