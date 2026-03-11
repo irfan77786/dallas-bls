@@ -10,7 +10,7 @@ use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\WebsiteController;
 use App\Http\Controllers\ExportController;
 use Illuminate\Support\Facades\Artisan;
-use Illuminate\Http\Request;
+use Illuminate\Http\Request; 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StoredLocationsController;
 use Yajra\DataTables\Facades\DataTables; 
