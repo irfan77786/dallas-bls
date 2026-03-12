@@ -1,6 +1,14 @@
 @extends('master')
 
 @section('content')
+    <section class="d-md-none">
+        <div class="ah-container">
+            <div class="search-form-mobile">
+                @include('partials.search', ['id_suffix' => '_mobile'])
+            </div>
+        </div>
+    </section>
+
     <section class="home-banner-section">
         <div class="hero-banner-container py-60 ah-container position-relative py-sm-70 py-md-80 py-lg-100"
              style="z-index: 2; background-image: url('{{ asset('assets/new_theme/img/banner-1.webp') }}'); background-size: cover; background-position: center;">
