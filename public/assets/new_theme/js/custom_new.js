@@ -71,20 +71,29 @@ jQuery(document).ready(function ($) {
             }
         }
     });
-    var testimonialSlider = new Swiper(".testimonial-slider", {
-        slidesPerView: 1,
-        slidesOffsetBefore: 0,
-        slidesOffsetAfter: 0,
-        spaceBetween: 20,
-
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
+    $(".testimonial-slider").each(function () {
+        var el = this;
+        var paginationEl = el.querySelector(".swiper-pagination");
+        var nextEl = el.querySelector(".swiper-button-next");
+        var prevEl = el.querySelector(".swiper-button-prev");
+        var config = {
+            slidesPerView: 1,
+            slidesOffsetBefore: 0,
+            slidesOffsetAfter: 0,
+            spaceBetween: 20,
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+        };
+        if (paginationEl) {
+            config.pagination = { el: paginationEl, clickable: true };
+        }
+        if (nextEl && prevEl) {
+            config.navigation = { nextEl: nextEl, prevEl: prevEl };
+        }
+        new Swiper(el, config);
     });
 });
 

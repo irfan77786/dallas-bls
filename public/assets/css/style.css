@@ -5785,6 +5785,7 @@ li {
 .testimonial-slider {
   border-radius: 12px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+  padding-bottom: 50px;
 }
 .testimonial-slider .swiper-button-next,
 .testimonial-slider .swiper-button-prev {
@@ -5815,11 +5816,11 @@ li {
   }
 }
 .testimonial-slider .swiper-pagination {
-  bottom: 30px;
+  bottom: 10px;
 }
 @media (min-width: 992px) {
   .testimonial-slider .swiper-pagination {
-    bottom: 60px;
+    bottom: 15px;
   }
 }
 .testimonial-slider .swiper-pagination .swiper-pagination-bullet {
