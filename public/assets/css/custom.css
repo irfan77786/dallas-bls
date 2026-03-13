@@ -958,6 +958,13 @@ a.btn.btn-primary.fifa-btn {
   .col-md-6.col-sm-6 {
     width: 50%;
   }
+  h2.h2.fw-bold.mb-10.text-center {
+    font-size: 26px ! IMPORTANT;
+    line-height: normal;
+    margin-bottom: 13px;
+}
+
+
 .container.py-md-5,
 div#pricing-area-wrapper,
 .px-3.py-2.bg-white.d-flex.justify-content-between.align-items-center {
@@ -1231,6 +1238,15 @@ div#pricing-area-wrapper,
   .onlyDesktop {
     display: none;
   }
+  
+  .step-tow-p {
+    max-width: 55% !important;
+    margin-left: 0px !important;
+    margin-top: 5px !important;
+}
+
+
+
 }
 
 @media (min-width: 769px) {
@@ -1266,7 +1282,52 @@ div#pricing-area-wrapper,
 .why-imgs img {
     border-radius: 7px;
 }
+.step-tow-p{
+    max-width: 66% !important;
+    margin-left: 0px !important;
+}
+h2.h2.fw-bold.mb-10.text-center {
+    font-size: 36px;
+    line-height: normal;
+    margin-bottom: 13px;
+}
+
+h2.h2.fw-bold.mb-10 {
+    font-size: 36px;
+    line-height: normal;
+    margin-bottom: 13px;
+}
+h3.h6.fw-semibold.mb-10 a {
+    font-size: 18px;
+    color: #000000;
+}
+section.pt-40.pb-15.bg-blue.ridelux-difference p {
+    color: #fff;
+    text-align: center;
+}
+
+p.font-md.justify-mobile {
+    text-align: center;
+}
+
+.testimonial-slider-item .location {
+    color: #ffffff;
+    font-size: 17px;
+}
+h2.h2.fw-bold.text-center {
+    font-size: 36px;
+    line-height: normal;
+    margin-bottom: 13px;
+}
+
+h2.h2.fw-bold {
+    font-size: 36px;
+    line-height: normal;
+    margin-bottom: 13px;
+}
 
 
 
-
+h3.h4.fw-semibold {
+    font-size: 21px;
+}

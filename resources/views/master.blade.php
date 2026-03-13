@@ -12,6 +12,7 @@
         content="{{ $seo['description'] ?? 'Premium black car and limousine service in Dallas, Texas. Luxury transportation for airport transfers, corporate events, and special occasions.' }}">
     <meta name="keywords"
         content="{{ $seo['keywords'] ?? 'Dallas black car service, Dallas limo service, luxury car service Dallas, airport transportation Dallas' }}">
+        <link rel="shortcut icon" href="/img/dallas-black-car-service-favicon.webp">
 
     {{-- Open Graph Meta Tags --}}
     <meta property="og:title" content="{{ $seo['og_title'] ?? $seo['title'] ?? 'DALLAS LIMOS AND BLACK CAR SERVICE' }}">

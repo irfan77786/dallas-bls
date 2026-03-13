@@ -5601,7 +5601,7 @@ li {
 
 @media (max-width: 767px) {
   .luxury-cars-section {
-    padding-top: 260px;
+    padding-top: 40px;
   }
 }
 
@@ -5691,10 +5691,12 @@ li {
   margin-top: 20px;
 }
 .accordion-holder .accordion-item .accordion-button {
-  box-shadow: none;
-  outline: none;
-  background: transparent;
-  color: #0b1422;
+    box-shadow: none;
+    outline: none;
+    background: transparent;
+    color: #0b1422;
+    padding: 14px;
+    padding-left: 18px !important;
 }
 .accordion-holder .accordion-item .accordion-button.collapsed .chevron-icon {
   transform: rotate(0deg);
@@ -5709,7 +5711,7 @@ li {
 .accordion-holder .accordion-item .accordion-collapse {
   background-color: #fff;
   border-radius: 0 0 12px 12px;
-  padding: 0 15px;
+  padding: 15px 15px 0px 15px;
 }
 
 .top-cities-item {
@@ -5848,7 +5850,7 @@ li {
 .testimonial-slider-item .name {
   font-style: normal;
   color: #0b1422;
-  font-size: 24px;
+  font-size: 17px;
 }
 .testimonial-slider-item .location {
   color: #0b1422;

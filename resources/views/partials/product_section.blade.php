@@ -1115,7 +1115,7 @@ return !in_array($feature['text'], $desktopHiddenFeatureTexts, true);
                         <hr>
                         <h6 class="card-title">Secure payments</h6>
                         <img src="{{ asset('assets/img/credit-cards.png') }}" alt="Payment methods"
-                            class="img-fluid payment-methods">
+                            class="img-fluid step-tow-p payment-methods">
                         <hr>
                         <h6 class="card-title text-dark"><i class="bi bi-chat-left-text-fill"></i>Email Support</h6>
                         <p class="card-text">Reach us anytime for quick assistance.</p>
