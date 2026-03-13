@@ -297,13 +297,13 @@
                     <div class="col-12">
                         <h4 class="h6 fw-bold mb-10 mb-md-15 text-white">Our Service</h4>
                         <ul class="footer-nav-list-item list-unstyled mb-30 mb-lg-0">
-                            <li><a href="/services/airport-transfer-dallas">Airport
+                            <li><a href="/services/airport-transfers-dallas">Airport
                                     Transfers</a></li>
                             <li><a href="/services/chauffeur-service-dallas">Chauffeur
                                     Service</a></li>
-                            <li><a href="/services/private-car-service-dallas">Private
+                            <li><a href="/services/private-car-service-in-dallas">Private
                                     car service</a></li>
-                            <li><a href="/services/luxury-mercedes-sprinter-service-dallas-texas">Luxury Sprinter
+                            <li><a href="/services/luxury-van-rental-dallas">Luxury Sprinter
                                     Service</a></li>
                             <li><a href="/city-to-city-rides">City-to-city-rides</a>
                             </li>
@@ -314,16 +314,16 @@
                     <div class="col-12">
                         <h4 class="h6 fw-bold mb-10 mb-md-15 text-white">Top Cities</h4>
                         <ul class="footer-nav-list-item list-unstyled mb-30 mb-lg-0">
-                            <li><a href="/black-car-service-allen-tx">Allen</a>
+                            <li><a href="/texas/black-car-service-allen-tx">Allen</a>
                             </li>
                             <li><a href="/">Dallas</a></li>
-                            <li><a href="/black-car-service-fort-worth-tx">Fort
+                            <li><a href="/texas/black-car-service-fort-worth-tx">Fort
                                     Worth</a></li>
-                            <li><a href="/black-car-service-frisco-tx">Frisco</a>
+                            <li><a href="/texas/black-car-service-frisco-tx">Frisco</a>
                             </li>
-                            <li><a href="/black-car-service-college-station-tx">College Station</a>
+                            <li><a href="/texas/black-car-service-college-station-tx">College Station</a>
                             </li>
-                            <li><a href="/black-car-service-oklahoma-city-ok">OKC</a>
+                            <li><a href="/texas/black-car-service-oklahoma-city-ok">OKC</a>
                             </li>
                         </ul>
 
@@ -335,7 +335,7 @@
                                     Austin</a></li>
                             <li><a href="/dallas-to-houston-car-service">Dallas
                                     - Houston</a></li>
-                            <li><a href="/dallas-to-college-station-car-service">Dallas -
+                            <li><a href="/city-to-city-ride/dallas-to-college-station">Dallas -
                                     College Station</a></li>
                             <li><a href="/dallas-to-oklahoma-city-ok">Dallas -
                                     OKC</a></li>
@@ -348,16 +348,16 @@
                     <div class="col-12">
                         <h4 class="h6 fw-bold mb-10 mb-md-15 text-white">Airports</h4>
                         <ul class="footer-nav-list-item list-unstyled mb-30 mb-lg-0">
-                            <li><a href="/addison-airport-car-service">Addison
+                            <li><a href="/airports/addison-airport-car-service">Addison
                                     Airport (ADS)</a></li>
-                            <li><a href="/dfw-car-service">Dallas/Fort Worth
+                            <li><a href="/airports/dfw-car-service">Dallas/Fort Worth
                                     Airport (DFW)</a></li>
-                            <li><a href="/love-field-airport-car-service">Dallas
+                            <li><a href="/airports/dallas-love-field-airport-car-service">Dallas
                                     Love Field Airport (DAL)</a></li>
-                            <li><a href="/dallas-executive-airport-car-service">Dallas Executive Airport (RBD)</a></li>
-                            <li><a href="/signature-flight-support-car-service">Signature
+                            <li><a href="/airports/dallas-executive-airport-car-service">Dallas Executive Airport (RBD)</a></li>
+                            <li><a href="/airports/signature-flight-support-car-service">Signature
                                     Flight Support (DAL)</a></li>
-                            <li><a href="/waco-regional-airport-car-service">Waco
+                            <li><a href="/airports/waco-regional-airport-car-service">Waco
                                     Regional Airport (ACT)</a></li>
                         </ul>
                     </div>

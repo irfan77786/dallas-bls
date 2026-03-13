@@ -422,6 +422,7 @@ Route::prefix('services')->group(function(){
     Route::get('/corporate-transportation-dallas/', [ServiceController::class, 'CorporateTransportation'])->name('corporate_transportation');
     Route::get("/executive-shuttle-services-dallas/", [ServiceController::class, 'ExecutiveShuttleServices'])->name('executive_shuttle_services');
     Route::get("/luxury-van-rental-dallas/", [ServiceController::class, 'LuxuryVanRental'])->name('luxury_van_rental');
+    Route::get('/luxury-mercedes-sprinter-service-dallas-texas/', [ServiceController::class, 'LuxuryVanRental'])->name('luxury_sprinter_service');
     Route::get('/chauffeur-service-dallas/', [ServiceController::class, 'ChauffeurService'])->name('chauffeur_service');
     Route::get('/private-car-service-in-dallas/', [ServiceController::class, 'PrivateCarService'])->name('private_car_service');
     Route::get('/private-aviation-dallas/', [ServiceController::class, 'PrivateAviation'])->name('private_aviation');
@@ -430,6 +431,8 @@ Route::prefix('services')->group(function(){
     Route::get('/city-to-city-rides/', [ServiceController::class, 'CityToCityRides'])->name('city_to_city_rides');
     Route::get('/limousine-service-dallas/', [ServiceController::class, 'DfwLimoService'])->name('dfw_limo_service');
     Route::get('/dallas-to-austin-car-service', [LocationController::class, 'DallasToAustinCarService'])->name('dallas_to_austin_car_service');
+    Route::get('/dallas-to-houston-car-service', [LocationController::class, 'DallasToHoustonCarService'])->name('dallas_to_houston_car_service');
+    Route::get('/dallas-to-oklahoma-city-ok', [LocationController::class, 'DallasToOklahomaCityOk'])->name('dallas_to_oklahoma_city_ok');
     Route::get('/dallas-to-arlington-car-service', [LocationController::class, 'DallasToArlingtonCarService'])->name('dallas_to_arlington_car_service');
     Route::get('/dallas-to-crowley-car-service', [LocationController::class, 'DallasToCrowleyCarService'])->name('dallas_to_crowley_car_service');
     Route::get('/dallas-to-anna-car-service', [LocationController::class, 'DallasToAnnaCarService'])->name('dallas_to_anna_car_service');
@@ -443,6 +446,8 @@ Route::prefix('airports')->group(function(){
     Route::get('/addison-airport-car-service/', [AirportController::class, 'AddisonAirportCarService'])->name('addison_airport_car_service');
     Route::get('/dfw-car-service/', [AirportController::class, 'CarServiceInDallasFortWorthInternationalAirport'])->name('car_service_in_dallas_fort_worth_international_airport');
     Route::get('/dallas-love-field-airport-car-service/', [AirportController::class, 'DallasLoveFieldBlackCarService'])->name('dallas_love_field_black_car_service');
+    Route::get('/dallas-executive-airport-car-service/', [AirportController::class, 'DallasExecutiveAirportCarService'])->name('dallas_executive_airport_car_service');
+    Route::get('/signature-flight-support-car-service/', [AirportController::class, 'SignatureFlightSupport'])->name('signature_flight_support_car_service');
     Route::get('/mckinney-national-airport-car-service/', [AirportController::class, 'SignatureFlightSupport'])->name('signature_flight_support');
     Route::get('/waco-regional-airport-car-service/', [AirportController::class, 'WacoRegionalAirport'])->name('waco_regional_airport');
 });
@@ -453,6 +458,8 @@ Route::prefix('texas')->group(function(){
     Route::get('/black-car-service-fort-worth-tx/', [LocationController::class, 'BlackCarServiceFortWorthTexas'])->name('black_car_service_fort_worth_texas');
     Route::get('/black-car-service-frisco-tx/', [LocationController::class, 'BlackCarServiceFriscoTexas'])->name('black_car_service_frisco_texas');
     Route::get('/black-car-service-plano-tx/', [LocationController::class, 'BlackCarServicePlanoTexas'])->name('black_car_service_plano_texas');
+    Route::get('/black-car-service-college-station-tx/', [LocationController::class, 'BlackCarServiceCollegeStationTexas'])->name('black_car_service_college_station_texas');
+    Route::get('/black-car-service-oklahoma-city-ok/', [LocationController::class, 'BlackCarServiceOklahomaCityOk'])->name('black_car_service_oklahoma_city_ok');
 });
 
 Route::prefix('city-to-city-ride')->group(function(){

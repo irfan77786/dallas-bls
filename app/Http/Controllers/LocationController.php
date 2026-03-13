@@ -269,4 +269,100 @@ class LocationController extends Controller
             'seo' => $seo
         ]);
     }
+
+    public function BlackCarServiceCollegeStationTexas(Request $request){
+        if($request->edit){
+            session(['edit'=>1]);
+        }else{
+            session()->flush();
+            $request->session()->regenerateToken();
+        }
+
+        $seo = [
+            'title' => 'Black Car Service College Station TX | Luxury Airport & Corporate Rides',
+            'description' => 'Premium Black Car Service in College Station, TX. Luxury sedans, SUVs & minibuses for airport transfers, corporate events & special occasions. Reliable chauffeurs & 24/7 service.',
+            'keywords' => 'black car service College Station, College Station luxury car service, College Station airport car service, corporate rides College Station TX',
+            'og_title' => 'Black Car Service College Station TX | Luxury Airport & Corporate Rides',
+            'og_description' => 'Premium Black Car Service in College Station, TX. Luxury sedans, SUVs & minibuses for airport transfers, corporate events & special occasions.',
+            'og_image' => asset('new_assets/assets/black-car-service-dallas-logo.png')
+        ];
+
+        return view('locations.black-car-service-college-station-texas', [
+            'backgroundImage' => '/img/black-car-service-frisco.webp',
+            'mobileImage' => 'new_assets/assets/black-car-service-dallas-logo.png',
+            'seo' => $seo
+        ]);
+    }
+
+    public function BlackCarServiceOklahomaCityOk(Request $request){
+        if($request->edit){
+            session(['edit'=>1]);
+        }else{
+            session()->flush();
+            $request->session()->regenerateToken();
+        }
+
+        $seo = [
+            'title' => 'Black Car Service Oklahoma City OK | Luxury Airport & Corporate Rides',
+            'description' => 'Premium Black Car Service in Oklahoma City, OK. Luxury sedans, SUVs & minibuses for airport transfers, corporate events & special occasions. Reliable chauffeurs & 24/7 service.',
+            'keywords' => 'black car service Oklahoma City, OKC luxury car service, Oklahoma City airport car service, corporate rides Oklahoma City',
+            'og_title' => 'Black Car Service Oklahoma City OK | Luxury Airport & Corporate Rides',
+            'og_description' => 'Premium Black Car Service in Oklahoma City, OK. Luxury sedans, SUVs & minibuses for airport transfers, corporate events & special occasions.',
+            'og_image' => asset('new_assets/assets/black-car-service-dallas-logo.png')
+        ];
+
+        return view('locations.black-car-service-oklahoma-city-ok', [
+            'backgroundImage' => '/img/black-car-service-frisco.webp',
+            'mobileImage' => 'new_assets/assets/black-car-service-dallas-logo.png',
+            'seo' => $seo
+        ]);
+    }
+
+    public function DallasToHoustonCarService(Request $request){
+        if($request->edit){
+            session(['edit'=>1]);
+        }else{
+            session()->flush();
+            $request->session()->regenerateToken();
+        }
+
+        $seo = [
+            'title' => 'Dallas to Houston Car Service | Luxury Travel Texas',
+            'description' => 'Experience top-tier Dallas to Houston car service with luxury sedans, SUVs, and minibuses. Ideal for business trips, weddings, and events. Book your ride today!',
+            'keywords' => 'Dallas to Houston car service, Fort Worth to Houston car service, Texas city to city car service',
+            'og_title' => 'Dallas to Houston Car Service | Luxury Travel Texas',
+            'og_description' => 'Experience top-tier Dallas to Houston car service with luxury sedans, SUVs, and minibuses. Ideal for business trips, weddings, and events.',
+            'og_image' => asset('new_assets/assets/black-car-service-dallas-logo.png')
+        ];
+
+        return view('locations.dallas-to-houston-car-service', [
+            'backgroundImage' => '/new_assets/assets/black-car-service-dallas-logo.png',
+            'mobileImage' => 'new_assets/assets/black-car-service-dallas-logo.png',
+            'seo' => $seo
+        ]);
+    }
+
+    public function DallasToOklahomaCityOk(Request $request){
+        if($request->edit){
+            session(['edit'=>1]);
+        }else{
+            session()->flush();
+            $request->session()->regenerateToken();
+        }
+
+        $seo = [
+            'title' => 'Dallas to Oklahoma City Car Service | Luxury Travel',
+            'description' => 'Experience top-tier Dallas to Oklahoma City car service with luxury sedans, SUVs, and minibuses. Ideal for business trips, weddings, and events. Book your ride today!',
+            'keywords' => 'Dallas to Oklahoma City car service, Dallas to OKC car service, Texas to Oklahoma car service',
+            'og_title' => 'Dallas to Oklahoma City Car Service | Luxury Travel',
+            'og_description' => 'Experience top-tier Dallas to Oklahoma City car service with luxury sedans, SUVs, and minibuses. Ideal for business trips, weddings, and events.',
+            'og_image' => asset('new_assets/assets/black-car-service-dallas-logo.png')
+        ];
+
+        return view('locations.dallas-to-oklahoma-city-ok', [
+            'backgroundImage' => '/new_assets/assets/black-car-service-dallas-logo.png',
+            'mobileImage' => 'new_assets/assets/black-car-service-dallas-logo.png',
+            'seo' => $seo
+        ]);
+    }
 }

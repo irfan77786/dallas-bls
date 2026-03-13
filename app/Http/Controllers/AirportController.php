@@ -102,6 +102,30 @@ class AirportController extends Controller
         ]);
     }
 
+    public function DallasExecutiveAirportCarService(Request $request){
+        if($request->edit){
+            session(['edit'=>1]);
+        }else{
+            session()->flush();
+            $request->session()->regenerateToken();
+        }
+
+        $seo = [
+            'title' => 'Dallas Executive Airport Car Service | RBD Black Car & Chauffeur',
+            'description' => 'Private black car & chauffeur service for Dallas Executive Airport (RBD). Luxury sedans, SUVs & group transfers with on-time pickups for private aviation.',
+            'keywords' => 'Dallas Executive Airport car service, RBD airport car service, Dallas Executive black car service',
+            'og_title' => 'Dallas Executive Airport Car Service | RBD Black Car & Chauffeur',
+            'og_description' => 'Private black car & chauffeur service for Dallas Executive Airport (RBD). Luxury sedans, SUVs & group transfers with on-time pickups.',
+            'og_image' => asset('new_assets/assets/black-car-service-dallas-logo.png')
+        ];
+
+        return view('airports.dallas-executive-airport-car-service', [
+            'backgroundImage' => '/img/black-car-service-frisco.webp',
+            'mobileImage' => 'new_assets/assets/black-car-service-dallas-logo.png',
+            'seo' => $seo
+        ]);
+    }
+
     public function WacoRegionalAirport(Request $request){
         if($request->edit){
             session(['edit'=>1]);
