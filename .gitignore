@@ -28,3 +28,4 @@ old-project/dallascars/
 *.zip
 /storage/*.key
 /.well-known
+/dallascars-project
