@@ -230,7 +230,7 @@ class WebsiteController extends Controller
 
             Contact::create($contactData);
 
-            $adminEmail = env('ADMIN_EMAIL_ADDRESS', 'hafizirfan8078@gmail.com');
+            $adminEmail = env('ADMIN_EMAIL_ADDRESS', 'info@legacyonelimo.com');
 
             Mail::to($validated['email'])->send(new ContactMail($contactData, false));
             Mail::to($adminEmail)->send(new ContactMail($contactData, true));
