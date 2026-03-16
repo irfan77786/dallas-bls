@@ -42,39 +42,66 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-11 col-xl-10">
-                    <form action="#" method="post" class="contact-us-form bg-white px-20 px-sm-30 py-30 shadow-sm rounded">
+                    @if ($message = session('success'))
+                        <div class="alert alert-success alert-dismissible fade show mb-20" role="alert">
+                            {{ $message }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    @endif
+
+                    @if ($message = session('error'))
+                        <div class="alert alert-danger alert-dismissible fade show mb-20" role="alert">
+                            {{ $message }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    @endif
+
+                    <form action="{{ route('contact_us_post') }}" method="post" class="contact-us-form bg-white px-20 px-sm-30 py-30 shadow-sm rounded">
+                        @csrf
                         <div class="row">
                             <div class="col-12 col-md-6 col-lg-4 mb-15">
                                 <label for="full_name" class="form-label mb-1 fw-medium">Full Name</label>
-                                <input type="text" class="form-control" id="full_name" placeholder="Full Name">
+                                <input type="text" class="form-control @error('full_name') is-invalid @enderror" id="full_name" name="full_name" placeholder="Full Name" value="{{ old('full_name') }}" required>
+                                @error('full_name')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
                             </div>
                             <div class="col-12 col-md-6 col-lg-4 mb-15">
                                 <label for="email" class="form-label mb-1 fw-medium">Email</label>
-                                <input type="email" class="form-control" id="email" placeholder="Your email address">
+                                <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" name="email" placeholder="Your email address" value="{{ old('email') }}" required>
+                                @error('email')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
                             </div>
                             <div class="col-12 col-md-6 col-lg-4 mb-15">
                                 <label for="phone" class="form-label mb-1 fw-medium">Phone</label>
-                                <input type="phone" class="form-control" id="phone" placeholder="Your phone number">
+                                <input type="tel" class="form-control @error('phone') is-invalid @enderror" id="phone" name="phone" placeholder="Your phone number" value="{{ old('phone') }}" required>
+                                @error('phone')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
                             </div>
                             <div class="col-12 mb-3">
                                 <label for="message" class="form-label mb-1 fw-medium">Message</label>
-                                <textarea class="form-control" id="message" rows="4"></textarea>
+                                <textarea class="form-control @error('message') is-invalid @enderror" id="message" name="message" rows="4" required>{{ old('message') }}</textarea>
+                                @error('message')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
                             </div>
                             <div class="col-12 mb-15">
-                                <p class="font-sm mb-2 text-muted">
-                                    Do you agree to receive texts from Dallas Black Cars Limo Service? Messages may include reservation reminders/updates.
-                                </p>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" id="Yes" name="text_agreement" value="yes">
-                                    <label class="form-check-label" for="Yes">Yes, I agree.</label>
+                                <p class="font-sm mb-2">
+                                    Do you agree to receive texts from Dallas Black Cars Limo Service (+1 214-897-8056)? Messages may include reservation reminders/updates. Msg &amp; data rates may apply. Reply STOP to unsubscribe or HELP for support.</p>
+                                <div class="form-check d-flex">
+                                    <input class="form-check-input flex-shrink-0 @error('sms_consent') is-invalid @enderror" type="checkbox" id="sms_consent" name="sms_consent" value="1" style="margin-left: 0;" required>
+                                    <label class="form-check-label small d-inline-block ms-2" for="sms_consent" style="margin-top: -2px;">
+                                        Yes, I agree to receive text messages from Dallas Black Cars Service sent from (+1 214-897-8056).
+                                    </label>
                                 </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" id="No" name="text_agreement" value="no">
-                                    <label class="form-check-label" for="No">No, I do not want to receive texts.</label>
-                                </div>
+                                @error('sms_consent')
+                                    <div class="invalid-feedback d-block">{{ $message }}</div>
+                                @enderror
                             </div>
                             <div class="col-12 text-end">
-                                <button class="btn btn-primary fw-bold">Send Message</button>
+                                <button type="submit" class="btn btn-primary fw-bold" id="submitBtn">Send Message</button>
                             </div>
                         </div>
                     </form>
@@ -119,4 +146,33 @@
 
     @include('partials.testimonials')
     @include('partials.faq')
+@endsection
+
+@section('scripts')
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+@if (session('success'))
+    Swal.fire({
+        title: 'Success!',
+        text: '{{ session('success') }}',
+        icon: 'success',
+        confirmButtonColor: '#3085d6',
+        confirmButtonText: 'OK'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            document.querySelector('.contact-us-form')?.reset();
+        }
+    });
+@endif
+
+@if (session('error'))
+    Swal.fire({
+        title: 'Error!',
+        text: '{{ session('error') }}',
+        icon: 'error',
+        confirmButtonColor: '#d33',
+        confirmButtonText: 'OK'
+    });
+@endif
+</script>
 @endsection

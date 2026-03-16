@@ -678,7 +678,21 @@
                     </ul>
                 </div>
                 <div class="col-12 col-md-6">
-                    <form class="news-letter-form mx-auto me-md-0 px-15 py-25" action="" method="post">
+                    @if ($message = session('success'))
+                        <div class="alert alert-success alert-dismissible fade show mb-20" role="alert">
+                            {{ $message }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    @endif
+
+                    @if ($message = session('error'))
+                        <div class="alert alert-danger alert-dismissible fade show mb-20" role="alert">
+                            {{ $message }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    @endif
+
+                    <form class="news-letter-form mx-auto me-md-0 px-15 py-25" action="{{ route('corporate_support_post') }}" method="post">
                         @csrf
                         <div class="text-center">
                             <h3 class="font-md fw-bold mb-0">Need Corporate Support?</h3>
@@ -687,19 +701,31 @@
                         <div class="row">
                             <div class="col-12 col-sm-6 mb-15">
                                 <label for="full_name" class="form-label mb-1 fw-medium">Full Name</label>
-                                <input type="text" class="form-control" name="full_name" id="full_name" placeholder="">
+                                <input type="text" class="form-control @error('full_name') is-invalid @enderror" name="full_name" id="full_name" placeholder="" value="{{ old('full_name') }}" required>
+                                @error('full_name')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
                             </div>
                             <div class="col-12 col-sm-6 mb-15">
                                 <label for="Email" class="form-label mb-1 fw-medium">Email</label>
-                                <input type="email" class="form-control" name="email" id="Email" placeholder="name@example.com">
+                                <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" id="Email" placeholder="name@example.com" value="{{ old('email') }}" required>
+                                @error('email')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
                             </div>
                             <div class="col-12 mb-15">
                                 <label for="contact_no" class="form-label mb-1 fw-medium">Contact No</label>
-                                <input id="contact_no" name="contact_no" type="tel" class="form-control">
+                                <input id="contact_no" name="phone" type="tel" class="form-control @error('phone') is-invalid @enderror" value="{{ old('phone') }}" required>
+                                @error('phone')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
                             </div>
                             <div class="col-12 mb-15">
                                 <label for="message" class="form-label mb-1 fw-medium">Message</label>
-                                <textarea name="message" id="message" class="form-control"></textarea>
+                                <textarea name="message" id="message" class="form-control @error('message') is-invalid @enderror" required>{{ old('message') }}</textarea>
+                                @error('message')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
                             </div>
                             <div class="col-12 text-end">
                                 <button type="submit" class="btn btn-primary btn-sm">Submit</button>

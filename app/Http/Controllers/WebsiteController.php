@@ -5,13 +5,17 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ContactMail;
+use App\Mail\QuoteMail;
+use App\Models\Contact;
+use App\Models\Quote;
 
 class WebsiteController extends Controller
 {
-    public function aboutUs(Request $request){
-        if($request->edit){
-            session(['edit'=>1]);
-        }else{
+    public function aboutUs(Request $request)
+    {
+        if ($request->edit) {
+            session(['edit' => 1]);
+        } else {
             session()->flush();
             $request->session()->regenerateToken();
         }
@@ -32,10 +36,11 @@ class WebsiteController extends Controller
         ]);
     }
 
-    public function fifaWorldCup2026CarServiceDallas(Request $request){
-        if($request->edit){
-            session(['edit'=>1]);
-        }else{
+    public function fifaWorldCup2026CarServiceDallas(Request $request)
+    {
+        if ($request->edit) {
+            session(['edit' => 1]);
+        } else {
             session()->flush();
             $request->session()->regenerateToken();
         }
@@ -56,10 +61,11 @@ class WebsiteController extends Controller
         ]);
     }
 
-    public function ourFleet(Request $request){
-        if($request->edit){
-            session(['edit'=>1]);
-        }else{
+    public function ourFleet(Request $request)
+    {
+        if ($request->edit) {
+            session(['edit' => 1]);
+        } else {
             session()->flush();
             $request->session()->regenerateToken();
         }
@@ -80,10 +86,11 @@ class WebsiteController extends Controller
         ]);
     }
 
-    public function getAQuote(Request $request){
-        if($request->edit){
-            session(['edit'=>1]);
-        }else{
+    public function getAQuote(Request $request)
+    {
+        if ($request->edit) {
+            session(['edit' => 1]);
+        } else {
             session()->flush();
             $request->session()->regenerateToken();
         }
@@ -104,10 +111,11 @@ class WebsiteController extends Controller
         ]);
     }
 
-    public function contactUs(Request $request){
-        if($request->edit){
-            session(['edit'=>1]);
-        }else{
+    public function contactUs(Request $request)
+    {
+        if ($request->edit) {
+            session(['edit' => 1]);
+        } else {
             session()->flush();
             $request->session()->regenerateToken();
         }
@@ -130,20 +138,114 @@ class WebsiteController extends Controller
 
     public function contactUsPost(Request $request)
     {
-        $contactData = $request->formInput;
+        $validated = $request->validate([
+            'full_name' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'phone' => 'required|string|max:20',
+            'message' => 'required|string|min:10',
+            'sms_consent' => 'required|accepted',
+        ]);
+
         try {
-            $details = ['name' => $contactData['first_name'] . ' ' . $contactData['last_name'], 'email' => $contactData['email'], 'phone' => $contactData['phone'], 'message' => $contactData['message'],];
-            Mail::to('nexusdeveloper09@gmail.com')->send(new ContactMail($details));
+            $contactData = [
+                'full_name' => $validated['full_name'],
+                'email' => $validated['email'],
+                'phone' => $validated['phone'],
+                'message' => $validated['message'],
+                'sms_consent' => $validated['sms_consent'] ?? false,
+            ];
+
+            Contact::create($contactData);
+
+            $adminEmail = env('ADMIN_EMAIL_ADDRESS', 'info@dallasblacklimoservice.com');
+
+            Mail::to($validated['email'])->send(new ContactMail($contactData, false));
+            Mail::to($adminEmail)->send(new ContactMail($contactData, true));
+
             return redirect()->back()->with('success', 'Your message has been sent successfully!');
         } catch (\Exception $e) {
-            return redirect()->back()->with('error', 'Mail not sent: ' . $e->getMessage());
+            return redirect()->back()->with('error', 'Error: ' . $e->getMessage());
         }
     }
 
-    public function CancellationPolicy(Request $request){
-        if($request->edit){
-            session(['edit'=>1]);
-        }else{
+    public function getAQuotePost(Request $request)
+    {
+        $validated = $request->validate([
+            'vehicle_type' => 'required|string|max:255',
+            'trip_type' => 'required|string|max:255',
+            'number_of_passengers' => 'required|string|max:50',
+            'trip_date' => 'required|date',
+            'trip_time' => 'required|date_format:H:i',
+            'pickup_address' => 'required|string|max:255',
+            'dropoff_address' => 'required|string|max:255',
+            'full_name' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'message' => 'nullable|string|min:5',
+        ]);
+
+        try {
+            $quoteData = [
+                'vehicle_type' => $validated['vehicle_type'],
+                'trip_type' => $validated['trip_type'],
+                'number_of_passengers' => $validated['number_of_passengers'],
+                'trip_date' => $validated['trip_date'],
+                'trip_time' => $validated['trip_time'],
+                'pickup_address' => $validated['pickup_address'],
+                'dropoff_address' => $validated['dropoff_address'],
+                'full_name' => $validated['full_name'],
+                'email' => $validated['email'],
+                'message' => $validated['message'] ?? null,
+            ];
+
+            Quote::create($quoteData);
+
+            $adminEmail = env('ADMIN_EMAIL_ADDRESS', 'info@dallasblacklimoservice.com');
+
+            Mail::to($validated['email'])->send(new QuoteMail($quoteData, false));
+            Mail::to($adminEmail)->send(new QuoteMail($quoteData, true));
+
+            return redirect()->back()->with('success', 'Your quote request has been sent successfully! We will send you a quote shortly.');
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'Error: ' . $e->getMessage());
+        }
+    }
+
+    public function corporateSupportPost(Request $request)
+    {
+        $validated = $request->validate([
+            'full_name' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'phone' => 'required|string|max:20',
+            'message' => 'required|string|min:10',
+        ]);
+
+        try {
+            $contactData = [
+                'full_name' => $validated['full_name'],
+                'email' => $validated['email'],
+                'phone' => $validated['phone'],
+                'message' => $validated['message'],
+                'sms_consent' => false,
+            ];
+
+            Contact::create($contactData);
+
+            $adminEmail = env('ADMIN_EMAIL_ADDRESS', 'hafizirfan8078@gmail.com');
+
+            Mail::to($validated['email'])->send(new ContactMail($contactData, false));
+            Mail::to($adminEmail)->send(new ContactMail($contactData, true));
+
+            return redirect()->back()->with('success', 'Your corporate support request has been sent successfully!');
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'Error: ' . $e->getMessage());
+        }
+    }
+
+    public function CancellationPolicy(Request $request)
+    {
+        if ($request->edit) {
+            session(['edit' => 1]);
+        } else {
             session()->flush();
             $request->session()->regenerateToken();
         }
@@ -164,10 +266,11 @@ class WebsiteController extends Controller
         ]);
     }
 
-    public function TermsAndConditions(Request $request){
-        if($request->edit){
-            session(['edit'=>1]);
-        }else{
+    public function TermsAndConditions(Request $request)
+    {
+        if ($request->edit) {
+            session(['edit' => 1]);
+        } else {
             session()->flush();
             $request->session()->regenerateToken();
         }
@@ -188,10 +291,11 @@ class WebsiteController extends Controller
         ]);
     }
 
-    public function PrivacyPolicy(Request $request){
-        if($request->edit){
-            session(['edit'=>1]);
-        }else{
+    public function PrivacyPolicy(Request $request)
+    {
+        if ($request->edit) {
+            session(['edit' => 1]);
+        } else {
             session()->flush();
             $request->session()->regenerateToken();
         }

@@ -474,8 +474,10 @@ Route::get('/', [BookingController::class, 'showForm'])->name('booking');
 Route::get('/about-us/', [WebsiteController::class, 'aboutUs'])->name('about_us');
 Route::get('/contact-us/', [WebsiteController::class, 'contactUs'])->name('contact_us');
 Route::post('/contact-us', [WebsiteController::class, 'contactUsPost'])->name('contact_us_post');
+Route::post('/corporate-support', [WebsiteController::class, 'corporateSupportPost'])->name('corporate_support_post');
 Route::get('/our-fleet/', [WebsiteController::class, 'ourFleet'])->name('our_fleet');
 Route::get('/get-a-quote/', [WebsiteController::class, 'getAQuote'])->name('get_a_quote');
+Route::post('/get-a-quote', [WebsiteController::class, 'getAQuotePost'])->name('get_a_quote_post');
 Route::get('/fifa-world-cup-2026-car-service-dallas/', [WebsiteController::class, 'fifaWorldCup2026CarServiceDallas'])->name('fifa_world_cup_2026_car_service_dallas');
 Route::post('/booking/point-to-point', [BookingController::class, 'handlePointToPoint'])->name('booking.pointToPoint');
 Route::post('/booking/hourly-hire', [BookingController::class, 'handleHourlyHire'])->name('booking.hourlyHire');
@@ -493,6 +495,21 @@ Route::get('/run-queue', function (Request $request) {
         'status' => 'success',
         'message' => 'Queue processed'
     ]);
+});
+
+Route::get('/test-mail', function (Request $request) {
+    if ($request->key !== 'nexus_developer_09') {
+        abort(403, 'Unauthorized');
+    }
+    try {
+        $adminEmail = env('ADMIN_EMAIL_ADDRESS', 'hafizirfan8078@gmail.com');
+        \Illuminate\Support\Facades\Mail::raw('Test email from Dallas BLS - ' . now(), function ($message) use ($adminEmail) {
+            $message->to($adminEmail)->subject('Mail Test - Dallas BLS');
+        });
+        return response()->json(['status' => 'success', 'message' => 'Test email sent to ' . $adminEmail]);
+    } catch (\Exception $e) {
+        return response()->json(['status' => 'error', 'message' => $e->getMessage()], 500);
+    }
 });
 
 Route::get('test', function(){
