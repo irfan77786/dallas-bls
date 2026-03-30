@@ -16,11 +16,11 @@
 
             <div class="row" style="pointer-events: none;">
                 <div id="home-text-content" class="banner-text-content col-12 col-md-6 d-flex flex-column justify-content-center" style="pointer-events: auto; position: relative; z-index: 0;">
-                    <h1 class="h1 fw-bold text-white mb-15">Contact Us – Dallas Black Cars Service</h1>
+                    <h1 class="h1 fw-bold text-white mb-15">Contact Us – Dallas Black Limo Service</h1>
                     <p class="font-lg fw-medium text-white mb-0">Request Instant Pricing for Black Car, SUV, or Group Travel in DFW.</p>
-                    <strong class="font-base text-white fw-semibold d-block my-15">24/7 Service Available, Click to Call Now!</strong>
+                 
                     <p class="text-white font-base d-flex align-items-center mb-30 mb-md-0">
-                        Call: <a href="tel:+12148978056" class="mx-2 fw-bold font-lg theme-color">+1 214-897-8056</a>
+                        Call: <a href="tel:+14699612047" class="mx-2 fw-bold font-lg theme-color">+1 469-961-2047</a>
                     </p>
                 </div>
                 <div class="d-none col-12 col-md-6 d-md-block" style="pointer-events: auto; position: relative; z-index: 2;">
@@ -89,11 +89,11 @@
                             </div>
                             <div class="col-12 mb-15">
                                 <p class="font-sm mb-2">
-                                    Do you agree to receive texts from Dallas Black Cars Limo Service (+1 214-897-8056)? Messages may include reservation reminders/updates. Msg &amp; data rates may apply. Reply STOP to unsubscribe or HELP for support.</p>
+                                    Do you agree to receive texts from Dallas Black Limo Service (+1 469-961-2047)? Messages may include reservation reminders/updates. Msg &amp; data rates may apply. Reply STOP to unsubscribe or HELP for support.</p>
                                 <div class="form-check d-flex">
                                     <input class="form-check-input flex-shrink-0 @error('sms_consent') is-invalid @enderror" type="checkbox" id="sms_consent" name="sms_consent" value="1" style="margin-left: 0;" required>
                                     <label class="form-check-label small d-inline-block ms-2" for="sms_consent" style="margin-top: -2px;">
-                                        Yes, I agree to receive text messages from Dallas Black Cars Service sent from (+1 214-897-8056).
+                                        Yes, I agree to receive text messages from Dallas Black Limo Service sent from (+1 469-961-2047).
                                     </label>
                                 </div>
                                 @error('sms_consent')
@@ -119,7 +119,7 @@
                             <img loading="lazy" decoding="async" src="{{ asset('assets/new_theme/img/phone.svg') }}" alt="Phone" class="img-fluid" width="40">
                         </span>
                         <h3 class="h6 fw-semibold">Call or Text Our Team</h3>
-                        <p class="font-base"><strong>Phone: </strong>(214) 897-8056</p>
+                        <p class="font-base"><strong>Phone: </strong>+1 469-961-2047</p>
                     </article>
                 </div>
                 <div class="col-12 col-sm-6 col-md-4 mb-25 mb-md-30">

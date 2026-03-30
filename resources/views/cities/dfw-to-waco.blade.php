@@ -26,7 +26,7 @@ $isHourly = session('service_type') === 'hourlyHire';
                             </p>
                             <p class="bt-text">24/7 Service Available, Click to Call Now!</p>
                             <div class="bottom-banner-btn" bis_skin_checked="1">
-                                <a class="call-phonea hover-up d-inline-block mb-20" href="tel:+12148978056" bis_skin_checked="1">Call: 214-897-8056</a>
+                                <a class="call-phonea hover-up d-inline-block mb-20" href="tel:+14699612047" bis_skin_checked="1">Call:+14699612047</a>
                             </div>
                         </div>
                     </div>
@@ -76,7 +76,7 @@ $isHourly = session('service_type') === 'hourlyHire';
                     </p>
                     <p class="bt-text">24/7 Service – Call Now</p>
                     <div class="bottom-banner-btn" bis_skin_checked="1">
-                        <a class="call-phonea hover-up d-inline-block mb-20" href="tel:+12148978056" bis_skin_checked="1">Call: 214-897-8056</a>
+                        <a class="call-phonea hover-up d-inline-block mb-20" href="tel:+14699612047" bis_skin_checked="1">Call:+1 469-961-2047</a>
                     </div>
                 </div>
             </div>

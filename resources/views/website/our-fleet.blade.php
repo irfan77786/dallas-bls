@@ -11,7 +11,7 @@
                         <h1 class="h1 fw-bold text-white mb-15">Our Luxury Fleets</h1>
                         <p class="font-lg fw-medium text-white mb-0">Explore our professionally maintained fleet of luxury sedans, black SUVs, Sprinter vans, limousines, and group vehicles.</p>
                         <p class="font-md text-white d-flex align-items-center justify-content-center justify-content-md-start">
-                            Call Now: <a href="tel:+12148978056" class="fw-bold font-lg theme-color mx-2 text-underline">(214) 897-8056</a>
+                            Call Now: <a href="tel:+14699612047" class="fw-bold font-lg theme-color mx-2 text-underline">+1 469-961-2047</a>
                         </p>
                     </div>
                     <div class="d-none col-12 col-md-6 d-md-block" style="pointer-events: auto; position: relative; z-index: 2;">

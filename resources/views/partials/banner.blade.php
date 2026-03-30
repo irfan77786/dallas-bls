@@ -6,7 +6,7 @@
                 <h1 class="h1 fw-bold text-white mb-15">{{ $title ?? 'Dallas Black Car Service' }}</h1>
                 <p class="font-lg fw-medium text-white mb-0">24/7 Service Available – Professional chauffeurs for airport transfers, corporate travel & city-to-city rides.</p>
                 <p class="text-white font-base d-flex align-items-center justify-content-center my-15 mb-md-0">
-                    Call: <a href="tel:+12148978056" class="mx-2 fw-bold font-lg theme-color">+1 214-897-8056</a>
+                    Call: <a href="tel:+14699612047" class="mx-2 fw-bold font-lg theme-color">+1 469-961-2047</a>
                 </p>
             </div>
         </div>

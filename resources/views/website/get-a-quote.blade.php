@@ -17,15 +17,12 @@
         <div class="row" style="pointer-events: none;">
             <div id="home-text-content" class="col-12 col-md-6 d-flex flex-column justify-content-center"
                 style="pointer-events: auto; position: relative; z-index: 0;">
-                <h1 class="text-white h1 fw-bold mb-15">Black Car Service Dallas</h1>
+                <h1 class="text-white h1 fw-bold mb-15">Get A Quote</h1>
                 <div class="d-none d-md-block">
-                    <p class="text-white font-lg fw-medium mb-30">Lorem Ipsum is simply dummy text of the printing
-                        and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
-                        the 1500s, when an unknown printer tooks,</p>
-                    <span class="text-white font-base">24/7 Service Available – <strong
-                            class="font-lg fw-semibold">Click to Call Now</strong></span>
+                    <p class="text-white font-lg fw-medium mb-30">Luxury chauffeur-driven rides for airport transfers, corporate travel & special events across Dallas–Fort Worth.</p>
+                 
                     <p class="text-white font-base d-flex align-items-center mb-30 mb-md-0">
-                        Call: <a href="tel:+12148978056" class="mx-2 fw-bold font-lg theme-color">+1 214-897-8056</a>
+                        Call Now: <a href="tel:+4699612047" class="mx-2 fw-bold font-lg theme-color">+1 469-961-2047</a>
                     </p>
                 </div>
             </div>
@@ -43,10 +40,8 @@
     <div class="ah-container">
         <div class="row justify-content-center">
             <div class="col-12 col-lg-11 col-xl-10 text-center mb-20 mb-md-30 mb-lg-40">
-                <h2 class="h2 fw-bold mb-15 mb-sm-20 mb-lg-30">Get A Quote</h2>
-                <p class="font-base">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                    unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <h2 class="h2 fw-bold mb-15 mb-sm-20 mb-lg-30">Get a Quote for Black Car Service Dallas</h2>
+                <p class="font-base">Looking for a reliable and affordable black car service in Dallas? Fill out the form below to get an instant quote for your ride. Whether you need airport transportation, corporate travel, or a private chauffeur, we provide luxury vehicles with professional drivers available 24/7.</p>
             </div>
         </div>
         <div class="row justify-content-center">
@@ -199,130 +194,307 @@
             </div>
             <div class="col-12 col-md-6 h-100">
                 <div class="img-holder ms-md-auto">
-                    <img src="{{ asset('new_assets/assets/image-01.png') }}" class="img-fluid" alt="">
+                    <img src="https://www.dallasblacklimoservice.com/assets/new_theme/img/why-choose-dallas-black-limo-service.webp" class="img-fluid" alt="">
                 </div>
             </div>
         </div>
     </div>
 </section>
-<section class="fleet-section py-50 py-sm-60 py-md-70 py-lg-80">
-    <div class="ah-container">
-        <div class="row justify-content-center">
-            <div class="col-12 col-xl-10 text-center">
-                <h2 class="h2 fw-bold mb-15 mb-sm-20 mb-lg-30">Our Premium Fleet – Ride in Comfort and Style
-                    with <span class="theme-color fw-bold">Dallas Limo and Black Cars Service</span></h2>
-            </div>
-            <div class="col-12 mb-15">
-                <p class="font-base">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                    unknown printer took a galley of type and scrambled it to make a type specimen book. It has
-                    survived not only five centuries, but also the leap into electronic typesetting, remaining
-                    essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
-                    containing Lorem Ipsum passages, and more recently.</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <ul class="list-unstyled">
-                    <li>
-                        <strong class="font-lg gray-700 fw-bold d-block mb-2">Luxury Sedans:</strong>
-                        <p class="font-base">Pick from the Cadillac CT6, Volvo S90, or Mercedes-Benz S-Class for
-                            effortless driving to the DFW airport, meetings, or any other special event.</p>
-                    </li>
-                    <li>
-                        <strong class="font-lg gray-700 fw-bold d-block mb-2">Black SUVs:</strong>
-                        <p class="font-base">Our Cadillac Escalade, Chevy Suburban, and GMC Yukon XL provide
-                            spacious, stylish transportation for groups, corporate travelers, or extra luggage.
-                        </p>
-                    </li>
-                    <li>
-                        <strong class="font-lg gray-700 fw-bold d-block mb-2">Executive Sprinter Vans:</strong>
-                        <p class="font-base"> Ideal for large gatherings such as meetings and weddings events,
-                            our
-                            Mercedes-Benz Sprinter Vans offer ample storage as well as comfortable and spacious
-                            seating.</p>
-                    </li>
-                    <li>
-                        <strong class="font-lg gray-700 fw-bold d-block mb-2">Mini Bus Luxury Bus (23-27
-                            Passengers):</strong>
-                        <p class="font-base">Confortable seating & Wi-Fi make our Luxury Mini Buses best for
-                            smaller groups, corporate meeting, or <a class="fw-bold font-lg mx-2 theme-color"
-                                href="">airport
-                                transfers</a>. Comfortably seats 23-27 passengers.</p>
-                    </li>
-                    <li>
-                        <strong class="font-lg gray-700 fw-bold d-block mb-2">Mini Bus (31-38
-                            Passengers):</strong>
-                        <p class="font-base"> Ideal for large gatherings such as meetings and weddings events,
-                            our
-                            Mercedes-Benz Sprinter Vans offer ample storage as well as comfortable and spacious
-                            seating.</p>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <div class="img-holder">
-                    <img src="{{ asset('new_assets/assets/fleet-img.webp') }}" alt="Fleet Image" class="img-fluid">
+<section class="pb-40 luxury-cars-section bg-gray pb-sm-60 py-md-40">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-11 col-xl-10 text-md-center mb-15 mb-sm-25 mb-md-30 mb-lg-40">
+                        <h2 class="mb-10 text-center h2 fw-bold">Airport Transportation Built <span class="theme-color br-css-tt">Around Executive Expectations</span></h2>
+                        <p class="mb-0 font-md justify-mobile">Our airport fleet is built for travelers and executive assistants who need reliable, professional transportation without follow-ups or uncertainty. Executive sedans offer a quiet, composed ride for solo and business travel, while luxury and premium SUVs provide added space for passengers and luggage with a polished, executive-ready presence. Sprinter vans and larger buses support coordinated group airport transfers, corporate arrivals, and event travel. Every vehicle is chauffeur-driven, clean, and selected for schedule awareness—ensuring calm departures, smooth arrivals, and airport transportation handled correctly.</p>
+                    </div>
+                </div>
+                <div class="row luxury-cars-item-holder justify-content-center d-none d-md-flex">
+                    <div class="col-12 col-lg-3 px-30 px-sm-15">
+                        <article class="mx-auto text-center luxury-cars-item">
+                            <div class="img-holder mb-15">
+                                <img loading="lazy" decoding="async" src="https://www.dallasblacklimoservice.com/assets/new_theme/img/Sedan.webp" alt="Black car service Dallas luxury sedan" class="img-fluid" width="750" height="410">
+                            </div>
+                            <h3 class="mb-3 fw-semibold h6">Premier Sadan</h3>
+                            <p class="mb-2 font-base">Mercedes S550, BMW 750 or similar</p>
+                            <ul class="pl-0 mb-0 list-unstyled d-flex justify-content-center">
+                                <li class="gap-2 d-flex align-items-center">
+                                    <svg width="20" height="20" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="PeopleIcon">
+                                        <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3m-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3m0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5m8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5">
+                                        </path>
+                                    </svg>
+                                    max 3
+                                </li>
+                                <li class="px-2"></li>
+                                <li class="gap-2 d-flex align-items-center">
+                                    <svg width="20" height="20" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="LuggageIcon">
+                                        <path d="M17 6h-2V3c0-.55-.45-1-1-1h-4c-.55 0-1 .45-1 1v3H7c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2 0 .55.45 1 1 1s1-.45 1-1h6c0 .55.45 1 1 1s1-.45 1-1c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2M9.5 18H8V9h1.5zm3.25 0h-1.5V9h1.5zm.75-12h-3V3.5h3zM16 18h-1.5V9H16z">
+                                        </path>
+                                    </svg>
+                                    max 3
+                                </li>
+                            </ul>
+                        </article>
+                    </div>
+                    <div class="col-12 col-lg-3 px-30 px-sm-15">
+                        <article class="mx-auto text-center luxury-cars-item">
+                            <div class="img-holder mb-15">
+                                <img loading="lazy" decoding="async" src="https://www.dallasblacklimoservice.com/assets/new_theme/img/suv.webp" alt="Luxury SUV black car service Dallas" class="img-fluid" width="750" height="410">
+                            </div>
+                            <h3 class="mb-3 fw-semibold h6">Premier SUV</h3>
+                            <p class="mb-2 font-base">Chevrolet Suburban or similar</p>
+                            <ul class="pl-0 mb-0 list-unstyled d-flex justify-content-center">
+                                <li class="gap-2 d-flex align-items-center">
+                                    <svg width="20" height="20" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="PeopleIcon">
+                                        <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3m-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3m0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5m8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5">
+                                        </path>
+                                    </svg>
+                                    max 6
+                                </li>
+                                <li class="px-2"></li>
+                                <li class="gap-2 d-flex align-items-center">
+                                    <svg width="20" height="20" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="LuggageIcon">
+                                        <path d="M17 6h-2V3c0-.55-.45-1-1-1h-4c-.55 0-1 .45-1 1v3H7c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2 0 .55.45 1 1 1s1-.45 1-1h6c0 .55.45 1 1 1s1-.45 1-1c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2M9.5 18H8V9h1.5zm3.25 0h-1.5V9h1.5zm.75-12h-3V3.5h3zM16 18h-1.5V9H16z">
+                                        </path>
+                                    </svg>
+                                    max 6
+                                </li>
+                            </ul>
+                        </article>
+                    </div>
+                    <div class="col-12 col-lg-3 px-30 px-sm-15">
+                        <article class="mx-auto text-center luxury-cars-item">
+                            <div class="img-holder mb-15">
+                                <img loading="lazy" decoding="async" src="https://www.dallasblacklimoservice.com/assets/new_theme/img/luxury-suv.webp" alt="Premium SUV black car service Dallas" class="img-fluid" width="750" height="410">
+                            </div>
+                            <h3 class="mb-3 fw-semibold h6">Luxury SUV</h3>
+                            <p class="mb-2 font-base">Cadillac Escalade ESV, Lincoln Navigator or similar</p>
+                            <ul class="pl-0 mb-0 list-unstyled d-flex justify-content-center">
+                                <li class="gap-2 d-flex align-items-center">
+                                    <svg width="20" height="20" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="PeopleIcon">
+                                        <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3m-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3m0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5m8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5">
+                                        </path>
+                                    </svg>
+                                    max 6
+                                </li>
+                                <li class="px-2"></li>
+                                <li class="gap-2 d-flex align-items-center">
+                                    <svg width="20" height="20" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="LuggageIcon">
+                                        <path d="M17 6h-2V3c0-.55-.45-1-1-1h-4c-.55 0-1 .45-1 1v3H7c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2 0 .55.45 1 1 1s1-.45 1-1h6c0 .55.45 1 1 1s1-.45 1-1c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2M9.5 18H8V9h1.5zm3.25 0h-1.5V9h1.5zm.75-12h-3V3.5h3zM16 18h-1.5V9H16z">
+                                        </path>
+                                    </svg>
+                                    max 6
+                                </li>
+                            </ul>
+                        </article>
+                    </div>
+                    <div class="col-12 col-lg-3 px-30 px-sm-15">
+                        <article class="mx-auto text-center luxury-cars-item">
+                            <div class="img-holder mb-15">
+                                <img loading="lazy" decoding="async" src="https://www.dallasblacklimoservice.com/assets/new_theme/img/sprinter.webp" alt="Black SUV chauffeur service in Dallas" class="img-fluid" width="750" height="410">
+                            </div>
+                            <h3 class="mb-3 fw-semibold h6">Busniess Sprinter</h3>
+                            <p class="mb-2 font-base">Mercedes benz Sprinter Van or similar</p>
+                            <ul class="pl-0 mb-0 list-unstyled d-flex justify-content-center">
+                                <li class="gap-2 d-flex align-items-center">
+                                    <svg width="20" height="20" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="PeopleIcon">
+                                        <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3m-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3m0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5m8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5">
+                                        </path>
+                                    </svg>
+                                    max 12
+                                </li>
+                                <li class="px-2"></li>
+                                <li class="gap-2 d-flex align-items-center">
+                                    <svg width="20" height="20" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="LuggageIcon">
+                                        <path d="M17 6h-2V3c0-.55-.45-1-1-1h-4c-.55 0-1 .45-1 1v3H7c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2 0 .55.45 1 1 1s1-.45 1-1h6c0 .55.45 1 1 1s1-.45 1-1c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2M9.5 18H8V9h1.5zm3.25 0h-1.5V9h1.5zm.75-12h-3V3.5h3zM16 18h-1.5V9H16z">
+                                        </path>
+                                    </svg>
+                                    max 30
+                                </li>
+                            </ul>
+                        </article>
+                    </div>
+                    <div class="col-12 col-lg-3 px-30 px-sm-15">
+                        <article class="mx-auto text-center luxury-cars-item">
+                            <div class="img-holder mb-15">
+                                <img loading="lazy" decoding="async" src="https://www.dallasblacklimoservice.com/assets/new_theme/img/mini-bus.webp" alt="Spacious black SUV for Dallas black car service" class="img-fluid" width="750" height="410">
+                            </div>
+                            <h3 class="mb-3 fw-semibold h6">Mini Bus</h3>
+                            <p class="mb-2 font-base">24-Seater Mini Bus</p>
+                            <ul class="pl-0 mb-0 list-unstyled d-flex justify-content-center">
+                                <li class="gap-2 d-flex align-items-center">
+                                    <svg width="20" height="20" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="PeopleIcon">
+                                        <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3m-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3m0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5m8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5">
+                                        </path>
+                                    </svg>
+                                    max 24
+                                </li>
+                                <li class="px-2"></li>
+                                <li class="gap-2 d-flex align-items-center">
+                                    <svg width="20" height="20" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="LuggageIcon">
+                                        <path d="M17 6h-2V3c0-.55-.45-1-1-1h-4c-.55 0-1 .45-1 1v3H7c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2 0 .55.45 1 1 1s1-.45 1-1h6c0 .55.45 1 1 1s1-.45 1-1c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2M9.5 18H8V9h1.5zm3.25 0h-1.5V9h1.5zm.75-12h-3V3.5h3zM16 18h-1.5V9H16z">
+                                        </path>
+                                    </svg>
+                                    max 20
+                                </li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+                <div class="row d-md-none">
+                    <div class="col-12">
+
+
+                        <div class="luxury-cars-slider-holder">
+                            <div>
+                                <article class="mx-auto text-center luxury-cars-slider-item">
+                                    <div class="img-holder mb-15">
+                                        <img loading="lazy" decoding="async" src="https://www.dallasblacklimoservice.com/assets/new_theme/img/sedan.webp" alt="Black car service Dallas luxury sedan" class="img-fluid" width="750" height="410">
+                                    </div>
+                                    <h3 class="mb-2 fw-semibold h5">Premier Sadan</h3>
+                                    <p class="mb-2 font-base">Mercedes S550, BMW 750 or similar</p>
+                                    <ul class="pl-0 mb-0 list-unstyled d-flex justify-content-center">
+                                        <li class="gap-2 d-flex align-items-center">
+                                            <svg width="20" height="20" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="PeopleIcon">
+                                                <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3m-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3m0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5m8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5">
+                                                </path>
+                                            </svg>
+                                            max 3
+                                        </li>
+                                        <li class="px-2"></li>
+                                        <li class="gap-2 d-flex align-items-center">
+                                            <svg width="20" height="20" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="LuggageIcon">
+                                                <path d="M17 6h-2V3c0-.55-.45-1-1-1h-4c-.55 0-1 .45-1 1v3H7c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2 0 .55.45 1 1 1s1-.45 1-1h6c0 .55.45 1 1 1s1-.45 1-1c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2M9.5 18H8V9h1.5zm3.25 0h-1.5V9h1.5zm.75-12h-3V3.5h3zM16 18h-1.5V9H16z">
+                                                </path>
+                                            </svg>
+                                            max 3
+                                        </li>
+                                    </ul>
+                                </article>
+                            </div>
+                            <div>
+                                <article class="mx-auto text-center luxury-cars-slider-item">
+                                    <div class="img-holder mb-15">
+                                        <img loading="lazy" decoding="async" src="https://www.dallasblacklimoservice.com/assets/new_theme/img/suv.webp" alt="Luxury SUV black car service Dallas" class="img-fluid" width="750" height="410">
+                                    </div>
+                                    <h3 class="mb-2 fw-semibold h5">Premier SUV</h3>
+                                    <p class="mb-2 font-base">Chevrolet Suburban or similar</p>
+                                    <ul class="pl-0 mb-0 list-unstyled d-flex justify-content-center">
+                                        <li class="gap-2 d-flex align-items-center">
+                                            <svg width="20" height="20" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="PeopleIcon">
+                                                <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3m-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3m0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5m8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5">
+                                                </path>
+                                            </svg>
+                                            max 6
+                                        </li>
+                                        <li class="px-2"></li>
+                                        <li class="gap-2 d-flex align-items-center">
+                                            <svg width="20" height="20" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="LuggageIcon">
+                                                <path d="M17 6h-2V3c0-.55-.45-1-1-1h-4c-.55 0-1 .45-1 1v3H7c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2 0 .55.45 1 1 1s1-.45 1-1h6c0 .55.45 1 1 1s1-.45 1-1c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2M9.5 18H8V9h1.5zm3.25 0h-1.5V9h1.5zm.75-12h-3V3.5h3zM16 18h-1.5V9H16z">
+                                                </path>
+                                            </svg>
+                                            max 6
+                                        </li>
+                                    </ul>
+                                </article>
+                            </div>
+                            <div>
+                                <article class="mx-auto text-center luxury-cars-slider-item">
+                                    <div class="img-holder mb-15">
+                                        <img loading="lazy" decoding="async" src="https://www.dallasblacklimoservice.com/assets/new_theme/img/luxury-suv.webp" alt="Premium SUV black car service Dallas" class="img-fluid" width="750" height="410">
+                                    </div>
+                                    <h3 class="mb-2 fw-semibold h5">Luxury SUV</h3>
+                                    <p class="mb-2 font-base">Cadillac Escalade ESV, Lincoln Navigator or similar</p>
+                                    <ul class="pl-0 mb-0 list-unstyled d-flex justify-content-center">
+                                        <li class="gap-2 d-flex align-items-center">
+                                            <svg width="20" height="20" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="PeopleIcon">
+                                                <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3m-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3m0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5m8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5">
+                                                </path>
+                                            </svg>
+                                            max 6
+                                        </li>
+                                        <li class="px-2"></li>
+                                        <li class="gap-2 d-flex align-items-center">
+                                            <svg width="20" height="20" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="LuggageIcon">
+                                                <path d="M17 6h-2V3c0-.55-.45-1-1-1h-4c-.55 0-1 .45-1 1v3H7c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2 0 .55.45 1 1 1s1-.45 1-1h6c0 .55.45 1 1 1s1-.45 1-1c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2M9.5 18H8V9h1.5zm3.25 0h-1.5V9h1.5zm.75-12h-3V3.5h3zM16 18h-1.5V9H16z">
+                                                </path>
+                                            </svg>
+                                            max 6
+                                        </li>
+                                    </ul>
+                                </article>
+                            </div>
+
+                            <div>
+                                <article class="mx-auto text-center luxury-cars-slider-item">
+                                    <div class="img-holder mb-15">
+                                        <img loading="lazy" decoding="async" src="https://www.dallasblacklimoservice.com/assets/new_theme/img/sprinter.webp" alt="Black SUV chauffeur service in Dallas" class="img-fluid" width="750" height="410">
+                                    </div>
+                                    <h3 class="mb-2 fw-semibold h5">Busniess Sprinter</h3>
+                                    <p class="mb-2 font-base">Mercedes benz Sprinter Van or similar</p>
+                                    <ul class="pl-0 mb-0 list-unstyled d-flex justify-content-center">
+                                        <li class="gap-2 d-flex align-items-center">
+                                            <svg width="20" height="20" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="PeopleIcon">
+                                                <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3m-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3m0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5m8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5">
+                                                </path>
+                                            </svg>
+                                            max 12
+                                        </li>
+                                        <li class="px-2"></li>
+                                        <li class="gap-2 d-flex align-items-center">
+                                            <svg width="20" height="20" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="LuggageIcon">
+                                                <path d="M17 6h-2V3c0-.55-.45-1-1-1h-4c-.55 0-1 .45-1 1v3H7c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2 0 .55.45 1 1 1s1-.45 1-1h6c0 .55.45 1 1 1s1-.45 1-1c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2M9.5 18H8V9h1.5zm3.25 0h-1.5V9h1.5zm.75-12h-3V3.5h3zM16 18h-1.5V9H16z">
+                                                </path>
+                                            </svg>
+                                            max 20
+                                        </li>
+                                    </ul>
+                                </article>
+                            </div>
+
+
+
+
+                                  <div>
+                                <article class="mx-auto text-center luxury-cars-slider-item">
+                                    <div class="img-holder mb-15">
+                                        <img loading="lazy" decoding="async" src="https://www.dallasblacklimoservice.com/assets/new_theme/img/mini-bus.webp" alt="Black SUV chauffeur service in Dallas" class="img-fluid" width="750" height="410">
+                                    </div>
+                                     <h3 class="mb-3 fw-semibold h6">Mini Bus</h3>
+                            <p class="mb-2 font-base">24-Seater Mini Bus</p>
+                                    <ul class="pl-0 mb-0 list-unstyled d-flex justify-content-center">
+                                        <li class="gap-2 d-flex align-items-center">
+                                            <svg width="20" height="20" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="PeopleIcon">
+                                                <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3m-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3m0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5m8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5">
+                                                </path>
+                                            </svg>
+                                            max 24
+                                        </li>
+                                        <li class="px-2"></li>
+                                        <li class="gap-2 d-flex align-items-center">
+                                            <svg width="20" height="20" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="LuggageIcon">
+                                                <path d="M17 6h-2V3c0-.55-.45-1-1-1h-4c-.55 0-1 .45-1 1v3H7c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2 0 .55.45 1 1 1s1-.45 1-1h6c0 .55.45 1 1 1s1-.45 1-1c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2M9.5 18H8V9h1.5zm3.25 0h-1.5V9h1.5zm.75-12h-3V3.5h3zM16 18h-1.5V9H16z">
+                                                </path>
+                                            </svg>
+                                            max 20
+                                        </li>
+                                    </ul>
+                                </article>
+                            </div>
+
+
+
+
+
+
+                        </div>
+
+
+
+                    </div>
                 </div>
             </div>
-            <div class="col-12 text-center pt-15">
-                <a href="#" class="btn btn-primary">Quick Quote </a>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="bg-gray pt-50 pb-25 pt-sm-60 pb-sm-35 pt-md-70 pb-md-40">
-    <div class="ah-container">
-        <div class="row justify-content-center">
-            <div class="col-12 col-sm-6 col-md-4 mb-25 mb-md-30 d-flex ">
-                <article class="custom-card d-flex flex-column w-100 bg-white">
-                    <span class="icon-holder mb-20">
-                        <img src="{{ asset('new_assets/assets/icon-03.svg') }}" alt="Booking" class="img-fluid">
-                    </span>
-                    <h3 class="h4 fw-semibold">Online Form (Fastest)</h3>
-                    <p class="font-base">Fill out our simple quote form with pickup location, drop-off, date, and
-                        passenger count. <br><strong>Request a Quote Online</strong></p>
-                </article>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 mb-25 mb-md-30 d-flex ">
-                <article class="custom-card d-flex flex-column w-100 bg-white">
-                    <span class="icon-holder mb-20">
-                        <img src="{{ asset('new_assets/assets/icon-02.svg') }}" alt="Confirmation" class="img-fluid">
-                    </span>
-                    <h3 class="h3 fw-semibold">Email Quote</h3>
-                    <p class="font-base">
-                        <strong>Send trip details to:</strong>
-                        <span class="single-line-ellipses w-100 d-inline-block"
-                            style="max-width: 296px;vertical-align: middle;">
-                            <a class="fw-bold font-lg"
-                                href="mailto:info@dallaslimoandblackcars.com">info@dallaslimoandblackcars.com </a>
-                        </span>
-                        <br>
-                        <strong>Include:</strong> pickup, destination, vehicle type, number of
-                        passengers.
-                    </p>
-                </article>
-            </div>
-            <div class="col-12 col-sm-6 col-md-4 mb-25 mb-md-30 d-flex ">
-                <article class="custom-card d-flex flex-column w-100 bg-white">
-                    <span class="icon-holder mb-20">
-                        <img src="{{ asset('new_assets/assets/icon-01.svg') }}" alt="Driver" class="img-fluid">
-                    </span>
-                    <h3 class="h3 fw-semibold">Call or Text</h3>
-                    <p class="font-base">Speak with our team anytime:
-                        <a class="fw-bold font-lg ms-2 theme-color" style="word-break: break-all;"
-                            href="tel:+12148978056">+1
-                            214-897-8056</a>.
-                        <br> We’ll get you a quote within
-                        minutes—24/7.
-                    </p>
-                </article>
-            </div>
-        </div>
-    </div>
-</section>
+        </section>
+ 
 @include('partials.companies_strip')
 @include('partials.testimonials')
 @include('partials.faq')

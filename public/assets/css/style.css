@@ -5345,6 +5345,10 @@ li {
   .btn {
     width: 100%;
   }
+#home-text-content {
+    margin-top: 0px !important;
+}
+    
 }
 
 @media (min-width: 768px) {
@@ -6274,3 +6278,92 @@ li {
     background-color: #e52c43 !important;
     border-color: #e52c43 !important;
 }
+h1.h1.fw-bold.text-white.mb-15 {
+    font-size: 37px;
+    line-height: normal;
+    margin-bottom: 10px;
+}
+
+    #home-text-content {
+        margin-top: 90px !important;
+    }
+    
+    
+    
+    
+    .py-lg-100 {
+        padding-top: 60px;
+        padding-bottom: 82px;
+    }
+    
+    
+     
+    
+    @media (max-width: 767px) {
+ 
+#home-text-content {
+    margin-top: 0px !important;
+}
+    
+}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

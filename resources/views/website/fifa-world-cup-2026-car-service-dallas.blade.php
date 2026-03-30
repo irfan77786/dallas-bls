@@ -20,7 +20,7 @@
                     <h1 class="h1 fw-bold text-white mb-15">FIFA World Cup 2026 Car Service in Dallas</h1>
                     <p class="font-lg fw-medium text-white mb-0">Professional black car and chauffeur service for FIFA World Cup 2026 matches, airport arrivals, hotels, stadium transfers, and VIP travel across Dallas–Fort Worth.</p>
                     <p class="font-md text-white d-flex align-items-center">
-                        Call: <a href="tel:(214) 897-8056" class="fw-bold font-lg theme-color mx-2 text-underline">(214) 897-8056</a>
+                        Call: <a href="tel:+14699612047" class="fw-bold font-lg theme-color mx-2 text-underline">+1 469-961-2047</a>
                     </p>
                 </div>
                 <div class="d-none col-12 col-md-6 d-md-block" style="pointer-events: auto; position: relative; z-index: 2;">

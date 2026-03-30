@@ -20,7 +20,7 @@
                     <h1 class="text-white h1 fw-bold mb-15">Professional Airport Transfers Built for On-Time Arrivals</h1>
                     <p class="mb-0 text-white font-lg fw-medium justify-class">We provide smooth, punctual airport transportation with real-time flight tracking, professional drivers, and service available day and night. Trusted by frequent flyers and business travelers for dependable airport transportation.</p>
                     <p class="text-white font-md d-flex align-items-center">
-                        Call Now: <a href="tel:(214) 897-8056" class="mx-2 fw-bold font-lg theme-color text-underline">(214) 897-8056</a>
+                        Call Now: <a href="tel:+14699612047" class="mx-2 fw-bold font-lg theme-color text-underline">+1 469-961-2047</a>
                     </p>
                 </div>
                 <div class="d-none col-12 col-md-6 d-md-block" style="pointer-events: auto; position: relative; z-index: 2;">
@@ -44,7 +44,7 @@
                     <div class="col-12 col-lg-3 px-30 px-sm-15">
                         <article class="mx-auto text-center luxury-cars-item">
                             <div class="img-holder mb-15">
-                                <img loading="lazy" decoding="async" src="{{ asset('assets/new_theme/img/sedan.webp') }}" alt="Black car service Dallas luxury sedan"
+                                <img loading="lazy" decoding="async" src="https://www.dallasblacklimoservice.com/assets/new_theme/img/Sedan.webp" alt="Black car service Dallas luxury sedan"
                                     class="img-fluid" width="750" height="410">
                             </div>
                             <h3 class="mb-3 fw-semibold h6">Premier Sadan</h3>

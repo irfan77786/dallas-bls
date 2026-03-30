@@ -9,7 +9,7 @@
                     <h1 class="h1 fw-bold text-white mb-15">About Dallas Black Limo Service</h1>
                     <p class="font-lg fw-medium text-white mb-0 justify-class">Dallas Black Limo Service is a trusted provider of luxury black car and chauffeur services across Dallas–Fort Worth. We deliver reliable, discreet, and professionally managed transportation for airports, corporate travel, events, and private clients.</p>
                     <p class="font-md text-white d-flex align-items-center mt-3">
-                        Call Now: <a href="tel:(214) 897-8056" class="fw-bold font-lg theme-color mx-2 text-underline">(214) 897-8056</a>
+                        Call Now: <a href="tel:+14699612047" class="fw-bold font-lg theme-color mx-2 text-underline">+1 469-961-2047</a>
                     </p>
                 </div>
                 <div class="d-none col-12 col-md-6 d-md-block" style="pointer-events: auto; position: relative; z-index: 2;">
@@ -47,30 +47,45 @@
             </div>
         </div>
     </section>
-
-    <section class="pt-40 pb-15 bg-blue ridelux-difference">
+<section class="pt-40 pb-15 bg-blue ridelux-difference">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-11 col-xl-10 text-center mb-20">
                     <h2 class="h2 fw-bold mb-10 text-white">The Smarter Choice for Corporate Transportation</h2>
-                    <p class="font-md text-white justify-mobile">Professional black car service in Dallas for executives and executive assistants who require punctual pickups, transparent pricing, and zero uncertainty.</p>
+                    <p class="font-md justify-mobile">Professional black car service in Dallas for executives and executive assistants who require punctual pickups, transparent pricing, and zero uncertainty. Every ride is professionally chauffeured, actively monitored by dispatch, and backed by contingency planning for business-critical travel to DFW, Love Field, and across Dallas.</p>
                 </div>
             </div>
             <div class="row justify-content-center">
                 <div class="col-12 col-sm-6 col-md-4 mb-25 mb-md-30">
                     <article class="text-center">
                         <span class="icon-holder mb-10 d-block">
-                            <img loading="lazy" decoding="async" src="{{ asset('assets/new_theme/img/money.svg') }}" alt="Booking" class="img-fluid" width="40" height="40">
+                            <img loading="lazy" decoding="async" src="https://www.dallasblacklimoservice.com/assets/new_theme/img/money.svg" alt="Booking" class="img-fluid" width="40" height="40">
                         </span>
                         <h3 class="h6 fw-semibold text-white">Upfront Corporate Pricing</h3>
-                        <p class="font-md text-white">Flat, pre-set rates with no surge fees or hidden charges.</p>
+                        <p class="font-md text-white"> Flat, pre-set rates with no surge fees or hidden charges -<b> clear invoicing designed for corporate travel approvals and expense reporting.</b></p>
                     </article>
                 </div>
-                <!-- ... other items ... -->
+                <div class="col-12 col-sm-6 col-md-4 mb-25 mb-md-30">
+                    <article class="text-center">
+                        <span class="icon-holder mb-10 d-block">
+                            <img loading="lazy" decoding="async" src="https://www.dallasblacklimoservice.com/assets/new_theme/img/car-steering.svg" alt="Confirmation" class="img-fluid" width="40" height="40">
+                        </span>
+                        <h3 class="h6 fw-semibold text-white">Career Chauffeurs</h3>
+                        <p class="font-md text-white"> Professionally trained, background-checked chauffeurs with <b>dedicated executive and airport transfer experience</b>, selected for discretion, punctuality, and consistency.</p>
+                    </article>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4 mb-25 mb-md-30">
+                    <article class="text-center">
+                        <span class="icon-holder mb-10 d-block">
+                            <img loading="lazy" decoding="async" src="https://www.dallasblacklimoservice.com/assets/new_theme/img/dimond.svg" alt="Driver" class="img-fluid" width="40" height="40">
+                        </span>
+                        <h3 class="h6 fw-semibold text-white">Executive-Grade Fleet</h3>
+                        <p class="font-md text-white">Late-model sedans and luxury SUVs maintained on a <b>scheduled inspection cycle</b> for quiet comfort, clean presentation, and reliable business travel.</p>
+                    </article>
+                </div>
             </div>
         </div>
     </section>
-
     @include('partials.top-cities')
     @include('partials.testimonials')
     @include('partials.faq')

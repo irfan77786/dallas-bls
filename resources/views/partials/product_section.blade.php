@@ -1119,13 +1119,13 @@ return !in_array($feature['text'], $desktopHiddenFeatureTexts, true);
                         <hr>
                         <h6 class="card-title text-dark"><i class="bi bi-chat-left-text-fill"></i>Email Support</h6>
                         <p class="card-text">Reach us anytime for quick assistance.</p>
-                        <a href="mailto:info@dallaslimoandblackcars.com"
-                            class="mail_side d-block text-decoration-none small text-dark">info@dallaslimoandblackcars.com</a>
+                        <a href="mailto:info@dallasblacklimoservice.com"
+                            class="mail_side d-block text-decoration-none small text-dark">info@dallasblacklimoservice.com</a>
                         <hr>
                         <p class="mb-0 call_heading text-dark"><i class="bi bi-telephone-fill"></i>Call Support</p>
                         <p class="mb-0">
-                            <a href="tel:+12148978056"
-                                class="number_side d-block text-decoration-none text-dark">214-897-8056</a>
+                            <a href="tel:+14699612047"
+                                class="number_side d-block text-decoration-none text-dark">+1 469-961-2047</a>
                         </p>
                     </div>
                 </div>
