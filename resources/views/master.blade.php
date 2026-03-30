@@ -175,10 +175,10 @@
                 </div>
                 @if($hideHeaderItems)
                 <div class="col-6 col-lg-9 d-flex align-items-center justify-content-end">
-                    <a href="tel:+12148978056"
+                    <a href="tel:+14699612047"
                         class="text-dark fw-semibold text-decoration-none d-inline-flex align-items-center gap-2">
                         <i class="fa-solid fa-phone"></i>
-                        <span>+1 214-897-8056</span>
+                        <span>+1 469-961-2047</span>
                     </a>
                 </div>
                 @else
