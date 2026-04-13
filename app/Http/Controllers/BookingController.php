@@ -141,6 +141,14 @@ class BookingController extends Controller
     // Handle Point to Point form submission
     public function handlePointToPoint(Request $request)
     {
+        if ($request->isMethod('post')) {
+            dd([
+                'message' => 'Route OK: POST booking.pointToPoint (home banner point-to-point form)',
+                'route_name' => 'booking.pointToPoint',
+                'payload' => $request->except(['_token']),
+            ]);
+        }
+
         session([
             'booking_completed' => false
         ]);
@@ -282,6 +290,14 @@ class BookingController extends Controller
     // Handle Hourly Hire form submission
     public function handleHourlyHire(Request $request)
     {
+        if ($request->isMethod('post')) {
+            dd([
+                'message' => 'Route OK: POST booking.hourlyHire (home banner hourly form)',
+                'route_name' => 'booking.hourlyHire',
+                'payload' => $request->except(['_token']),
+            ]);
+        }
+
         session()->forget('round_trip');
         session([
             'booking_completed' => false
