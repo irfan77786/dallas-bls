@@ -22,8 +22,9 @@ $tabSuffix = $id_suffix ?? '';
         <!-- Point to Point -->
         <div class="tab-pane container p-0 {{ !$isHourly ? 'active show' : '' }}" id="place{{ $tabSuffix }}">
             <div class="search-form-box">
-                <form class="search-form loader-form" action="/booking/point-to-point" method="POST">
+                <form class="search-form loader-form" action="/save-booking-form-session" method="POST">
                     @csrf
+                    <input type="hidden" name="form_type" value="ride_info_point_to_point">
                     <input type="hidden" name="is_airport" id="is-airport{{ $tabSuffix }}"
                         value="{{ session('is_airport') ?? 0 }}">
 
@@ -214,8 +215,9 @@ $tabSuffix = $id_suffix ?? '';
         <!-- Hourly Hire -->
         <div class="tab-pane container p-0 {{ $isHourly ? 'active show' : '' }}" id="event{{ $tabSuffix }}">
             <div class="search-form-box">
-                <form class="search-form loader-form" action="/booking/hourly-hire" method="POST">
+                <form class="search-form loader-form" action="/save-booking-form-session" method="POST">
                     @csrf
+                    <input type="hidden" name="form_type" value="ride_info_hourly">
                     <!-- Pick-up Location (Hourly) -->
                     <div class="floating-bordered-input position-relative">
                         <span class="floating-label">Pick-up Location</span>
@@ -590,51 +592,6 @@ $tabSuffix = $id_suffix ?? '';
     enforceBookingRestrictions('pickup-date-hourly{{ $tabSuffix }}', 'pickup-time-hourly{{ $tabSuffix }}');
     enforceBookingRestrictions('return-date{{ $tabSuffix }}', 'return-time{{ $tabSuffix }}');
 
-    function bindRideInfoSessionSubmit(form, formType, redirectTo) {
-      if (!form || form.dataset.sessionSubmitBound === '1') return;
-      form.dataset.sessionSubmitBound = '1';
-
-      form.addEventListener('submit', function(event) {
-        event.preventDefault();
-        event.stopImmediatePropagation();
-
-        const formData = new FormData(form);
-        formData.set('form_type', formType);
-
-        fetch('/save-booking-form-session', {
-          method: 'POST',
-          body: formData,
-          headers: {
-            'X-Requested-With': 'XMLHttpRequest',
-            'Accept': 'application/json'
-          }
-        })
-          .then(async function(response) {
-            if (!response.ok) {
-              throw new Error('Failed to save ride info');
-            }
-            return response.json();
-          })
-          .then(function() {
-            window.location.href = redirectTo;
-          })
-          .catch(function() {
-            HTMLFormElement.prototype.submit.call(form);
-          });
-      }, true);
-    }
-
-    bindRideInfoSessionSubmit(
-      document.querySelector('#place{{ $tabSuffix }} form.search-form'),
-      'ride_info_point_to_point',
-      '/booking/point-to-point'
-    );
-
-    bindRideInfoSessionSubmit(
-      document.querySelector('#event{{ $tabSuffix }} form.search-form'),
-      'ride_info_hourly',
-      '/booking/hourly-hire'
-    );
   });
 })();
 </script>

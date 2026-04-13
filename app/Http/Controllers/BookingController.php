@@ -658,6 +658,7 @@ class BookingController extends Controller
     public function saveBookingFormSession(Request $request)
     {
         $formType = $request->input('form_type', '');
+        $expectsJson = $request->ajax() || $request->wantsJson();
 
         Log::info('booking.session_save.enter', [
             'form_type' => $formType,
@@ -757,10 +758,14 @@ class BookingController extends Controller
                     'input_keys' => array_keys($request->except(['_token'])),
                 ]);
 
-                return response()->json([
-                    'success' => false,
-                    'errors' => $validator->errors(),
-                ], 422);
+                if ($expectsJson) {
+                    return response()->json([
+                        'success' => false,
+                        'errors' => $validator->errors(),
+                    ], 422);
+                }
+
+                return redirect()->back()->withErrors($validator)->withInput();
             }
 
             $validated = $validator->validated();
@@ -801,6 +806,10 @@ class BookingController extends Controller
                     'is_airport',
                 ]),
             ]);
+
+            if (!$expectsJson) {
+                return redirect()->route('booking.pointToPoint');
+            }
         } elseif ($formType === 'ride_info_hourly') {
             $validator = Validator::make($request->all(), [
                 'pickup_location_hourly' => 'required|string',
@@ -818,10 +827,14 @@ class BookingController extends Controller
                     'input_keys' => array_keys($request->except(['_token'])),
                 ]);
 
-                return response()->json([
-                    'success' => false,
-                    'errors' => $validator->errors(),
-                ], 422);
+                if ($expectsJson) {
+                    return response()->json([
+                        'success' => false,
+                        'errors' => $validator->errors(),
+                    ], 422);
+                }
+
+                return redirect()->back()->withErrors($validator)->withInput();
             }
 
             $validated = $validator->validated();
@@ -848,6 +861,10 @@ class BookingController extends Controller
                     'service_type',
                 ]),
             ]);
+
+            if (!$expectsJson) {
+                return redirect()->route('booking.hourlyHire');
+            }
         }
 
         Log::info('booking.session_save.exit', [

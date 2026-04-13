@@ -53,8 +53,9 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   <div class="tab-content" id="serviceTabsContent">
     <!-- Point to Point -->
     <div class="tab-pane fade {{ !$isHourly ? 'show active' : '' }}" id="pointToPoint" role="tabpanel" aria-labelledby="pointToPoint-tab">
-      <form class="loader-form" action="/booking/point-to-point" method="POST">
+      <form class="loader-form" action="/save-booking-form-session" method="POST">
         @csrf
+        <input type="hidden" name="form_type" value="ride_info_point_to_point">
         <input type="hidden" name="is_airport" id="is-airport" value="{{ session('is_airport') ?? 0 }}">
 
         <!-- Pick-up Location -->
@@ -132,8 +133,9 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 
     <!-- Hourly Hire -->
     <div class="tab-pane fade {{ $isHourly ? 'show active' : '' }}" id="hourlyHire" role="tabpanel" aria-labelledby="hourlyHire-tab">
-      <form class="loader-form" id="hourForm" action="/booking/hourly-hire" method="POST">
+      <form class="loader-form" id="hourForm" action="/save-booking-form-session" method="POST">
         @csrf
+        <input type="hidden" name="form_type" value="ride_info_hourly">
 
         <!-- Pick-up Location -->
         <div class="mb-1 input-group-container">
@@ -261,50 +263,5 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     enforceBookingRestrictions('pickup-date', 'pickup-time');
     enforceBookingRestrictions('pickup-date-hourly', 'pickup-time-hourly');
 
-    function bindRideInfoSessionSubmit(form, formType, redirectTo) {
-      if (!form || form.dataset.sessionSubmitBound === '1') return;
-      form.dataset.sessionSubmitBound = '1';
-
-      form.addEventListener('submit', function(event) {
-        event.preventDefault();
-        event.stopImmediatePropagation();
-
-        const formData = new FormData(form);
-        formData.set('form_type', formType);
-
-        fetch('/save-booking-form-session', {
-          method: 'POST',
-          body: formData,
-          headers: {
-            'X-Requested-With': 'XMLHttpRequest',
-            'Accept': 'application/json'
-          }
-        })
-          .then(async function(response) {
-            if (!response.ok) {
-              throw new Error('Failed to save ride info');
-            }
-            return response.json();
-          })
-          .then(function() {
-            window.location.href = redirectTo;
-          })
-          .catch(function() {
-            HTMLFormElement.prototype.submit.call(form);
-          });
-      }, true);
-    }
-
-    bindRideInfoSessionSubmit(
-      document.querySelector('#pointToPoint form'),
-      'ride_info_point_to_point',
-      '/booking/point-to-point'
-    );
-
-    bindRideInfoSessionSubmit(
-      document.querySelector('#hourlyHire form'),
-      'ride_info_hourly',
-      '/booking/hourly-hire'
-    );
   });
 </script>
