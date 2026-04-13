@@ -406,11 +406,11 @@ Route::middleware('checkBookingCompletion')->group(function () {
     Route::get('/calculate-return-trip/', [BookingController::class, 'CalculateReturnTrip']);
     Route::post('/save-return-service', [BookingController::class, 'saveReturnService']);
     // Must not use `/booking` or `/booking/` — conflicts with GET `/booking` (WebsiteController) and never registers.
-    Route::get('/booking/start', [BookingController::class, 'showForm'])->name('booking.form');  // step 1 (same as home form)
-    Route::get('/booking/point-to-point/', [BookingController::class, 'handlePointToPoint'])->name('booking.pointToPoint.show');  //step2 case 1
-    Route::get('/booking/hourly-hire/', [BookingController::class, 'handleHourlyHire'])->name('booking.hourlyHire.show');  //step2 case 2
-    Route::get('/passengerInfo', [BookingController::class, 'submitPassengerInfo'] )->name('passenger.info'); //step 3
-    Route::get('/submit-passengerInfo', [BookingController::class, 'submitPassengerInfo'])->name('submit.passenger.info'); //step 4
+    Route::get('/booking/start', [BookingController::class, 'showForm'])->name('booking.form'); // step 1
+    Route::match(['get', 'post'], '/booking/point-to-point', [BookingController::class, 'handlePointToPoint'])->name('booking.pointToPoint'); // step 2 point-to-point
+    Route::match(['get', 'post'], '/booking/hourly-hire', [BookingController::class, 'handleHourlyHire'])->name('booking.hourlyHire'); // step 2 hourly
+    Route::get('/passengerInfo', [BookingController::class, 'submitPassengerInfo'])->name('passenger.info'); // step 3
+    Route::get('/submit-passengerInfo', [BookingController::class, 'submitPassengerInfo'])->name('submit.passenger.info'); // step 4
     Route::post('/save-booking-form-session', [BookingController::class, 'saveBookingFormSession'])->name('save.booking.form.session');
 
 });
@@ -483,8 +483,6 @@ Route::get('/our-fleet/', [WebsiteController::class, 'ourFleet'])->name('our_fle
 Route::get('/get-a-quote/', [WebsiteController::class, 'getAQuote'])->name('get_a_quote');
 Route::post('/get-a-quote', [WebsiteController::class, 'getAQuotePost'])->name('get_a_quote_post');
 Route::get('/fifa-world-cup-2026-car-service-dallas/', [WebsiteController::class, 'fifaWorldCup2026CarServiceDallas'])->name('fifa_world_cup_2026_car_service_dallas');
-Route::post('/booking/point-to-point', [BookingController::class, 'handlePointToPoint'])->name('booking.pointToPoint');
-Route::post('/booking/hourly-hire', [BookingController::class, 'handleHourlyHire'])->name('booking.hourlyHire');
 Route::get('/thank-you', [BookingController::class, 'ThankYou'])->name('thankyou');
 
 // ------------------------------------- CONFIGURATION ROUTES -------------------------------------------------:
