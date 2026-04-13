@@ -53,7 +53,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   <div class="tab-content" id="serviceTabsContent">
     <!-- Point to Point -->
     <div class="tab-pane fade {{ !$isHourly ? 'show active' : '' }}" id="pointToPoint" role="tabpanel" aria-labelledby="pointToPoint-tab">
-      <form class="loader-form" action="/save-booking-form-session" method="POST">
+      <form class="ride-info-form" action="/save-booking-form-session" method="POST">
         @csrf
         <input type="hidden" name="form_type" value="ride_info_point_to_point">
         <input type="hidden" name="is_airport" id="is-airport" value="{{ session('is_airport') ?? 0 }}">
@@ -133,7 +133,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 
     <!-- Hourly Hire -->
     <div class="tab-pane fade {{ $isHourly ? 'show active' : '' }}" id="hourlyHire" role="tabpanel" aria-labelledby="hourlyHire-tab">
-      <form class="loader-form" id="hourForm" action="/save-booking-form-session" method="POST">
+      <form class="ride-info-form" id="ride-hour-form" action="/save-booking-form-session" method="POST">
         @csrf
         <input type="hidden" name="form_type" value="ride_info_hourly">
 
