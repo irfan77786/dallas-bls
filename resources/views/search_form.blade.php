@@ -260,5 +260,51 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 
     enforceBookingRestrictions('pickup-date', 'pickup-time');
     enforceBookingRestrictions('pickup-date-hourly', 'pickup-time-hourly');
+
+    function bindRideInfoSessionSubmit(form, formType, redirectTo) {
+      if (!form || form.dataset.sessionSubmitBound === '1') return;
+      form.dataset.sessionSubmitBound = '1';
+
+      form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        event.stopImmediatePropagation();
+
+        const formData = new FormData(form);
+        formData.set('form_type', formType);
+
+        fetch('/save-booking-form-session', {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'X-Requested-With': 'XMLHttpRequest',
+            'Accept': 'application/json'
+          }
+        })
+          .then(async function(response) {
+            if (!response.ok) {
+              throw new Error('Failed to save ride info');
+            }
+            return response.json();
+          })
+          .then(function() {
+            window.location.href = redirectTo;
+          })
+          .catch(function() {
+            HTMLFormElement.prototype.submit.call(form);
+          });
+      }, true);
+    }
+
+    bindRideInfoSessionSubmit(
+      document.querySelector('#pointToPoint form'),
+      'ride_info_point_to_point',
+      '/booking/point-to-point'
+    );
+
+    bindRideInfoSessionSubmit(
+      document.querySelector('#hourlyHire form'),
+      'ride_info_hourly',
+      '/booking/hourly-hire'
+    );
   });
 </script>

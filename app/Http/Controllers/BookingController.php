@@ -334,6 +334,58 @@ class BookingController extends Controller
             'booking_completed' => false
         ]);
 
+        if ($request->isMethod('get')) {
+            $sessionData = session()->only([
+                'pickup_location',
+                'select_hours',
+                'pickup_date',
+                'pickup_time',
+                'stops',
+            ]);
+
+            if (empty($sessionData['pickup_location']) || empty($sessionData['select_hours'])) {
+                return redirect()->route('booking');
+            }
+
+            $vehicles = Vehicle::with(['carSeat'])->get();
+            $stops = json_decode($sessionData['stops'] ?? '[]', true);
+            $distanceData = [];
+
+            foreach ($vehicles as $vehicle) {
+                $distanceData[$vehicle->id] = $this->calculateDistanceWithStops(
+                    $sessionData['pickup_location'],
+                    null,
+                    $stops ?? [],
+                    $vehicle->base_fare,
+                    $vehicle->base_hourly_fare,
+                    $vehicle->per_km_rate,
+                    (int) $sessionData['select_hours']
+                );
+            }
+
+            return view('booking.confirmation', [
+                'step' => 2,
+                'data' => $vehicles,
+                'distance' => $distanceData,
+                'userData' => [
+                    'pickup_location_hourly' => $sessionData['pickup_location'],
+                    'select_hours' => (int) $sessionData['select_hours'],
+                    'pickup_date' => $sessionData['pickup_date'],
+                    'pickup_time' => $sessionData['pickup_time'],
+                    'stops' => $stops ?? [],
+                ],
+                'service_type' => 'hourlyHire',
+                'seo' => [
+                    'title' => 'Select Your Vehicle | Dallas Limo And Black Cars',
+                    'description' => 'Choose your luxury vehicle for your Dallas car service. Select from sedans, SUVs, sprinter vans and more.',
+                    'keywords' => 'Dallas black car booking, luxury car selection, airport transfer vehicles Dallas',
+                    'og_title' => 'Select Your Vehicle | Dallas Limo And Black Cars',
+                    'og_description' => 'Choose your luxury vehicle for your Dallas car service.',
+                    'og_image' => asset('new_assets/assets/black-car-service-dallas-logo.png')
+                ]
+            ]);
+        }
+
         $validator = Validator::make($request->all(), [
             'pickup_location_hourly' => 'required|string',
             'select_hours' => 'required|integer|min:1|max:24',
@@ -606,6 +658,79 @@ class BookingController extends Controller
             if ($request->input('meet_option') === 'none') {
                 session(['meet_option' => null]);
             }
+        } elseif ($formType === 'ride_info_point_to_point') {
+            $validator = Validator::make($request->all(), [
+                'pickup_location' => 'required|string',
+                'dropoff_location' => 'required|string',
+                'pickup_date' => 'required|date',
+                'pickup_time' => 'required',
+                'return_date' => 'nullable|date',
+                'return_time' => 'nullable',
+                'stops' => 'nullable|array',
+                'stops.*' => 'string',
+                'is_airport' => 'nullable|integer',
+            ]);
+
+            if ($validator->fails()) {
+                return response()->json([
+                    'success' => false,
+                    'errors' => $validator->errors(),
+                ], 422);
+            }
+
+            $validated = $validator->validated();
+            $pickupTime = Carbon::parse($validated['pickup_time'])->format('H:i:s');
+            $returnTime = !empty($validated['return_time'])
+                ? Carbon::parse($validated['return_time'])->format('H:i:s')
+                : null;
+
+            session([
+                'booking_completed' => false,
+                'pickup_location' => $validated['pickup_location'],
+                'dropoff_location' => $validated['dropoff_location'],
+                'is_airport' => (int) ($validated['is_airport'] ?? 0),
+                'pickup_date' => $validated['pickup_date'],
+                'pickup_time' => $pickupTime,
+                'return_date' => $validated['return_date'] ?? null,
+                'return_time' => $returnTime,
+                'round_trip' => $request->boolean('round_trip') ? 'on' : null,
+                'return_datetime' => (!empty($validated['return_date']) && $returnTime)
+                    ? $validated['return_date'] . ' ' . $returnTime
+                    : null,
+                'select_hours' => null,
+                'stops' => json_encode($validated['stops'] ?? []),
+                'service_type' => 'pointToPoint',
+            ]);
+        } elseif ($formType === 'ride_info_hourly') {
+            $validator = Validator::make($request->all(), [
+                'pickup_location_hourly' => 'required|string',
+                'select_hours' => 'required|integer|min:1|max:24',
+                'pickup_date' => 'required|date',
+                'pickup_time' => 'required',
+                'stops' => 'nullable|array',
+                'stops.*' => 'string',
+            ]);
+
+            if ($validator->fails()) {
+                return response()->json([
+                    'success' => false,
+                    'errors' => $validator->errors(),
+                ], 422);
+            }
+
+            $validated = $validator->validated();
+
+            session()->forget('round_trip');
+            session([
+                'booking_completed' => false,
+                'pickup_location' => $validated['pickup_location_hourly'],
+                'dropoff_location' => null,
+                'select_hours' => (int) $validated['select_hours'],
+                'pickup_date' => $validated['pickup_date'],
+                'pickup_time' => Carbon::parse($validated['pickup_time'])->format('H:i'),
+                'stops' => json_encode($validated['stops'] ?? []),
+                'service_type' => 'hourlyHire',
+            ]);
         }
 
         return response()->json(['success' => true]);

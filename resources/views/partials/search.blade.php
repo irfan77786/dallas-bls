@@ -589,6 +589,52 @@ $tabSuffix = $id_suffix ?? '';
     enforceBookingRestrictions('pickup-date{{ $tabSuffix }}', 'pickup-time{{ $tabSuffix }}');
     enforceBookingRestrictions('pickup-date-hourly{{ $tabSuffix }}', 'pickup-time-hourly{{ $tabSuffix }}');
     enforceBookingRestrictions('return-date{{ $tabSuffix }}', 'return-time{{ $tabSuffix }}');
+
+    function bindRideInfoSessionSubmit(form, formType, redirectTo) {
+      if (!form || form.dataset.sessionSubmitBound === '1') return;
+      form.dataset.sessionSubmitBound = '1';
+
+      form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        event.stopImmediatePropagation();
+
+        const formData = new FormData(form);
+        formData.set('form_type', formType);
+
+        fetch('/save-booking-form-session', {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'X-Requested-With': 'XMLHttpRequest',
+            'Accept': 'application/json'
+          }
+        })
+          .then(async function(response) {
+            if (!response.ok) {
+              throw new Error('Failed to save ride info');
+            }
+            return response.json();
+          })
+          .then(function() {
+            window.location.href = redirectTo;
+          })
+          .catch(function() {
+            HTMLFormElement.prototype.submit.call(form);
+          });
+      }, true);
+    }
+
+    bindRideInfoSessionSubmit(
+      document.querySelector('#place{{ $tabSuffix }} form.search-form'),
+      'ride_info_point_to_point',
+      '/booking/point-to-point'
+    );
+
+    bindRideInfoSessionSubmit(
+      document.querySelector('#event{{ $tabSuffix }} form.search-form'),
+      'ride_info_hourly',
+      '/booking/hourly-hire'
+    );
   });
 })();
 </script>
