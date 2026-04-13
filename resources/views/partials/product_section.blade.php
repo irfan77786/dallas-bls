@@ -1074,7 +1074,7 @@ return !in_array($feature['text'], $desktopHiddenFeatureTexts, true);
                                                 </div>
                                                 @endforeach
                                                 <div class="vehicle-continue-wrap">
-                                                    <a href="{{ $requiresMoreHours ? 'javascript:void(0)' : url('/user-login/' . $value['id'] . '/' . $continuePrice) }}"
+                                                    <a href="{{ $requiresMoreHours ? 'javascript:void(0)' : '/user-login/' . $value['id'] . '/' . $continuePrice }}"
                                                         class="btn btn-primary vehicle-continue-btn {{ $requiresMoreHours ? 'disabled' : '' }}"
                                                         aria-disabled="{{ $requiresMoreHours ? 'true' : 'false' }}"
                                                         onclick="{{ $requiresMoreHours ? 'event.preventDefault(); event.stopPropagation(); return false;' : 'event.stopPropagation()' }}">

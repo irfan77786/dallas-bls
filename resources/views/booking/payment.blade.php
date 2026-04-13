@@ -211,7 +211,7 @@
             <p class="mb-3 small" style="color: #000;">All transactions are secure and encrypted. Safe and secure
                 payments powered by <b>Stripe</b></p>
 
-            <form id="payment-form" method="POST" action="{{ url('/completeBook') }}">
+            <form id="payment-form" method="POST" action="/completeBook">
                 @csrf
                 <input type="hidden" name="payment_method_id" id="payment_method_id">
 

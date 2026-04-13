@@ -283,7 +283,7 @@
     <div class="container py-md-5">
         <div class="row">
             <div class="px-4 mb-3 col-md-8 mobile-mg-dc">
-                <form method="POST" action="{{ url('/bookRide') }}" class="d-flex flex-column loader-form" id="booking-detail-form">
+                <form method="POST" action="/bookRide" class="d-flex flex-column loader-form" id="booking-detail-form">
                     @csrf
 
                     <input type="hidden" name="vehicle_id" id="hidden-vehicle-id" value="{{ session('vehicle_id') }}">
@@ -418,7 +418,7 @@
                         <span aria-hidden="true" style="font-size: 2rem;">&times;</span>
                     </button>
                 </div>
-                <form id="return-service-form" method="POST" action="{{ url('/save-return-service') }}"
+                <form id="return-service-form" method="POST" action="/save-return-service"
                     class="loader-form">
                     @csrf
                     <div class="modal-body">
@@ -1564,7 +1564,7 @@
             data.append('return_flight_details', retFlight?.value || document.getElementById('hidden-return-flight-details')?.value || '');
             data.append('return_flight_number', retNum?.value || document.getElementById('hidden-return-flight-number')?.value || '');
             if (retNoInfo?.checked) data.append('return_no_flight_info', '1');
-            fetch('{{ route("save.booking.form.session") }}', { method: 'POST', body: data, headers: { 'X-Requested-With': 'XMLHttpRequest' } })
+            fetch('/save-booking-form-session', { method: 'POST', body: data, headers: { 'X-Requested-With': 'XMLHttpRequest' } })
                 .then(r => r.json())
                 .then(() => { if (callback) callback(); })
                 .catch(() => { if (callback) callback(); });

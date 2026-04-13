@@ -310,7 +310,7 @@ $step = 3;
         <div class="mb-4 col-lg-6">
             <div class="info-card">
                 <h2 class="section-title">Continue as Guest</h2>
-                <form id="passengerForm" method="POST" action="{{ route('login') }}">
+                <form id="passengerForm" method="POST" action="/login">
                     @csrf
                     @method('POST')
                     <input type="text" name="login_type" value="booking" hidden>
@@ -380,7 +380,7 @@ $step = 3;
 
                 <!-- Login Form -->
                 <form id="loginForm" method="{{ auth()->check() ? 'GET' :  'POST' }}"
-                    action="{{ auth()->check() ? route('submit.passenger.info') : route('login') }}">
+                    action="{{ auth()->check() ? '/submit-passengerInfo' : '/login' }}">
                     @csrf
 
                     <input type="text" name="login_type" value="booking" hidden>
@@ -721,7 +721,7 @@ $step = 3;
             data.append('first_name', firstName);
             data.append('last_name', lastName);
             data.append('number', numberVal);
-            fetch('{{ route("save.booking.form.session") }}', { method: 'POST', body: data, headers: { 'X-Requested-With': 'XMLHttpRequest' } })
+            fetch('/save-booking-form-session', { method: 'POST', body: data, headers: { 'X-Requested-With': 'XMLHttpRequest' } })
                 .then(r => r.json())
                 .then(() => { if (callback) callback(); })
                 .catch(() => { if (callback) callback(); });
@@ -749,7 +749,7 @@ $step = 3;
                 let email = $('#email_login').val().trim();
                 if (email === '') { alert('Please enter your email address.'); return; }
                 $.ajax({
-                    url: '{{ route('check.email.exists') }}',
+                    url: '/check-email-exists',
                     type: 'POST',
                     headers: {
                         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content'),
@@ -761,7 +761,7 @@ $step = 3;
                             $('.register-now').hide();
                             $('.login-now').show();
                             $('.login-btn').text('Login');
-                            $('#loginForm').attr('action', '{{ route('login') }}');
+                            $('#loginForm').attr('action', '/login');
                             $('#loginForm [name="first_name"], #loginForm [name="last_name"], #loginForm #phone')
                                 .prop('required', false)
                                 .val('');
@@ -769,7 +769,7 @@ $step = 3;
                             $('.login-now').show();
                             $('.register-now').show();
                             $('.login-btn').text('Register');
-                            $('#loginForm').attr('action', '{{ route('register') }}');
+                            $('#loginForm').attr('action', '/register');
                             $('#loginForm [name="first_name"], #loginForm [name="last_name"], #loginForm #phone')
                                 .prop('required', true);
                         }

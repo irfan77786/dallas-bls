@@ -1,16 +1,16 @@
 @php
 $currentStep = $step ?? 1;
 $steps = [
-1 => ['label' => 'Ride Info', 'route' => route('booking', ['edit' => 1])],
+1 => ['label' => 'Ride Info', 'route' => '/?edit=1'],
 2 => ['label' => 'Vehicle Class', 'route' => session('service_type') === 'pointToPoint'
-? route('booking.pointToPoint.show')
-: route('booking.hourlyHire.show')],
+? '/booking/point-to-point'
+: '/booking/hourly-hire'],
 3 => ['label' => 'Passenger Info', 'route' => (session()->has('vehicle_id') && (session()->has('calculated_price') ||
 session()->has('price') || ($currentStep >= 3)))
-? route('user_login', ['id' => session('vehicle_id'), 'price' => session('calculated_price') ?? session('price')])
+? '/user-login/' . session('vehicle_id') . '/' . (session('calculated_price') ?? session('price'))
 : null],
 4 => ['label' => 'Booking Detail', 'route' => ($currentStep >= 4 || session()->has('first_name'))
-? route('submit.passenger.info')
+? '/submit-passengerInfo'
 : null],
 5 => ['label' => 'Payment', 'route' => null]
 ];
