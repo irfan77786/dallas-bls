@@ -405,7 +405,8 @@ Route::middleware('checkBookingCompletion')->group(function () {
     Route::post('/completeBook', [BookingController::class, 'completeBook']);
     Route::get('/calculate-return-trip/', [BookingController::class, 'CalculateReturnTrip']);
     Route::post('/save-return-service', [BookingController::class, 'saveReturnService']);
-    Route::get('/booking/', [BookingController::class, 'showForm'])->name('booking.form');  //step 1
+    // Must not use `/booking` or `/booking/` — conflicts with GET `/booking` (WebsiteController) and never registers.
+    Route::get('/booking/start', [BookingController::class, 'showForm'])->name('booking.form');  // step 1 (same as home form)
     Route::get('/booking/point-to-point/', [BookingController::class, 'handlePointToPoint'])->name('booking.pointToPoint.show');  //step2 case 1
     Route::get('/booking/hourly-hire/', [BookingController::class, 'handleHourlyHire'])->name('booking.hourlyHire.show');  //step2 case 2
     Route::get('/passengerInfo', [BookingController::class, 'submitPassengerInfo'] )->name('passenger.info'); //step 3
