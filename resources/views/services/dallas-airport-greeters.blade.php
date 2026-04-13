@@ -4,7 +4,7 @@
 $isHourly = session('service_type') === 'hourlyHire';
 @endphp
 <meta name="csrf-token" content="{{ csrf_token() }}">
-<meta name="point-to-point-url" content="{{ url('/booking/point-to-point') }}">
+<meta name="point-to-point-url" content="{{ route('booking.pointToPoint') }}">
 @if(!session('pickup_location') && !session('dropoff_location'))
   @include('partials.banner', ['title' => "Dallas Airport Greeters"])
 @endif

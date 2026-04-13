@@ -53,7 +53,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   <div class="tab-content" id="serviceTabsContent">
     <!-- Point to Point -->
     <div class="tab-pane fade {{ !$isHourly ? 'show active' : '' }}" id="pointToPoint" role="tabpanel" aria-labelledby="pointToPoint-tab">
-      <form class="loader-form" action="{{ url('/booking/point-to-point') }}" method="POST">
+      <form class="loader-form" action="{{ route('booking.pointToPoint') }}" method="POST">
         @csrf
         <input type="hidden" name="is_airport" id="is-airport" value="{{ session('is_airport') ?? 0 }}">
 
@@ -132,7 +132,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 
     <!-- Hourly Hire -->
     <div class="tab-pane fade {{ $isHourly ? 'show active' : '' }}" id="hourlyHire" role="tabpanel" aria-labelledby="hourlyHire-tab">
-      <form class="loader-form" id="hourForm" action="/booking/hourly-hire" method="POST">
+      <form class="loader-form" id="hourForm" action="{{ route('booking.hourlyHire') }}" method="POST">
         @csrf
 
         <!-- Pick-up Location -->

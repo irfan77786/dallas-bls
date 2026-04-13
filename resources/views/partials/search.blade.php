@@ -22,7 +22,7 @@ $tabSuffix = $id_suffix ?? '';
         <!-- Point to Point -->
         <div class="tab-pane container p-0 {{ !$isHourly ? 'active show' : '' }}" id="place{{ $tabSuffix }}">
             <div class="search-form-box">
-                <form class="search-form loader-form" action="{{ url('/booking/point-to-point') }}" method="POST">
+                <form class="search-form loader-form" action="{{ route('booking.pointToPoint') }}" method="POST">
                     @csrf
                     <input type="hidden" name="is_airport" id="is-airport{{ $tabSuffix }}"
                         value="{{ session('is_airport') ?? 0 }}">
@@ -214,7 +214,7 @@ $tabSuffix = $id_suffix ?? '';
         <!-- Hourly Hire -->
         <div class="tab-pane container p-0 {{ $isHourly ? 'active show' : '' }}" id="event{{ $tabSuffix }}">
             <div class="search-form-box">
-                <form class="search-form loader-form" action="{{ url('/booking/hourly-hire') }}" method="POST">
+                <form class="search-form loader-form" action="{{ route('booking.hourlyHire') }}" method="POST">
                     @csrf
                     <!-- Pick-up Location (Hourly) -->
                     <div class="floating-bordered-input position-relative">
