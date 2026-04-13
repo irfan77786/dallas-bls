@@ -13,6 +13,7 @@ use App\Models\RateVehicleCity;
 use App\Models\ReturnService;
 use Exception;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
@@ -141,6 +142,16 @@ class BookingController extends Controller
     // Handle Point to Point form submission
     public function handlePointToPoint(Request $request)
     {
+        Log::info('booking.point_to_point.enter', [
+            'method' => $request->method(),
+            'full_url' => $request->fullUrl(),
+            'route' => $request->route()?->getName(),
+            'secure' => $request->secure(),
+            'session_id' => $request->hasSession() ? $request->session()->getId() : null,
+            'has_csrf_token' => $request->has('_token'),
+            'session_key_count' => $request->hasSession() ? count($request->session()->all()) : 0,
+        ]);
+
         session([
             'booking_completed' => false
         ]);
@@ -156,8 +167,19 @@ class BookingController extends Controller
             ]);
 
             if (empty($sessionData['pickup_location']) || empty($sessionData['dropoff_location'])) {
+                Log::warning('booking.point_to_point.get_redirect_home_missing_session', [
+                    'session_id' => $request->session()->getId(),
+                    'pickup_empty' => empty($sessionData['pickup_location']),
+                    'dropoff_empty' => empty($sessionData['dropoff_location']),
+                    'session_snapshot_keys' => array_keys(session()->all()),
+                ]);
+
                 return redirect()->route('booking'); // or wherever the user should be
             }
+
+            Log::info('booking.point_to_point.get_ok_show_confirmation', [
+                'session_id' => $request->session()->getId(),
+            ]);
 
             $vehicles = Vehicle::with(['carSeat'])->get();
             $stops = json_decode($sessionData['stops'] ?? '[]', true);
@@ -223,10 +245,28 @@ class BookingController extends Controller
             $rules['pickup_datetime'] = 'required';
         }
 
+        Log::info('booking.point_to_point.post_before_validate', [
+            'session_id' => $request->session()->getId(),
+            'has_pickup_location' => $request->filled('pickup_location'),
+            'has_dropoff_location' => $request->filled('dropoff_location'),
+            'has_pickup_date' => $request->filled('pickup_date'),
+            'has_pickup_time' => $request->filled('pickup_time'),
+            'pickup_date_raw' => $request->input('pickup_date'),
+            'pickup_time_raw' => $request->input('pickup_time'),
+            'is_airport_raw' => $request->input('is_airport'),
+            'parsed_pickup_date' => $pickup_date,
+            'parsed_pickup_time' => $pickup_time,
+        ]);
+
         $validator = Validator::make($request->all(), $rules);
 
         if ($validator->fails()) {
-            // dd($validator->errors()); // Dump and die with the validation errors
+            Log::warning('booking.point_to_point.validation_failed', [
+                'session_id' => $request->session()->getId(),
+                'errors' => $validator->errors()->toArray(),
+                'input_keys' => array_keys($request->except(['password', '_token'])),
+            ]);
+
             return redirect()->back()->withErrors($validator)->withInput();
         }
 
@@ -260,6 +300,13 @@ class BookingController extends Controller
             'select_hours' => null,
             'stops' => json_encode($data['stops'] ?? []),
             'service_type' => 'pointToPoint',
+        ]);
+
+        Log::info('booking.point_to_point.post_success', [
+            'session_id' => $request->session()->getId(),
+            'route_distance_km' => $distance,
+            'pickup_date' => $data['pickup_date'],
+            'pickup_time' => $data['pickup_time'],
         ]);
 
         return view('booking.confirmation', [
