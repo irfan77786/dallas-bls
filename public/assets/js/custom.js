@@ -1528,79 +1528,82 @@ function validateForm(formId) {
     }
     return true;
 }
-var searchForm = document.querySelector(".search-form");
-if (searchForm) {
-    searchForm.addEventListener("submit", async function (event) {
-        event.preventDefault(); // Prevent default form submission
+// Point-to-point: wire every form (mobile + desktop). Old code only bound the first
+// `.search-form` and read `#pickup-location` / `#dropoff-location`, so mobile always failed.
+document.querySelectorAll("form.search-form").forEach((form) => {
+    const action = form.getAttribute("action") || "";
+    if (!action.includes("point-to-point")) {
+        return;
+    }
+    form.addEventListener("submit", async function (event) {
+        event.preventDefault();
 
-        // Get latest places from pickup & dropoff autocompletes
+        if (!window.google || !google.maps) {
+            form.submit();
+            return;
+        }
+
         const geocoder = new google.maps.Geocoder();
-        const pickupInput = document.getElementById("pickup-location");
-        const dropoffInput = document.getElementById("dropoff-location");
+        const pickupInput = form.querySelector('[name="pickup_location"]');
+        const dropoffInput = form.querySelector('[name="dropoff_location"]');
+        if (!pickupInput || !dropoffInput) {
+            alert("Missing pickup or destination fields.");
+            return;
+        }
+
         const pickupAddress = pickupInput.value.trim();
         const dropoffAddress = dropoffInput.value.trim();
-        let pickupPlace = autocompletePickup?.getPlace?.();
-        let dropoffPlace = autocompleteDropoff?.getPlace?.();
-
-        // Fallback if autocomplete has no place (e.g., form is prefilled)
-        if (!pickupPlace && pickupAddress) {
-            pickupPlace = await new Promise((resolve) => {
-                geocoder.geocode(
-                    { address: pickupAddress },
-                    (results, status) => {
-                        resolve(status === "OK" ? results[0] : null);
-                    },
-                );
-            });
+        if (!pickupAddress || !dropoffAddress) {
+            alert("Please enter pickup and destination.");
+            return;
         }
 
-        if (!dropoffPlace && dropoffAddress) {
-            dropoffPlace = await new Promise((resolve) => {
-                geocoder.geocode(
-                    { address: dropoffAddress },
-                    (results, status) => {
-                        resolve(status === "OK" ? results[0] : null);
-                    },
-                );
+        const geocodeAddr = (addr) =>
+            new Promise((resolve) => {
+                geocoder.geocode({ address: addr }, (results, status) => {
+                    resolve(
+                        status === "OK" && results[0] && results[0].geometry
+                            ? results[0]
+                            : null,
+                    );
+                });
             });
-        }
+
+        const pickupPlace = await geocodeAddr(pickupAddress);
+        const dropoffPlace = await geocodeAddr(dropoffAddress);
 
         if (!pickupPlace || !dropoffPlace) {
             alert("Please select valid pickup and dropoff locations.");
             return;
         }
 
-        // Collect stop text values (input values, not Autocomplete objects)
-        const stopAddresses = stopAutocompletes
-            .map((auto, index) => {
-                const input = auto.inputElement; // We'll store this manually when creating each Autocomplete
-                const value = input.value.trim();
-                if (!value) {
-                    alert(
-                        `Please enter a valid stop address for Stop #${index + 1}`,
-                    );
-                }
-                return value;
-            })
-            .filter(Boolean); // Remove empty or invalid entries
+        const stopAddresses = [];
+        const autos = stopAutocompletes || [];
+        for (let i = 0; i < autos.length; i++) {
+            const input = autos[i].inputElement;
+            const value = input ? input.value.trim() : "";
+            if (!value) {
+                alert(
+                    `Please enter a valid stop address for Stop #${i + 1}`,
+                );
+                return;
+            }
+            stopAddresses.push(value);
+        }
 
-        const pointToPointForm = document.querySelector("#pointToPoint");
-        // Clear any existing hidden inputs
-        // const existingHiddenStops = form.querySelectorAll('[name^="stop_"]');
-        // existingHiddenStops.forEach(input => input.remove());
+        form.querySelectorAll('input[name="stops[]"]').forEach((el) => el.remove());
 
-        // Append new hidden input fields for each stop
-        stopAddresses.forEach((address, index) => {
+        stopAddresses.forEach((address) => {
             const hiddenInput = document.createElement("input");
             hiddenInput.type = "hidden";
-            hiddenInput.name = "stops[]"; // Set the name dynamically
-            hiddenInput.value = address; // Set the stop address as the value
-            pointToPointForm.appendChild(hiddenInput);
+            hiddenInput.name = "stops[]";
+            hiddenInput.value = address;
+            form.appendChild(hiddenInput);
         });
 
-        event.target.submit();
+        form.submit();
     });
-}
+});
 
 const hourForm = document.querySelector("#hourForm");
 if (hourForm) {

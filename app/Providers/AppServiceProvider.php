@@ -25,9 +25,5 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Paginator::useBootstrap();
-        if(session('booking_completed')){
-            session()->flush();
-            return redirect()->route('booking');
-        }
     }
 }
