@@ -393,7 +393,7 @@ Route::middleware('auth')->group(function () {
 
     Route::delete('/payment-methods/{id}', [PaymentMethodController::class, 'destroy'])
         ->name('cards.delete');
-});
+}); 
 
 // ------------------------------------- BOOKING ROUTES -------------------------------------------------:
 
