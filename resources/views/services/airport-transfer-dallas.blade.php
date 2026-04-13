@@ -17,7 +17,7 @@
 
             <div class="row" style="pointer-events: none;">
                 <div id="home-text-content" class="banner-text-content col-12 col-md-6 d-flex flex-column justify-content-center" style="pointer-events: auto; position: relative; z-index: 0;">
-                    <h1 class="text-white h1 fw-bold mb-15">Professional Airport Transfers Built for On-Time Arrivals</h1>
+                    <h1 class="text-white h1 fw-bold mb-15">Professional Airport Transfers</h1>
                     <p class="mb-0 text-white font-lg fw-medium justify-class">We provide smooth, punctual airport transportation with real-time flight tracking, professional drivers, and service available day and night. Trusted by frequent flyers and business travelers for dependable airport transportation.</p>
                     <p class="text-white font-md d-flex align-items-center">
                         Call Now: <a href="tel:+14699612047" class="mx-2 fw-bold font-lg theme-color text-underline">+1 469-961-2047</a>
@@ -31,6 +31,7 @@
             </div>
         </div>
     </section>
+
 
         <section class="pb-40 luxury-cars-section bg-gray pb-sm-60 py-md-40">
             <div class="container">
@@ -376,6 +377,8 @@
                 </div>
             </div>
         </section>
+        
+        
         <section class="pt-40 pb-20 detail-content-section">
             <div class="container">
                 <div class="row justify-content-center">
@@ -384,13 +387,12 @@
                         <!-- mb-15 mb-sm-20 mb-lg-30 -->
                         <h2 class="mb-10 text-center h2 fw-bold">Why Choose <span class="theme-color br-css-tt"> Dallas Black Limo
                                 Service</span></h2>
-                        <p class="font-md justify-mobile">Executives trust us for trained chauffeurs, on-time airport transfers, and consistently reliable black car service across Dallas.</p>
+                        <p class="font-md justify-mobile">Our <a href="/airports/dfw-car-service/"><b>airport transfers</b></a> are built for real flight conditions, not assumptions. Our Dallas airport car service follows how DFW and Love Field actually operate, with every ride monitored from flight tracking to curbside pickup.</p>
                     </div>
                 </div>
                 <div class="py-20 row">
                     <div class="col-12 col-md-8 pr-xl-50">
-                        <h3 class="h5 fw-semibold">Why Executives Choose Our Airport Transfer Service</h3>
-                        <p class="font-md justify-mobile">Our <a href="/dfw-car-service/"><b>airport transfers</b></a> are built for real flight conditions, not assumptions. Our Dallas airport car service follows how DFW and Love Field actually operate, with every ride monitored from flight tracking to curbside pickup.</p>
+                         
                         <ul class="list-unstyled custom-unorder-list">
                             <li>
                                 <p class="mb-0 justify-mobile">
@@ -447,7 +449,77 @@
             </div>
 
         </section>
-        <section class="bg-gray pt-50 pb-25 pb-md-20">
+   
+        
+
+<section class="detail-content-section bg-gray py-40 py-sm-50 py-md-50 py-lg-40 seciononeheading">
+        <div class="ah-container">
+            
+            <div class="py-20 row align-items-center">
+                <div class="col-12 col-md-6 h-100 only-m">
+                    <div class="service-image">
+                        <img src="/img/premier-black-car-service-for-dfw-and-love-field-airport-transfers-mobile.webp" class="img-fluid" alt="professional airport transfers Dallas luxury black car service">
+                    </div>
+                </div>
+                
+                <div class="col-12 col-md-6 pr-xl-50">
+                    <h3 class="h5 fw-semibold">Professional Airport Transfers in Dallas with Luxury Black Car Service</h3>
+                    <p class="font-base text-justify">Professional airport transfers in Dallas are essential for travelers who value punctuality, comfort, and reliability. Whether you are traveling for business or leisure, our airport transfer service ensures a smooth and stress-free experience across the entire Dallas–Fort Worth metroplex. We provide timely pickups and drop-offs at major airports, including DFW International Airport and Dallas Love Field, with a strong focus on customer satisfaction and convenience.
+
+Our luxury fleet includes premium sedans and executive SUVs designed for comfort, privacy, and efficiency. With real-time flight tracking and experienced chauffeurs, we ensure that delays and early arrivals are managed seamlessly. Serving Dallas, Plano, Frisco, Irving, and nearby cities, our service guarantees dependable transportation every time. For travelers seeking a reliable solution, explore our <a href="/airports/dfw-car-service/"><b>DFW airport car service</b></a> and enjoy a premium airport transfer experience.</p>
+                <a href="/booking/" class="btn btn-primary sm fw-medium fifa-btn-full">Book Professional Airport Transfer</a>
+                </div>
+                <div class="col-12 col-md-6 h-100 only-d">
+                    <div class="service-image">
+                        <img src="/img/premier-black-car-service-for-dfw-and-love-field-airport-transfers.webp" class="img-fluid" alt="Dallas airport transfer luxury chauffeur service">
+                    </div>
+                </div>
+            </div>
+ 
+            <div class="flex-row-reverse py-20 row align-items-center">
+                <div class="col-12 col-md-6 h-100 only-m">
+                    <div class="service-image">
+                        <img src="/img/luxury-executive-corporate-travel-with-professional-chauffeur-service-mobile.webp" class="img-fluid" alt="airport chauffeur service Dallas executive travel">
+                    </div>
+                </div>
+                <div class="mb-20 col-12 col-md-6 pr-xl-50">
+                    <h3 class="h5 fw-semibold">Executive Airport Chauffeur Service for Business and VIP Travelers</h3>
+                    <p class="font-base text-justify">Our executive airport chauffeur service in Dallas is designed for business professionals and VIP travelers who require high-end, dependable transportation. We understand the importance of punctuality and presentation, which is why our chauffeurs are trained to deliver a professional and discreet service tailored to your needs. Whether you are attending corporate meetings, conferences, or hosting important clients, our airport transfer service ensures a smooth and impressive journey.
+
+We offer a fleet of luxury vehicles, including executive sedans and SUVs, equipped to provide maximum comfort and privacy. Our service covers all major business hubs, including Downtown Dallas, Plano, Frisco, and Richardson, ensuring seamless connectivity throughout the region. With flexible scheduling and reliable service, we help you maintain your professional image. Discover our premium <a href="/services/executive-shuttle-services-dallas/"><b>executive shuttle services in Dallas</b></a> for enhanced corporate travel solutions.</p>
+                    <a href="/get-a-quote/" class="btn btn-primary sm fw-medium fifa-btn-full">Request Executive Transfer Quote</a>
+                </div>
+                <div class="col-12 col-md-6 h-100 only-d">
+                    <div class="service-image">
+                        <img src="/img/luxury-executive-corporate-travel-with-professional-chauffeur-service.webp" class="img-fluid" alt="VIP airport transfer Dallas chauffeur service">
+                    </div>
+                </div>
+            </div>
+
+            <div class="py-20 row align-items-center">
+                <div class="col-12 col-md-6 h-100 only-m">
+                    <div class="service-image">
+                        <img src="/img/private-city-to-city-black-car-service-from-dallas-mobile.webp" class="img-fluid" alt="private airport transfer Dallas luxury vehicle service">
+                    </div>
+                </div>
+                
+                <div class="col-12 col-md-6 pr-xl-50">
+                    <h3 class="h5 fw-semibold">Private Airport Transfer Service for Comfortable and Stress-Free Travel</h3>
+                    <p class="font-base text-justify">Our private airport transfer service in Dallas offers a personalized and stress-free travel experience for individuals, families, and corporate clients. Unlike shared transportation or rideshare options, our private service ensures complete privacy, direct routes, and a comfortable journey tailored to your schedule. Whether you are traveling to or from Dallas Love Field, Addison Airport, or DFW Airport, we provide reliable and efficient transportation solutions.
+
+Our chauffeurs prioritize safety, punctuality, and customer satisfaction, ensuring every ride meets the highest standards. With door-to-door service and luxury vehicles, we make airport travel effortless and enjoyable. We serve all major areas, including Dallas, Irving, Plano, and McKinney, making us a trusted choice across the DFW metroplex. For a more personalized experience, check our <a href="/services/private-car-service-in-dallas/"><b>private car service in Dallas</b></a> and enjoy premium airport transportation.</p>
+                    <a href="/booking/" class="btn btn-primary sm fw-medium fifa-btn-full">Book Private Airport Transfer</a>
+                </div>
+                <div class="col-12 col-md-6 h-100 only-d">
+                    <div class="service-image">
+                        <img src="/img/private-city-to-city-black-car-service-from-dallas.webp" class="img-fluid" alt="Dallas private airport transportation luxury black car">
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+     <section class=" pt-50 pb-25 pb-md-20">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-12 col-sm-6 col-md-4 mb-25 mb-md-30">
@@ -479,62 +551,6 @@
                             <h3 class="h6 fw-semibold">Arrive Stress-Free</h3>
                             <p class="font-md">Relax while we handle airport travel.</p>
                         </article>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="py-20 detail-content-section">
-            <div class="container">
-                <div class="py-20 row">
-                    <div class="col-12 col-md-8 pr-xl-50">
-                        <h3 class="h4 fw-semibold">Land at Dallas Fort Worth International Airport</h3>
-                        <p class="font-md">Landing at Dallas Fort Worth International Airport should feel organized, not rushed. Our airport transfer service is built for executives, assistants, and travelers who need reliable airport transportation without uncertainty or last-minute coordination. Every professional chauffeur tracks your flight in real time and arrives early, adjusting automatically for delays, early arrivals, or gate changes. Terminal pickups are handled smoothly, with clear curbside coordination and assistance with luggage. A clean, quiet vehicle is ready when you exit, giving you space to reset after your flight. Routes and traffic patterns are planned in advance to protect your schedule and avoid unnecessary delays. Whether you’re traveling to a business meeting, hotel, residence, or corporate office, each airport transfer is private, punctual, and professionally managed. From touchdown to final drop-off, timing is controlled, details are handled, and your ride remains calm, dependable, and predictable.</p>
-
-                    </div>
-                    <div class="col-12 col-md-4 h-100">
-                        <div class="img-holder ms-md-auto">
-                            <img loading="lazy" decoding="async" src="{{ asset('assets/new_theme/img/dfw-and-love-field-airport-transportation.webp') }}" width="407" height="210" class="img-fluid" alt="Luxury black car at Dallas Love Field Airport">
-                        </div>
-                    </div>
-                </div>
-                <div class="flex-row-reverse py-20 row">
-                    <div class="mb-20 col-12 col-md-8 pr-xl-50">
-                        <h3 class="h4 fw-semibold">From the Airport to Anywhere in Dallas</h3>
-                        <p class="font-md">
-                            After landing at <a href="/services/airport-transfer-dallas/"><b>DFW or Dallas Love Field</b></a>, your airport transfer is managed using real arrival times, terminal location, and live traffic conditions not estimates. <br />
-Our airport car service provides direct transportation to Dallas’s main business districts, hotels, and venues. Many executives travel to Downtown Dallas, with offices near The Ritz-Carlton, Dallas and Omni Dallas Hotel. Event travel is routed to American Airlines Center or AT&T Stadium with traffic-aware planning.<br />
-Corporate pickups often continue to Las Colinas, Plano, and North Dallas. Every ride is flight-monitored, terminal-matched, and dispatch-managed for smooth curbside pickup and on-time arrival.
-                        </p>
-                    </div>
-                    <div class="col-12 col-md-4 h-100">
-                        <div class="img-holder">
-                            <img loading="lazy" decoding="async" src="{{ asset('assets/new_theme/img/executive-black-car-service-for-business-meetings.webp') }}" width="407" height="210" class="img-fluid" alt="Professional chauffeur for black car service Dallas">
-                        </div>
-                    </div>
-                </div>
-                <div class="py-20 row d-none d-md-flex">
-                    <div class="mb-20 col-12 col-md-8 pr-xl-50">
-                        <h3 class="h4 fw-semibold">Book with Dallas Black Limo Service for a premium service </h3>
-                        <p class="font-md">
-                            Our <a href=""><b>airport transfer service</b></a> is built for executives, assistants, and travelers who need airport transportation handled correctly the first time. Dallas Black Limo Service provides professional airport car service with trained chauffeurs who arrive early, track flights in real time, and adjust automatically for delays or gate changes. Terminal pickups are smooth and organized, with polite greeting, luggage assistance, and a clean, quiet vehicle ready curbside. Every airport black car service ride is private, punctual, and planned around traffic and airport rules to protect your schedule. From <a href="/dfw-car-service/"><b>Dallas Fort Worth International Airport</b></a> to downtown Dallas, hotels, or offices, your arrival is managed calmly, professionally, and without reminders.
-                        </p>
-                    </div>
-                    <div class="col-12 col-md-4 h-100">
-                        <div class="img-holder">
-                            <img loading="lazy" decoding="async" src="{{ asset('assets/new_theme/img/luxury-black-car-airport-transfer-will-rogers-world-airport.webp') }}" width="407" height="210" class="img-fluid" alt="Professional chauffeur for black car service Dallas">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="bg-gray py-30 d-md-none">
-                <div class="container">
-                    <div class="row">
-                        <div class="text-center col-12">
-                            <h4 class="mb-20 h4 fw-semibold">
-                                <span class="theme-color">Reserve Your Executive Ride </span> <br>in Dallas Fort Worth
-                            </h4>
-                            <a href="/booking" class="btn btn-primary w-100 fw-medium text-capitalize">Book Corporate Chauffeur Service</a>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -665,233 +681,169 @@ Corporate pickups often continue to Las Colinas, Plano, and North Dallas. Every 
                 </div>
             </div>
         </section>
-        <section class="pt-40 pb-20 intercity-ride-section bg-gray">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <!-- mb-15 mb-sm-25 mb-md-30 mb-lg-40 -->
-                    <div class="mb-20 col-12 col-lg-11 col-xl-10 text-md-center">
-                        <!-- mb-15 mb-sm-20 mb-lg-30 -->
-                        <h2 class="mb-10 text-center h2 fw-bold">Top Cities &amp; <span class="theme-color">Top
-                                Routes</span></h2>
-                        <p class="font-md">Travel across Dallas and nearby cities effortlessly. From busy routes to
-                            airport pickups and event destinations, our professional chauffeurs ensure every ride is
-                            seamless, comfortable, and tailored to your schedule.</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12 col-sm-6 col-lg-4">
-                        <article class="mb-20 top-cities-item mb-sm-25 mb-md-30">
-                            <a href="/dallas-to-austin-car-service/">
-                            <div class="img-holder">
-                                <img loading="lazy" width="416" height="199" decoding="async" src="{{ asset('assets/new_theme/img/austin.webp') }}" alt="Top City" class="img-fluid">
-                            </div>
-                            <div class="city-details p-15 position-absolute">
-                                <h3 class="mb-0 text-white h6">Dallas
-                                    <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium mui-style-nw1xan" focusable="false" aria-hidden="true" width="24" viewBox="0 0 24 24" data-testid="ChevronRightIcon">
-                                        <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="#fff"></path>
-                                    </svg>
-                                    Austin
-                                </h3>
-                                <p class="mb-0 text-white font-sm">195 miles &nbsp;&nbsp;|&nbsp;&nbsp; 2h 54m</p>
-                            </div>
-                            </a>
-                        </article>
-                    </div>
-                    <div class="col-12 col-sm-6 col-lg-4">
-                        <article class="mb-20 top-cities-item mb-sm-25 mb-md-30">
-                            <a href="/dallas-to-houston-car-service/">
-                            <div class="img-holder">
-                                <img loading="lazy" width="416" height="199" decoding="async" src="{{ asset('assets/new_theme/img/houston.webp') }}" alt="Top City" class="img-fluid">
-                            </div>
-                            <div class="city-details p-15 position-absolute">
-                                <h3 class="mb-0 text-white h6">Dallas
-                                    <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium mui-style-nw1xan" focusable="false" aria-hidden="true" width="24" viewBox="0 0 24 24" data-testid="ChevronRightIcon">
-                                        <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="#fff"></path>
-                                    </svg>
-                                    Houston
-                                </h3>
-                                <p class="mb-0 text-white font-sm">239 miles &nbsp;&nbsp;|&nbsp;&nbsp; 3h 29m</p>
-                            </div>
-                            </a>
-                        </article>
-                    </div>
-                    <div class="col-12 col-sm-6 col-lg-4">
-                        <article class="mb-20 top-cities-item mb-sm-25 mb-md-30">
-                            <a href="/dallas-to-college-station-car-service/">
-                            <div class="img-holder">
-                                <img loading="lazy" width="416" height="199" decoding="async" src="{{ asset('assets/new_theme/img/college-station.webp') }}" alt="Top City" class="img-fluid">
-                            </div>
-                            <div class="city-details p-15 position-absolute">
-                                <h3 class="mb-0 text-white h6">Dallas
-                                    <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium mui-style-nw1xan" focusable="false" aria-hidden="true" width="24" viewBox="0 0 24 24" data-testid="ChevronRightIcon">
-                                        <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="#fff"></path>
-                                    </svg>
-                                    College Station
-                                </h3>
-                                <p class="mb-0 text-white font-sm">181 miles &nbsp;&nbsp;|&nbsp;&nbsp; 2h 44m</p>
-                            </div>
-                            </a>
-                        </article>
-                    </div>
-
-
-
-
-                    <div class="col-12 col-sm-6 col-lg-4">
-                        <article class="mb-20 top-cities-item mb-sm-25 mb-md-30">
-                            <a href="/dallas-to-oklahoma-city-ok/">
-                            <div class="img-holder">
-                                <img loading="lazy" width="416" height="199" decoding="async" src="{{ asset('assets/new_theme/img/oklahoma-city.webp') }}" alt="Top City" class="img-fluid">
-                            </div>
-                            <div class="city-details p-15 position-absolute">
-                                <h3 class="mb-0 text-white h6">Dallas
-                                    <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium mui-style-nw1xan" focusable="false" aria-hidden="true" width="24" viewBox="0 0 24 24" data-testid="ChevronRightIcon">
-                                        <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="#fff"></path>
-                                    </svg>
-                                    OKC
-                                </h3>
-                                <p class="mb-0 text-white font-sm">206 miles &nbsp;&nbsp;|&nbsp;&nbsp; 3h 07m</p>
-                            </div>
-                            </a>
-                        </article>
-                    </div>
-
-
-
-
-
-                    <div class="col-12 col-sm-6 col-lg-4">
-                        <article class="mb-20 top-cities-item mb-sm-25 mb-md-30">
-                            <a href="/dallas-to-tyler-car-service/">
-                            <div class="img-holder">
-                                <img loading="lazy" width="416" height="199" decoding="async" src="{{ asset('assets/new_theme/img/tyler.webp') }}" alt="Top City" class="img-fluid">
-                            </div>
-                            <div class="city-details p-15 position-absolute">
-                                <h3 class="mb-0 text-white h6">Dallas
-                                    <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium mui-style-nw1xan" focusable="false" aria-hidden="true" width="24" viewBox="0 0 24 24" data-testid="ChevronRightIcon">
-                                        <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="#fff"></path>
-                                    </svg>
-                                    Tyler
-                                </h3>
-                                <p class="mb-0 text-white font-sm">116 miles &nbsp;&nbsp;|&nbsp;&nbsp; 2h 10min</p>
-                            </div>
-                            </a>
-                        </article>
-                    </div>
-                    <div class="col-12 col-sm-6 col-lg-4">
-                        <article class="mb-20 top-cities-item mb-sm-25 mb-md-30">
-                            <a href="/dfw-to-waco-car-service/">
-                            <div class="img-holder">
-                                <img loading="lazy" width="416" height="199" decoding="async" src="{{ asset('assets/new_theme/img/waco.webp') }}" alt="Top City" class="img-fluid">
-                            </div>
-                            <div class="city-details p-15 position-absolute">
-                                <h3 class="mb-0 text-white h6">DFW
-                                    <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium mui-style-nw1xan" focusable="false" aria-hidden="true" width="24" viewBox="0 0 24 24" data-testid="ChevronRightIcon">
-                                        <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="#fff"></path>
-                                    </svg>
-                                    Waco
-                                </h3>
-                                <p class="mb-0 text-white font-sm">93.8 miles &nbsp;&nbsp;|&nbsp;&nbsp; 1h 23m</p>
-                            </div>
-                            </a>
-                        </article>
-                    </div>
+     
+     
+     <section class="intercity-ride-section bg-gray pt-40 pb-20">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-11 col-xl-10 text-md-center mb-20">
+                    <h2 class="h2 fw-bold mb-10 text-center home-heading-style">Top Cities &amp; <span class="theme-color">Top Routes</span></h2>
+                    <p class="font-md justify-mobile">Travel across Dallas and nearby cities effortlessly. From busy routes to
+                        airport pickups and event destinations, our professional chauffeurs ensure every ride is
+                        seamless, comfortable, and tailored to your schedule.</p>
                 </div>
             </div>
-        </section>
-        <section class="testimonial-section bg-blue py-50 py-sm-60 py-md-70 py-lg-80">
-            <div class="container">
-                <div class="row">
-                    <div class="mb-10 text-center col-12 mb-md-20">
-                        <h2 class="text-white h2 fw-bold">Testimonials</h2>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="testimonial-slider">
-                            <div>
-                                <div class="testimonial-slider-item">
-                                    <blockquote class="mb-30">
-                                        <!-- <span class="quote">“</span> -->
-                                        <p class="text-center font-lg fw-medium">
-                                            My airport pickup was smooth and right on time. The chauffeur was polite and helped with luggage. After a long flight, the ride felt calm and comfortable.
-                                        </p>
-                                    </blockquote>
-                                    <cite class="text-center text-white name fw-semibold font-lg d-block"> — Michael R., Corporate Finance Manager</cite>
-                                    <span class="text-center location fw-semibold font-lg d-block">Dallas, TX</span>
-                                </div>
+            <div class="row">
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <article class="top-cities-item mb-20 mb-sm-25 mb-md-30">
+                        <a href="/dallas-to-austin-car-service">
+                         
+                            <img loading="lazy" width="416" height="199" decoding="async" src="https://www.dallasblacklimoservice.com/assets/new_theme/img/austin.webp" alt="Top City" class="img-fluid">
+                       
+                       <div class="city-details position-absolute">
+                              <div class="row">
+                           <div class="col-md-6 col-sm-6">
+                            <h3 class="mb-1 text-white h6">Dallas
+                                <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium mui-style-nw1xan" focusable="false" aria-hidden="true" width="20" viewBox="0 0 24 24" data-testid="ChevronRightIcon">
+                                    <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="#fff"></path>
+                                </svg>
+                                 Austin
+                            </h3>
                             </div>
-                            <div>
-                                <div class="testimonial-slider-item">
-                                    <blockquote class="mb-30">
-                                        <!-- <span class="quote">“</span> -->
-                                        <p class="text-center font-lg fw-medium">
-                                            I use their airport drop-off service often for work travel. The car arrives early, the ride is quiet, and I never worry about being late for my flight.
-                                        </p>
-                                    </blockquote>
-                                    <cite class="text-center text-white name fw-semibold font-lg d-block"> — Sarah L., Senior Project Consultant</cite>
-                                    <span class="text-center location fw-semibold font-lg d-block">Fort Worth, TX</span>
-                                </div>
-                            </div>
-
-                                   <div>
-                                <div class="testimonial-slider-item">
-                                    <blockquote class="mb-20 mb-md-30">
-                                        <!-- <span class="quote">“</span> -->
-                                        <p class="text-center font-lg fw-medium">
-                                           We booked a car from DAL to Plano for a client visit. The pickup was on time, the driver was professional, and everything went exactly as scheduled.
-                                        </p>
-                                    </blockquote>
-                                    <cite class="text-center text-white name fw-semibold font-lg d-block">- Michael Turner, Corporate Client</cite>
-                                    <span class="text-center location fw-semibold font-lg d-block">Dallas, TX</span>
-                                </div>
-                            </div>
-
-
-                              <div>
-                                <div class="testimonial-slider-item">
-                                    <blockquote class="mb-20 mb-md-30">
-                                        <!-- <span class="quote">“</span> -->
-                                        <p class="text-center font-lg fw-medium">
-                                        We booked a car for a family ride with our 16 month old. The driver was professional, and the ride felt safe and comfortable throughout.
-                                        </p>
-                                    </blockquote>
-                                    <cite class="text-center text-white name fw-semibold font-lg d-block">- Rachel Moore</cite>
-                                    <span class="text-center location fw-semibold font-lg d-block">New York City, NY</span>
-                                </div>
-                            </div>
-
-
-                              <div>
-                                <div class="testimonial-slider-item">
-                                    <blockquote class="mb-20 mb-md-30">
-                                        <!-- <span class="quote">“</span> -->
-                                        <p class="text-center font-lg fw-medium">
-                                          It was my first time in Dallas, and I booked their service for a game at AT&T Stadium. The ride was comfortable, and getting around was completely stress-free.
-                                        </p>
-                                    </blockquote>
-                                    <cite class="text-center text-white name fw-semibold font-lg d-block">- David Ramirez, Amelia C.</cite>
-                                    <span class="text-center location fw-semibold font-lg d-block">Philadelphia, PA</span>
-                                </div>
-                            </div>
-
-                            <div>
-                                <div class="testimonial-slider-item">
-                                    <blockquote class="mb-30">
-                                        <!-- <span class="quote">“</span> -->
-                                        <p class="text-center font-lg fw-medium">
-                                            We booked an airport pickup for an early morning arrival. Everything was well organized and stress-free. Great service for business travelers.
-                                        </p>
-                                    </blockquote>
-                                    <cite class="text-center text-white name fw-semibold font-lg d-block"> — David K., Operations Director</cite>
-                                    <span class="text-center location fw-semibold font-lg d-block">Plano, TX</span>
-                                </div>
+                            <div class="col-md-6 col-sm-6">
+                            <p class="mb-0 text-white font-base">195 miles &nbsp;&nbsp;|&nbsp;&nbsp; 2h 54m</p>
+                             </div>
                             </div>
                         </div>
-                    </div>
+                        </a>
+                    </article>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <article class="top-cities-item mb-20 mb-sm-25 mb-md-30">
+                        <a href="/dallas-to-houston-car-service/">
+                        
+                            <img loading="lazy" width="416" height="199" decoding="async" src="https://www.dallasblacklimoservice.com/assets/new_theme/img/houston.webp" alt="Top City" class="img-fluid">
+                       
+                       <div class="city-details position-absolute">
+                              <div class="row">
+                           <div class="col-md-6 col-sm-6">
+                            <h3 class="mb-1 text-white h6">Dallas
+                                <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium mui-style-nw1xan" focusable="false" aria-hidden="true" width="20" viewBox="0 0 24 24" data-testid="ChevronRightIcon">
+                                    <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="#fff"></path>
+                                </svg>
+                                 Houston
+                            </h3>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                            <p class="mb-0 text-white font-base">239 miles &nbsp;&nbsp;|&nbsp;&nbsp; 3 hr 28 min</p>
+                             </div>
+                            </div>
+                        </div>
+                        </a>
+                    </article>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <article class="top-cities-item mb-20 mb-sm-25 mb-md-30">
+                        <a href="/city-to-city-ride/dallas-to-college-station/">
+                        
+                            <img loading="lazy" width="416" height="199" decoding="async" src="https://www.dallasblacklimoservice.com/assets/new_theme/img/college-station.webp" alt="Top City" class="img-fluid">
+                    
+                  <div class="city-details position-absolute">
+                              <div class="row">
+                           <div class="col-md-6 col-sm-6">
+                            <h3 class="mb-1 text-white h6">Dallas
+                                <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium mui-style-nw1xan" focusable="false" aria-hidden="true" width="20" viewBox="0 0 24 24" data-testid="ChevronRightIcon">
+                                    <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="#fff"></path>
+                                </svg>
+                                 Colleg Station
+                            </h3>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                            <p class="mb-0 text-white font-base">181 miles &nbsp;&nbsp;|&nbsp;&nbsp; 2 hr 49 min</p>
+                             </div>
+                            </div>
+                        </div>
+                        </a>
+                    </article>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <article class="top-cities-item mb-20 mb-sm-25 mb-md-30">
+                        <a href="/dallas-to-oklahoma-city-ok/">
+                        
+                            <img loading="lazy" width="416" height="199" decoding="async" src="https://www.dallasblacklimoservice.com/assets/new_theme/img/oklahoma-city.webp" alt="Top City" class="img-fluid">
+                        
+                      <div class="city-details position-absolute">
+                              <div class="row">
+                           <div class="col-md-6 col-sm-6">
+                            <h3 class="mb-1 text-white h6">Dallas
+                                <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium mui-style-nw1xan" focusable="false" aria-hidden="true" width="20" viewBox="0 0 24 24" data-testid="ChevronRightIcon">
+                                    <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="#fff"></path>
+                                </svg>
+                                 Oklahoma City
+                            </h3>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                            <p class="mb-0 text-white font-base">206 miles &nbsp;&nbsp;|&nbsp;&nbsp; 3 hr 10 min</p>
+                             </div>
+                            </div>
+                        </div>
+                        </a>
+                    </article>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <article class="top-cities-item mb-20 mb-sm-25 mb-md-30">
+                        <a href="/dallas-to-tyler-car-service">
+                       
+                            <img loading="lazy" width="416" height="199" decoding="async" src="https://www.dallasblacklimoservice.com/assets/new_theme/img/tyler.webp" alt="Top City" class="img-fluid">
+                  
+                      <div class="city-details position-absolute">
+                              <div class="row">
+                           <div class="col-md-6 col-sm-6">
+                            <h3 class="mb-1 text-white h6">Dallas
+                                <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium mui-style-nw1xan" focusable="false" aria-hidden="true" width="20" viewBox="0 0 24 24" data-testid="ChevronRightIcon">
+                                    <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="#fff"></path>
+                                </svg>
+                                 Tyler
+                            </h3>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                            <p class="mb-0 text-white font-base">98.9 miles &nbsp;&nbsp;|&nbsp;&nbsp; 1 hr 50 min</p>
+                             </div>
+                            </div>
+                        </div>
+                        </a>
+                    </article>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <article class="top-cities-item mb-20 mb-sm-25 mb-md-30">
+                        <a href="/dfw-to-waco-car-service">
+                         
+                            <img loading="lazy" width="416" height="199" decoding="async" src="https://www.dallasblacklimoservice.com/assets/new_theme/img/waco.webp" alt="Top City" class="img-fluid">
+                
+                       <div class="city-details position-absolute">
+                              <div class="row">
+                           <div class="col-md-6 col-sm-6">
+                            <h3 class="mb-1 text-white h6">Dallas
+                                <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium mui-style-nw1xan" focusable="false" aria-hidden="true" width="20" viewBox="0 0 24 24" data-testid="ChevronRightIcon">
+                                    <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="#fff"></path>
+                                </svg>
+                                 Waco
+                            </h3>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                            <p class="mb-0 text-white font-base">93.8 miles &nbsp;&nbsp;|&nbsp;&nbsp; 1 hr 27 min</p>
+                             </div>
+                            </div>
+                        </div>
+                        </a>
+                    </article>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
+    
+    
+     @include('partials.testimonials')
         <section class="bg-gray py-30 d-md-none">
             <div class="container">
                 <div class="row">

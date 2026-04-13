@@ -26,7 +26,7 @@
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-11 col-xl-10 text-md-center">
                     <h2 class="h2 fw-bold mb-10 text-center">Luxury Black Car & Chauffeur<span class="theme-color br-css-tt"> Service You Can Trust in Dallas</span></h2>
-                    <p class="font-md">Executives trust us for trained chauffeurs, <a href="/services/airport-transfer-dallas/"><b>on-time airport transfers</b></a>, and consistently reliable black car service across Dallas.</p>
+                    <p class="font-md">Executives trust us for trained chauffeurs, <a href="/services/airport-transfers-dallas/"><b>on-time airport transfers</b></a>, and consistently reliable black car service across Dallas.</p>
                 </div>
             </div>
             <div class="row py-20">

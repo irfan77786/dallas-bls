@@ -87,7 +87,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xl-12 col-sm-12 text-center">
-                    <span>&copy;2025 [Your Company Name] - All rights reserved.</span>
+                    <span>&copy;2026 [Your Company Name] - All rights reserved.</span>
                 </div>
             </div>
         </div>

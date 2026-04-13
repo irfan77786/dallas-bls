@@ -15,11 +15,11 @@
 
         <div class="row" style="pointer-events: none;">
             <div id="home-text-content" class="banner-text-content col-12 col-md-6 d-flex flex-column justify-content-center" style="pointer-events: auto; position: relative; z-index: 0;">
-                <h1 class="text-white h1 fw-bold mb-15">Privacy Policy – Black Car Service Dallas</h1>
+                <h1 class="text-white h1 fw-bold mb-15">Privacy Policy</h1>
                 <p class="mb-0 text-white font-lg fw-medium">Request Instant Pricing for Black Car, SUV, or Group Travel in DFW.</p>
-                <span class="my-2 text-white font-base d-block">24/7 Service Available – <strong class="font-lg fw-semibold">Click to Call Now</strong></span>
+              
                 <p class="text-white font-base d-flex align-items-center mb-30 mb-md-0">
-                    Call: <a href="tel:+14699612047" class="mx-2 fw-bold font-lg theme-color">+1 469-961-2047</a>
+                    Call Now: <a href="tel:+14699612047" class="mx-2 fw-bold font-lg theme-color">+1 469-961-2047</a>
                 </p>
             </div>
             <div class="d-none col-12 col-md-6 d-md-block" style="pointer-events: auto; position: relative; z-index: 2;">
@@ -34,7 +34,7 @@
     <div class="ah-container">
         <div class="row">
             <div class="col-12">
-                <p class="font-base">At Dallas Black Cars Service, we care about your privacy and take
+                <p class="font-base">At Dallas Black Limo Service, we care about your privacy and take
                     measures to protect any personal information you provide. This Privacy Policy outlines our
                     practices concerning the collection, use, and protection of your data while you access our
                     websites, mobile applications, and services. By using our services, you agree to the
@@ -45,9 +45,9 @@
                     from unauthorized access, sharing, alteration, or loss. We safeguard your personal and
                     financial information and continuously improve our security strategies.</p>
                 <h3 class="h5 fw-medium">2. Provision Of Services</h3>
-                <p>Dallas Black Cars Service provides Black Car and transportation services. Our services
+                <p>Dallas Black Limo Service provides Black Car and transportation services. Our services
                     are accessible through our websites, mobile apps, and other digital platforms. By accessing
-                    these platforms, you consent to Dallas Black Cars Service collecting, using, and
+                    these platforms, you consent to Dallas Black Limo Service collecting, using, and
                     storing your data as described in this Privacy Policy.</p>
                 <h3 class="h5 fw-medium">3. Cookies, Pixels, and Similar Technologies</h3>
                 <p>We use cookies, beacons, and similar technologies on our websites and mobile apps to enhance

@@ -1,49 +1,1092 @@
 @extends('master')
+
 @section('content')
-@include('partials.search_form')
-<section class="fleet-section py-50 py-sm-60 py-md-70 py-lg-80">
-    <div class="ah-container">
-        <div class="row justify-content-center">
-            <div class="text-center col-12 col-xl-10">
-                <h2 class="h2 fw-bold mb-15 mb-sm-20 mb-lg-30">Dallas to College Station Car Service – Ride in Comfort and Style
-                    with <span class="theme-color fw-bold">Dallas Limo and Black Cars Service</span></h2>
-            </div>
-            <div class="col-12 mb-15">
-                <p class="font-base">Enjoy a smooth, private ride from Dallas to College Station with our luxury black car service. Perfect for campus visits, Aggie game days, or business travel. Our sedans, SUVs & executive vehicles provide comfort & reliability with professional chauffeurs & timely service.</p>
+    <section class="d-md-none">
+        <div class="ah-container">
+            <div class="search-form-mobile">
+                @include('partials.search', ['id_suffix' => '_mobile'])
             </div>
         </div>
-        <div class="row">
-            <div class="col-12">
-                <ul class="list-unstyled">
-                    <li>
-                        <strong class="mb-2 font-lg gray-700 fw-bold d-block">Luxury Sedans:</strong>
-                        <p class="font-base">Cadillac CT6, Volvo S90, and Mercedes-Benz S-Class for discreet, chauffeur-driven rides to Texas A&M and College Station.</p>
-                    </li>
-                    <li>
-                        <strong class="mb-2 font-lg gray-700 fw-bold d-block">Black SUVs:</strong>
-                        <p class="font-base">Our Cadillac Escalade, Chevy Suburban, and GMC Yukon XL provide comfortable seating for students, families, or professionals.</p>
-                    </li>
-                    <li>
-                        <strong class="mb-2 font-lg gray-700 fw-bold d-block">Executive Sprinter Vans:</strong>
-                        <p class="font-base">Mercedes-Benz Sprinters are perfect for alumni events, college visits, or group transfers between Dallas and College Station.</p>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <div class="img-holder">
-                    <img src="{{ asset('new_assets/assets/fleet-img.webp') }}" alt="Dallas to College Station Car Service" class="img-fluid">
+    </section>
+
+    <section class="home-banner-section">
+        <div class="hero-banner-container py-60 ah-container position-relative py-sm-70 py-md-80 py-lg-100"
+             style="z-index: 2; background-image: url('{{ asset('assets/new_theme/img/banner-1.webp') }}'); background-size: cover; background-position: center;">
+            <div id="map" class="position-absolute w-100 h-100" style="top:0; left:0; z-index: 1; display:none;"></div>
+
+            <div class="row" style="pointer-events: none;">
+                <div id="home-text-content" class="banner-text-content col-12 col-md-6 d-flex flex-column justify-content-center" style="pointer-events: auto; position: relative; z-index: 0;">
+                    <h1 class="text-white h1 fw-bold mb-15">Dallas to College Station Black Car Service</h1>
+                    <p class="mb-0 text-white font-lg fw-medium justify-class">Our Dallas to College Station black car service provides private long-distance transportation for business travelers, families, university visitors, and airport passengers who need a smooth ride without the stress of driving.</p>
+                    <p class="text-white font-md d-flex align-items-center">
+                        Call Now: <a href="tel:+14699612047" class="mx-2 fw-bold font-lg theme-color text-underline">+1 469-961-2047</a>
+                    </p>
+                </div>
+                <div class="d-none col-12 col-md-6 d-md-block" style="pointer-events: auto; position: relative; z-index: 2;">
+                    <div class="search-form-wrapper-desktop">
+                        @include('partials.search', ['id_suffix' => ''])
+                    </div>
                 </div>
             </div>
-            <div class="text-center col-12 pt-15">
-                <a href="/booking" class="btn btn-primary">Book Now</a>
+        </div>
+    </section>
+
+
+        <section class="pb-40 luxury-cars-section bg-gray pb-sm-60 py-md-40">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-11 col-xl-10 text-md-center mb-15 mb-sm-25 mb-md-30 mb-lg-40">
+                        <h2 class="mb-10 text-center h2 fw-bold">Long-Distance Transportation Built <span class="theme-color br-css-tt">Around Executive Expectations</span></h2>
+                        <p class="mb-0 font-md justify-mobile">Our fleet is built for travelers who expect comfort, privacy, and dependable timing on Dallas to College Station trips. Executive sedans provide a quiet ride for solo travelers and business passengers, while premium SUVs offer extra room for luggage, family travel, and university drop-offs. Sprinter vans and larger buses support group transportation for events, campus visits, and coordinated travel. Every vehicle is chauffeur-driven, professionally maintained, and selected for a smooth highway experience—making our <a href="https://www.dallasblacklimoservice.com/services/private-car-service-in-dallas/"><b>private car service in Dallas</b></a> a dependable solution for regional transportation.</p>
+                    </div>
+                </div>
+                <div class="row luxury-cars-item-holder justify-content-center d-none d-md-flex">
+                    <div class="col-12 col-lg-3 px-30 px-sm-15">
+                        <article class="mx-auto text-center luxury-cars-item">
+                            <div class="img-holder mb-15">
+                                <img loading="lazy" decoding="async" src="https://www.dallasblacklimoservice.com/assets/new_theme/img/Sedan.webp" alt="Black car service Dallas luxury sedan"
+                                    class="img-fluid" width="750" height="410">
+                            </div>
+                            <h3 class="mb-3 fw-semibold h6">Premier Sadan</h3>
+                            <p class="mb-2 font-base">Mercedes S550, BMW 750 or similar</p>
+                            <ul class="pl-0 mb-0 list-unstyled d-flex justify-content-center">
+                                <li class="gap-2 d-flex align-items-center">
+                                    <svg width="20" height="20" focusable="false" aria-hidden="true" viewBox="0 0 24 24"
+                                        data-testid="PeopleIcon">
+                                        <path
+                                            d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3m-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3m0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5m8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5">
+                                        </path>
+                                    </svg>
+                                    max 3
+                                </li>
+                                <li class="px-2"></li>
+                                <li class="gap-2 d-flex align-items-center">
+                                    <svg width="20" height="20" focusable="false" aria-hidden="true" viewBox="0 0 24 24"
+                                        data-testid="LuggageIcon">
+                                        <path
+                                            d="M17 6h-2V3c0-.55-.45-1-1-1h-4c-.55 0-1 .45-1 1v3H7c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2 0 .55.45 1 1 1s1-.45 1-1h6c0 .55.45 1 1 1s1-.45 1-1c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2M9.5 18H8V9h1.5zm3.25 0h-1.5V9h1.5zm.75-12h-3V3.5h3zM16 18h-1.5V9H16z">
+                                        </path>
+                                    </svg>
+                                    max 3
+                                </li>
+                            </ul>
+                        </article>
+                    </div>
+                    <div class="col-12 col-lg-3 px-30 px-sm-15">
+                        <article class="mx-auto text-center luxury-cars-item">
+                            <div class="img-holder mb-15">
+                                <img loading="lazy" decoding="async" src="{{ asset('assets/new_theme/img/suv.webp') }}" alt="Luxury SUV black car service Dallas"
+                                    class="img-fluid" width="750" height="410">
+                            </div>
+                            <h3 class="mb-3 fw-semibold h6">Premier SUV</h3>
+                            <p class="mb-2 font-base">Chevrolet Suburban or similar</p>
+                            <ul class="pl-0 mb-0 list-unstyled d-flex justify-content-center">
+                                <li class="gap-2 d-flex align-items-center">
+                                    <svg width="20" height="20" focusable="false" aria-hidden="true" viewBox="0 0 24 24"
+                                        data-testid="PeopleIcon">
+                                        <path
+                                            d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3m-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3m0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5m8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5">
+                                        </path>
+                                    </svg>
+                                    max 6
+                                </li>
+                                <li class="px-2"></li>
+                                <li class="gap-2 d-flex align-items-center">
+                                    <svg width="20" height="20" focusable="false" aria-hidden="true" viewBox="0 0 24 24"
+                                        data-testid="LuggageIcon">
+                                        <path
+                                            d="M17 6h-2V3c0-.55-.45-1-1-1h-4c-.55 0-1 .45-1 1v3H7c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2 0 .55.45 1 1 1s1-.45 1-1h6c0 .55.45 1 1 1s1-.45 1-1c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2M9.5 18H8V9h1.5zm3.25 0h-1.5V9h1.5zm.75-12h-3V3.5h3zM16 18h-1.5V9H16z">
+                                        </path>
+                                    </svg>
+                                    max 6
+                                </li>
+                            </ul>
+                        </article>
+                    </div>
+                    <div class="col-12 col-lg-3 px-30 px-sm-15">
+                        <article class="mx-auto text-center luxury-cars-item">
+                            <div class="img-holder mb-15">
+                                <img loading="lazy" decoding="async" src="{{ asset('assets/new_theme/img/luxury-suv.webp') }}" alt="Premium SUV black car service Dallas"
+                                    class="img-fluid" width="750" height="410">
+                            </div>
+                            <h3 class="mb-3 fw-semibold h6">Luxury SUV</h3>
+                            <p class="mb-2 font-base">Cadillac Escalade ESV, Lincoln Navigator or similar</p>
+                            <ul class="pl-0 mb-0 list-unstyled d-flex justify-content-center">
+                                <li class="gap-2 d-flex align-items-center">
+                                    <svg width="20" height="20" focusable="false" aria-hidden="true" viewBox="0 0 24 24"
+                                        data-testid="PeopleIcon">
+                                        <path
+                                            d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3m-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3m0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5m8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5">
+                                        </path>
+                                    </svg>
+                                    max 6
+                                </li>
+                                <li class="px-2"></li>
+                                <li class="gap-2 d-flex align-items-center">
+                                    <svg width="20" height="20" focusable="false" aria-hidden="true" viewBox="0 0 24 24"
+                                        data-testid="LuggageIcon">
+                                        <path
+                                            d="M17 6h-2V3c0-.55-.45-1-1-1h-4c-.55 0-1 .45-1 1v3H7c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2 0 .55.45 1 1 1s1-.45 1-1h6c0 .55.45 1 1 1s1-.45 1-1c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2M9.5 18H8V9h1.5zm3.25 0h-1.5V9h1.5zm.75-12h-3V3.5h3zM16 18h-1.5V9H16z">
+                                        </path>
+                                    </svg>
+                                    max 6
+                                </li>
+                            </ul>
+                        </article>
+                    </div>
+                    <div class="col-12 col-lg-3 px-30 px-sm-15">
+                        <article class="mx-auto text-center luxury-cars-item">
+                            <div class="img-holder mb-15">
+                                <img loading="lazy" decoding="async" src="{{ asset('assets/new_theme/img/sprinter.webp') }}" alt="Black SUV chauffeur service in Dallas"
+                                    class="img-fluid" width="750" height="410">
+                            </div>
+                            <h3 class="mb-3 fw-semibold h6">Busniess Sprinter</h3>
+                            <p class="mb-2 font-base">Mercedes benz Sprinter Van or similar</p>
+                            <ul class="pl-0 mb-0 list-unstyled d-flex justify-content-center">
+                                <li class="gap-2 d-flex align-items-center">
+                                    <svg width="20" height="20" focusable="false" aria-hidden="true" viewBox="0 0 24 24"
+                                        data-testid="PeopleIcon">
+                                        <path
+                                            d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3m-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3m0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5m8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5">
+                                        </path>
+                                    </svg>
+                                    max 12
+                                </li>
+                                <li class="px-2"></li>
+                                <li class="gap-2 d-flex align-items-center">
+                                    <svg width="20" height="20" focusable="false" aria-hidden="true" viewBox="0 0 24 24"
+                                        data-testid="LuggageIcon">
+                                        <path
+                                            d="M17 6h-2V3c0-.55-.45-1-1-1h-4c-.55 0-1 .45-1 1v3H7c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2 0 .55.45 1 1 1s1-.45 1-1h6c0 .55.45 1 1 1s1-.45 1-1c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2M9.5 18H8V9h1.5zm3.25 0h-1.5V9h1.5zm.75-12h-3V3.5h3zM16 18h-1.5V9H16z">
+                                        </path>
+                                    </svg>
+                                    max 30
+                                </li>
+                            </ul>
+                        </article>
+                    </div>
+                    <div class="col-12 col-lg-3 px-30 px-sm-15">
+                        <article class="mx-auto text-center luxury-cars-item">
+                            <div class="img-holder mb-15">
+                                <img loading="lazy" decoding="async" src="{{ asset('assets/new_theme/img/mini-bus.webp') }}" alt="Spacious black SUV for Dallas black car service"
+                                    class="img-fluid" width="750" height="410">
+                            </div>
+                            <h3 class="mb-3 fw-semibold h6">Mini Bus</h3>
+                            <p class="mb-2 font-base">24-Seater Mini Bus</p>
+                            <ul class="pl-0 mb-0 list-unstyled d-flex justify-content-center">
+                                <li class="gap-2 d-flex align-items-center">
+                                    <svg width="20" height="20" focusable="false" aria-hidden="true" viewBox="0 0 24 24"
+                                        data-testid="PeopleIcon">
+                                        <path
+                                            d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3m-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3m0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5m8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5">
+                                        </path>
+                                    </svg>
+                                    max 24
+                                </li>
+                                <li class="px-2"></li>
+                                <li class="gap-2 d-flex align-items-center">
+                                    <svg width="20" height="20" focusable="false" aria-hidden="true" viewBox="0 0 24 24"
+                                        data-testid="LuggageIcon">
+                                        <path
+                                            d="M17 6h-2V3c0-.55-.45-1-1-1h-4c-.55 0-1 .45-1 1v3H7c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2 0 .55.45 1 1 1s1-.45 1-1h6c0 .55.45 1 1 1s1-.45 1-1c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2M9.5 18H8V9h1.5zm3.25 0h-1.5V9h1.5zm.75-12h-3V3.5h3zM16 18h-1.5V9H16z">
+                                        </path>
+                                    </svg>
+                                    max 20
+                                </li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+                <div class="row d-md-none">
+                    <div class="col-12">
+
+
+                        <div class="luxury-cars-slider-holder">
+                            <div>
+                                <article class="mx-auto text-center luxury-cars-slider-item">
+                                    <div class="img-holder mb-15">
+                                        <img loading="lazy" decoding="async" src="{{ asset('assets/new_theme/img/sedan.webp') }}" alt="Black car service Dallas luxury sedan"
+                                            class="img-fluid" width="750" height="410">
+                                    </div>
+                                    <h3 class="mb-2 fw-semibold h5">Premier Sadan</h3>
+                                    <p class="mb-2 font-base">Mercedes S550, BMW 750 or similar</p>
+                                    <ul class="pl-0 mb-0 list-unstyled d-flex justify-content-center">
+                                        <li class="gap-2 d-flex align-items-center">
+                                            <svg width="20" height="20" focusable="false" aria-hidden="true"
+                                                viewBox="0 0 24 24" data-testid="PeopleIcon">
+                                                <path
+                                                    d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3m-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3m0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5m8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5">
+                                                </path>
+                                            </svg>
+                                            max 3
+                                        </li>
+                                        <li class="px-2"></li>
+                                        <li class="gap-2 d-flex align-items-center">
+                                            <svg width="20" height="20" focusable="false" aria-hidden="true"
+                                                viewBox="0 0 24 24" data-testid="LuggageIcon">
+                                                <path
+                                                    d="M17 6h-2V3c0-.55-.45-1-1-1h-4c-.55 0-1 .45-1 1v3H7c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2 0 .55.45 1 1 1s1-.45 1-1h6c0 .55.45 1 1 1s1-.45 1-1c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2M9.5 18H8V9h1.5zm3.25 0h-1.5V9h1.5zm.75-12h-3V3.5h3zM16 18h-1.5V9H16z">
+                                                </path>
+                                            </svg>
+                                            max 3
+                                        </li>
+                                    </ul>
+                                </article>
+                            </div>
+                            <div>
+                                <article class="mx-auto text-center luxury-cars-slider-item">
+                                    <div class="img-holder mb-15">
+                                        <img loading="lazy" decoding="async" src="{{ asset('assets/new_theme/img/suv.webp') }}" alt="Luxury SUV black car service Dallas"
+                                            class="img-fluid" width="750" height="410">
+                                    </div>
+                                    <h3 class="mb-2 fw-semibold h5">Premier SUV</h3>
+                                    <p class="mb-2 font-base">Chevrolet Suburban or similar</p>
+                                    <ul class="pl-0 mb-0 list-unstyled d-flex justify-content-center">
+                                        <li class="gap-2 d-flex align-items-center">
+                                            <svg width="20" height="20" focusable="false" aria-hidden="true"
+                                                viewBox="0 0 24 24" data-testid="PeopleIcon">
+                                                <path
+                                                    d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3m-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3m0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5m8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5">
+                                                </path>
+                                            </svg>
+                                            max 6
+                                        </li>
+                                        <li class="px-2"></li>
+                                        <li class="gap-2 d-flex align-items-center">
+                                            <svg width="20" height="20" focusable="false" aria-hidden="true"
+                                                viewBox="0 0 24 24" data-testid="LuggageIcon">
+                                                <path
+                                                    d="M17 6h-2V3c0-.55-.45-1-1-1h-4c-.55 0-1 .45-1 1v3H7c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2 0 .55.45 1 1 1s1-.45 1-1h6c0 .55.45 1 1 1s1-.45 1-1c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2M9.5 18H8V9h1.5zm3.25 0h-1.5V9h1.5zm.75-12h-3V3.5h3zM16 18h-1.5V9H16z">
+                                                </path>
+                                            </svg>
+                                            max 6
+                                        </li>
+                                    </ul>
+                                </article>
+                            </div>
+                            <div>
+                                <article class="mx-auto text-center luxury-cars-slider-item">
+                                    <div class="img-holder mb-15">
+                                        <img loading="lazy" decoding="async" src="{{ asset('assets/new_theme/img/luxury-suv.webp') }}"
+                                            alt="Premium SUV black car service Dallas" class="img-fluid" width="750" height="410">
+                                    </div>
+                                    <h3 class="mb-2 fw-semibold h5">Luxury SUV</h3>
+                                    <p class="mb-2 font-base">Cadillac Escalade ESV, Lincoln Navigator or similar</p>
+                                    <ul class="pl-0 mb-0 list-unstyled d-flex justify-content-center">
+                                        <li class="gap-2 d-flex align-items-center">
+                                            <svg width="20" height="20" focusable="false" aria-hidden="true"
+                                                viewBox="0 0 24 24" data-testid="PeopleIcon">
+                                                <path
+                                                    d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3m-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3m0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5m8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5">
+                                                </path>
+                                            </svg>
+                                            max 6
+                                        </li>
+                                        <li class="px-2"></li>
+                                        <li class="gap-2 d-flex align-items-center">
+                                            <svg width="20" height="20" focusable="false" aria-hidden="true"
+                                                viewBox="0 0 24 24" data-testid="LuggageIcon">
+                                                <path
+                                                    d="M17 6h-2V3c0-.55-.45-1-1-1h-4c-.55 0-1 .45-1 1v3H7c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2 0 .55.45 1 1 1s1-.45 1-1h6c0 .55.45 1 1 1s1-.45 1-1c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2M9.5 18H8V9h1.5zm3.25 0h-1.5V9h1.5zm.75-12h-3V3.5h3zM16 18h-1.5V9H16z">
+                                                </path>
+                                            </svg>
+                                            max 6
+                                        </li>
+                                    </ul>
+                                </article>
+                            </div>
+
+                            <div>
+                                <article class="mx-auto text-center luxury-cars-slider-item">
+                                    <div class="img-holder mb-15">
+                                        <img loading="lazy" decoding="async" src="{{ asset('assets/new_theme/img/sprinter.webp') }}"
+                                            alt="Black SUV chauffeur service in Dallas" class="img-fluid" width="750" height="410">
+                                    </div>
+                                    <h3 class="mb-2 fw-semibold h5">Busniess Sprinter</h3>
+                                    <p class="mb-2 font-base">Mercedes benz Sprinter Van or similar</p>
+                                    <ul class="pl-0 mb-0 list-unstyled d-flex justify-content-center">
+                                        <li class="gap-2 d-flex align-items-center">
+                                            <svg width="20" height="20" focusable="false" aria-hidden="true"
+                                                viewBox="0 0 24 24" data-testid="PeopleIcon">
+                                                <path
+                                                    d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3m-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3m0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5m8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5">
+                                                </path>
+                                            </svg>
+                                            max 12
+                                        </li>
+                                        <li class="px-2"></li>
+                                        <li class="gap-2 d-flex align-items-center">
+                                            <svg width="20" height="20" focusable="false" aria-hidden="true"
+                                                viewBox="0 0 24 24" data-testid="LuggageIcon">
+                                                <path
+                                                    d="M17 6h-2V3c0-.55-.45-1-1-1h-4c-.55 0-1 .45-1 1v3H7c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2 0 .55.45 1 1 1s1-.45 1-1h6c0 .55.45 1 1 1s1-.45 1-1c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2M9.5 18H8V9h1.5zm3.25 0h-1.5V9h1.5zm.75-12h-3V3.5h3zM16 18h-1.5V9H16z">
+                                                </path>
+                                            </svg>
+                                            max 20
+                                        </li>
+                                    </ul>
+                                </article>
+                            </div>
+
+
+
+
+                                  <div>
+                                <article class="mx-auto text-center luxury-cars-slider-item">
+                                    <div class="img-holder mb-15">
+                                        <img loading="lazy" decoding="async" src="{{ asset('assets/new_theme/img/mini-bus.webp') }}"
+                                            alt="Black SUV chauffeur service in Dallas" class="img-fluid" width="750" height="410">
+                                    </div>
+                                     <h3 class="mb-3 fw-semibold h6">Mini Bus</h3>
+                            <p class="mb-2 font-base">24-Seater Mini Bus</p>
+                                    <ul class="pl-0 mb-0 list-unstyled d-flex justify-content-center">
+                                        <li class="gap-2 d-flex align-items-center">
+                                            <svg width="20" height="20" focusable="false" aria-hidden="true"
+                                                viewBox="0 0 24 24" data-testid="PeopleIcon">
+                                                <path
+                                                    d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3m-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3m0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5m8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5">
+                                                </path>
+                                            </svg>
+                                            max 24
+                                        </li>
+                                        <li class="px-2"></li>
+                                        <li class="gap-2 d-flex align-items-center">
+                                            <svg width="20" height="20" focusable="false" aria-hidden="true"
+                                                viewBox="0 0 24 24" data-testid="LuggageIcon">
+                                                <path
+                                                    d="M17 6h-2V3c0-.55-.45-1-1-1h-4c-.55 0-1 .45-1 1v3H7c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2 0 .55.45 1 1 1s1-.45 1-1h6c0 .55.45 1 1 1s1-.45 1-1c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2M9.5 18H8V9h1.5zm3.25 0h-1.5V9h1.5zm.75-12h-3V3.5h3zM16 18h-1.5V9H16z">
+                                                </path>
+                                            </svg>
+                                            max 20
+                                        </li>
+                                    </ul>
+                                </article>
+                            </div>
+
+
+
+
+
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        <section class="pt-40 pb-20 detail-content-section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-11 col-xl-10 text-md-center">
+                        <h2 class="mb-10 text-center h2 fw-bold">Why Choose <span class="theme-color br-css-tt"> Dallas Black Limo
+                                Service</span></h2>
+                        <p class="font-md justify-mobile">Our Dallas to College Station black car service is designed for travelers who need dependable long-distance transportation with professional support from pickup to arrival. Whether your ride begins in Dallas, Plano, Frisco, Allen, or after a flight into <a href="https://www.dallasblacklimoservice.com/airports/dfw-car-service/"><b>DFW car service</b></a>, every reservation is scheduled for comfort, timing, and direct travel without unnecessary stops.</p>
+                    </div>
+                </div>
+                <div class="py-20 row">
+                    <div class="col-12 col-md-8 pr-xl-50">
+                         
+                        <ul class="list-unstyled custom-unorder-list">
+                            <li>
+                                <p class="mb-0 justify-mobile">
+                                    <strong class="br-css-tts">Direct Private Transportation:</strong> Your chauffeur handles a dedicated Dallas to College Station trip with no rideshare delays, no shared passengers, and no last-minute route changes.
+                                </p>
+                            </li>
+                            <li>
+                                <p class="mb-0 justify-mobile">
+                                    <strong class="br-css-tts">Reliable Pickup Scheduling:</strong> Pickup times are planned around your meeting, campus visit, hotel check-in, or airport arrival so your trip stays organized from start to finish.
+                                </p>
+                            </li>
+                            <li>
+                                <p class="mb-0 justify-mobile">
+                                    <strong class="br-css-tts">Comfortable Long-Distance Vehicles:</strong> Executive sedans, SUVs, and larger vehicles are selected for highway comfort, luggage space, and a quiet ride across North and Central Texas.
+                                </p>
+                            </li>
+                            <li>
+                                <p class="mb-0 justify-mobile">
+                                    <strong class="br-css-tts">Professional Chauffeurs:</strong> Experienced chauffeurs provide a polished travel experience with courteous service, route awareness, and dependable time management.
+                                </p>
+                            </li>
+                            <li>
+                                <p class="mb-0 justify-mobile">
+                                    <strong class="br-css-tts">Ideal for Business and University Travel:</strong> Our service is a strong fit for Texas A&amp;M visitors, corporate passengers, parents, faculty travel, and executive transportation.
+                                </p>
+                            </li>
+                            <li>
+                                <p class="mb-0 justify-mobile">
+                                    <strong class="br-css-tts">Clean, Managed, and Stress-Free Service:</strong> Every trip is professionally coordinated to reduce travel stress and give you a better alternative to driving yourself long distance.
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-4 h-100">
+                        <div class="img-holder ms-md-auto">
+                            <img loading="lazy" decoding="async" src="{{ asset('assets/new_theme/img/why-choose-dallas-black-limo-service.webp') }}" width="406" height="233" class="img-fluid" alt="Uniformed chauffeur for executive travel Dallas">
+                        </div>
+                    </div>
+                </div>
+             </div>
+            <div class="bg-gray py-30 d-md-none">
+                <div class="container">
+                    <div class="row">
+                        <div class="text-center col-12">
+                            <div class="fifa-image-holder">
+                                <img loading="lazy" decoding="async" src="{{ asset('assets/new_theme/img/fifa-image.png') }}" class="img-fluid" alt="FIFA Image" width="380" height="100%">
+                            </div>
+                            <a href="" class="btn btn-primary w-100 fw-medium text-capitalize">Visit our FIFA World
+                                Cup 2026
+                                page</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+   
+        
+
+<section class="detail-content-section bg-gray py-40 py-sm-50 py-md-50 py-lg-40 seciononeheading">
+        <div class="ah-container">
+            
+            <div class="py-20 row align-items-center">
+                <div class="col-12 col-md-6 h-100 only-m">
+                    <div class="service-image">
+                        <img src="/img/premier-black-car-service-for-dfw-and-love-field-airport-transfers-mobile.webp" class="img-fluid" alt="professional airport transfers Dallas luxury black car service">
+                    </div>
+                </div>
+                
+                <div class="col-12 col-md-6 pr-xl-50">
+                    <h3 class="h5 fw-semibold">Private Dallas to College Station Car Service for Business, University, and Family Travel</h3>
+                    <p class="font-base text-justify">Our Dallas to College Station black car service is built for travelers who want a direct, professional, and comfortable alternative to self-driving. This route is frequently booked by business travelers, Texas A&amp;M visitors, parents, students, faculty members, and families who need dependable long-distance transportation with a higher standard of service. Instead of dealing with traffic fatigue, rental cars, or inconsistent rideshare availability, you get a scheduled chauffeur, a clean luxury vehicle, and a smooth point-to-point trip planned around your timing. We serve Dallas, Plano, Frisco, Allen, Irving, and nearby areas, making it easy to arrange pickup anywhere across the metroplex. If your trip begins after a flight, we also support connections from our <a href="https://www.dallasblacklimoservice.com/services/airport-transfers-dallas/"><b>airport car service</b></a> options for a seamless transfer from airport to highway. This service is ideal for travelers who value privacy, punctuality, and a better travel experience from departure to arrival in College Station.</p>
+                <a href="/booking/" class="btn btn-primary sm fw-medium fifa-btn-full">Book Dallas to College Station Car Service</a>
+                </div>
+                <div class="col-12 col-md-6 h-100 only-d">
+                    <div class="service-image">
+                        <img src="/img/premier-black-car-service-for-dfw-and-love-field-airport-transfers.webp" class="img-fluid" alt="Dallas airport transfer luxury chauffeur service">
+                    </div>
+                </div>
+            </div>
+ 
+            <div class="flex-row-reverse py-20 row align-items-center">
+                <div class="col-12 col-md-6 h-100 only-m">
+                    <div class="service-image">
+                        <img src="/img/luxury-executive-corporate-travel-with-professional-chauffeur-service-mobile.webp" class="img-fluid" alt="airport chauffeur service Dallas executive travel">
+                    </div>
+                </div>
+                <div class="mb-20 col-12 col-md-6 pr-xl-50">
+                    <h3 class="h5 fw-semibold">Executive Chauffeur Service from Dallas to College Station with Premium Vehicles and Professional Support</h3>
+                    <p class="font-base text-justify">For executives, professionals, and managed travelers, our Dallas to College Station chauffeur service provides a more polished way to handle regional transportation. This route often involves time-sensitive meetings, campus events, corporate visits, and guest transportation where timing and presentation matter. Our chauffeurs are trained to deliver discreet, professional service, and our fleet includes executive sedans and luxury SUVs suited for private business travel. Instead of navigating the drive yourself, you can stay focused, make calls, review schedules, or simply relax during the ride. We also support travelers arriving through Dallas airports who need direct transportation onward to College Station without switching vehicles. For clients who want elevated service standards throughout the metroplex, our <a href="https://www.dallasblacklimoservice.com/services/chauffeur-service-dallas/"><b>chauffeur service Dallas</b></a> solutions connect city transportation with dependable long-distance travel. From downtown offices to suburban pickups in Plano, Frisco, and Allen, every reservation is handled with attention to comfort, punctuality, and professional consistency.</p>
+                    <a href="/get-a-quote/" class="btn btn-primary sm fw-medium fifa-btn-full">Request Long-Distance Chauffeur Quote</a>
+                </div>
+                <div class="col-12 col-md-6 h-100 only-d">
+                    <div class="service-image">
+                        <img src="/img/luxury-executive-corporate-travel-with-professional-chauffeur-service.webp" class="img-fluid" alt="VIP airport transfer Dallas chauffeur service">
+                    </div>
+                </div>
+            </div>
+
+            <div class="py-20 row align-items-center">
+                <div class="col-12 col-md-6 h-100 only-m">
+                    <div class="service-image">
+                        <img src="/img/private-city-to-city-black-car-service-from-dallas-mobile.webp" class="img-fluid" alt="private airport transfer Dallas luxury vehicle service">
+                    </div>
+                </div>
+                
+                <div class="col-12 col-md-6 pr-xl-50">
+                    <h3 class="h5 fw-semibold">Reliable City-to-City Black Car Service from Dallas to College Station with Direct Scheduling</h3>
+                    <p class="font-base text-justify">Our Dallas to College Station route is part of our premium <a href="https://www.dallasblacklimoservice.com/city-to-city-rides/"><b>city to city rides</b></a> service, created for travelers who need direct transportation between major Texas destinations. This is not a generic local ride stretched into a highway trip. It is a professionally managed city-to-city reservation with a dedicated vehicle, an experienced chauffeur, and scheduling built around long-distance comfort. Whether you are traveling one-way or arranging round-trip service, we make the process simple and dependable. The route is especially useful for Texas A&amp;M campus visits, university events, medical travel, family transportation, and private regional trips that need more comfort than standard car service. We keep the trip private, efficient, and predictable, while allowing travelers to avoid parking, fuel stops, and the fatigue of driving long distance. If you are comparing city-to-city transportation options from Dallas, our service stands out for its direct routing, luxury fleet quality, and professionally coordinated travel support from pickup through arrival.</p>
+                    <a href="/booking/" class="btn btn-primary sm fw-medium fifa-btn-full">Reserve Your City-to-City Ride</a>
+                </div>
+                <div class="col-12 col-md-6 h-100 only-d">
+                    <div class="service-image">
+                        <img src="/img/private-city-to-city-black-car-service-from-dallas.webp" class="img-fluid" alt="Dallas private airport transportation luxury black car">
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+     <section class=" pt-50 pb-25 pb-md-20">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-sm-6 col-md-4 mb-25 mb-md-30">
+                        <article class="text-center">
+                            <span class="mb-10 icon-holder d-block">
+<img  loading="lazy"
+                                decoding="async" src="{{ asset('assets/new_theme/img/icon-03.svg') }}" alt="Booking" class="img-fluid">
+                            </span>
+                            <h3 class="h6 fw-semibold">Schedule Your Ride</h3>
+                            <p class="font-md">Book your Dallas to College Station trip online or by phone in minutes.</p>
+                        </article>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 mb-25 mb-md-30">
+                        <article class="text-center">
+                            <span class="mb-10 icon-holder d-block">
+<img  loading="lazy"
+                                decoding="async" src="{{ asset('assets/new_theme/img/icon-02.svg') }}" alt="Confirmation" class="img-fluid">
+                            </span>
+                            <h3 class="h6 fw-semibold">Direct Route Planning</h3>
+                            <p class="font-md">Your chauffeur service is scheduled for efficient, private highway travel.</p>
+                        </article>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 mb-25 mb-md-30">
+                        <article class="text-center">
+                            <span class="mb-10 icon-holder d-block">
+<img  loading="lazy"
+                                decoding="async" src="{{ asset('assets/new_theme/img/icon-01.svg') }}" alt="Driver" class="img-fluid">
+                            </span>
+                            <h3 class="h6 fw-semibold">Arrive Comfortably</h3>
+                            <p class="font-md">Relax while we handle the road, timing, and long-distance travel details.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-gray pt-50 pb-25 pt-sm-60 pb-sm-35 pt-md-70 pb-md-45 pt-lg-80 pb-lg-50">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="text-center col-12 col-lg-11 col-xl-10 mb-25 mb-md-30 mb-lg-40">
+                        <h2 class="h2 fw-bold mb-15 mb-sm-20 mb-lg-25">Where This <span class="theme-color">Route Works Best</span></h2>
+                        <p class="font-md">Our Dallas to College Station transportation service supports regional pickups, airport connections, university travel, and executive scheduling across North Texas.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                        <article class="text-center we-serve-item mb-30 mb-md-35">
+                            <a href="" class="mx-auto img-holder mb-15 d-block">
+<img  loading="lazy"
+                                decoding="async" src="{{ asset('assets/new_theme/img/image-05.jpg') }}" alt="Premium black car service for airport, hotel, and event travel" class="img-fluid">
+                            </a>
+                            <h3 class="mb-10 h6 fw-semibold"><a href="">Dallas Area Pickups</a></h3>
+                            <p class="font-base">We provide Dallas to College Station pickups in Dallas, Plano, Frisco, Allen, McKinney, Irving, Addison, Richardson, Grapevine, and surrounding DFW communities.</p>
+                        </article>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                        <article class="text-center we-serve-item mb-30 mb-md-35">
+                            <a href="" class="mx-auto img-holder mb-15 d-block">
+<img  loading="lazy"
+                                decoding="async" src="{{ asset('assets/new_theme/img/image-06.jpg') }}" alt="Chauffeur service providing safe and comfortable city transportation" class="img-fluid">
+                            </a>
+                            <h3 class="mb-10 h6 fw-semibold"><a href="">Airport Connections</a></h3>
+                            <p class="font-base">Travelers arriving through DFW International Airport or <a href="https://www.dallasblacklimoservice.com/airports/dallas-love-field-airport-car-service/"><b>Love Field airport car service</b></a> can continue directly to College Station in one private reservation.</p>
+                        </article>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                        <article class="text-center we-serve-item mb-30 mb-md-35">
+                            <a href="" class="mx-auto img-holder mb-15 d-block">
+<img  loading="lazy"
+                                decoding="async" src="{{ asset('assets/new_theme/img/image-07.jpg') }}" alt="Executive black car service for meetings, conferences, and events" class="img-fluid">
+                            </a>
+                            <h3 class="mb-10 h6 fw-semibold"><a href="">Business & University Travel</a></h3>
+                            <p class="font-base">This route is ideal for Texas A&amp;M visits, executive travel, corporate meetings, university events, family transportation, and private regional travel planning.</p>
+                        </article>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                        <article class="text-center we-serve-item mb-30 mb-md-35">
+                            <a href="" class="mx-auto img-holder mb-15 d-block">
+<img  loading="lazy"
+                                decoding="async" src="{{ asset('assets/new_theme/img/image-08.jpg') }}" alt="Airport pickup service with professional chauffeur and luxury vehicle" class="img-fluid">
+                            </a>
+                            <h3 class="mb-10 h6 fw-semibold"><a href="">One-Way & Round-Trip Rides</a></h3>
+                            <p class="font-base">We can coordinate one-way transportation or round-trip scheduling for meetings, campus tours, parent weekends, hotel transfers, and time-sensitive return travel.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="pt-50 pt-sm-60 pt-md-70 pt-lg-80 pb-30 pb-sm-40 pb-md-50 pb-lg-60">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="text-center col-12 col-lg-11 col-xl-10 mb-15 mb-md-20 mb-lg-30">
+                        <h2 class="h2 fw-bold mb-15 mb-sm-20 mb-lg-30">Chosen By Travelers Who Need <span class="theme-color">Reliable Long-Distance Service</span></h2>
+                        <p class="font-md">Clients choose our Dallas to College Station black car service for comfort, privacy, dependable scheduling, and a better alternative to self-driving.</p>
+                    </div>
+                    <div class="col-12">
+                        <div class="companies-logo-marquee">
+                            <div class="companies-logo-track">
+                                @foreach ([1, 2, 3, 4, 5, 6, 7, 8] as $i)
+                                <div class="py-10 px-15">
+                                    <span class="img-holder">
+                                        <img loading="lazy" width="90" height="60" decoding="async"
+                                            src="{{ asset('assets/new_theme/img/logo-0' . $i . '.webp') }}" alt="Logo" class="img-fluid">
+                                    </span>
+                                </div>
+                                @endforeach
+                                @foreach ([1, 2, 3, 4, 5, 6, 7, 8] as $i)
+                                <div class="py-10 px-15">
+                                    <span class="img-holder">
+                                        <img loading="lazy" width="90" height="60" decoding="async"
+                                            src="{{ asset('assets/new_theme/img/logo-0' . $i . '.webp') }}" alt="" class="img-fluid">
+                                    </span>
+                                </div>
+                                @endforeach
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="pt-40 pb-15 bg-blue ridelux-difference">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="mb-20 text-center col-12 col-lg-11 col-xl-10">
+                        <h2 class="mb-10 text-white h2 fw-bold">A Smarter Way to Travel from Dallas to College Station</h2>
+                        <p class="font-md">Our long-distance black car service is ideal for travelers who want privacy, consistent timing, transparent scheduling, and a professionally chauffeured ride. Whether you are heading to Texas A&amp;M, a business destination, a hotel, or a private address, every trip is managed for comfort and dependable arrival.</p>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-12 col-sm-6 col-md-4 mb-25 mb-md-30">
+                        <article class="text-center">
+                            <span class="mb-10 icon-holder d-block">
+                                <img loading="lazy" decoding="async" src="{{ asset('assets/new_theme/img/money.svg') }}" alt="Booking" class="img-fluid" width="40" height="40">
+                            </span>
+                            <h3 class="text-white h6 fw-semibold">Fast Reservation Process</h3>
+                            <p class="font-md">Book your Dallas to College Station transportation online or by phone with quick confirmation.</p>
+                        </article>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 mb-25 mb-md-30">
+                        <article class="text-center">
+                            <span class="mb-10 icon-holder d-block">
+                                <img loading="lazy" decoding="async" src="{{ asset('assets/new_theme/img/car-steering.svg') }}" alt="Confirmation" class="img-fluid" width="40" height="40">
+                            </span>
+                            <h3 class="text-white h6 fw-semibold">Managed City-to-City Travel</h3>
+                            <p class="font-md">Your route is professionally planned for direct, comfortable, and stress-free regional transportation.</p>
+                        </article>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 mb-25 mb-md-30">
+                        <article class="text-center">
+                            <span class="mb-10 icon-holder d-block">
+                                <img loading="lazy" decoding="async" src="{{ asset('assets/new_theme/img/dimond.svg') }}" alt="Driver" class="img-fluid" width="40" height="40">
+                            </span>
+                            <h3 class="text-white h6 fw-semibold">Professional Chauffeur Experience</h3>
+                            <p class="font-md">Enjoy a clean luxury vehicle, dependable chauffeur, and smooth service from pickup through arrival.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+     
+     
+     <section class="intercity-ride-section bg-gray pt-40 pb-20">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-11 col-xl-10 text-md-center mb-20">
+                    <h2 class="h2 fw-bold mb-10 text-center home-heading-style">Top Cities &amp; <span class="theme-color">Top Routes</span></h2>
+                    <p class="font-md justify-mobile">Travel across Dallas and nearby cities effortlessly. From busy routes to
+                        airport pickups and event destinations, our professional chauffeurs ensure every ride is
+                        seamless, comfortable, and tailored to your schedule.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <article class="top-cities-item mb-20 mb-sm-25 mb-md-30">
+                        <a href="/dallas-to-austin-car-service">
+                         
+                            <img loading="lazy" width="416" height="199" decoding="async" src="https://www.dallasblacklimoservice.com/assets/new_theme/img/austin.webp" alt="Top City" class="img-fluid">
+                       
+                       <div class="city-details position-absolute">
+                              <div class="row">
+                           <div class="col-md-6 col-sm-6">
+                            <h3 class="mb-1 text-white h6">Dallas
+                                <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium mui-style-nw1xan" focusable="false" aria-hidden="true" width="20" viewBox="0 0 24 24" data-testid="ChevronRightIcon">
+                                    <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="#fff"></path>
+                                </svg>
+                                 Austin
+                            </h3>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                            <p class="mb-0 text-white font-base">195 miles &nbsp;&nbsp;|&nbsp;&nbsp; 2h 54m</p>
+                             </div>
+                            </div>
+                        </div>
+                        </a>
+                    </article>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <article class="top-cities-item mb-20 mb-sm-25 mb-md-30">
+                        <a href="/dallas-to-houston-car-service/">
+                        
+                            <img loading="lazy" width="416" height="199" decoding="async" src="https://www.dallasblacklimoservice.com/assets/new_theme/img/houston.webp" alt="Top City" class="img-fluid">
+                       
+                       <div class="city-details position-absolute">
+                              <div class="row">
+                           <div class="col-md-6 col-sm-6">
+                            <h3 class="mb-1 text-white h6">Dallas
+                                <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium mui-style-nw1xan" focusable="false" aria-hidden="true" width="20" viewBox="0 0 24 24" data-testid="ChevronRightIcon">
+                                    <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="#fff"></path>
+                                </svg>
+                                 Houston
+                            </h3>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                            <p class="mb-0 text-white font-base">239 miles &nbsp;&nbsp;|&nbsp;&nbsp; 3 hr 28 min</p>
+                             </div>
+                            </div>
+                        </div>
+                        </a>
+                    </article>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <article class="top-cities-item mb-20 mb-sm-25 mb-md-30">
+                        <a href="/city-to-city-ride/dallas-to-college-station/">
+                        
+                            <img loading="lazy" width="416" height="199" decoding="async" src="https://www.dallasblacklimoservice.com/assets/new_theme/img/college-station.webp" alt="Top City" class="img-fluid">
+                    
+                  <div class="city-details position-absolute">
+                              <div class="row">
+                           <div class="col-md-6 col-sm-6">
+                            <h3 class="mb-1 text-white h6">Dallas
+                                <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium mui-style-nw1xan" focusable="false" aria-hidden="true" width="20" viewBox="0 0 24 24" data-testid="ChevronRightIcon">
+                                    <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="#fff"></path>
+                                </svg>
+                                 Colleg Station
+                            </h3>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                            <p class="mb-0 text-white font-base">181 miles &nbsp;&nbsp;|&nbsp;&nbsp; 2 hr 49 min</p>
+                             </div>
+                            </div>
+                        </div>
+                        </a>
+                    </article>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <article class="top-cities-item mb-20 mb-sm-25 mb-md-30">
+                        <a href="/dallas-to-oklahoma-city-ok/">
+                        
+                            <img loading="lazy" width="416" height="199" decoding="async" src="https://www.dallasblacklimoservice.com/assets/new_theme/img/oklahoma-city.webp" alt="Top City" class="img-fluid">
+                        
+                      <div class="city-details position-absolute">
+                              <div class="row">
+                           <div class="col-md-6 col-sm-6">
+                            <h3 class="mb-1 text-white h6">Dallas
+                                <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium mui-style-nw1xan" focusable="false" aria-hidden="true" width="20" viewBox="0 0 24 24" data-testid="ChevronRightIcon">
+                                    <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="#fff"></path>
+                                </svg>
+                                 Oklahoma City
+                            </h3>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                            <p class="mb-0 text-white font-base">206 miles &nbsp;&nbsp;|&nbsp;&nbsp; 3 hr 10 min</p>
+                             </div>
+                            </div>
+                        </div>
+                        </a>
+                    </article>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <article class="top-cities-item mb-20 mb-sm-25 mb-md-30">
+                        <a href="/dallas-to-tyler-car-service">
+                       
+                            <img loading="lazy" width="416" height="199" decoding="async" src="https://www.dallasblacklimoservice.com/assets/new_theme/img/tyler.webp" alt="Top City" class="img-fluid">
+                  
+                      <div class="city-details position-absolute">
+                              <div class="row">
+                           <div class="col-md-6 col-sm-6">
+                            <h3 class="mb-1 text-white h6">Dallas
+                                <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium mui-style-nw1xan" focusable="false" aria-hidden="true" width="20" viewBox="0 0 24 24" data-testid="ChevronRightIcon">
+                                    <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="#fff"></path>
+                                </svg>
+                                 Tyler
+                            </h3>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                            <p class="mb-0 text-white font-base">98.9 miles &nbsp;&nbsp;|&nbsp;&nbsp; 1 hr 50 min</p>
+                             </div>
+                            </div>
+                        </div>
+                        </a>
+                    </article>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <article class="top-cities-item mb-20 mb-sm-25 mb-md-30">
+                        <a href="/dfw-to-waco-car-service">
+                         
+                            <img loading="lazy" width="416" height="199" decoding="async" src="https://www.dallasblacklimoservice.com/assets/new_theme/img/waco.webp" alt="Top City" class="img-fluid">
+                
+                       <div class="city-details position-absolute">
+                              <div class="row">
+                           <div class="col-md-6 col-sm-6">
+                            <h3 class="mb-1 text-white h6">Dallas
+                                <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium mui-style-nw1xan" focusable="false" aria-hidden="true" width="20" viewBox="0 0 24 24" data-testid="ChevronRightIcon">
+                                    <path d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="#fff"></path>
+                                </svg>
+                                 Waco
+                            </h3>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                            <p class="mb-0 text-white font-base">93.8 miles &nbsp;&nbsp;|&nbsp;&nbsp; 1 hr 27 min</p>
+                             </div>
+                            </div>
+                        </div>
+                        </a>
+                    </article>
+                </div>
             </div>
         </div>
-    </div>
-</section>
-@include('partials.top-cities')
-@include('partials.companies_strip')
-@include('partials.testimonials')
-@include('partials.faq')
+    </section>
+    
+    
+     @include('partials.testimonials')
+        <section class="bg-gray py-30 d-md-none">
+            <div class="container">
+                <div class="row">
+                    <div class="text-center col-12">
+                        <div class="fifa-image-holder">
+                            <img  loading="lazy"
+decoding="async" src="{{ asset('assets/new_theme/img/fifa-image.png') }}" class="img-fluid" alt="FIFA Image">
+                        </div>
+                        <a href="" class="btn btn-primary w-100 fw-medium text-capitalize">Visit our FIFA World Cup 2026
+                            page</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+          <section class="py-40 faqs-section">
+            <div class="container">
+                <div class="row">
+                     <div class="mb-20 text-center col-12">
+                        <h2 class="h2 fw-bold">Frequently Asked <span class="theme-color br-css-tt">Questions</span></h2>
+                    </div>
+                </div>
+                <div class="row" id="faqAccordion">
+                    <div class="col-12 col-md-6 accordion-holder accordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button
+                                    class="px-0 mb-0 h6 accordion-button py-15 py-sm-20 py-lg-25 fw-semibold collapsed"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                    aria-expanded="false" aria-controls="collapseOne">
+                                    How long is the drive from Dallas to College Station?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                data-bs-parent="#faqAccordion">
+                                <div class="pt-0 pr-0 pl-0 accordion-body">
+                                    <p class="font-base">The Dallas to College Station route is approximately 181 miles and usually takes around 2 hours and 49 minutes, depending on traffic, pickup location, and travel conditions. Our chauffeurs plan the route in advance for efficient point-to-point transportation.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button
+                                    class="px-0 mb-0 h6 accordion-button py-15 py-sm-20 py-lg-25 fw-semibold collapsed"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                    aria-expanded="false" aria-controls="collapseTwo">
+                                    Do you provide service to Texas A&amp;M University?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#faqAccordion">
+                                <div class="pt-0 pr-0 pl-0 accordion-body">
+                                    <p class="font-base">Yes. We provide Dallas to College Station black car service for Texas A&amp;M University visitors, students, parents, faculty, business guests, and event attendees. We can arrange direct transportation to campus, hotels, private residences, and surrounding destinations.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button
+                                    class="px-0 mb-0 h6 accordion-button py-15 py-sm-20 py-lg-25 fw-semibold collapsed"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                    aria-expanded="false" aria-controls="collapseThree">
+                                    Can I book a one-way or round-trip ride?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#faqAccordion">
+                                <div class="pt-0 pr-0 pl-0 accordion-body">
+                                    <p class="font-base">Yes. We offer both one-way and round-trip Dallas to College Station transportation. Round-trip service is popular for campus visits, business meetings, family travel, and scheduled returns to Dallas, Plano, Frisco, Allen, or airport locations.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button
+                                    class="px-0 mb-0 h6 accordion-button py-15 py-sm-20 py-lg-25 fw-semibold collapsed"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour"
+                                    aria-expanded="false" aria-controls="collapseFour">
+                                    What vehicles are available for this route?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                data-bs-parent="#faqAccordion">
+                                <div class="pt-0 pr-0 pl-0 accordion-body">
+                                    <p class="font-base">We offer executive sedans, premium SUVs, luxury SUVs, sprinter vans, and larger group vehicles for Dallas to College Station rides. Vehicle selection depends on your passenger count, luggage needs, and preferred level of comfort.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="col-12 col-md-6 accordion-holder accordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button
+                                    class="px-0 mb-0 h6 accordion-button py-15 py-sm-20 py-lg-25 fw-semibold collapsed"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive"
+                                    aria-expanded="false" aria-controls="collapseFive">
+                                    Do you provide airport-to-College Station transfers?
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                                data-bs-parent="#faqAccordion">
+                                <div class="pt-0 pr-0 pl-0 accordion-body">
+                                    <p class="font-base">Yes. We provide direct transfers from Dallas airports to College Station, including pickups from DFW International Airport and Dallas Love Field. This is a convenient option for visitors flying into Dallas and continuing to College Station in a private vehicle.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingSix">
+                                <button
+                                    class="px-0 mb-0 h6 accordion-button py-15 py-sm-20 py-lg-25 fw-semibold collapsed"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix"
+                                    aria-expanded="false" aria-controls="collapseSix">
+                                    Is this service good for business travelers?
+                                </button>
+                            </h2>
+                            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                                data-bs-parent="#faqAccordion">
+                                <div class="pt-0 pr-0 pl-0 accordion-body">
+                                    <p class="font-base">Yes. Our Dallas to College Station chauffeur service is well suited for executives, professionals, and managed travel. It provides private transportation, professional chauffeurs, luxury vehicles, and a more dependable long-distance option than rental cars or rideshare services.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingSeven">
+                                <button
+                                    class="px-0 mb-0 h6 accordion-button py-15 py-sm-20 py-lg-25 fw-semibold collapsed"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven"
+                                    aria-expanded="false" aria-controls="collapseSeven">
+                                    Do you serve pickups outside central Dallas?
+                                </button>
+                            </h2>
+                            <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
+                                data-bs-parent="#faqAccordion">
+                                <div class="pt-0 pr-0 pl-0 accordion-body">
+                                    <p class="font-base">Yes. We serve a wide range of pickup points across the Dallas–Fort Worth metroplex, including Plano, Frisco, Allen, McKinney, Irving, Addison, Richardson, Grapevine, and surrounding communities for College Station transportation.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingEight">
+                                <button
+                                    class="px-0 mb-0 h6 accordion-button py-15 py-sm-20 py-lg-25 fw-semibold collapsed"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight"
+                                    aria-expanded="false" aria-controls="collapseEight">
+                                    How do I reserve Dallas to College Station black car service?
+                                </button>
+                            </h2>
+                            <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
+                                data-bs-parent="#faqAccordion">
+                                <div class="pt-0 pr-0 pl-0 accordion-body">
+                                    <p class="font-base">You can reserve your Dallas to College Station ride online or by phone. Once we receive your trip details, we schedule the vehicle, confirm pickup information, and coordinate the ride based on your preferred timing and service requirements.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+           <div class="bg-gray py-30 d-md-none">
+            <div class="container">
+                <div class="row">
+                    <div class="text-center col-12">
+                        <h3 class="mb-20 h4 fw-semibold">
+                           Travel Direct to College Station <br><span class="theme-color">Book Your Chauffeur Now</span>
+                        </h3>
+                        <a href="/booking/" class="btn btn-primary w-100 fw-medium text-capitalize">Book Your Chauffeur Today</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="bg-gray py-30">
+            <div class="container">
+                <div class="flex-row-reverse row">
+                    <div class="col-12 col-md-5 mb-15 mb-md-0">
+                        <ul
+                            class="gap-4 mb-0 list-unstyled footer-social-list d-flex justify-content-center justify-content-md-end">
+
+                                <li>
+                                <a href="">
+                                    <svg class="footer_socialMediaIcon__XNZUm" focusable="false"
+                                        xmlns="http://www.w3.org/2000/svg" fill="none" role="img"
+                                        aria-label="Facebook logo" width="40" height="40" viewBox="0 0 24 24">
+                                        <title>Facebook logo</title>
+                                        <path d="M17 2v4h-2c-.7 0-1 .8-1 1.5V10h3v4h-3v8h-4v-8H7v-4h3V6a4 4 0 014-4h3z"
+                                            fill="#97999E"></path>
+                                    </svg>
+                                </a>
+                            </li>
+
+
+                            <li>
+                                <a href="">
+                                    <svg class="footer_socialMediaIcon__XNZUm" focusable="false"
+                                        xmlns="http://www.w3.org/2000/svg" fill="none" role="img"
+                                        aria-label="Instagram logo" width="40" height="40" viewBox="0 0 24 24">
+                                        <title>Instagram logo</title>
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4c0 3.2-2.6 5.8-5.8 5.8H7.8A5.8 5.8 0 012 16.2V7.8C2 4.6 4.6 2 7.8 2zm-.2 2A3.6 3.6 0 004 7.6v8.8A3.6 3.6 0 007.6 20h8.8a3.6 3.6 0 003.6-3.6V7.6A3.6 3.6 0 0016.4 4H7.6zm10.9 2.75a1.25 1.25 0 10-2.5 0 1.25 1.25 0 002.5 0zM12 7a5 5 0 110 10 5 5 0 010-10zm-3 5a3 3 0 116 0 3 3 0 01-6 0z"
+                                            fill="#97999E"></path>
+                                    </svg>
+                                </a>
+                            </li>
+
+
+                         <li>
+                                <a href="">
+                                    <svg class="footer_socialMediaIcon__XNZUm" focusable="false"
+                                        xmlns="http://www.w3.org/2000/svg" fill="none" role="img"
+                                        aria-label="YouTube logo" width="40" height="40" viewBox="0 0 24 24">
+                                        <title>YouTube logo</title>
+                                        <path
+                                            d="M21.58 7.2a2.5 2.5 0 00-1.76-1.77C18.26 5 12 5 12 5s-6.26 0-7.83.41c-.84.23-1.53.92-1.76 1.78C2 8.76 2 12 2 12s0 3.26.41 4.8c.23.87.9 1.54 1.76 1.77C5.76 19 12 19 12 19s6.26 0 7.82-.41a2.5 2.5 0 001.76-1.76c.42-1.57.42-4.81.42-4.81s.01-3.26-.42-4.83zM10 15V9l5.2 3-5.2 3z"
+                                            fill="#97999E"></path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M18.21 2H21L14.01 10.2L22 22H15.99L11.13 15.37L5.5 22H2.74L10.14 13.26L2 2H8.13L12.48 8.09L18.21 2ZM16.34 20.33H18L7.73 3.49H5.94L16.34 20.33Z"
+                                            fill="#97999E" />
+                                    </svg>
+                                </a>
+                            </li>
+
+                           <li>
+    <a href="">
+        <svg class="footer_socialMediaIcon__XNZUm" focusable="false"
+            xmlns="http://www.w3.org/2000/svg" fill="none" role="img"
+            aria-label="TikTok logo" width="40" height="40" viewBox="0 0 24 24">
+            <title>TikTok logo</title>
+            <path
+                d="M12.75 2h2.02c.15 1.2.84 2.32 1.94 3.04a5.2 5.2 0 002.8.82v2.02a7.1 7.1 0 01-4.74-1.78v7.26a5.37 5.37 0 11-5.37-5.37c.35 0 .7.04 1.03.12v2.2a3.36 3.36 0 00-1.03-.17 3.35 3.35 0 103.35 3.35V2z"
+                fill="#97999E"></path>
+        </svg>
+    </a>
+</li>
+
+                        </ul>
+                    </div>
+                    <div
+                        class="gap-2 col-12 col-md-7 d-flex justify-content-center justify-content-md-start align-items-start">
+                        <svg class="mt-1" fill="#000000" width="20px" height="20px" viewBox="-4 0 32 32"
+                            xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid">
+                            <path
+                                d="M12.649,31.760 C12.463,31.919 12.231,31.999 12.000,31.999 C11.769,31.999 11.537,31.919 11.351,31.760 C10.887,31.365 0.000,21.976 0.000,11.964 C0.000,5.363 5.383,-0.006 12.000,-0.006 C18.617,-0.006 24.000,5.363 24.000,11.964 C24.000,21.976 13.113,31.365 12.649,31.760 ZM12.000,1.989 C6.486,1.989 2.000,6.464 2.000,11.964 C2.000,19.724 9.687,27.493 12.000,29.654 C14.312,27.493 22.000,19.724 22.000,11.964 C22.000,6.464 17.514,1.989 12.000,1.989 ZM12.000,17.991 C8.691,17.991 6.000,15.306 6.000,12.006 C6.000,8.705 8.691,6.021 12.000,6.021 C15.309,6.021 18.000,8.705 18.000,12.006 C18.000,15.306 15.309,17.991 12.000,17.991 ZM12.000,8.016 C9.794,8.016 8.000,9.805 8.000,12.006 C8.000,14.206 9.794,15.996 12.000,15.996 C14.206,15.996 16.000,14.206 16.000,12.006 C16.000,9.805 14.206,8.016 12.000,8.016 Z"
+                                fill="#97999E" />
+                        </svg>
+                        <address class="mb-0 font-md single-line-ellipses">Dallas, Texas, United States, 75001
+                        </address>
+                    </div>
+                </div>
+            </div>
+        </section>
 @endsection

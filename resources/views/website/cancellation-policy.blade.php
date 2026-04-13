@@ -15,11 +15,11 @@
 
         <div class="row" style="pointer-events: none;">
             <div id="home-text-content" class="banner-text-content col-12 col-md-6 d-flex flex-column justify-content-center" style="pointer-events: auto; position: relative; z-index: 0;">
-                <h1 class="text-white h1 fw-bold mb-15">Cancellation Policy – Black Car Service Dallas</h1>
+                <h1 class="text-white h1 fw-bold mb-15">Cancellation Policy</h1>
                 <p class="mb-0 text-white font-lg fw-medium">Request Instant Pricing for Black Car, SUV, or Group Travel in DFW.</p>
-                <span class="my-2 text-white font-base d-block">24/7 Service Available – <strong class="font-lg fw-semibold">Click to Call Now</strong></span>
+               
                 <p class="text-white font-base d-flex align-items-center mb-30 mb-md-0">
-                    Call: <a href="tel:+14699612047" class="mx-2 fw-bold font-lg theme-color">+1 469-961-2047</a>
+                    Call Now: <a href="tel:+14699612047" class="mx-2 fw-bold font-lg theme-color">+1 469-961-2047</a>
                 </p>
             </div>
             <div class="d-none col-12 col-md-6 d-md-block" style="pointer-events: auto; position: relative; z-index: 2;">
@@ -34,9 +34,9 @@
     <div class="ah-container">
         <div class="row">
             <div class="col-12">
-                <p class="font-base">Dallas Black Cars Service strives to provide excellent service while
+                <p class="font-base">Dallas Black Limo Service strives to provide excellent service while
                     maintaining a clear, fair, and simple cancellation, deposit, and service policy. By booking
-                    with Dallas Black Cars Service, you agree to the following terms.</p>
+                    with Dallas Black Limo Service, you agree to the following terms.</p>
                 <ol class="list-unstyled custom-order-list">
                     <li class="h5">
                         <div>

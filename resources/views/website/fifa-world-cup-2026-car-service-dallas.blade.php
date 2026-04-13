@@ -9,6 +9,8 @@
         </div>
     </section>
 
+ 
+
     <section class="home-banner-section">
         <div class="hero-banner-container py-60 ah-container position-relative py-sm-70 py-md-80 py-lg-100"
              style="z-index: 2; background-image: url('{{ asset('assets/new_theme/img/banner-1.webp') }}'); background-size: cover; background-position: center;">
@@ -37,7 +39,7 @@
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-11 col-xl-10 text-md-center mb-15 mb-sm-25 mb-md-30 mb-lg-40">
                     <h2 class="h2 fw-bold mb-10 text-center">FIFA World Cup 2026 <span class="theme-color br-css-tt">Chauffeured Fleet in Dallas</span></h2>
-                    <p class="font-md mb-0 mobile-justify">Our professionally chauffeured fleet in Dallas is designed for <a href="/booking/"><b>FIFA World Cup 2026 transportation</b></a>, supporting <a href="/services/airport-transfer-dallas/"><b>airport transfers</b></a>, hotel pickups, stadium travel, and group movement across the Dallas–Fort Worth area. We offer luxury sedans, premium and luxury SUVs, Sprinter vans, and minibuses for individual travelers, VIP guests, teams, and large groups. All vehicles are commercially insured, maintained to executive standards, and scheduled in advance to ensure reliable, comfortable, and on-time service during World Cup events in Dallas.</p>
+                    <p class="font-md mb-0 mobile-justify">Our professionally chauffeured fleet in Dallas is designed for <a href="/booking/"><b>FIFA World Cup 2026 transportation</b></a>, supporting <a href="/services/airport-transfers-dallas/"><b>airport transfers</b></a>, hotel pickups, stadium travel, and group movement across the Dallas–Fort Worth area. We offer luxury sedans, premium and luxury SUVs, Sprinter vans, and minibuses for individual travelers, VIP guests, teams, and large groups. All vehicles are commercially insured, maintained to executive standards, and scheduled in advance to ensure reliable, comfortable, and on-time service during World Cup events in Dallas.</p>
                 </div>
             </div>
             <div class="row luxury-cars-item-holder justify-content-center d-none d-md-flex">
@@ -366,12 +368,11 @@
         <div class="container">
             <div class="row py-20">
                 <div class="col-12 col-md-4 h-100 only-m">
-                    <div class="img-holder ms-md-auto">
-                        <img loading="lazy" decoding="async" src="{{ asset('assets/new_theme/img/mercedes-benz-sprinter-service.webp') }}" width="407" height="210" class="img-fluid" alt="Luxury black car at Dallas Love Field Airport">
-                    </div>
+                         <img loading="lazy" decoding="async" src="{{ asset('assets/new_theme/img/mercedes-benz-sprinter-service.webp') }}" width="407" height="210" class="img-fluid" alt="Luxury black car at Dallas Love Field Airport" style="margin-bottom:10px;">
+                     
                 </div>
 
-                <div class="col-12 col-md-8 pr-xl-50">
+                <div class="col-12 col-md-6 pr-xl-50">
                     <h3 class="h4 fw-semibold">Mercedes-Benz Sprinter Service for FIFA World Cup 2026</h3>
                     <p class="font-md justify-class">
                         Our Mercedes-Benz <a href="/booking/"><b>Sprinter service for the FIFA World Cup 2026</b></a> is designed for groups that want to travel together with comfort, privacy, and precise scheduling. This option is ideal for fans, corporate guests, media teams, and VIP groups attending matches and official events in the Dallas–Fort Worth area. Executive Sprinter vans offer spacious seating, climate-controlled interiors, and generous luggage capacity, making them perfect for full match-day travel.
@@ -379,24 +380,26 @@
                         Sprinter service is commonly used for transportation to and from AT&T Stadium, FIFA fan zones, hotels, and airports such as DFW Airport and Dallas Love Field. Professional chauffeurs manage traffic conditions, road closures, and timed arrivals to ensure your group reaches the venue without stress. By traveling in one vehicle, groups avoid parking challenges and rideshare delays. With advance scheduling, clear pricing, and experienced event chauffeurs, our Mercedes-Benz Sprinter service delivers smooth and reliable group transportation throughout the FIFA World Cup 2026 in Dallas.
                     </p>
                     <div class="fifa-btnss sec-btn">
-                        <a href="/get-a-quote/">Book Executive Black Car for Match Days</a>
+                      
+                        
+                        <a href="/get-a-quote/" class="btn btn-primary sm fw-medium fifa-btn-full">Book Executive Black Car for Match Days</a>
                     </div>
                 </div>
-                <div class="col-12 col-md-4 h-100 only-d">
-                    <div class="img-holder ms-md-auto">
-                        <img loading="lazy" decoding="async" src="{{ asset('assets/new_theme/img/01.webp') }}" width="407" height="210" class="img-fluid" alt="Luxury black car at Dallas Love Field Airport">
-                    </div>
+                <div class="col-12 col-md-6 h-100 only-d">
+                  
+                        <img loading="lazy" decoding="async" src="{{ asset('/img/sprinter-van-for-fifa-world-cup-2026.webp') }}"  class="img-fluid" alt="Luxury black car at Dallas Love Field Airport">
+                    
                 </div>
             </div>
 
             <div class="row flex-row-reverse py-20">
-                <div class="col-12 col-md-4 h-100 only-m">
-                    <div class="img-holder">
-                        <img loading="lazy" decoding="async" src="{{ asset('assets/new_theme/img/mini-bus-car-service.webp') }}" width="407" height="210" class="img-fluid" alt="Professional chauffeur for black car service Dallas">
-                    </div>
+                <div class="col-12 col-md-6 h-100 only-m">
+                  
+                        <img loading="lazy" decoding="async" src="{{ asset('assets/new_theme/img/mini-bus-car-service.webp') }}" width="407" height="210" class="img-fluid" alt="Professional chauffeur for black car service Dallas" style="margin-bottom:10px;">
+                     
                 </div>
 
-                <div class="col-12 col-md-8 pr-xl-50 mb-20">
+                <div class="col-12 col-md-6 pr-xl-50 mb-20">
                     <h3 class="h4 fw-semibold">Mini Bus Transportation for FIFA World Cup 2026 in Dallas</h3>
                     <p class="font-md justify-class">
                         Our <a href="/services/chauffeur-service-dallas/"><b>mini bus transportation service for FIFA World Cup 2026 in Dallas</b></a> is built for medium-sized groups that require organized, comfortable, and dependable travel. This service is ideal for fan groups, corporate delegations, tour operators, and hospitality planners coordinating transportation for matches and related events. Mini buses provide ample seating, luggage space, and easy group boarding, keeping everyone together on busy match days.
@@ -404,24 +407,27 @@
                         Mini bus transportation is frequently used for hotel-to-stadium transfers, airport pickups, fan zone travel, and multi-stop itineraries across Dallas and Arlington. Chauffeurs are experienced in managing event traffic patterns and venue access requirements, helping groups arrive on time despite increased congestion. By using a dedicated mini bus, groups eliminate the need for multiple vehicles or complex coordination. With professional drivers, clear communication, and scheduled pickups, our mini bus service supports smooth, efficient group movement during the FIFA World Cup 2026.
                     </p>
                     <div class="fifa-btnss sec-btn">
-                        <a href="/get-a-quote/">Reserve VIP Chauffeur Service</a>
+                        
+                        
+                          <a href="/get-a-quote/" class="btn btn-primary sm fw-medium fifa-btn-full">Reserve VIP Chauffeur Service</a>
+                          
                     </div>
                 </div>
-                <div class="col-12 col-md-4 h-100 only-d">
-                    <div class="img-holder">
-                        <img loading="lazy" decoding="async" src="{{ asset('assets/new_theme/img/02.webp') }}" width="407" height="210" class="img-fluid" alt="Professional chauffeur for black car service Dallas">
-                    </div>
+                <div class="col-12 col-md-6 h-100 only-d">
+                  
+                        <img loading="lazy" decoding="async" src="{{ asset('/img/mini-bus-for-fifa-world-cup-2026.webp') }}" class="img-fluid" alt="Professional chauffeur for black car service Dallas">
+                    
                 </div>
             </div>
 
             <div class="row py-20 d-md-flex">
                 <div class="col-12 col-md-4 h-100 only-m">
-                    <div class="img-holder">
-                        <img loading="lazy" decoding="async" src="{{ asset('assets/new_theme/img/charter-bus-service-dallas.webp') }}" width="407" height="210" class="img-fluid" alt="Professional chauffeur for black car service Dallas">
-                    </div>
+                   
+                        <img loading="lazy" decoding="async" src="{{ asset('assets/new_theme/img/charter-bus-service-dallas.webp') }}" width="407" height="210" class="img-fluid" alt="Professional chauffeur for black car service Dallas" style="margin-bottom:10px;">
+                     
                 </div>
 
-                <div class="col-12 col-md-8 pr-xl-50 mb-20">
+                <div class="col-12 col-md-6 pr-xl-50 mb-20">
                     <h3 class="h4 fw-semibold">Charter Bus Service for FIFA World Cup Groups in Dallas</h3>
                     <p class="font-md justify-class">
                         Our <a href="/booking/"><b>charter bus service for FIFA World Cup in Dallas</b></a> is designed for large-scale transportation needs during the tournament. This service is well suited for large fan groups, corporate hospitality programs, sports organizations, and travel agencies managing group arrivals and departures. Charter buses provide comfortable seating, climate control, and sufficient storage for luggage and event gear.
@@ -429,14 +435,17 @@
                         Charter bus transportation is commonly used for coordinated travel between airports, hotels, AT&T Stadium, and official FIFA venues. Our team plans routes and schedules in advance to account for match-day traffic, security zones, and timed entry windows. Professional chauffeurs handle navigation and logistics, allowing groups to focus on the event experience. With dependable scheduling, transparent pricing, and scalable fleet options, our charter bus service delivers reliable, organized transportation for large groups attending the FIFA World Cup 2026 in Dallas.
                     </p>
                     <div class="fifa-btnss sec-btn">
-                        <a href="/get-a-quote/">Request FIFA VIP Transportation</a>
+                     
+                        
+                         <a href="/get-a-quote/" class="btn btn-primary sm fw-medium fifa-btn-full">Request FIFA VIP Transportation</a>
+                         
                     </div>
                 </div>
 
-                <div class="col-12 col-md-4 h-100 only-d">
-                    <div class="img-holder">
-                        <img loading="lazy" decoding="async" src="{{ asset('assets/new_theme/img/03.webp') }}" width="407" height="210" class="img-fluid" alt="Professional chauffeur for black car service Dallas">
-                    </div>
+                <div class="col-12 col-md-6 h-100 only-d">
+                 
+                        <img loading="lazy" decoding="async" src="{{ asset('/img/charter-bus-for-fifa-world-cup-2026.webp') }}"  class="img-fluid" alt="Professional chauffeur for black car service Dallas">
+                     
                 </div>
             </div>
         </div>
@@ -494,7 +503,7 @@
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-11 col-xl-10 text-center mb-15 mb-md-20 mb-lg-30">
                     <h2 class="h2 fw-bold mb-15 mb-sm-20 mb-lg-30">Chosen By People At <span class="theme-color">Top Companies</span></h2>
-                    <p class="font-md">Chosen by professionals at leading corporations, financial institutions, and luxury hotels, our black car service is trusted for reliability, discretion, and consistent executive standards. Clients rely on us for <a href="/services/airport-transfer-dallas/"><b>airport transfers</b></a>, corporate travel, and high-profile events where punctuality, comfort, and professional presentation matter most.</p>
+                    <p class="font-md">Chosen by professionals at leading corporations, financial institutions, and luxury hotels, our black car service is trusted for reliability, discretion, and consistent executive standards. Clients rely on us for <a href="/services/airport-transfers-dallas/"><b>airport transfers</b></a>, corporate travel, and high-profile events where punctuality, comfort, and professional presentation matter most.</p>
                 </div>
                 <div class="col-12">
                     <div class="companies-logo-marquee">
@@ -532,16 +541,16 @@
                     </p>
                     <p class="font-md">Service coverage includes:</p>
                     <ul>
-                        <li><a href="/love-field-airport-car-service/"><b>Airport transfers to/from Dallas Love Field Airport</b></a> and DFW International Airport.</li>
+                        <li><a href="/airports/dallas-love-field-airport-car-service/"><b>Airport transfers to/from Dallas Love Field Airport</b></a> and DFW International Airport.</li>
                         <li>Hotel pickups from Omni Dallas Hotel and Hyatt Regency Dallas.</li>
                         <li>Stadium transportation to AT&T Stadium.</li>
                         <li>Private sedans, SUVs, Sprinter vans, and minibuses.</li>
                     </ul>
                 </div>
                 <div class="col-12 col-md-4 h-100">
-                    <div class="img-holder ms-md-auto">
+                  
                         <img loading="lazy" decoding="async" src="{{ asset('assets/new_theme/img/fifa-cup-image.jpg') }}" width="407" height="210" class="img-fluid" alt="Luxury black car at Dallas Love Field Airport">
-                    </div>
+                   
                 </div>
             </div>
             <div class="row flex-row-reverse py-20 d-none d-md-flex">
@@ -552,7 +561,7 @@
                     </p>
                     <p class="font-md"> We regularly serve: </p>
                     <ul>
-                        <li>Downtown Dallas, Uptown Dallas, Las Colinas, Plano, <a href="/black-car-service-frisco-tx/"><b>Frisco</b></a>, and Arlington.</li>
+                        <li>Downtown Dallas, Uptown Dallas, Las Colinas, Plano, <a href="/texas/black-car-service-frisco-tx/"><b>Frisco</b></a>, and Arlington.</li>
                         <li>Major hotels including Omni Dallas Hotel, Hyatt Regency Dallas, and nearby luxury accommodations.</li>
                         <li>Airport transportation to and from DFW International Airport and Dallas Love Field.</li>
                         <li>Stadium and event travel to AT&T Stadium.</li>

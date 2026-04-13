@@ -15,11 +15,11 @@
 
         <div class="row" style="pointer-events: none;">
             <div id="home-text-content" class="banner-text-content col-12 col-md-6 d-flex flex-column justify-content-center" style="pointer-events: auto; position: relative; z-index: 0;">
-                <h1 class="text-white h1 fw-bold mb-15">Term & Conditions – Black Car Service Dallas</h1>
+                <h1 class="text-white h1 fw-bold mb-15">Term & Conditions</h1>
                 <p class="mb-0 text-white font-lg fw-medium">Request Instant Pricing for Black Car, SUV, or Group Travel in DFW.</p>
-                <span class="my-2 text-white font-base d-block">24/7 Service Available – <strong class="font-lg fw-semibold">Click to Call Now</strong></span>
+                
                 <p class="text-white font-base d-flex align-items-center mb-30 mb-md-0">
-                    Call: <a href="tel:+14699612047" class="mx-2 fw-bold font-lg theme-color">+1 469-961-2047</a>
+                    Call Now: <a href="tel:+14699612047" class="mx-2 fw-bold font-lg theme-color">+1 469-961-2047</a>
                 </p>
             </div>
             <div class="d-none col-12 col-md-6 d-md-block" style="pointer-events: auto; position: relative; z-index: 2;">
@@ -34,15 +34,15 @@
     <div class="ah-container">
         <div class="row">
             <div class="col-12">
-                <p class="font-base">Welcome to Dallas Black Cars Service! These Terms and Conditions
+                <p class="font-base">Welcome to Dallas Black Limo Service! These Terms and Conditions
                     govern your use of this website and our services. By getting access to and the usage of this
                     website and our services, you agree to be bound using those Terms. If you do not agree to
                     those Terms, you can no longer use our offerings or this website. You acknowledge that
-                    Dallas Black Cars Service has the right to exchange those Terms at any time without
+                    Dallas Black Limo Service has the right to exchange those Terms at any time without
                     notice to you. Continue to check them from time to time for updates.
                 </p>
                 <h3 class="h5 fw-medium">1. Definitions</h3>
-                <p><b>Dallas Black Cars Service, "we", "our", or "us":</b> Refers to the enterprise, the
+                <p><b>Dallas Black Limo Service, "we", "our", or "us":</b> Refers to the enterprise, the
                     internet
                     site, the owners, the operators, and/or the associates.
                     <b>"You" or "User":</b> Refers to individuals or entities who get admission to or employ our
@@ -52,10 +52,10 @@
                 <p>When you use our site or what we do, you say you have looked at and get these rules, and you
                     say yes to them. But if you don't go along with these rules, don't use our site or anything
                     we give you.</p>
-                <p>Dallas Black Cars Service may change the Terms and Conditions at any time. If you
+                <p>Dallas Black Limo Service may change the Terms and Conditions at any time. If you
                     continue to use the services, you accept the new Terms and Conditions.</p>
                 <h3 class="h5 fw-medium">3. Services Offered</h3>
-                <p>Dallas Black Cars Service is an elite provider of professional chauffeured limousine
+                <p>Dallas Black Limo Service is an elite provider of professional chauffeured limousine
                     services, specializing in the following areas:</p>
                 <p>
                 <ul class="list-unstyled custom-unorder-list">
@@ -83,7 +83,7 @@
                     </li>
                     <li class="mb-0 d-block"><b>Declined Payments:</b>Payments that are declined will require
                         you to provide another form of payment. If the alternate form of payment is not given,
-                        it is possible your booking may be canceled. Dallas Black Cars Service is not
+                        it is possible your booking may be canceled. Dallas Black Limo Service is not
                         liable for cancellations on your booking due to payment issues.</li>
                     <li class="mb-0">After payment is completed, you will receive a confirmation via email or
                         SMS text message containing your booking information.</li>
@@ -106,10 +106,10 @@
                 <p>In the event of disputes stemming from the use of our services or website:</p>
                 <p>
                 <ul class="list-unstyled custom-unorder-list">
-                    <li class="mb-0">The user must first contact Dallas Black Cars Service directly for resolution.</li>
+                    <li class="mb-0">The user must first contact Dallas Black Limo Service directly for resolution.</li>
                     <li class="mb-0">If there is no resolution, disputes will be settled through binding arbitration under relevant U.S. law.</li>
                     <li class="mb-0">Arbitration will take place at a mutually agreed-upon location, and the arbitrator's decision will be final.</li>
-                    <li class="mb-0">Users waive their right to bring a class action lawsuit relating to the services of Dallas Black Cars Service or its terms.</li>
+                    <li class="mb-0">Users waive their right to bring a class action lawsuit relating to the services of Dallas Black Limo Service or its terms.</li>
                 </ul>
             </div>
         </div>

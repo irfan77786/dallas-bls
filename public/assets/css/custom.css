@@ -773,7 +773,7 @@ p.text-white.font-base.d-flex.align-items-center.mb-30.mb-md-0 {
 }
 
 p.mb-0.text-white.font-base {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 500;
   text-align: end;
 }
@@ -812,7 +812,7 @@ section.fifa-main-banner {
   padding: 20px 0;
   height: 435px;
   background-size: cover !important;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 }
 
 .here-fifa {
@@ -962,6 +962,13 @@ a.btn.btn-primary.fifa-btn {
     font-size: 26px ! IMPORTANT;
     line-height: normal;
     margin-bottom: 13px;
+}
+
+div#home-text-content p {
+    display: none  !important;
+}
+div#home-text-content a {
+    display: none;
 }
 
 

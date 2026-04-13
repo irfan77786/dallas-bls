@@ -111,6 +111,31 @@ class WebsiteController extends Controller
         ]);
     }
 
+    public function booking(Request $request)
+    {
+        if ($request->edit) {
+            session(['edit' => 1]);
+        } else {
+            session()->flush();
+            $request->session()->regenerateToken();
+        }
+
+        $seo = [
+            'title' => 'Booking | Dallas Limo And Black Cars Service',
+            'description' => 'Book your luxury black car service in Dallas for airport transfers, corporate travel, weddings, events, and hourly chauffeur service.',
+            'keywords' => 'Dallas booking page, black car booking Dallas, limo booking Dallas, airport transfer booking Dallas',
+            'og_title' => 'Booking | Dallas Limo And Black Cars Service',
+            'og_description' => 'Book your luxury black car service in Dallas for airport transfers, corporate travel, weddings, events, and hourly chauffeur service.',
+            'og_image' => asset('new_assets/assets/black-car-service-dallas-logo.png')
+        ];
+
+        return view('website.booking', [
+            'backgroundImage' => '/img/black-car-service-frisco.webp',
+            'mobileImage' => 'new_assets/assets/black-car-service-dallas-logo.png',
+            'seo' => $seo
+        ]);
+    }
+
     public function contactUs(Request $request)
     {
         if ($request->edit) {

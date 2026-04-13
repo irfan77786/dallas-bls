@@ -2321,7 +2321,7 @@
     padding-top: 50px;
   }
   .pr-xl-50 {
-    padding-right: 50px;
+    padding-right: 15px;
   }
   .pb-xl-50 {
     padding-bottom: 50px;
@@ -5745,8 +5745,7 @@ li {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(0deg, #121e2a 30%, transparent);
-  opacity: 0.97;
+   opacity: 0.97;
   z-index: 0;
 }
 .top-cities-item .img-holder img {
@@ -6052,11 +6051,11 @@ li {
   background: #fff;
   border-radius: 12px;
 }
-@media (min-width: 768px) {
+/*@media (min-width: 768px) {
   .news-letter-form {
     max-width: 520px;
   }
-}
+}*/
 .news-letter-form .iti {
   width: 100%;
 }
@@ -6154,7 +6153,7 @@ li {
   background: #fff;
 }
 .we-serve-item .img-holder {
-  height: 160px;
+  height: 230px;
   position: relative;
   z-index: 1;
   max-width: 100%;
@@ -6177,8 +6176,7 @@ li {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(0deg, #121e2a 20%, transparent);
-  opacity: 0.97;
+   opacity: 0.97;
   z-index: 0;
 }
 .we-serve-item .img-holder img {
@@ -6301,21 +6299,111 @@ h1.h1.fw-bold.text-white.mb-15 {
     
     @media (max-width: 767px) {
  
+ h2.h2.fw-bold {
+    font-size: 26px !important;
+    line-height: normal;
+    margin-bottom: 13px;
+}
+
+
 #home-text-content {
     margin-top: 0px !important;
 }
+
+  .only-m {
+        display:block !important;
+    }
+    
+        .only-m {
+        display:none !important;
+    }
+    
+    .fifa-btnss.text-center.my-4 a {
+    width:100% !important;
+}
+ .fifa-btnss.text-center.my-4 {
+    margin-top: 5px !important;
+    margin-bottom: 0px !important;
+}
+p.font-md.mb-0.justify-mobile {
+    text-align: justify;
+}
+h2.h2.fw-bold.mb-10.text-center {
+ 
+    text-align: left !important;
+}
+h2.h2.fw-bold.mb-10 {
+    font-size: 26px !important;
+ 
+}
+    .col-12.col-md-6.pr-xl-50 {
+        margin-bottom: 0px !important;
+    }
+.testimonial-slider-item .name {
+    
+    font-size: 17px !important;
+}
+h2.home-heading-style {
+    font-size: 26px !important;
+    line-height: normal;
+    margin-bottom: 10px !important;
+    text-align: left !important;
+}
+p.font-md.justify-mobile {
+    text-align: justify !important;
+}
+
+h2.h2.fw-bold.text-white.home-heading-style {
+    text-align: center !important;
+}
+h2.h2.fw-bold.text-center.home-heading-style.home-form {
+    font-size: 26px !important;
+}
+.t-policy a {
+    font-size: 14px;
+    line-height: normal;
+}
+.container.py-20.c-policy {
+    padding-top: 0px;
+    padding-bottom: 15px;
+}
+h2.h2.fw-bold.home-heading-style.home-heading-style {
+    font-size: 26px !important;
+    text-align: center !important;
+}
+
+
     
 }
     
+    img.img-fluid {
+    border-radius: 7px;
+}
+    
+  .fifa-btnss.text-center.my-4 a {
+    width: 430px;
+}  
+    
+    .only-m {
+        display:none ;
+    }
+    
+        .only-m {
+        display:block ;
+}
+
+.city-details.position-absolute {
+    padding: 4px 10px 2px 10px;
+}
+
     
     
     
-    
-    
-    
-    
-    
-    
+    h2.home-heading-style {
+    font-size: 36px !important;
+    line-height: normal;
+    margin-bottom: 13px;
+}
     
     
     

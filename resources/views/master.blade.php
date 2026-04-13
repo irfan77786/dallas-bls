@@ -22,6 +22,8 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url()->current() }}">
 
+<link rel="canonical" href="{{ url()->current() }}/" /> 
+
     {{-- Twitter Card Meta Tags --}}
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title"
@@ -357,7 +359,7 @@
                             <li><a href="/airports/dallas-executive-airport-car-service">Dallas Executive Airport (RBD)</a></li>
                             <li><a href="/airports/signature-flight-support-car-service">Signature
                                     Flight Support (DAL)</a></li>
-                            <li><a href="/airports/waco-regional-airport-car-service">Waco
+                            <li><a href="/airports/waco-regional-airport-car-service/">Waco
                                     Regional Airport (ACT)</a></li>
                         </ul>
                     </div>
@@ -365,10 +367,10 @@
             </div>
         </div>
         <div class="t-policy">
-            <div class="container py-20">
+            <div class="container py-20 c-policy">
                 <a href="/cancellation-policy" class="last-p">Cancellation Policy</a>
-                <a href="/terms-and-conditions">Terms &amp; Conditions</a>
-                <a href="/privacy-policy">Privacy Policy</a>
+                <a href="/terms-and-conditions"> - Terms &amp; Conditions</a>
+                <a href="/privacy-policy"> - Privacy Policy</a>
             </div>
         </div>
 
