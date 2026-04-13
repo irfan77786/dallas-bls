@@ -10,12 +10,13 @@ class TrustProxies extends Middleware
     /**
      * The trusted proxies for this application.
      *
-     * Trust all proxies so HTTPS / correct host are detected when the app sits
-     * behind Cloudflare, nginx, cPanel, or load balancers (fixes sessions & CSRF on live).
+     * Prefer configuring proxies in bootstrap/app.php via $middleware->trustProxies(...).
+     * The default global middleware uses Illuminate's TrustProxies, not this class,
+     * unless you replace it in bootstrap.
      *
      * @var array<int, string>|string|null
      */
-    protected $proxies = '*';
+    protected $proxies;
 
     /**
      * The headers that should be used to detect proxies.

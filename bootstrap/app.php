@@ -11,6 +11,10 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
+        // Required on most live hosts (SSL terminator / reverse proxy) so Laravel sees HTTPS,
+        // session cookies work, and CSRF matches — otherwise POSTs redirect back to the same page.
+        $middleware->trustProxies(at: '*');
+
         $middleware->alias([
             'auth' => \App\Http\Middleware\Authenticate::class,
             'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
