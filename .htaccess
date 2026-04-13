@@ -28,7 +28,6 @@ RewriteCond %{THE_REQUEST} \s/+(.+)//+([^\s]*) [NC]
 RewriteRule .* /%1/%2 [R=301,L]
 
 
-
 # Front controller
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
