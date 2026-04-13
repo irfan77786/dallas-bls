@@ -411,7 +411,7 @@ Route::middleware('checkBookingCompletion')->group(function () {
     Route::match(['get', 'post'], '/booking/hourly-hire', [BookingController::class, 'handleHourlyHire'])->name('booking.hourlyHire'); // step 2 hourly
     Route::get('/passengerInfo', [BookingController::class, 'submitPassengerInfo'])->name('passenger.info'); // step 3
     Route::get('/submit-passengerInfo', [BookingController::class, 'submitPassengerInfo'])->name('submit.passenger.info'); // step 4
-    Route::post('/save-booking-form-session', [BookingController::class, 'saveBookingFormSession'])->name('save.booking.form.session');
+    Route::any('/save-booking-form-session', [BookingController::class, 'saveBookingFormSession'])->name('save.booking.form.session');
 
 });
 

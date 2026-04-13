@@ -677,7 +677,37 @@ class BookingController extends Controller
             'has_select_hours' => $request->filled('select_hours'),
             'has_pickup_date' => $request->filled('pickup_date'),
             'has_pickup_time' => $request->filled('pickup_time'),
+            'query' => $request->query(),
         ]);
+
+        if (!$request->isMethod('post')) {
+            Log::warning('booking.session_save.unexpected_method', [
+                'method' => $request->method(),
+                'full_url' => $request->fullUrl(),
+                'route' => $request->route()?->getName(),
+                'session_id' => $request->hasSession() ? $request->session()->getId() : null,
+                'session_cookie_name' => config('session.cookie'),
+                'has_session_cookie' => $request->cookies->has(config('session.cookie')),
+                'request_cookie_names' => array_keys($request->cookies->all()),
+                'referer' => $request->headers->get('referer'),
+                'origin' => $request->headers->get('origin'),
+                'host' => $request->getHost(),
+                'scheme' => $request->getScheme(),
+                'user_agent' => $request->userAgent(),
+                'sec_fetch_site' => $request->headers->get('sec-fetch-site'),
+                'sec_fetch_mode' => $request->headers->get('sec-fetch-mode'),
+                'sec_fetch_dest' => $request->headers->get('sec-fetch-dest'),
+                'query' => $request->query(),
+                'input_keys' => array_keys($request->all()),
+            ]);
+
+            return response()->json([
+                'success' => false,
+                'message' => 'Method not allowed for booking session save.',
+                'expected_method' => 'POST',
+                'received_method' => $request->method(),
+            ], 405);
+        }
 
         if ($formType === 'guest_info') {
             $sanitizedNumber = preg_replace('/[^\d+]/', '', trim($request->input('number', '') ?? ''));
