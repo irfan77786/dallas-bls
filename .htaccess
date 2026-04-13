@@ -27,12 +27,6 @@ RewriteRule ^images/(.*)$ public/images/$1 [L]
 RewriteCond %{THE_REQUEST} \s/+(.+)//+([^\s]*) [NC]
 RewriteRule .* /%1/%2 [R=301,L]
 
-# Force trailing slash on non-files and non-directories
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_URI} !/$
-RewriteRule ^(.*)$ https://www.dallasblacklimoservice.com/$1/ [R=301,L]
-
 # Front controller
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
