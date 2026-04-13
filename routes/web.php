@@ -431,7 +431,7 @@ Route::prefix('services')->group(function(){
 
     Route::get('/city-to-city-rides/', [ServiceController::class, 'CityToCityRides'])->name('city_to_city_rides');
     
-    Route::get('/booking', [WebsiteController::class, 'booking'])->name('booking');
+    Route::get('/booking', [WebsiteController::class, 'booking'])->name('booking.landing');
     
     Route::get('/limousine-service-dallas/', [ServiceController::class, 'DfwLimoService'])->name('dfw_limo_service');
     Route::get('/dallas-to-austin-car-service', [LocationController::class, 'DallasToAustinCarService'])->name('dallas_to_austin_car_service');

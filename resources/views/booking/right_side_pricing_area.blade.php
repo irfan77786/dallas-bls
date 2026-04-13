@@ -1,7 +1,7 @@
 @php
 $currentStep = $step ?? 1;
 $steps = [
-1 => ['label' => 'Ride Info', 'route' => route('booking.form',['edit' => 1])],
+1 => ['label' => 'Ride Info', 'route' => route('booking', ['edit' => 1])],
 2 => ['label' => 'Vehicle Class', 'route' => session('service_type') === 'pointToPoint'
 ? route('booking.pointToPoint.show')
 : route('booking.hourlyHire.show')],
