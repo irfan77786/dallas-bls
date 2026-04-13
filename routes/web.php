@@ -398,26 +398,25 @@ Route::middleware('auth')->group(function () {
 // ------------------------------------- BOOKING ROUTES -------------------------------------------------:
 
 Route::middleware('checkBookingCompletion')->group(function () {
-    Route::get('/book-now/', [BookingController::class, 'BookNow'])->name('book_now');
-    Route::get('/allVehicle/', [BookingController::class, 'showAll']);
+    Route::get('/book-now', [BookingController::class, 'BookNow'])->name('book_now');
+    Route::get('/allVehicle', [BookingController::class, 'showAll']);
     Route::post('/submit-passengerInfo/{id}', [BookingController::class, 'submitPassengerInfo']);
     Route::match(['get', 'post'], '/bookRide', [BookingController::class, 'bookRide']);
     Route::post('/completeBook', [BookingController::class, 'completeBook']);
-    Route::get('/calculate-return-trip/', [BookingController::class, 'CalculateReturnTrip']);
+    Route::get('/calculate-return-trip', [BookingController::class, 'CalculateReturnTrip']);
     Route::post('/save-return-service', [BookingController::class, 'saveReturnService']);
-    // Must not use `/booking` or `/booking/` — conflicts with GET `/booking` (WebsiteController) and never registers.
-    Route::get('/booking/start', [BookingController::class, 'showForm'])->name('booking.form');  // step 1 (same as home form)
-    Route::get('/booking/point-to-point/', [BookingController::class, 'handlePointToPoint'])->name('booking.pointToPoint.show');  //step2 case 1
-    Route::get('/booking/hourly-hire/', [BookingController::class, 'handleHourlyHire'])->name('booking.hourlyHire.show');  //step2 case 2
-    Route::get('/passengerInfo', [BookingController::class, 'submitPassengerInfo'] )->name('passenger.info'); //step 3
-    Route::get('/submit-passengerInfo', [BookingController::class, 'submitPassengerInfo'])->name('submit.passenger.info'); //step 4
+    // Do not register GET `/booking` here — it is the marketing page (`booking.landing`). Use `/booking/start` for the wizard step-1 URL.
+    Route::get('/booking/start', [BookingController::class, 'showForm'])->name('booking.form');
+    Route::get('/booking/point-to-point', [BookingController::class, 'handlePointToPoint'])->name('booking.pointToPoint.show');
+    Route::get('/booking/hourly-hire', [BookingController::class, 'handleHourlyHire'])->name('booking.hourlyHire.show');
+    Route::get('/passengerInfo', [BookingController::class, 'submitPassengerInfo'])->name('passenger.info');
+    Route::get('/submit-passengerInfo', [BookingController::class, 'submitPassengerInfo'])->name('submit.passenger.info');
     Route::post('/save-booking-form-session', [BookingController::class, 'saveBookingFormSession'])->name('save.booking.form.session');
-
 });
 
 // Other Pages:
 
-Route::prefix('services')->group(function(){
+Route::prefix('services')->group(function () {
     Route::get('/airport-transfers-dallas/', [ServiceController::class, 'AirportTransfer'])->name('airport_transfer');
     Route::get('/dallas-airport-greeters/', [ServiceController::class, 'AirportGreeters'])->name('airport_greeters');
     Route::get('/corporate-transportation-dallas/', [ServiceController::class, 'CorporateTransportation'])->name('corporate_transportation');
@@ -429,24 +428,24 @@ Route::prefix('services')->group(function(){
     Route::get('/private-aviation-dallas/', [ServiceController::class, 'PrivateAviation'])->name('private_aviation');
 });
 
-    Route::get('/city-to-city-rides/', [ServiceController::class, 'CityToCityRides'])->name('city_to_city_rides');
-    
-    Route::get('/booking', [WebsiteController::class, 'booking'])->name('booking.landing');
-    
-    Route::get('/limousine-service-dallas/', [ServiceController::class, 'DfwLimoService'])->name('dfw_limo_service');
-    Route::get('/dallas-to-austin-car-service', [LocationController::class, 'DallasToAustinCarService'])->name('dallas_to_austin_car_service');
-    Route::get('/dallas-to-houston-car-service', [LocationController::class, 'DallasToHoustonCarService'])->name('dallas_to_houston_car_service');
-    Route::get('/dallas-to-oklahoma-city-ok', [LocationController::class, 'DallasToOklahomaCityOk'])->name('dallas_to_oklahoma_city_ok');
-    Route::get('/dallas-to-arlington-car-service', [LocationController::class, 'DallasToArlingtonCarService'])->name('dallas_to_arlington_car_service');
-    Route::get('/dallas-to-crowley-car-service', [LocationController::class, 'DallasToCrowleyCarService'])->name('dallas_to_crowley_car_service');
-    Route::get('/dallas-to-anna-car-service', [LocationController::class, 'DallasToAnnaCarService'])->name('dallas_to_anna_car_service');
-    Route::get('/dallas-to-tyler-car-service', [LocationController::class, 'DallasToTylerCarService'])->name('dallas_to_tyler_car_service');
-    Route::get('/dfw-to-waco-car-service', [LocationController::class, 'DfwToWacoCarService'])->name('dfw_to_waco_car_service');
-    Route::get('/cancellation-policy', [WebsiteController::class, 'CancellationPolicy'])->name('cancellation_policy');
-    Route::get('/terms-and-conditions', [WebsiteController::class, 'TermsAndConditions'])->name('terms_and_conditions');
-    Route::get('/privacy-policy', [WebsiteController::class, 'PrivacyPolicy'])->name('privacy_policy');
+Route::get('/city-to-city-rides/', [ServiceController::class, 'CityToCityRides'])->name('city_to_city_rides');
 
-Route::prefix('airports')->group(function(){
+Route::get('/booking', [WebsiteController::class, 'booking'])->name('booking.landing');
+
+Route::get('/limousine-service-dallas/', [ServiceController::class, 'DfwLimoService'])->name('dfw_limo_service');
+Route::get('/dallas-to-austin-car-service', [LocationController::class, 'DallasToAustinCarService'])->name('dallas_to_austin_car_service');
+Route::get('/dallas-to-houston-car-service', [LocationController::class, 'DallasToHoustonCarService'])->name('dallas_to_houston_car_service');
+Route::get('/dallas-to-oklahoma-city-ok', [LocationController::class, 'DallasToOklahomaCityOk'])->name('dallas_to_oklahoma_city_ok');
+Route::get('/dallas-to-arlington-car-service', [LocationController::class, 'DallasToArlingtonCarService'])->name('dallas_to_arlington_car_service');
+Route::get('/dallas-to-crowley-car-service', [LocationController::class, 'DallasToCrowleyCarService'])->name('dallas_to_crowley_car_service');
+Route::get('/dallas-to-anna-car-service', [LocationController::class, 'DallasToAnnaCarService'])->name('dallas_to_anna_car_service');
+Route::get('/dallas-to-tyler-car-service', [LocationController::class, 'DallasToTylerCarService'])->name('dallas_to_tyler_car_service');
+Route::get('/dfw-to-waco-car-service', [LocationController::class, 'DfwToWacoCarService'])->name('dfw_to_waco_car_service');
+Route::get('/cancellation-policy', [WebsiteController::class, 'CancellationPolicy'])->name('cancellation_policy');
+Route::get('/terms-and-conditions', [WebsiteController::class, 'TermsAndConditions'])->name('terms_and_conditions');
+Route::get('/privacy-policy', [WebsiteController::class, 'PrivacyPolicy'])->name('privacy_policy');
+
+Route::prefix('airports')->group(function () {
     Route::get('/addison-airport-car-service/', [AirportController::class, 'AddisonAirportCarService'])->name('addison_airport_car_service');
     Route::get('/dfw-car-service/', [AirportController::class, 'CarServiceInDallasFortWorthInternationalAirport'])->name('car_service_in_dallas_fort_worth_international_airport');
     Route::get('/dallas-love-field-airport-car-service/', [AirportController::class, 'DallasLoveFieldBlackCarService'])->name('dallas_love_field_black_car_service');
