@@ -150,13 +150,6 @@ class BookingController extends Controller
             'session_id' => $request->hasSession() ? $request->session()->getId() : null,
             'has_csrf_token' => $request->has('_token'),
             'session_key_count' => $request->hasSession() ? count($request->session()->all()) : 0,
-            'session_cookie_name' => config('session.cookie'),
-            'has_session_cookie' => $request->cookies->has(config('session.cookie')),
-            'referer' => $request->headers->get('referer'),
-            'origin' => $request->headers->get('origin'),
-            'user_agent' => $request->userAgent(),
-            'x_forwarded_proto' => $request->headers->get('x-forwarded-proto'),
-            'x_forwarded_for' => $request->headers->get('x-forwarded-for'),
         ]);
 
         session([
@@ -179,28 +172,6 @@ class BookingController extends Controller
                     'pickup_empty' => empty($sessionData['pickup_location']),
                     'dropoff_empty' => empty($sessionData['dropoff_location']),
                     'session_snapshot_keys' => array_keys(session()->all()),
-                    'session_snapshot' => session()->only([
-                        '_previous',
-                        'booking_completed',
-                        'pickup_location',
-                        'dropoff_location',
-                        'pickup_date',
-                        'pickup_time',
-                        'service_type',
-                    ]),
-                    'has_session_cookie' => $request->cookies->has(config('session.cookie')),
-                    'session_cookie_name' => config('session.cookie'),
-                    'request_cookie_names' => array_keys($request->cookies->all()),
-                    'referer' => $request->headers->get('referer'),
-                    'origin' => $request->headers->get('origin'),
-                    'host' => $request->getHost(),
-                    'scheme' => $request->getScheme(),
-                    'user_agent' => $request->userAgent(),
-                    'sec_fetch_site' => $request->headers->get('sec-fetch-site'),
-                    'sec_fetch_mode' => $request->headers->get('sec-fetch-mode'),
-                    'sec_fetch_dest' => $request->headers->get('sec-fetch-dest'),
-                    'x_forwarded_proto' => $request->headers->get('x-forwarded-proto'),
-                    'x_forwarded_for' => $request->headers->get('x-forwarded-for'),
                 ]);
 
                 return redirect()->route('booking'); // or wherever the user should be
@@ -660,56 +631,6 @@ class BookingController extends Controller
         $formType = $request->input('form_type', '');
         $expectsJson = $request->ajax() || $request->wantsJson();
 
-        Log::info('booking.session_save.enter', [
-            'form_type' => $formType,
-            'method' => $request->method(),
-            'full_url' => $request->fullUrl(),
-            'route' => $request->route()?->getName(),
-            'session_id' => $request->hasSession() ? $request->session()->getId() : null,
-            'session_cookie_name' => config('session.cookie'),
-            'has_session_cookie' => $request->cookies->has(config('session.cookie')),
-            'referer' => $request->headers->get('referer'),
-            'origin' => $request->headers->get('origin'),
-            'user_agent' => $request->userAgent(),
-            'input_keys' => array_keys($request->except(['_token'])),
-            'has_pickup_location' => $request->filled('pickup_location'),
-            'has_dropoff_location' => $request->filled('dropoff_location'),
-            'has_pickup_location_hourly' => $request->filled('pickup_location_hourly'),
-            'has_select_hours' => $request->filled('select_hours'),
-            'has_pickup_date' => $request->filled('pickup_date'),
-            'has_pickup_time' => $request->filled('pickup_time'),
-            'query' => $request->query(),
-        ]);
-
-        if (!$request->isMethod('post')) {
-            Log::warning('booking.session_save.unexpected_method', [
-                'method' => $request->method(),
-                'full_url' => $request->fullUrl(),
-                'route' => $request->route()?->getName(),
-                'session_id' => $request->hasSession() ? $request->session()->getId() : null,
-                'session_cookie_name' => config('session.cookie'),
-                'has_session_cookie' => $request->cookies->has(config('session.cookie')),
-                'request_cookie_names' => array_keys($request->cookies->all()),
-                'referer' => $request->headers->get('referer'),
-                'origin' => $request->headers->get('origin'),
-                'host' => $request->getHost(),
-                'scheme' => $request->getScheme(),
-                'user_agent' => $request->userAgent(),
-                'sec_fetch_site' => $request->headers->get('sec-fetch-site'),
-                'sec_fetch_mode' => $request->headers->get('sec-fetch-mode'),
-                'sec_fetch_dest' => $request->headers->get('sec-fetch-dest'),
-                'query' => $request->query(),
-                'input_keys' => array_keys($request->all()),
-            ]);
-
-            return response()->json([
-                'success' => false,
-                'message' => 'Method not allowed for booking session save.',
-                'expected_method' => 'POST',
-                'received_method' => $request->method(),
-            ], 405);
-        }
-
         if ($formType === 'guest_info') {
             $sanitizedNumber = preg_replace('/[^\d+]/', '', trim($request->input('number', '') ?? ''));
             session([
@@ -752,12 +673,6 @@ class BookingController extends Controller
             ]);
 
             if ($validator->fails()) {
-                Log::warning('booking.session_save.ride_info_point_to_point.validation_failed', [
-                    'session_id' => $request->session()->getId(),
-                    'errors' => $validator->errors()->toArray(),
-                    'input_keys' => array_keys($request->except(['_token'])),
-                ]);
-
                 if ($expectsJson) {
                     return response()->json([
                         'success' => false,
@@ -792,21 +707,6 @@ class BookingController extends Controller
                 'service_type' => 'pointToPoint',
             ]);
 
-            Log::info('booking.session_save.ride_info_point_to_point.saved', [
-                'session_id' => $request->session()->getId(),
-                'saved_session' => session()->only([
-                    'pickup_location',
-                    'dropoff_location',
-                    'pickup_date',
-                    'pickup_time',
-                    'return_date',
-                    'return_time',
-                    'round_trip',
-                    'service_type',
-                    'is_airport',
-                ]),
-            ]);
-
             if (!$expectsJson) {
                 return redirect()->route('booking.pointToPoint');
             }
@@ -821,12 +721,6 @@ class BookingController extends Controller
             ]);
 
             if ($validator->fails()) {
-                Log::warning('booking.session_save.ride_info_hourly.validation_failed', [
-                    'session_id' => $request->session()->getId(),
-                    'errors' => $validator->errors()->toArray(),
-                    'input_keys' => array_keys($request->except(['_token'])),
-                ]);
-
                 if ($expectsJson) {
                     return response()->json([
                         'success' => false,
@@ -851,27 +745,10 @@ class BookingController extends Controller
                 'service_type' => 'hourlyHire',
             ]);
 
-            Log::info('booking.session_save.ride_info_hourly.saved', [
-                'session_id' => $request->session()->getId(),
-                'saved_session' => session()->only([
-                    'pickup_location',
-                    'select_hours',
-                    'pickup_date',
-                    'pickup_time',
-                    'service_type',
-                ]),
-            ]);
-
             if (!$expectsJson) {
                 return redirect()->route('booking.hourlyHire');
             }
         }
-
-        Log::info('booking.session_save.exit', [
-            'form_type' => $formType,
-            'session_id' => $request->session()->getId(),
-            'session_keys_after_save' => array_keys(session()->all()),
-        ]);
 
         return response()->json(['success' => true]);
     }
