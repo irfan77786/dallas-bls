@@ -141,7 +141,6 @@ class BookingController extends Controller
     // Handle Point to Point form submission
     public function handlePointToPoint(Request $request)
     {
-        dd($request->all());
         session([
             'booking_completed' => false
         ]);
