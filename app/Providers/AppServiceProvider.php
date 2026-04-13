@@ -2,7 +2,6 @@
 
 namespace App\Providers;
 
-use Illuminate\Support\Facades\URL;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Pagination\Paginator;
 
@@ -26,13 +25,9 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Paginator::useBootstrap();
-
-        $root = rtrim((string) config('app.url'), '/');
-        if ($root !== '') {
-            URL::forceRootUrl($root);
-        }
-        if (str_starts_with($root, 'https://')) {
-            URL::forceScheme('https');
+        if(session('booking_completed')){
+            session()->flush();
+            return redirect()->route('booking');
         }
     }
 }
