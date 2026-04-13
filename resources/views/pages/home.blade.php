@@ -1,6 +1,11 @@
 @extends('master')
 
 @section('content')
+    @if(session('booking_notice'))
+        <div class="alert alert-warning text-center mb-0 rounded-0 border-0" role="alert">
+            {{ session('booking_notice') }}
+        </div>
+    @endif
     <section class="d-md-none">
         <div class="ah-container">
             <div class="search-form-mobile">

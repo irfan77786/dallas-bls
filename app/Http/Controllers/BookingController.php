@@ -174,7 +174,10 @@ class BookingController extends Controller
                     'session_snapshot_keys' => array_keys(session()->all()),
                 ]);
 
-                return redirect()->route('booking'); // or wherever the user should be
+                return redirect()->route('booking')->with(
+                    'booking_notice',
+                    'We could not find your trip details. Please enter pickup and destination again to continue.'
+                );
             }
 
             Log::info('booking.point_to_point.get_ok_show_confirmation', [
