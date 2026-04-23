@@ -103,6 +103,13 @@ class BookingController extends Controller
             session(['edit' => 1]);
         }
 
+        // A completed booking leaves this flag set; the home route is outside
+        // checkBookingCompletion, so it never got cleared. Allow a new search
+        // without the next booking URL being blocked or fully flushed.
+        if (session('booking_completed')) {
+            session()->forget('booking_completed');
+        }
+
         $seo = [
             'title' => 'Dallas Limo And Black Cars | Luxury Chauffeur and Airport Car Service',
             'description' => 'Experience reliable Dallas Limo And Black Cars for airport transfers, corporate travel & luxury rides. 24/7 chauffeurs, clean fleet & on-time service across DFW.',

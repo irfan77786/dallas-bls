@@ -16,6 +16,17 @@ class CheckBookingCompletion
      */
     public function handle(Request $request, Closure $next)
     {
+        // Let a fresh home / banner booking POST through: saveBookingFormSession
+        // clears booking data and sets booking_completed => false. Otherwise this
+        // middleware flushed+redirected before the controller ever ran, blocking
+        // a second trip after a completed booking.
+        if (
+            $request->routeIs('save.booking.form.session')
+            && $request->isMethod('post')
+        ) {
+            return $next($request);
+        }
+
         if (session('booking_completed')) {
             session()->flush();
             $request->session()->regenerateToken();
