@@ -14,7 +14,8 @@
         <div class="header"
             style="padding: 20px 10px; text-align: center; border-bottom: 1px solid #eee; background-color: #ffffff;">
             <div style="background-color: #ffffff; padding: 15px; display: inline-block;">
-                <img src="https://dallasblacklimoservice.com/public/assets/logo.jpeg" alt="Dallas Black Limo Service"
+                <img src="{{ rtrim((string) config('app.url', 'https://dallasblacklimoservice.com'), '/') }}/assets/logo.jpeg"
+                    alt="Dallas Black Limo Service"
                     style="max-width: 250px; margin-bottom: 10px; height: auto; display: block; background-color: #ffffff;">
             </div>
             <h2 style="margin: 0; font-size: 22px; color: #12143e;">Booking {{ $isAdmin ? 'Notification' :
@@ -45,6 +46,44 @@
             <p style="font-size: 12px; margin: 0 0 10px;">Thank you for choosing our service. Your booking has been
                 successfully confirmed. Below are your booking details:</p>
             @endif
+
+            {{-- FIFA World Cup 2026 notice (matches PDF policy; full terms in attached PDF) --}}
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0"
+                style="margin: 16px 0 20px; background-color: #FDFAF3; border: 1px solid #9C844C; border-radius: 12px;">
+                <tr>
+                    <td style="padding: 16px; vertical-align: top;">
+                        <table role="presentation" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                                <td style="width: 40px; vertical-align: top; padding-top: 2px;">
+                                    <div
+                                        style="width: 28px; height: 28px; line-height: 28px; text-align: center; border-radius: 50%; background-color: #9C844C; color: #ffffff; font-size: 16px; font-weight: 700; font-family: Georgia, 'Times New Roman', serif;">
+                                        i
+                                    </div>
+                                </td>
+                                <td style="vertical-align: top; padding-left: 8px;">
+                                    <p
+                                        style="margin: 0 0 10px; font-size: 13px; color: #333; font-weight: 700; line-height: 1.45;">
+                                        Important Event Notice – FIFA World Cup 2026 (June 13 – July 15, 2026):
+                                    </p>
+                                    <p
+                                        style="margin: 0; font-size: 12px; color: #333; font-style: italic; line-height: 1.5;">
+                                        If this booking falls within the FIFA World Cup 2026 event dates, all rates, fees, and
+                                        minimums are subject to change without notice based on event demand, availability, and
+                                        operational conditions. You acknowledge and agree that these rates are not guaranteed
+                                        until final payment is made in accordance with our policy. By confirming this
+                                        reservation, you expressly authorize any rate adjustments and agree that such
+                                        changes are not a basis for refund, credit, cancellation, or chargeback.
+                                    </p>
+                                    <p style="margin: 10px 0 0; font-size: 11px; color: #555; line-height: 1.4;">
+                                        Complete FIFA 2026 (Dallas–Fort Worth) event terms are included in your attached
+                                        booking PDF.
+                                    </p>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
 
             {{-- Booker Information --}}
             @if($bookingData['isBookingForOthers'] && !$sendToBooker)

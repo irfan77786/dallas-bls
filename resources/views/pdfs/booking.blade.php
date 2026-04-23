@@ -196,11 +196,15 @@
       <div style="display: table-row;">
         <div style="display: table-cell; vertical-align: middle; width: 62%;">
           @php
-            $logoData = base64_encode(file_get_contents(public_path('assets/img/site/black-car-service-dallas-logo.png')));
-            $mime = 'image/png';
+            $logoPath = public_path('assets/logo.jpeg');
+            if (!is_readable($logoPath)) {
+                $logoPath = public_path('assets/img/site/black-car-service-dallas-logo.png');
+            }
+            $logoData = is_readable($logoPath) ? base64_encode(file_get_contents($logoPath)) : null;
+            $mime = (str_ends_with(strtolower((string) $logoPath), '.png')) ? 'image/png' : 'image/jpeg';
           @endphp
           @if($logoData)
-            <img src="data:{{ $mime }};base64,{{ $logoData }}" alt="Logo" style="height: 60px;" />
+            <img src="data:{{ $mime }};base64,{{ $logoData }}" alt="Logo" style="max-width: 250px; max-height: 60px; height: auto;" />
           @else
             <div style="font-weight: bold; font-size: 18px;">Dallas Limo And Black Cars Service</div>
           @endif
@@ -511,7 +515,7 @@
       @endif
     </div>
   </div>
-  <div class="sections" style="page-break-before: always;">
+  <div class="sections">
       <h2 class="custom-large-heading">Cancellation Policy: Cancellation, Deposit & Service Policy</h2>
       <div class="section-content">
         <p>
@@ -682,6 +686,9 @@
           - No refunds for Motor Coaches, Mini Buses, or Special Events after cancellation window closes.</p>
       </div>
     </div>
+
+    @include('pdfs.partials.fifa-2026-event-policy')
+
     <div class="sections section-light">
       <h2>Thank you for choosing Dallas Limo And Black Cars Service.</h2>
       <div class="section-content">

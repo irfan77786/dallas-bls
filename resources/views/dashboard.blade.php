@@ -307,6 +307,7 @@
             if (!status) return 'badge bg-secondary';
             const s = status.toLowerCase();
             if (s === 'paid') return 'badge bg-success';
+            if (s.includes('authorized')) return 'badge bg-info text-dark';
             if (s === 'pending') return 'badge bg-warning text-dark';
             if (s === 'cancelled') return 'badge bg-danger';
             return 'badge bg-secondary';

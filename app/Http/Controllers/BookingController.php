@@ -1163,6 +1163,7 @@ class BookingController extends Controller
                     'currency' => 'usd',
                     'customer' => $stripeCustomerId,
                     'payment_method' => $request->payment_method_id,
+                    'capture_method' => 'manual',
                     'off_session' => true,
                     'confirm' => true,
                 ]);
@@ -1187,6 +1188,16 @@ class BookingController extends Controller
             if ($paymentIntent->status === 'requires_action' && $paymentIntent->next_action->type === 'use_stripe_sdk') {
                 return redirect()->back()->with('error', 'Payment requires additional authentication.');
             }
+
+            // Manual capture: success state is `requires_capture` (authorized, not yet charged in Stripe)
+            if (!in_array($paymentIntent->status, ['requires_capture', 'succeeded'], true)) {
+                return redirect()->back()->with(
+                    'error',
+                    'Payment could not be authorized. Please try again or use another card. (Status: ' . $paymentIntent->status . ')'
+                );
+            }
+
+            $paymentStatusLabel = $paymentIntent->status === 'succeeded' ? 'Paid' : 'Authorized';
 
             // -------------------------
             // Booking ID Generation
@@ -1260,7 +1271,7 @@ class BookingController extends Controller
                 'return_date' => $returnDateYmd,
                 'return_time' => $returnTimeHis,
                 'total_price' => $selected_price,
-                'payment_status' => "Paid",
+                'payment_status' => $paymentStatusLabel,
                 'return_service_id' => $returnServiceId,
                 'round_trip' => session('round_trip') ? 1 : 0,
                 'note' => session('note') ?? null,
@@ -1269,7 +1280,7 @@ class BookingController extends Controller
             // Payment record
             $booking->payments()->create([
                 'payment_method' => "card",
-                'payment_status' => "Paid",
+                'payment_status' => $paymentStatusLabel,
                 'transaction_id' => $transactionId,
                 'amount' => $selected_price,
             ]);
@@ -1335,7 +1346,7 @@ class BookingController extends Controller
                 'vehicle_type' => $vehicle_name ?? 'Standard',
                 'passengers' => 1,
                 'total_amount' => $selected_price,
-                'payment_status' => 'Paid',
+                'payment_status' => $paymentStatusLabel,
                 'special_instructions' => session('note') ?? null,
                 'flight_details' => $flight_details,
             ];
