@@ -1339,7 +1339,9 @@ class BookingController extends Controller
                 'special_instructions' => session('note') ?? null,
                 'flight_details' => $flight_details,
             ];
-            CreateBookingDocs::dispatch($bookingData, $customBookingId);
+            // Run synchronously so admin/booker receive mail without a queue worker
+            // (the job still implements job structure for tests / future queue use).
+            CreateBookingDocs::dispatchSync($bookingData, $customBookingId);
 
             // Clear session
             session()->forget([

@@ -116,4 +116,11 @@ return [
         'name' => env('MAIL_FROM_NAME', 'Example'),
     ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | Admin notifications (e.g. new booking)
+    |--------------------------------------------------------------------------
+    */
+    'admin_email' => env('ADMIN_EMAIL_ADDRESS', 'nexusdeveloper09@gmail.com'),
+
 ];

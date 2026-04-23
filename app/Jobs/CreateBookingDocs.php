@@ -3,14 +3,13 @@
 namespace App\Jobs;
 
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Support\Facades\Mail;
 use Barryvdh\DomPDF\Facade\Pdf;
 
-class CreateBookingDocs implements ShouldQueue
+class CreateBookingDocs
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
@@ -47,7 +46,7 @@ class CreateBookingDocs implements ShouldQueue
             $pdf = PDF::loadView('pdfs.booking', ['bookingData' => $this->bookingData]);
             $pdf->save($filePath);
 
-            $adminEmail = config('mail.admin_email', env('ADMIN_EMAIL_ADDRESS', 'nexusdeveloper09@gmail.com'));
+            $adminEmail = config('mail.admin_email');
             \Log::info('Admin email from config: ' . ($adminEmail ?: 'NOT FOUND'));
             \Log::info('Customer email: ' . $this->bookingData['email']);
 
