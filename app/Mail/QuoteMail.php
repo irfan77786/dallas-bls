@@ -31,7 +31,7 @@ class QuoteMail extends Mailable
     {
         $subject = $this->isAdmin
             ? 'New Quote Request from ' . ($this->details['full_name'] ?? 'User')
-            : 'Your Quote Request - Dallas Black Cars';
+            : 'Your Quote Request - Dallas Black Limo Service';
 
         return new Envelope(
             subject: $subject

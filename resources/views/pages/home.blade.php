@@ -699,21 +699,7 @@ With a fleet of luxury sedans and executive SUVs, we provide exceptional comfort
                     </ul>
                 </div>
                 <div class="col-12 col-md-6">
-                    @if ($message = session('success'))
-                        <div class="alert alert-success alert-dismissible fade show mb-20" role="alert">
-                            {{ $message }}
-                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                        </div>
-                    @endif
-
-                    @if ($message = session('error'))
-                        <div class="alert alert-danger alert-dismissible fade show mb-20" role="alert">
-                            {{ $message }}
-                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                        </div>
-                    @endif
-
-                    <form class="news-letter-form mx-auto me-md-0 px-15 py-25" action="{{ route('corporate_support_post') }}" method="post">
+                    <form id="corporate-support-form" class="news-letter-form mx-auto me-md-0 px-15 py-25" action="{{ route('corporate_support_post') }}" method="post">
                         @csrf
                         <div class="text-center">
                             <h3 class="font-md fw-bold mb-0">Need Corporate Support?</h3>
@@ -960,4 +946,48 @@ With a fleet of luxury sedans and executive SUVs, we provide exceptional comfort
             </div>
         </div>
     </div>
+@endsection
+
+@section('scripts')
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+(function () {
+    @if (session('corporate_support_success'))
+    Swal.fire({
+        title: 'Success!',
+        text: @json(session('corporate_support_success')),
+        icon: 'success',
+        confirmButtonColor: '#3085d6',
+        confirmButtonText: 'OK'
+    }).then(function (result) {
+        if (result.isConfirmed) {
+            var f = document.getElementById('corporate-support-form');
+            if (f) f.reset();
+        }
+    });
+    @endif
+
+    @if (session('corporate_support_error'))
+    Swal.fire({
+        title: 'Error',
+        text: @json(session('corporate_support_error')),
+        icon: 'error',
+        confirmButtonColor: '#d33',
+        confirmButtonText: 'OK'
+    });
+    @endif
+
+    @if ($errors->any())
+    Swal.fire({
+        title: 'Please check the form',
+        html: @json('<ul class="text-start mb-0 small">' . collect($errors->all())->map(function ($m) {
+            return '<li>' . e($m) . '</li>';
+        })->implode('') . '</ul>'),
+        icon: 'error',
+        confirmButtonColor: '#d33',
+        confirmButtonText: 'OK'
+    });
+    @endif
+})();
+</script>
 @endsection

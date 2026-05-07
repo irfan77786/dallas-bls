@@ -289,22 +289,22 @@ session()->has('price') || ($currentStep >= 3)))
                         </td>
                     </tr>
                 </table>
-                <p>Welcome to Dallas Black Cars Service! These Terms and Conditions govern your use of this website and
+                <p>Welcome to Dallas Black Limo Service Service! These Terms and Conditions govern your use of this website and
                     our services. By getting access to and the usage of this website and our services, you agree to be
                     bound using those Terms. If you do not agree to those Terms, you can no longer use our offerings or
-                    this website. You acknowledge that Dallas Black Cars Service has the right to exchange those Terms
+                    this website. You acknowledge that Dallas Black Limo Service Service has the right to exchange those Terms
                     at any time without notice to you. Continue to check them from time to time for updates.</p>
                 <h6>1. Definitions</h6>
-                <p><b>Dallas Black Cars Service, "we", "our", or "us":</b> Refers to the enterprise, the internet site,
+                <p><b>Dallas Black Limo Service Service, "we", "our", or "us":</b> Refers to the enterprise, the internet site,
                     the owners, the operators, and/or the associates. <b>"You" or "User":</b> Refers to individuals or
                     entities who get admission to or employ our internet site or offerings.</p>
                 <h6>2. Acknowledgment And Agreement To Terms</h6>
                 <p>When you use our site or what we do, you say you have looked at and get these rules, and you say yes
                     to them. But if you don't go along with these rules, don't use our site or anything we give you.</p>
-                <p>Dallas Black Cars Service may change the Terms and Conditions at any time. If you continue to use the
+                <p>Dallas Black Limo Service Service may change the Terms and Conditions at any time. If you continue to use the
                     services, you accept the new Terms and Conditions.</p>
                 <h6>3. Services Offered</h6>
-                <p>Dallas Black Cars Service is an elite provider of professional chauffeured limousine services,
+                <p>Dallas Black Limo Service Service is an elite provider of professional chauffeured limousine services,
                     specializing in the following areas:</p>
                 <ul>
                     <li>Airport Transfers</li>
@@ -326,7 +326,7 @@ session()->has('price') || ($currentStep >= 3)))
                         booking confirmation will be billed separately.</li>
                     <li><b>Declined Payments:</b> Payments that are declined will require you to provide another form of
                         payment. If the alternate form of payment is not given, it is possible your booking may be
-                        canceled. Dallas Black Cars Service is not liable for cancellations on your booking due to
+                        canceled. Dallas Black Limo Service Service is not liable for cancellations on your booking due to
                         payment issues.</li>
                 </ul>
                 <h6>5. Social Media/Social Networks</h6>
@@ -340,7 +340,7 @@ session()->has('price') || ($currentStep >= 3)))
                     processing.</p>
                 <h6>7. Disputes And Arbitration</h6>
                 <ul>
-                    <li>The user must first contact Dallas Black Cars Service directly for resolution.</li>
+                    <li>The user must first contact Dallas Black Limo Service Service directly for resolution.</li>
                     <li>If there is no resolution, disputes will be settled through binding arbitration under relevant
                         U.S. law.</li>
                     <li>Arbitration will take place at a mutually agreed-upon location, and the arbitrator's decision

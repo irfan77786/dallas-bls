@@ -42,20 +42,6 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-11 col-xl-10">
-                    @if ($message = session('success'))
-                        <div class="alert alert-success alert-dismissible fade show mb-20" role="alert">
-                            {{ $message }}
-                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                        </div>
-                    @endif
-
-                    @if ($message = session('error'))
-                        <div class="alert alert-danger alert-dismissible fade show mb-20" role="alert">
-                            {{ $message }}
-                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                        </div>
-                    @endif
-
                     <form action="{{ route('contact_us_post') }}" method="post" class="contact-us-form bg-white px-20 px-sm-30 py-30 shadow-sm rounded">
                         @csrf
                         <div class="row">
@@ -151,28 +137,43 @@
 @section('scripts')
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
-@if (session('success'))
+(function () {
+    @if (session('success'))
     Swal.fire({
         title: 'Success!',
-        text: '{{ session('success') }}',
+        text: @json(session('success')),
         icon: 'success',
         confirmButtonColor: '#3085d6',
         confirmButtonText: 'OK'
-    }).then((result) => {
+    }).then(function (result) {
         if (result.isConfirmed) {
-            document.querySelector('.contact-us-form')?.reset();
+            var form = document.querySelector('.contact-us-form');
+            if (form) form.reset();
         }
     });
-@endif
+    @endif
 
-@if (session('error'))
+    @if (session('error'))
     Swal.fire({
-        title: 'Error!',
-        text: '{{ session('error') }}',
+        title: 'Error',
+        text: @json(session('error')),
         icon: 'error',
         confirmButtonColor: '#d33',
         confirmButtonText: 'OK'
     });
-@endif
+    @endif
+
+    @if ($errors->any())
+    Swal.fire({
+        title: 'Please check the form',
+        html: @json('<ul class="text-start mb-0 small">' . collect($errors->all())->map(function ($m) {
+            return '<li>' . e($m) . '</li>';
+        })->implode('') . '</ul>'),
+        icon: 'error',
+        confirmButtonColor: '#d33',
+        confirmButtonText: 'OK'
+    });
+    @endif
+})();
 </script>
 @endsection

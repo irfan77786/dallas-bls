@@ -38,7 +38,7 @@
             </div>
             @else
             <p style="font-size: 12px; margin: 0 0 10px;"><b>Dear {{ $details['full_name'] }},</b></p>
-            <p style="font-size: 12px; margin: 0 0 10px;">Thank you for reaching out to Dallas Black Cars. We have
+            <p style="font-size: 12px; margin: 0 0 10px;">Thank you for reaching out to Dallas Black Limo Service. We have
                 received your message and appreciate your interest. Our team will review your inquiry and get back to
                 you shortly.</p>
             @endif
@@ -92,14 +92,14 @@
             @if($details['sms_consent'] ?? false)
             <p
                 style="font-size: 11px; color: #666; margin-top: 15px; padding: 8px; background-color: #f0f0f0; border-radius: 4px;">
-                ✓ This contact has opted in to receive SMS notifications from Dallas Black Cars.</p>
+                ✓ This contact has opted in to receive SMS notifications from Dallas Black Limo Service.</p>
             @endif
         </div>
 
         <div class="footer"
             style="text-align: center; padding: 20px 10px; font-size: 12px; color: #777; border-top: 1px solid #e1e1e1;">
-            <p style="margin: 0 0 5px;"><strong>Dallas Black Cars</strong></p>
-            <p style="margin: 0 0 8px;">Premium Black Car & Limo Service in Dallas</p>
+            <p style="margin: 0 0 5px;"><strong>Dallas Black Limo Service</strong></p>
+            <p style="margin: 0 0 8px;">Premier Black Car & Limo Service in Dallas</p>
             <p style="margin: 0 0 5px;"><a href="tel:+12148978056" style="color: #12143e; text-decoration: none;">+1
                     214-897-8056</a> | <a href="mailto:info@dallasblacklimoservice.com"
                     style="color: #12143e; text-decoration: none;">info@dallasblacklimoservice.com</a></p>

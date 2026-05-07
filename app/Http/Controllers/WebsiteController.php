@@ -141,7 +141,8 @@ class WebsiteController extends Controller
         if ($request->edit) {
             session(['edit' => 1]);
         } else {
-            session()->flush();
+            // Avoid session()->flush(): it deletes flash data (success/error) after contactUsPost redirect.
+            session()->forget('edit');
             $request->session()->regenerateToken();
         }
 

@@ -38,7 +38,8 @@
             </div>
             @else
             <p style="font-size: 12px; margin: 0 0 10px;"><b>Dear {{ $details['full_name'] }},</b></p>
-            <p style="font-size: 12px; margin: 0 0 10px;">Thank you for requesting a quote from Dallas Black Cars. We
+            <p style="font-size: 12px; margin: 0 0 10px;">Thank you for requesting a quote from Dallas Black Limo
+                Service. We
                 have received your quote request and our team is preparing a customized quote based on your trip
                 details. You can expect to receive your quote within 24 hours.</p>
             @endif
@@ -128,8 +129,8 @@
 
         <div class="footer"
             style="text-align: center; padding: 20px 10px; font-size: 12px; color: #777; border-top: 1px solid #e1e1e1;">
-            <p style="margin: 0 0 5px;"><strong>Dallas Black Cars</strong></p>
-            <p style="margin: 0 0 8px;">Premium Black Car & Limo Service in Dallas</p>
+            <p style="margin: 0 0 5px;"><strong>Dallas Black Limo Service</strong></p>
+            <p style="margin: 0 0 8px;">Premier Black Car & Limo Service in Dallas</p>
             <p style="margin: 0 0 5px;"><a href="tel:+12148978056" style="color: #12143e; text-decoration: none;">+1
                     214-897-8056</a> | <a href="mailto:info@dallasblacklimoservice.com"
                     style="color: #12143e; text-decoration: none;">info@dallasblacklimoservice.com</a></p>
