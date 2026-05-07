@@ -387,7 +387,7 @@ return !in_array($feature['text'], $desktopHiddenFeatureTexts, true);
 
         .vehicle_img {
             max-height: 90px;
-            width: 170px;
+            width: 160px;
         }
 
         .vehicle-info {
@@ -426,7 +426,7 @@ return !in_array($feature['text'], $desktopHiddenFeatureTexts, true);
             transform: none;
             flex: 0 0 auto;
             min-width: 88px !important;
-            max-width: 34%;
+            max-width: 29%;
             text-align: right !important;
             margin-top: 0;
             white-space: normal;

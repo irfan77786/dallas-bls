@@ -5176,9 +5176,11 @@ h6,
   color: #0b1422;
   font-family: "Plus Jakarta Sans", sans-serif;
 }
-
+.logo img {
+    border-radius: 0px !important;
+}
 .logo {
-  max-width: 180px;
+max-width: 77%;
 }
 @media (min-width: 992px) {
   .logo {

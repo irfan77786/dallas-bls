@@ -352,27 +352,29 @@ div.search-tab-wrap ul.nav-tabs li.nav-item a.nav-link:focus {
 }
 
 .floating-bordered-input .floating-label {
-  position: absolute;
-  top: -14px;
-  left: 7px;
-  background: #fff;
-  padding: 0 6px 10px;
-  font-size: 10px;
-  color: #3c3b3b;
-  pointer-events: none;
+ position: absolute;
+    top: -13px;
+    left: 7px;
+    background: #fff;
+    padding: 0 4px 3px;
+    font-size: 10px;
+    color: #3c3b3b;
+    pointer-events: none;
+    
 }
 
 .floating-bordered-input .form-control {
-  border: none !important;
-  box-shadow: none !important;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 16px;
-  padding-bottom: 20px;
-  margin-top: 10px !important;
-  min-height: 46px;
-  box-sizing: border-box;
-  line-height: 1.45;
+    border: none !important;
+    box-shadow: none !important;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 5px;
+    padding-bottom: 12px;
+    margin-top: 10px !important;
+    min-height: 46px;
+    box-sizing: border-box;
+    line-height: 1.45;
+        
 }
 
 @supports (-webkit-touch-callout: none) {
@@ -641,7 +643,7 @@ div.search-tab-wrap ul.nav-tabs li.nav-item a.nav-link:focus {
 }
 
 .py-lg-20 {
-  padding-top: 4px;
+  padding-top: 7px;
   padding-bottom: 4px;
 }
 
@@ -703,7 +705,7 @@ input.InputElement.is-complete.Input {
 }
 
 span.pricing_summary_price {
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .container.px-3.py-3.bg-white.d-none.d-md-block {
@@ -976,6 +978,25 @@ a.btn.btn-primary.fifa-btn {
   .col-md-6.col-sm-6 {
     width: 50%;
   }
+  
+  button.mbs-close {
+    color: #000 !important;
+}
+button.btn.mbs-back {
+    min-width: 105px;
+}
+
+  
+  .col-6.col-lg-9.d-flex.align-items-center.justify-content-end {
+    display: none !important;
+}
+
+  
+   .floating-bordered-input.rlx-theme .rlx-select .rlx-arrow {
+   display:none;
+  }
+  
+  
   h2.h2.fw-bold.mb-10.text-center {
     font-size: 26px ! IMPORTANT;
     line-height: normal;
@@ -1249,7 +1270,7 @@ div#pricing-area-wrapper,
 
   .sformlink {
     font-size: 16.4px !important;
-    font-weight: 300 !important;
+    font-weight: 400 !important;
   }
 
   .gallary-inner-row .col-12.col-md-6.col-lg-4:nth-child(n + 4) {
