@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Validator;
 use App\Mail\ContactMail;
 use App\Mail\QuoteMail;
 use App\Models\Contact;
@@ -111,6 +112,29 @@ class WebsiteController extends Controller
         ]);
     }
 
+    public function getAQuoteThankYou(Request $request)
+    {
+        if ($request->edit) {
+            session(['edit' => 1]);
+        } else {
+            session()->forget('edit');
+            $request->session()->regenerateToken();
+        }
+
+        $seo = [
+            'title' => 'Thank You – Quote Request | Dallas Black Car Service',
+            'description' => 'Thank you for requesting a quote from Dallas Black Car Service. Our team will follow up with pricing for your ride.',
+            'keywords' => 'Dallas black car quote, thank you, luxury car service Dallas',
+            'og_title' => 'Thank You – Quote Request | Dallas Black Car Service',
+            'og_description' => 'Thank you for requesting a quote from Dallas Black Car Service.',
+            'og_image' => asset('new_assets/assets/black-car-service-dallas-logo.png'),
+        ];
+
+        return view('website.get-a-quote-thank-you', [
+            'seo' => $seo,
+        ]);
+    }
+
     public function booking(Request $request)
     {
         if ($request->edit) {
@@ -196,7 +220,7 @@ class WebsiteController extends Controller
 
     public function getAQuotePost(Request $request)
     {
-        $validated = $request->validate([
+        $validator = Validator::make($request->all(), [
             'vehicle_type' => 'required|string|max:255',
             'trip_type' => 'required|string|max:255',
             'number_of_passengers' => 'required|string|max:50',
@@ -208,6 +232,14 @@ class WebsiteController extends Controller
             'email' => 'required|email|max:255',
             'message' => 'nullable|string|min:5',
         ]);
+
+        if ($validator->fails()) {
+            return redirect()->route('get_a_quote_thank_you')
+                ->withErrors($validator)
+                ->withInput();
+        }
+
+        $validated = $validator->validated();
 
         try {
             $quoteData = [
@@ -230,9 +262,15 @@ class WebsiteController extends Controller
             Mail::to($validated['email'])->send(new QuoteMail($quoteData, false));
             Mail::to($adminEmail)->send(new QuoteMail($quoteData, true));
 
-            return redirect()->back()->with('success', 'Your quote request has been sent successfully! We will send you a quote shortly.');
+            return redirect()->route('get_a_quote_thank_you')->with(
+                'get_a_quote_success',
+                'Your quote request has been sent successfully! We will send you a quote shortly.'
+            );
         } catch (\Exception $e) {
-            return redirect()->back()->with('error', 'Error: ' . $e->getMessage());
+            return redirect()->route('get_a_quote_thank_you')->with(
+                'get_a_quote_error',
+                'Error: ' . $e->getMessage()
+            );
         }
     }
 

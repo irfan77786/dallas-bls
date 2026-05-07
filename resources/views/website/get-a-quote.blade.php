@@ -46,20 +46,6 @@
         </div>
         <div class="row justify-content-center">
             <div class="col-12 col-lg-11 col-xl-10">
-                @if ($message = session('success'))
-                    <div class="alert alert-success alert-dismissible fade show mb-20" role="alert">
-                        {{ $message }}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                @endif
-
-                @if ($message = session('error'))
-                    <div class="alert alert-danger alert-dismissible fade show mb-20" role="alert">
-                        {{ $message }}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                @endif
-
                 <form action="{{ route('get_a_quote_post') }}" method="post" class="get-a-quote-form bg-white px-20 px-sm-30 py-30">
                     @csrf
                     <div class="row">
@@ -498,33 +484,4 @@
 @include('partials.companies_strip')
 @include('partials.testimonials')
 @include('partials.faq')
-@endsection
-
-@section('scripts')
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script>
-@if (session('success'))
-    Swal.fire({
-        title: 'Success!',
-        text: '{{ session('success') }}',
-        icon: 'success',
-        confirmButtonColor: '#3085d6',
-        confirmButtonText: 'OK'
-    }).then((result) => {
-        if (result.isConfirmed) {
-            document.querySelector('.get-a-quote-form')?.reset();
-        }
-    });
-@endif
-
-@if (session('error'))
-    Swal.fire({
-        title: 'Error!',
-        text: '{{ session('error') }}',
-        icon: 'error',
-        confirmButtonColor: '#d33',
-        confirmButtonText: 'OK'
-    });
-@endif
-</script>
 @endsection
