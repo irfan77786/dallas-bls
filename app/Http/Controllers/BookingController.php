@@ -8,6 +8,8 @@ use App\Models\Booking;
 use App\Models\Vehicle;
 use App\Models\Booker;
 use App\Models\FlightDetail;
+use App\Models\RateCityGroup;
+use App\Models\RateCityGroupVehicleRate;
 use App\Models\RateVehicle;
 use App\Models\RateVehicleCity;
 use App\Models\ReturnService;
@@ -1695,99 +1697,9 @@ class BookingController extends Controller
     {
         $pickupLocation = session('return_pickup_location') ?: session('pickup_location');
 
-        $rateModel = null;
-        $useCityRates = false;
+        $groupVehicleRate = RateCityGroup::vehicleRateForPickup($vehicle, $pickupLocation);
+        $rateModel = $groupVehicleRate ?: RateVehicle::where('vehicle_id', $vehicle->id)->first();
 
-        if (!empty($pickupLocation)) {
-            /**
-             * 1. Fetch all groups, sorted by latest first.
-             * We use ID desc to satisfy the "group created last" requirement.
-             */
-            $groups = \App\Models\RateCityGroup::orderBy('id', 'desc')->get();
-
-            foreach ($groups as $group) {
-                // Your schema stores cities as a JSON array of objects [{place_id, name}, ...]
-                $citiesInGroup = is_array($group->cities) ? $group->cities : json_decode($group->cities, true);
-
-                foreach (($citiesInGroup ?? []) as $cityData) {
-                    $cityName = trim((string)($cityData['name'] ?? ''));
-
-                    // 2. Check if the pickup location contains this city name
-                    if ($cityName !== '' && stripos($pickupLocation, $cityName) !== false) {
-
-                        // 3. Try to find the specific vehicle rates for THIS group
-                        $groupVehicleRate = \App\Models\RateCityGroupVehicleRate::where('group_id', $group->id)
-                            ->where('vehicle_id', $vehicle->id)
-                            ->first();
-
-                        if ($groupVehicleRate) {
-                            $rateModel = $groupVehicleRate;
-                            $useCityRates = true;
-                            break 2; // Exit both loops: we found the latest valid group
-                        }
-                    }
-                }
-            }
-        }
-
-        // 4. Fallback to global vehicle rates if no city group matched
-        if (!$useCityRates) {
-            $rateModel = \App\Models\RateVehicle::where('vehicle_id', $vehicle->id)->first();
-        }
-
-        // 5. Determine Base Rate
-        $base = ($rateModel && isset($rateModel->base_rate))
-            ? (float) $rateModel->base_rate
-            : (float) $vehicle->base_fare;
-
-        // 6. Extract Tiers (Handling JSON or Array)
-        $tiersRaw = ($rateModel && !empty($rateModel->distance_rates))
-            ? $rateModel->distance_rates
-            : [];
-
-        if (is_string($tiersRaw)) {
-            $decoded = json_decode($tiersRaw, true);
-            $tiers = is_array($decoded) ? $decoded : [];
-        } else {
-            $tiers = is_array($tiersRaw) ? $tiersRaw : [];
-        }
-
-        // 7. Calculate Tiered Distance Cost
-        $remainingDistance = $distanceMiles;
-        $distanceCost = 0.0;
-
-        foreach ($tiers as $tier) {
-            if ($remainingDistance <= 0) break;
-
-            $tier = (array) $tier; // Ensure we can access as array
-            $rate = isset($tier['rate']) ? (float) $tier['rate'] : 0.0;
-            $distanceValue = $tier['distance'] ?? null;
-
-            if ($distanceValue === 'remaining') {
-                $distanceCost += $remainingDistance * $rate;
-                $remainingDistance = 0;
-                break;
-            }
-
-            $tierDistance = (float) $distanceValue;
-            if ($tierDistance <= 0) continue;
-
-            $appliedDistance = min($remainingDistance, $tierDistance);
-            $distanceCost += $appliedDistance * $rate;
-            $remainingDistance -= $appliedDistance;
-        }
-
-        $totalPrice = round($base + $distanceCost, 2);
-
-        return [
-            'distance_km'    => round($distanceMiles, 2), // Note: Keep as miles unless conversion is needed
-            'distance_miles' => round($distanceMiles, 2),
-            'price'          => $totalPrice,
-            'baseFare'       => $base,
-            'hourlyFare'     => null,
-            'perKmRate'      => null,
-            'hours'          => null,
-            'type'           => 'PointToPoint'
-        ];
+        return RateCityGroupVehicleRate::pointToPointBreakdown($rateModel, $vehicle, $distanceMiles);
     }
 }
