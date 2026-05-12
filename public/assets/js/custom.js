@@ -1803,4 +1803,104 @@ $(document).ready(function () {
     } else {
         console.error("bootstrapMaterialDatePicker plugin is not loaded");
     }
+
+    /** Home banner / search forms: today + time must be at least 2 hours from now */
+    function localTodayYmd() {
+        var n = new Date();
+        return (
+            n.getFullYear() +
+            "-" +
+            String(n.getMonth() + 1).padStart(2, "0") +
+            "-" +
+            String(n.getDate()).padStart(2, "0")
+        );
+    }
+
+    function formPostsBookingSession(form) {
+        var a = (form.getAttribute("action") || "").trim();
+        return a.indexOf("save-booking-form-session") !== -1;
+    }
+
+    $(document).on("submit", "form", function (e) {
+        var form = this;
+        if (!formPostsBookingSession(form)) {
+            return;
+        }
+
+        var $form = $(form);
+        var $date = $form.find('input[name="pickup_date"]');
+        var $time = $form.find('input[name="pickup_time"]');
+        if (!$date.length || !$time.length) {
+            return;
+        }
+
+        var timeEl = $time[0];
+        var dateVal = ($date.val() || "").trim();
+        var timeVal = ($time.val() || "").trim();
+        if (!dateVal || !timeVal) {
+            return;
+        }
+
+        if (dateVal !== localTodayYmd()) {
+            timeEl.setCustomValidity("");
+            return;
+        }
+
+        var parts = timeVal.split(":");
+        var hh = parseInt(parts[0], 10);
+        var mm = parseInt(parts[1] !== undefined ? parts[1] : "0", 10);
+        if (isNaN(hh) || isNaN(mm)) {
+            return;
+        }
+
+        var dp = dateVal.split("-");
+        if (dp.length !== 3) {
+            return;
+        }
+        var pick = new Date(
+            parseInt(dp[0], 10),
+            parseInt(dp[1], 10) - 1,
+            parseInt(dp[2], 10),
+            hh,
+            mm,
+            0,
+            0,
+        );
+        if (isNaN(pick.getTime())) {
+            return;
+        }
+
+        var earliest = new Date(Date.now() + 2 * 60 * 60 * 1000);
+
+        if (pick.getTime() < earliest.getTime()) {
+            e.preventDefault();
+            e.stopImmediatePropagation();
+            var msg = "For today, pick-up must be at least 2 hours from the current time.";
+            timeEl.setCustomValidity(msg);
+            timeEl.focus({ preventScroll: true });
+            if (typeof timeEl.reportValidity === "function") {
+                timeEl.reportValidity();
+            } else {
+                window.alert(msg);
+            }
+            return false;
+        }
+
+        timeEl.setCustomValidity("");
+    });
+
+    $(document).on(
+        "change input",
+        'form input[name="pickup_date"], form input[name="pickup_time"]',
+        function () {
+            var f = this.form;
+            if (!f || !formPostsBookingSession(f)) {
+                return;
+            }
+            var t = f.querySelector('input[name="pickup_time"]');
+            if (t) {
+                t.setCustomValidity("");
+            }
+        },
+    );
 });
