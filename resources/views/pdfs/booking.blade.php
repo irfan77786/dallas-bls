@@ -700,7 +700,7 @@
 
 
     <footer style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee; text-align: center; font-size: 12px; color: #666;">
-      <p>Thank you for choosing Dallas Black Car Service. If you have any questions about your booking, please contact our customer support.</p>
+      <p>Thank you for choosing Dallas Black Limo Service. If you have any questions about your booking, please contact our customer support.</p>
       <p>214-897-8056 | info@dallaslimoandblackcars.com</p>
     </footer>
   </div>
