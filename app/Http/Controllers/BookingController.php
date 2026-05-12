@@ -1211,12 +1211,23 @@ class BookingController extends Controller
                 $lastNumericId = (int)$matches[1] + 1;
             }
 
-            $booker = Booker::create([
-                'first_name' => $booker_first_name,
-                'last_name'  => $booker_last_name,
-                'email'      => $booker_email,
-                'phone_number' => $booker_number,
-            ]);
+            // Only create a Booker row when the booking is for someone else AND we
+            // actually have the booker's contact info. The `booker` table requires
+            // all four columns NOT NULL, so creating one with missing data fails.
+            $booker = null;
+            if ($isBookingForOthers
+                && !empty($booker_first_name)
+                && !empty($booker_last_name)
+                && !empty($booker_email)
+                && !empty($booker_number)
+            ) {
+                $booker = Booker::create([
+                    'first_name' => $booker_first_name,
+                    'last_name'  => $booker_last_name,
+                    'email'      => $booker_email,
+                    'phone_number' => $booker_number,
+                ]);
+            }
 
             $customBookingId = 'pm_' . $lastNumericId;
 
@@ -1352,9 +1363,19 @@ class BookingController extends Controller
                 'special_instructions' => session('note') ?? null,
                 'flight_details' => $flight_details,
             ];
+
             // Run synchronously so admin/booker receive mail without a queue worker
             // (the job still implements job structure for tests / future queue use).
-            CreateBookingDocs::dispatchSync($bookingData, $customBookingId);
+            // Isolated try/catch: PDF/mail failures MUST NOT block the thank-you
+            // redirect or roll back the already-saved booking.
+            try {
+                CreateBookingDocs::dispatchSync($bookingData, $customBookingId);
+            } catch (\Throwable $e) {
+                \Log::error('Booking docs dispatch failed (booking still saved): ' . $e->getMessage(), [
+                    'booking_id' => $customBookingId,
+                    'file' => $e->getFile() . ':' . $e->getLine(),
+                ]);
+            }
 
             // Clear session
             session()->forget([
@@ -1381,48 +1402,84 @@ class BookingController extends Controller
                 'booking_id' => $customBookingId,
             ]);
 
-            return $user ? redirect()->route('dashboard')->with('success', 'Booking completed successfully!') : redirect()->route('thankyou');
+            return $user
+                ? redirect()->route('dashboard')->with('success', 'Booking completed successfully!')
+                : redirect()->route('thankyou');
         } catch (\Stripe\Exception\CardException $e) {
+            \Log::error('completeBook Stripe CardException: ' . $e->getMessage());
             return redirect()->back()->with('error', $e->getError()->message);
         } catch (\Stripe\Exception\ApiErrorException $e) {
+            \Log::error('completeBook Stripe ApiErrorException: ' . $e->getMessage());
             return redirect()->back()->with('error', 'Stripe API error: ' . $e->getMessage());
-        } catch (\Exception $e) {
+        } catch (\Throwable $e) {
+            \Log::error('completeBook fatal: ' . $e->getMessage(), [
+                'file' => $e->getFile() . ':' . $e->getLine(),
+                'trace' => substr($e->getTraceAsString(), 0, 2000),
+            ]);
+
+            // If we already created the booking, do NOT bounce the user back to
+            // the payment page (that would risk a double-charge). Send them to
+            // thank-you with the booking_id we just stored.
+            if (!empty($customBookingId) && \App\Models\Booking::where('booking_id', $customBookingId)->exists()) {
+                session([
+                    'booking_completed' => true,
+                    'booking_id' => $customBookingId,
+                ]);
+                return redirect()->route('thankyou');
+            }
+
             return redirect()->back()->with('error', 'Something went wrong: ' . $e->getMessage());
         }
     }
 
     public function ThankYou()
     {
+        $bookingId = session('booking_id');
+
+        if (empty($bookingId)) {
+            return redirect()->route('booking');
+        }
+
         $booking = Booking::with(['vehicle', 'passengers', 'booker'])
-            ->where('booking_id', session('booking_id'))
-            ->firstOrFail();
+            ->where('booking_id', $bookingId)
+            ->first();
+
+        if (!$booking) {
+            \Log::warning('ThankYou: booking not found for session booking_id', [
+                'booking_id' => $bookingId,
+            ]);
+            return redirect()->route('booking');
+        }
 
         $travelInfo = null;
 
-        if (empty($booking->dropoff_location)) {
-            // Hourly booking
-            $hours = $booking->total_hours ?? 0;
-            $fare = $booking->vehicle->base_hourly_fare * $hours;
-
-            $travelInfo = [
-                'type' => 'hourly',
-                'hours' => $hours,
-                'fare' => $fare,
-            ];
-        } else {
-            // Point-to-point booking
-            $distance = $this->getDistanceBetweenAddresses($booking->pickup_location, $booking->dropoff_location);
-
-            if ($distance !== null) {
-                $fare = $booking->vehicle->base_fare + ($distance * $booking->vehicle->per_km_rate);
-
+        try {
+            if (empty($booking->dropoff_location)) {
+                $hours = $booking->total_hours ?? 0;
+                $hourlyRate = $booking->vehicle->base_hourly_fare ?? 0;
                 $travelInfo = [
-                    'type' => 'point_to_point',
-                    'distance' => $distance,
-                    'fare' => $fare,
+                    'type' => 'hourly',
+                    'hours' => $hours,
+                    'fare' => $hourlyRate * $hours,
                 ];
+            } else {
+                $distance = $this->getDistanceBetweenAddresses($booking->pickup_location, $booking->dropoff_location);
+
+                if ($distance !== null && $booking->vehicle) {
+                    $baseFare = $booking->vehicle->base_fare ?? 0;
+                    $perKmRate = $booking->vehicle->per_km_rate ?? 0;
+                    $travelInfo = [
+                        'type' => 'point_to_point',
+                        'distance' => $distance,
+                        'fare' => $baseFare + ($distance * $perKmRate),
+                    ];
+                }
             }
+        } catch (\Throwable $e) {
+            \Log::warning('ThankYou: travelInfo computation failed: ' . $e->getMessage());
+            $travelInfo = null;
         }
+
         return view('booking.thankyou', [
             'booking' => $booking,
             'travelInfo' => $travelInfo,

@@ -34,65 +34,79 @@ class CreateBookingDocs
      */
     public function handle()
     {
+        // Generate PDF (non-fatal: a failure here must NOT abort the booking flow).
+        $filePath = null;
         try {
             $pdfsDirectory = public_path('pdfs');
-            
+
             if (!file_exists($pdfsDirectory)) {
                 mkdir($pdfsDirectory, 0777, true);
             }
 
             $filePath = $pdfsDirectory . '/' . $this->customBookingId . '.pdf';
-            
+
             $pdf = PDF::loadView('pdfs.booking', ['bookingData' => $this->bookingData]);
             $pdf->save($filePath);
+        } catch (\Throwable $e) {
+            \Log::error('CreateBookingDocs PDF generation failed: ' . $e->getMessage(), [
+                'booking_id' => $this->customBookingId,
+                'file' => $e->getFile() . ':' . $e->getLine(),
+            ]);
+            $filePath = null; // ensure mail can still go out without attachment
+        }
 
-            $adminEmail = config('mail.admin_email');
-            \Log::info('Admin email from config: ' . ($adminEmail ?: 'NOT FOUND'));
-            \Log::info('Customer email: ' . $this->bookingData['email']);
+        // Build recipient list
+        $recipients = [];
 
-            $recipients = [
-                ['email' => $this->bookingData['email'], 'isAdmin' => false, 'isBooker' => false],
-            ];
+        $customerEmail = $this->bookingData['email'] ?? null;
+        if (!empty($customerEmail)) {
+            $recipients[] = ['email' => $customerEmail, 'isAdmin' => false, 'isBooker' => false];
+        } else {
+            \Log::warning('CreateBookingDocs: customer email missing, skipping customer send', [
+                'booking_id' => $this->customBookingId,
+            ]);
+        }
 
-            if (!empty($adminEmail)) {
-                $recipients[] = ['email' => trim($adminEmail), 'isAdmin' => true, 'isBooker' => false];
-                \Log::info('Added admin email to recipients: ' . $adminEmail);
-            } else {
-                \Log::warning('Admin email not found in configuration');
+        $adminEmail = config('mail.admin_email');
+        if (!empty($adminEmail)) {
+            $recipients[] = ['email' => trim($adminEmail), 'isAdmin' => true, 'isBooker' => false];
+        } else {
+            \Log::warning('Admin email not found in configuration');
+        }
+
+        $isForOthers = !empty($this->bookingData['isBookingForOthers']);
+        $bookerEmail = $this->bookingData['booker_email'] ?? null;
+        if ($isForOthers && !empty($bookerEmail) && $bookerEmail !== $customerEmail) {
+            $recipients[] = ['email' => $bookerEmail, 'isAdmin' => false, 'isBooker' => true];
+        }
+
+        \Log::info('CreateBookingDocs final recipient list', [
+            'booking_id' => $this->customBookingId,
+            'recipients' => $recipients,
+        ]);
+
+        // Send each email independently so one failure does not stop the others
+        foreach ($recipients as $index => $recipient) {
+            try {
+                $email = new \App\Mail\Booking(
+                    $this->bookingData,
+                    $recipient['isAdmin'],
+                    $recipient['isBooker']
+                );
+
+                Mail::to($recipient['email'])->send($email);
+                \Log::info('Booking mail sent', [
+                    'booking_id' => $this->customBookingId,
+                    'to' => $recipient['email'],
+                    'index' => $index + 1,
+                ]);
+            } catch (\Throwable $e) {
+                \Log::error('Booking mail failed: ' . $e->getMessage(), [
+                    'booking_id' => $this->customBookingId,
+                    'to' => $recipient['email'],
+                    'file' => $e->getFile() . ':' . $e->getLine(),
+                ]);
             }
-
-            if ($this->bookingData['isBookingForOthers'] && $this->bookingData['booker_email'] !== $this->bookingData['email']) {
-                $recipients[] = [
-                    'email' => $this->bookingData['booker_email'],
-                    'isAdmin' => false,
-                    'isBooker' => true
-                ];
-                \Log::info('Added booker email to recipients: ' . $this->bookingData['booker_email']);
-            }
-
-            \Log::info('Final recipient list:', $recipients);
-
-            foreach ($recipients as $index => $recipient) {
-                try {
-                    \Log::info("Sending email #" . ($index + 1) . " to: " . $recipient['email']);
-                    
-                    $email = new \App\Mail\Booking(
-                        $this->bookingData,
-                        $recipient['isAdmin'],
-                        $recipient['isBooker']
-                    );
-                    
-                    Mail::to($recipient['email'])->send($email);
-                    \Log::info("Successfully sent email #" . ($index + 1) . " to: " . $recipient['email']);
-                } catch (\Exception $e) {
-                    \Log::error("Failed to send email #" . ($index + 1) . " to " . $recipient['email'] . ": " . $e->getMessage());
-                    \Log::error("Error details: " . $e->getFile() . ":" . $e->getLine() . " - " . $e->getTraceAsString());
-                    continue;
-                }
-            }
-        } catch (\Exception $e) {
-            \Log::error("Error in CreateBookingDocs job: " . $e->getMessage());
-            throw $e;
         }
     }
 }

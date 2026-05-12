@@ -14,7 +14,7 @@
         <div class="header"
             style="padding: 20px 10px; text-align: center; border-bottom: 1px solid #eee; background-color: #ffffff;">
             <div style="background-color: #ffffff; padding: 15px; display: inline-block;">
-                <img src="{{ rtrim((string) config('app.url', 'https://dallasblacklimoservice.com'), '/') }}/assets/logo.jpeg"
+                <img src="https://www.dallasblacklimoservice.com/img/dallas-black-limo-service-logo.png"
                     alt="Dallas Black Limo Service"
                     style="max-width: 250px; margin-bottom: 10px; height: auto; display: block; background-color: #ffffff;">
             </div>

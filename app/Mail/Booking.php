@@ -39,9 +39,25 @@ class Booking extends Mailable
      */
     public function envelope()
     {
-        $pickupDateTime = \Carbon\Carbon::parse($this->bookingData['pickup_date'].' '.$this->bookingData['pickup_time'])->format('F j, Y \a\t g:i A');
+        $pickupDate = $this->bookingData['pickup_date'] ?? null;
+        $pickupTime = $this->bookingData['pickup_time'] ?? null;
+
+        $pickupDateTime = 'N/A';
+        if (!empty($pickupDate)) {
+            try {
+                $pickupDateTime = \Carbon\Carbon::parse(trim($pickupDate.' '.($pickupTime ?? '')))
+                    ->format('F j, Y \a\t g:i A');
+            } catch (\Throwable $e) {
+                $pickupDateTime = (string) $pickupDate;
+            }
+        }
+
+        $name = $this->bookingData['customer_name']
+            ?? $this->bookingData['passenger_name']
+            ?? 'Customer';
+
         return new Envelope(
-            subject: 'Conf#'. ($this->bookingData['booking_id'] ?? '') . ' For ' . ($this->bookingData['customer_name'] ?? $this->bookingData['passenger_name'] ?? 'Customer') . ' [' . $pickupDateTime . ']',
+            subject: 'Conf#'. ($this->bookingData['booking_id'] ?? '') . ' For ' . $name . ' [' . $pickupDateTime . ']',
         );
     }
 
@@ -69,9 +85,19 @@ class Booking extends Mailable
      */
     public function attachments()
     {
+        $bookingId = $this->bookingData['booking_id'] ?? null;
+        if (empty($bookingId)) {
+            return [];
+        }
+
+        $path = public_path('pdfs/'.$bookingId.'.pdf');
+        if (!is_readable($path)) {
+            return [];
+        }
+
         return [
-            Attachment::fromPath(public_path('pdfs/'.$this->bookingData['booking_id'].'.pdf'))
-                ->as($this->bookingData['booking_id'].'.pdf')
+            Attachment::fromPath($path)
+                ->as($bookingId.'.pdf')
                 ->withMime('application/pdf'),
         ];
     }
