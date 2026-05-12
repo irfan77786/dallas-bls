@@ -15,6 +15,7 @@ use App\Models\RateVehicleCity;
 use App\Models\ReturnService;
 use Exception;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Validator;
@@ -84,6 +85,19 @@ class BookingController extends Controller
             'breakdown_data' => $result,
             'final_price' => $final,
         ]);
+
+        // Already authenticated users have no reason to see the
+        // "Login or Continue as Guest" screen. Submitting either form
+        // here would hit a `guest`-only route and bounce them out of
+        // the booking flow, so skip straight to passenger info.
+        if (Auth::check()) {
+            $user = Auth::user();
+            session()->put('booker_first_name', $user->first_name);
+            session()->put('booker_last_name', $user->last_name);
+            session()->put('booker_email', $user->email);
+
+            return redirect()->route('submit.passenger.info');
+        }
 
         return view('booking.user_login', [
             'step' => 3,
