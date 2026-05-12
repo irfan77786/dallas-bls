@@ -9,8 +9,9 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('users', function (Blueprint $table) {
-            if (!Schema::hasColumn('users', 'user_id')) {
-                $table->foreignId('user_id')->nullable()->constrained('users')->nullOnDelete()->index();
+            if (! Schema::hasColumn('users', 'user_id')) {
+                // No DB-level FK: legacy `users` tables may not have `id` as a primary key MySQL can reference.
+                $table->unsignedBigInteger('user_id')->nullable()->index();
             }
         });
     }
@@ -19,7 +20,7 @@ return new class extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             if (Schema::hasColumn('users', 'user_id')) {
-                $table->dropConstrainedForeignId('user_id');
+                $table->dropColumn('user_id');
             }
         });
     }

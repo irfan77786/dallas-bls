@@ -11,14 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        if (! Schema::hasTable('contacts')) {
-            Schema::create('contacts', function (Blueprint $table) {
+        if (! Schema::hasTable('stored_locations')) {
+            Schema::create('stored_locations', function (Blueprint $table) {
                 $table->id();
-                $table->string('full_name');
-                $table->string('email');
-                $table->string('phone', 20);
-                $table->text('message');
-                $table->boolean('sms_consent')->default(false);
+                $table->enum('address_type', ['home', 'other'])->default('home');
+                $table->string('location_label')->nullable();
+                $table->text('address')->nullable();
+                $table->string('apt_suite')->nullable();
                 $table->timestamps();
             });
         }
@@ -29,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('contacts');
+        Schema::dropIfExists('stored_locations');
     }
 };

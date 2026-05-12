@@ -11,13 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('airports', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('iata_code')->nullable();
-            $table->string('city')->nullable();
-            $table->timestamps();
-        });
+        if (! Schema::hasTable('airports')) {
+            Schema::create('airports', function (Blueprint $table) {
+                $table->id();
+                $table->string('name');
+                $table->string('iata_code')->nullable();
+                $table->string('city')->nullable();
+                $table->timestamps();
+            });
+        }
     }
 
     /**
