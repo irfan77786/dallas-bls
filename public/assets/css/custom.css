@@ -388,8 +388,9 @@ div.search-tab-wrap ul.nav-tabs li.nav-item a.nav-link:focus {
       padding-top: 14px;
       padding-bottom: 14px;
       line-height: 20px;
-      text-align: center;
-      text-align-last: center;
+      text-align: left;
+      text-align-last: left;
+      direction: ltr;
     }
   }
 }
