@@ -16,6 +16,15 @@ const options = {
     types: ["geocode", "establishment"],
 };
 
+/** Single-point fitBounds zooms extremely tight on phones; use explicit zoom instead. */
+function isHomeSearchMapMobileViewport() {
+    return typeof $ !== "undefined" && $(window).width() < 768;
+}
+
+function getHomeSearchMapSinglePlaceZoom() {
+    return isHomeSearchMapMobileViewport() ? 10 : 12;
+}
+
 function geolocate() {}
 
 function resetMap() {
@@ -787,7 +796,7 @@ function onLocationChanged() {
     const mapElement = document.getElementById("map");
     const pickupVal = $pickup.val() ? $pickup.val().trim() : "";
     const dropoffVal = $dropoff.val() ? $dropoff.val().trim() : "";
-    const zoomLevel = 12;
+    const zoomLevel = getHomeSearchMapSinglePlaceZoom();
     const animationDuration = 500; // ms
 
     // Clear directions if either field is empty
@@ -1049,7 +1058,7 @@ function initMap(pickupPlace, dropoffPlace) {
     if (!map) {
         map = new google.maps.Map(mapElement, {
             center: mapCenter,
-            zoom: 12,
+            zoom: getHomeSearchMapSinglePlaceZoom(),
             styles: mapStyle,
             disableDefaultUI: true,
             zoomControl: true,
@@ -1181,18 +1190,25 @@ function initMap(pickupPlace, dropoffPlace) {
     if (hasPickup) bounds.extend(pickupPlace.geometry.location);
     if (hasDropoff) bounds.extend(dropoffPlace.geometry.location);
 
-    // Only fit bounds if we have valid bounds
+    // Only fit bounds when both endpoints exist; one-point bounds make fitBounds zoom to max on mobile.
     if (!bounds.isEmpty()) {
-        // Add some padding around the markers
-        const padding = 100; // pixels
-        map.fitBounds(bounds, {
-            padding: {
-                top: padding,
-                right: padding,
-                bottom: padding,
-                left: padding,
-            },
-        });
+        if (hasPickup && hasDropoff) {
+            const padding = isHomeSearchMapMobileViewport() ? 130 : 100;
+            map.fitBounds(bounds, {
+                padding: {
+                    top: padding,
+                    right: padding,
+                    bottom: padding,
+                    left: padding,
+                },
+            });
+        } else {
+            const center = hasPickup
+                ? pickupPlace.geometry.location
+                : dropoffPlace.geometry.location;
+            map.panTo(center);
+            map.setZoom(getHomeSearchMapSinglePlaceZoom());
+        }
     }
 
     if (hasPickup && hasDropoff) {
