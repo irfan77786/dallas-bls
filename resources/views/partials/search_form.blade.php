@@ -23,7 +23,7 @@
                         the 1500s, when an unknown printer tooks,</p>
 
                     <p class="text-white font-base d-flex align-items-center mb-30 mb-md-0">
-                        Call: <a href="tel:+12148978056" class="mx-2 fw-bold font-lg theme-color">+1 214-897-8056</a>
+                        Call: <a href="tel:+12148978056" class="mx-2 fw-bold font-lg theme-color">+1 469-961-2047</a>
                     </p>
                 </div>
             </div>

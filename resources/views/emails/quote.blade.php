@@ -121,7 +121,7 @@
                 <ul style="margin: 0; padding-left: 20px;">
                     <li style="margin: 4px 0;">Our team will review your trip details</li>
                     <li style="margin: 4px 0;">We'll send you a customized quote within 24 hours</li>
-                    <li style="margin: 4px 0;">Feel free to call us anytime: <strong>+1 214-897-8056</strong></li>
+                    <li style="margin: 4px 0;">Feel free to call us anytime: <strong>+1 469-961-2047</strong></li>
                 </ul>
             </div>
             @endif
@@ -132,7 +132,7 @@
             <p style="margin: 0 0 5px;"><strong>Dallas Black Limo Service</strong></p>
             <p style="margin: 0 0 8px;">Premier Black Car & Limo Service in Dallas</p>
             <p style="margin: 0 0 5px;"><a href="tel:+12148978056" style="color: #12143e; text-decoration: none;">+1
-                    214-897-8056</a> | <a href="mailto:info@dallasblacklimoservice.com"
+                    469-961-2047</a> | <a href="mailto:info@dallasblacklimoservice.com"
                     style="color: #12143e; text-decoration: none;">info@dallasblacklimoservice.com</a></p>
             <p style="margin: 0; font-size: 11px;">This is an automated message. Please do not reply to this email.</p>
         </div>

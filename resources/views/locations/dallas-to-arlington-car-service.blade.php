@@ -6,7 +6,7 @@
         <div class="row justify-content-center">
             <div class="text-center col-12 col-xl-10">
                 <h2 class="h2 fw-bold mb-15 mb-sm-20 mb-lg-30">Our Premium Fleet – Ride in Comfort and Style
-                    with <span class="theme-color fw-bold">Dallas Limo and Black Cars Service</span></h2>
+                    with <span class="theme-color fw-bold"> Dallas Black Limo Service</span></h2>
             </div>
             <div class="col-12 mb-15">
                 <p class="font-base">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -72,8 +72,8 @@
     <div class="ah-container">
         <div class="row justify-content-center">
             <div class="mb-20 text-center col-12 col-lg-11 col-xl-10 mb-md-30 mb-lg-40">
-                <h2 class="h2 fw-bold mb-15 mb-sm-20 mb-lg-30">Why Choose Us for <span
-                        class="theme-color">Airport Transfers</span></h2>
+                <h2 class="h2 fw-bold mb-15 mb-sm-20 mb-lg-30">Why Choose Us for <span class="theme-color">Airport
+                        Transfers</span></h2>
                 <p class="font-base">Traveling to or from the airport should be safe & stress-free. We make sure
                     your journey is smooth, whether you’re catching an early flight or arriving late at night.
                     Our goal is to give you comfort, reliability & peace of mind every time.</p>
@@ -183,8 +183,7 @@
                     professional standards. Quiet rides allow focus and privacy, while drivers respect
                     schedules and understand business needs. In Dallas, we support meetings, events, and
                     executive travel with consistent, high-quality service.</p>
-                <a href="/about-us"
-                    class="btn btn-primary sm fw-medium">Learn
+                <a href="/about-us" class="btn btn-primary sm fw-medium">Learn
                     More</a>
             </div>
             <div class="col-12 col-md-6 h-100">
