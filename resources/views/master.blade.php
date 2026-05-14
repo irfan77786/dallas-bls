@@ -169,7 +169,7 @@
     <header class="py-15 py-lg-20">
         <div class="container position-relative">
             <div class="row align-items-center">
-                <div class="col-9 col-md-3">
+                <div class="col-6 col-md-3">
                     <div class="logo">
                         <a href="/">
                             <img src="{{ asset('assets/new_theme/img/logo.webp') }}" width="200" height="72"
@@ -190,7 +190,7 @@
                     </a>
                 </div>
                 @else
-                <div class="col-3 col-md-9">
+                <div class="col-6 col-md-9">
                     <nav class="custom-navbar navbar navbar-expand-lg p-0 position-static">
                         <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"

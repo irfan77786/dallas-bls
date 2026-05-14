@@ -102,6 +102,14 @@
         footer.footer.bg-blue {
             display: none !important;
         }
+    .mobile-card-methods {
+        width: 100% !important;
+    }
+    
+    
+    img.img-fluid {
+    border-radius: 2px;
+}
 
         .container.step-wrapper.md-py-3 {
             display: none !important;

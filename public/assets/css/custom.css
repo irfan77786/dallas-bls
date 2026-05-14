@@ -706,7 +706,7 @@ input.InputElement.is-complete.Input {
 }
 
 span.pricing_summary_price {
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .container.px-3.py-3.bg-white.d-none.d-md-block {
@@ -979,7 +979,13 @@ a.btn.btn-primary.fifa-btn {
   .col-md-6.col-sm-6 {
     width: 50%;
   }
-  
+  img.img-fluid.d-md-none {
+    width: 98%;
+}
+.logo {
+    max-width: 100%;
+}
+ 
   button.mbs-close {
     color: #000 !important;
 }
@@ -988,10 +994,7 @@ button.btn.mbs-back {
 }
 
   
-  .col-6.col-lg-9.d-flex.align-items-center.justify-content-end {
-    display: none !important;
-}
-
+ 
   
    .floating-bordered-input.rlx-theme .rlx-select .rlx-arrow {
    display:none;
