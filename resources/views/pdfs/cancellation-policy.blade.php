@@ -136,11 +136,19 @@
       <div style="display: table-row;">
         <div style="display: table-cell; vertical-align: middle; width: 62%;">
           @php
-          $logoUrl = 'https://dallaslimoandblackcars.com/img/black-car-service-dallas-logo.webp';
-          $context = stream_context_create(['ssl' => ['verify_peer' => false, 'verify_peer_name' => false]]);
-          $logoData = base64_encode(file_get_contents($logoUrl, false, $context));
+          $logoUrl = 'https://www.dallasblacklimoservice.com/img/dallas-black-limo-service-logo.png';
+          $context = stream_context_create([
+              'ssl' => ['verify_peer' => false, 'verify_peer_name' => false],
+              'http' => ['timeout' => 10],
+          ]);
+          $logoRaw = @file_get_contents($logoUrl, false, $context);
+          $logoData = ($logoRaw !== false && $logoRaw !== '') ? base64_encode($logoRaw) : null;
           @endphp
-          <img src="data:image/png;base64,{{ $logoData }}" alt="Logo" style="height: 60px;" />
+          @if($logoData)
+          <img src="data:image/png;base64,{{ $logoData }}" alt="Dallas Black Limo Service" style="max-width: 250px; max-height: 60px; height: auto;" />
+          @else
+          <div style="font-weight: bold; font-size: 18px;">Dallas Black Limo Service</div>
+          @endif
         </div>
         <div style="text-align: right;">
           <div style="font-size: 12px; text-align: left;">

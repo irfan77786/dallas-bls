@@ -199,18 +199,31 @@
       <div style="display: table-row;">
         <div style="display: table-cell; vertical-align: middle; width: 62%;">
           @php
-          $logoPath = public_path('assets/logo.jpeg');
-          if (!is_readable($logoPath)) {
-          $logoPath = public_path('assets/img/site/black-car-service-dallas-logo.png');
+          $logoUrl = 'https://www.dallasblacklimoservice.com/img/dallas-black-limo-service-logo.png';
+          $logoContext = stream_context_create([
+              'ssl' => ['verify_peer' => false, 'verify_peer_name' => false],
+              'http' => ['timeout' => 10],
+          ]);
+          $logoRaw = @file_get_contents($logoUrl, false, $logoContext);
+          $logoData = ($logoRaw !== false && $logoRaw !== '') ? base64_encode($logoRaw) : null;
+          $mime = 'image/png';
+
+          if (!$logoData) {
+              $logoPath = public_path('assets/logo.jpeg');
+              if (!is_readable($logoPath)) {
+                  $logoPath = public_path('assets/img/site/black-car-service-dallas-logo.png');
+              }
+              if (is_readable($logoPath)) {
+                  $logoData = base64_encode(file_get_contents($logoPath));
+                  $mime = str_ends_with(strtolower((string) $logoPath), '.png') ? 'image/png' : 'image/jpeg';
+              }
           }
-          $logoData = is_readable($logoPath) ? base64_encode(file_get_contents($logoPath)) : null;
-          $mime = (str_ends_with(strtolower((string) $logoPath), '.png')) ? 'image/png' : 'image/jpeg';
           @endphp
           @if($logoData)
-          <img src="data:{{ $mime }};base64,{{ $logoData }}" alt="Logo"
+          <img src="data:{{ $mime }};base64,{{ $logoData }}" alt="Dallas Black Limo Service"
             style="max-width: 250px; max-height: 60px; height: auto;" />
           @else
-          <div style="font-weight: bold; font-size: 18px;"> Dallas Black Limo Service</div>
+          <div style="font-weight: bold; font-size: 18px;">Dallas Black Limo Service</div>
           @endif
         </div>
         <div style="text-align: right;">
