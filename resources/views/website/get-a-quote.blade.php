@@ -96,16 +96,18 @@
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
-                        <div class="col-12 col-md-6 col-lg-4 mb-15">
+                        <div class="col-12 col-md-6 col-lg-4 mb-15 position-relative">
                             <label for="pickup_address" class="form-label mb-1 fw-medium">Pickup Address</label>
-                            <input type="text" class="form-control @error('pickup_address') is-invalid @enderror" id="pickup_address" name="pickup_address" placeholder="Street, City, State" value="{{ old('pickup_address') }}" required>
+                            <input type="text" class="form-control @error('pickup_address') is-invalid @enderror" id="pickup_address" name="pickup_address" placeholder="Start typing an address…" value="{{ old('pickup_address') }}" autocomplete="off" required>
+                            <div id="quote-pickup-suggestions" class="location-suggestions" role="listbox" aria-label="Pickup address suggestions"></div>
                             @error('pickup_address')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
-                        <div class="col-12 col-md-6 col-lg-4 mb-15">
+                        <div class="col-12 col-md-6 col-lg-4 mb-15 position-relative">
                             <label for="dropoff_address" class="form-label mb-1 fw-medium">Drop Off Address</label>
-                            <input type="text" class="form-control @error('dropoff_address') is-invalid @enderror" id="dropoff_address" name="dropoff_address" placeholder="Street, City, State" value="{{ old('dropoff_address') }}" required>
+                            <input type="text" class="form-control @error('dropoff_address') is-invalid @enderror" id="dropoff_address" name="dropoff_address" placeholder="Start typing an address…" value="{{ old('dropoff_address') }}" autocomplete="off" required>
+                            <div id="quote-dropoff-suggestions" class="location-suggestions" role="listbox" aria-label="Drop-off address suggestions"></div>
                             @error('dropoff_address')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror

@@ -439,7 +439,10 @@ function setupCustomAutocomplete(
 ) {
     const input = document.getElementById(inputId);
     const suggestionsContainer = document.getElementById(suggestionsListId);
-    const hiddenAirport = document.getElementById(hiddenAirportFieldId);
+    const hiddenAirport =
+        hiddenAirportFieldId != null && hiddenAirportFieldId !== ""
+            ? document.getElementById(hiddenAirportFieldId)
+            : null;
     let autocompleteService = new google.maps.places.AutocompleteService();
     let placesService = new google.maps.places.PlacesService(
         document.createElement("div"),
@@ -736,6 +739,9 @@ function initAutocomplete() {
             handlePointToPointUpdate();
         },
     );
+
+    setupCustomAutocomplete("pickup_address", "quote-pickup-suggestions", null);
+    setupCustomAutocomplete("dropoff_address", "quote-dropoff-suggestions", null);
 
     // Add window resize listener for map width if needed
     if (typeof updateMapWidth === "function") {

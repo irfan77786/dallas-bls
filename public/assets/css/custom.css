@@ -861,6 +861,17 @@ a.btn.btn-primary.fifa-btn {
    AUTOCOMPLETE
 ========================= */
 
+/* Banner search + Get a Quote: dropdown must not be clipped by parent overflow */
+.search-form-box .floating-bordered-input,
+.get-a-quote-form .position-relative {
+  position: relative;
+  z-index: 1;
+}
+
+.get-a-quote-form .position-relative:focus-within {
+  z-index: 5;
+}
+
 .location-suggestions {
   position: absolute;
   top: 100%;
