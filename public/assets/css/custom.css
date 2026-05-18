@@ -861,15 +861,28 @@ a.btn.btn-primary.fifa-btn {
    AUTOCOMPLETE
 ========================= */
 
-/* Banner search + Get a Quote: dropdown must not be clipped by parent overflow */
 .search-form-box .floating-bordered-input,
 .get-a-quote-form .position-relative {
   position: relative;
   z-index: 1;
 }
 
-.get-a-quote-form .position-relative:focus-within {
-  z-index: 5;
+.search-form-box .floating-bordered-input:focus-within,
+.search-form-box .floating-bordered-input.location-autocomplete-open,
+.get-a-quote-form .position-relative:focus-within,
+.get-a-quote-form .position-relative.location-autocomplete-open {
+  z-index: 200;
+}
+
+.search-form-box,
+.search-tab-wrap .tab-content,
+.get-a-quote-form {
+  overflow: visible;
+}
+
+.search-form-wrapper-desktop,
+.search-form-mobile {
+  overflow: visible;
 }
 
 .location-suggestions {
@@ -878,7 +891,7 @@ a.btn.btn-primary.fifa-btn {
   left: 0;
   width: 100%;
   background: #fff;
-  z-index: 1000;
+  z-index: 1;
   border: 1px solid #ddd;
   border-radius: 0 0 4px 4px;
   max-height: 300px;

@@ -431,6 +431,28 @@ function getPlaceIconSvg(place = {}) {
     return '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0a5.53 5.53 0 0 0-5.5 5.5C2.5 9.086 6.6 15 8 15s5.5-5.914 5.5-9.5A5.53 5.53 0 0 0 8 0m0 3a2.5 2.5 0 1 1 0 5A2.5 2.5 0 0 1 8 3"/></svg>';
 }
 
+function getLocationAutocompleteWrapper(suggestionsContainer) {
+    return suggestionsContainer?.closest(
+        ".floating-bordered-input, .position-relative",
+    );
+}
+
+function showLocationSuggestions(suggestionsContainer) {
+    if (!suggestionsContainer) return;
+    suggestionsContainer.style.display = "block";
+    getLocationAutocompleteWrapper(suggestionsContainer)?.classList.add(
+        "location-autocomplete-open",
+    );
+}
+
+function hideLocationSuggestions(suggestionsContainer) {
+    if (!suggestionsContainer) return;
+    suggestionsContainer.style.display = "none";
+    getLocationAutocompleteWrapper(suggestionsContainer)?.classList.remove(
+        "location-autocomplete-open",
+    );
+}
+
 function setupCustomAutocomplete(
     inputId,
     suggestionsListId,
@@ -452,7 +474,7 @@ function setupCustomAutocomplete(
     // Function to handle place selection
     function selectPlace(place, displayText) {
         input.value = displayText || place.formatted_address || place.name;
-        suggestionsContainer.style.display = "none";
+        hideLocationSuggestions(suggestionsContainer);
 
         // Check if it's an airport
         let isAirport = false;
@@ -485,7 +507,7 @@ function setupCustomAutocomplete(
         const query = this.value.trim();
 
         if (query.length < 2) {
-            suggestionsContainer.style.display = "none";
+            hideLocationSuggestions(suggestionsContainer);
             return;
         }
 
@@ -501,7 +523,7 @@ function setupCustomAutocomplete(
                         status !== google.maps.places.PlacesServiceStatus.OK ||
                         !predictions
                     ) {
-                        suggestionsContainer.style.display = "none";
+                        hideLocationSuggestions(suggestionsContainer);
                         return;
                     }
 
@@ -557,8 +579,7 @@ function setupCustomAutocomplete(
                         suggestionsContainer.appendChild(item);
                     });
 
-                    // Show suggestions
-                    suggestionsContainer.style.display = "block";
+                    showLocationSuggestions(suggestionsContainer);
                 },
             );
         }, 500);
@@ -570,7 +591,7 @@ function setupCustomAutocomplete(
             !input.contains(e.target) &&
             !suggestionsContainer.contains(e.target)
         ) {
-            suggestionsContainer.style.display = "none";
+            hideLocationSuggestions(suggestionsContainer);
         }
     });
 
