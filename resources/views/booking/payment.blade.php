@@ -219,6 +219,19 @@
             <p class="mb-3 small" style="color: #000;">All transactions are secure and encrypted. Safe and secure
                 payments powered by <b>Stripe</b></p>
 
+            @if(session('error'))
+            <div class="alert alert-danger mb-3" role="alert">{{ session('error') }}</div>
+            @endif
+            @if($errors->any())
+            <div class="alert alert-danger mb-3" role="alert">
+                <ul class="mb-0 ps-3">
+                    @foreach($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+            @endif
+
             <form id="payment-form" method="POST" action="/completeBook">
                 @csrf
                 <input type="hidden" name="payment_method_id" id="payment_method_id">

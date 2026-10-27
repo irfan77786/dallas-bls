@@ -30,10 +30,16 @@ return new class extends Migration {
 
     public function down(): void
     {
-        if (Schema::hasColumn('bookings', 'round_trip')) {
-            Schema::table('bookings', function (Blueprint $table) {
-                $table->dropColumn('round_trip');
-            });
-        }
+        Schema::table('bookings', function (Blueprint $table) {
+            $drop = [];
+            foreach (['round_trip', 'return_date', 'return_time'] as $column) {
+                if (Schema::hasColumn('bookings', $column)) {
+                    $drop[] = $column;
+                }
+            }
+            if ($drop !== []) {
+                $table->dropColumn($drop);
+            }
+        });
     }
 };
