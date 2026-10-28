@@ -265,6 +265,12 @@ div.search-tab-wrap ul.nav-tabs li.nav-item a.nav-link:focus {
   z-index: 1;
 }
 
+.search-tab-wrap .nav-tabs:has(.nav-item:nth-child(2) .nav-link.active)::after,
+.search-tab-wrap .nav-tabs:has(.nav-item:last-child .nav-link.active)::after,
+.search-tab-wrap .nav-tabs.hourly-active::after {
+  left: 50%;
+}
+
 .search-tab-wrap .nav-tabs .nav-link {
   border-bottom: 2px solid transparent !important;
   transition: color 0.3s ease;
@@ -1003,9 +1009,7 @@ button.btn.mbs-back {
   
  
   
-   .floating-bordered-input.rlx-theme .rlx-select .rlx-arrow {
-   display:none;
-  }
+
   
   
   h2.h2.fw-bold.mb-10.text-center {
@@ -1177,9 +1181,6 @@ div#pricing-area-wrapper,
     padding-top: 5px !important;
   }
 
-  .floating-bordered-input.rlx-theme .rlx-select .rlx-arrow {
-    left: 314px;
-  }
 
   h5.mb-2.step-title {
     margin: 0;

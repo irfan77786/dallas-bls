@@ -4,7 +4,7 @@ $tabSuffix = $id_suffix ?? '';
 @endphp
 <div class="search-tab-wrap">
     <!-- Nav tabs -->
-    <ul class="nav nav-tabs" style="padding-bottom: 8px;">
+    <ul class="nav nav-tabs {{ $isHourly ? 'hourly-active' : '' }}" style="padding-bottom: 8px;">
         <li class="nav-item" style="flex: 1">
             <a class="nav-link {{ !$isHourly ? 'active' : 'inactive-tab' }} text-center pt-0 sformlink"
                 style="font-size: 12px !important; font-weight: 600;" data-bs-toggle="tab"
@@ -325,69 +325,72 @@ $tabSuffix = $id_suffix ?? '';
 </div>
 
 <style>
+    /* Under-bar indicator sliding to hourly tab */
+    .search-tab-wrap .nav-tabs:has(.nav-item:nth-child(2) .nav-link.active)::after,
+    .search-tab-wrap .nav-tabs:has(.nav-item:last-child .nav-link.active)::after,
+    .search-tab-wrap .nav-tabs.hourly-active::after {
+        left: 50% !important;
+    }
+
+    /* Duration select field container */
+    .floating-bordered-input.rlx-theme {
+        padding: 0 !important;
+    }
+
     /* Ridelux-style custom select */
     .rlx-select {
         position: relative;
         width: 100%;
+        box-sizing: border-box;
     }
 
-    .rlx-select .rlx-trigger {
-        display: block;
-        position: relative;
-        width: 100%;
-        background: transparent;
-        border: none;
-        border-radius: 0;
-        padding: 0 44px 0 44px;
-        margin-top: 10px;
-        color: #1f2937;
-        font-size: 16px;
-        line-height: 1.45;
-        min-height: 42px;
-        text-align: left;
-    }
-
-    .floating-bordered-input .rlx-select .rlx-trigger {
-        margin-top: 10px;
-    }
-
-    /* Keep duration trigger content vertically centered */
     .floating-bordered-input.rlx-theme .rlx-select .rlx-trigger {
         display: flex;
         align-items: center;
+        width: 100%;
         min-height: 46px;
-        padding: 0 36px 0 0 !important;
-        padding-bottom: 0 !important;
+        padding: 0 38px 0 40px !important;
+        margin-top: 10px !important;
+        margin-bottom: 0 !important;
+        border: none;
+        border-radius: 0;
+        background: transparent;
+        color: #1f2937;
+        font-size: 16px;
+        line-height: 1.45;
+        text-align: left;
+        box-sizing: border-box;
+        cursor: pointer;
     }
 
     .rlx-select .rlx-value {
         pointer-events: none;
     }
 
-    .rlx-select .rlx-arrow {
+    .floating-bordered-input.rlx-theme .rlx-select .rlx-arrow {
         color: #6b7280;
         position: absolute;
-        right: 8px !important;
+        right: 14px !important;
+        left: auto !important;
         top: 50%;
         transform: translateY(-50%);
         pointer-events: none;
-    }
-
-    /* Move duration dropdown arrow to input's far right edge */
-    .floating-bordered-input.rlx-theme .rlx-select .rlx-arrow {
-        right: -28px !important;
-    }
-
-    .rlx-select.open .rlx-arrow {
-        transform: translateY(-50%) rotate(180deg);
+        display: block !important;
         transition: transform .18s ease;
+        z-index: 2;
+    }
+
+    .rlx-select.open .rlx-arrow,
+    .floating-bordered-input.rlx-theme .rlx-select.open .rlx-arrow {
+        transform: translateY(-50%) rotate(180deg);
     }
 
     .rlx-select .rlx-list {
         position: absolute;
-        top: calc(100% + 6px);
-        left: -40px;
-        right: -40px;
+        top: calc(100% + 4px);
+        left: 0;
+        right: 0;
+        width: 100%;
         background: #fff;
         border: 1px solid #e6eaef;
         border-radius: 8px;
@@ -401,6 +404,7 @@ $tabSuffix = $id_suffix ?? '';
         transition: opacity .18s ease, transform .18s ease;
         z-index: 1050;
         overscroll-behavior: contain;
+        box-sizing: border-box;
     }
 
     .rlx-select.open .rlx-list {
@@ -531,6 +535,40 @@ $tabSuffix = $id_suffix ?? '';
       else if (e.key === 'Escape') { e.preventDefault(); close(); trigger.focus(); }
     });
   }
+
+  if (!window.__searchTabUnderlineInit) {
+    window.__searchTabUnderlineInit = true;
+
+    document.addEventListener('click', function(e) {
+      var tabLink = e.target.closest('.search-tab-wrap .sformlink');
+      if (tabLink) {
+        var navTabs = tabLink.closest('.nav-tabs');
+        if (navTabs) {
+          var href = tabLink.getAttribute('href') || '';
+          if (href.indexOf('#event') !== -1) {
+            navTabs.classList.add('hourly-active');
+          } else {
+            navTabs.classList.remove('hourly-active');
+          }
+        }
+      }
+    });
+
+    document.addEventListener('shown.bs.tab', function(e) {
+      if (e.target && e.target.classList.contains('sformlink')) {
+        var navTabs = e.target.closest('.nav-tabs');
+        if (navTabs) {
+          var href = e.target.getAttribute('href') || '';
+          if (href.indexOf('#event') !== -1) {
+            navTabs.classList.add('hourly-active');
+          } else {
+            navTabs.classList.remove('hourly-active');
+          }
+        }
+      }
+    });
+  }
+
   document.addEventListener('DOMContentLoaded', function(){
     initRlxSelect('rlx-hours{{ $tabSuffix }}');
   });
