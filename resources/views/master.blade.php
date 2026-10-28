@@ -260,7 +260,7 @@
                                                 quote</a></li>
                                         <li><a class="dropdown-item" href="/contact-us">Contact
                                                 us</a></li>
-                                        <li><a class="dropdown-item" href="/faqs">FAQs</a></li>
+                                        {{-- <li><a class="dropdown-item" href="/faqs">FAQs</a></li> --}}
                                         <li><a class="dropdown-item" href="/terms-and-conditions">Terms
                                                 &
                                                 Conditions</a></li>

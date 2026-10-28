@@ -37,7 +37,7 @@
                                     <ul class="submenu">
                                         <li><a href="#">Get a quote</a></li>
                                         <li><a href="contact.html">Contact us</a></li>
-                                        <li><a href="#">FAQs</a></li>
+                                        {{-- <li><a href="#">FAQs</a></li> --}}
                                         <li><a href="#">Terms & Conditions</a></li>
                                         <li><a href="#">Privacy Policy</a></li>
                                         <li><a href="#">Cancellation Policy</a></li>
@@ -111,7 +111,7 @@
                         <ul class="submenu list-unstyled">
                             <li><a href="#">Get a quote</a></li>
                             <li><a href="contact.html">Contact us</a></li>
-                            <li><a href="#">FAQs</a></li>
+                            {{-- <li><a href="#">FAQs</a></li> --}}
                             <li><a href="#">Terms & Conditions</a></li>
                             <li><a href="#">Privacy Policy</a></li>
                             <li><a href="#">Cancellation Policy</a></li>
