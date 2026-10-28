@@ -331,45 +331,56 @@ $tabSuffix = $id_suffix ?? '';
         left: 50% !important;
     }
 
-    /* Duration select field container */
+    /* Duration select: vertically center icon + value + arrow in the field */
     .floating-bordered-input.rlx-theme {
         padding: 0 !important;
+        min-height: 56px;
+        display: flex !important;
+        align-items: center !important;
     }
 
-    /* Ridelux-style custom select */
-    .rlx-select {
+    .floating-bordered-input.rlx-theme > .rlx-select {
         position: relative;
         width: 100%;
+        height: 100%;
+        min-height: 56px;
         box-sizing: border-box;
     }
 
     .floating-bordered-input.rlx-theme .rlx-select .rlx-trigger {
         display: flex !important;
         align-items: center !important;
-        justify-content: flex-start;
+        justify-content: flex-start !important;
+        position: relative;
         width: 100%;
-        min-height: 46px !important;
-        height: 46px;
+        min-height: 56px !important;
+        height: 56px !important;
         padding: 0 38px 0 40px !important;
-        margin-top: 10px !important;
-        margin-bottom: 0 !important;
+        margin: 0 !important;
         border: none;
         border-radius: 0;
         background: transparent;
         color: #1f2937;
         font-size: 16px;
-        line-height: 1.2 !important;
+        line-height: 1 !important;
         text-align: left;
         box-sizing: border-box;
         cursor: pointer;
     }
 
-    .rlx-select .rlx-value {
+    .floating-bordered-input.rlx-theme .rlx-select .rlx-value {
         pointer-events: none;
-        display: flex;
-        align-items: center;
+        display: block;
         white-space: nowrap;
-        line-height: 1.2;
+        line-height: 1;
+        margin: 0;
+        padding: 0;
+    }
+
+    .floating-bordered-input.rlx-theme .input-icon-left {
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        z-index: 2;
     }
 
     .floating-bordered-input.rlx-theme .rlx-select .rlx-arrow {
@@ -377,17 +388,25 @@ $tabSuffix = $id_suffix ?? '';
         position: absolute;
         right: 14px !important;
         left: auto !important;
-        top: 50%;
+        top: 50% !important;
         transform: translateY(-50%);
         pointer-events: none;
         display: block !important;
         transition: transform .18s ease;
         z-index: 2;
+        margin: 0;
     }
 
     .rlx-select.open .rlx-arrow,
     .floating-bordered-input.rlx-theme .rlx-select.open .rlx-arrow {
         transform: translateY(-50%) rotate(180deg);
+    }
+
+    /* Ridelux-style custom select */
+    .rlx-select {
+        position: relative;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .rlx-select .rlx-list {

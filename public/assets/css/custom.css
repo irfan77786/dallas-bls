@@ -423,27 +423,45 @@ div.search-tab-wrap ul.nav-tabs li.nav-item a.nav-link:focus {
   display: flex;
   align-items: center;
   font-size: 16px;
-  min-height: 46px;
+  min-height: 56px;
   text-align: left;
+}
+
+.floating-bordered-input.rlx-theme {
+  display: flex !important;
+  align-items: center !important;
+  min-height: 56px;
+  padding: 0 !important;
+}
+
+.floating-bordered-input.rlx-theme .rlx-select {
+  width: 100%;
+  min-height: 56px;
 }
 
 .floating-bordered-input.rlx-theme .rlx-select .rlx-trigger {
   display: flex !important;
   align-items: center !important;
-  justify-content: flex-start;
-  min-height: 46px !important;
-  height: 46px;
+  justify-content: flex-start !important;
+  position: relative;
+  min-height: 56px !important;
+  height: 56px !important;
   padding: 0 38px 0 40px !important;
-  margin-top: 10px !important;
-  margin-bottom: 0 !important;
-  line-height: 1.2 !important;
+  margin: 0 !important;
+  line-height: 1 !important;
 }
 
 .floating-bordered-input.rlx-theme .rlx-select .rlx-value {
-  display: flex;
-  align-items: center;
+  display: block;
   white-space: nowrap;
-  line-height: 1.2;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.floating-bordered-input.rlx-theme .input-icon-left {
+  top: 50% !important;
+  transform: translateY(-50%) !important;
 }
 
 .hours-space {
