@@ -433,20 +433,6 @@
                     </div>
                 </div>
              </div>
-            <div class="bg-gray py-30 d-md-none">
-                <div class="container">
-                    <div class="row">
-                        <div class="text-center col-12">
-                            <div class="fifa-image-holder">
-                                <img loading="lazy" decoding="async" src="{{ asset('assets/new_theme/img/fifa-image.png') }}" class="img-fluid" alt="FIFA Image" width="380" height="100%">
-                            </div>
-                            <a href="" class="btn btn-primary w-100 fw-medium text-capitalize">Visit our FIFA World
-                                Cup 2026
-                                page</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
         </section>
    
@@ -467,7 +453,7 @@
                     <p class="font-base text-justify">Professional transportation to and from Signature Flight Support in Dallas is essential for travelers who value punctuality, privacy, and reliability. Whether you are arriving on a private flight, departing for business travel, or arranging service for an executive guest, our car service helps ensure a smooth and stress-free ground transportation experience. We provide timely pickups and drop-offs with close attention to FBO coordination, guest comfort, and schedule-sensitive travel needs.
 
 Our luxury fleet includes premium sedans and executive SUVs designed for comfort, privacy, and efficiency. With real-time coordination and experienced chauffeurs, we help ensure that schedule changes and arrival adjustments are handled seamlessly. Serving Dallas, Plano, Frisco, Irving, and nearby cities, our service provides dependable transportation for private aviation travelers every time. For clients seeking a reliable solution, explore our <a href="/airports/dfw-car-service/"><b>Dallas airport car service</b></a> and enjoy a premium FBO transfer experience.</p>
-                <a href="/booking/" class="btn btn-primary sm fw-medium fifa-btn-full">Book Signature Flight Support Car Service</a>
+                <a href="/booking/" class="btn btn-primary sm fw-medium w-100">Book Signature Flight Support Car Service</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -487,7 +473,7 @@ Our luxury fleet includes premium sedans and executive SUVs designed for comfort
                     <p class="font-base text-justify">Our executive chauffeur service for Signature Flight Support is designed for business professionals, VIP travelers, principals, and executive assistants who require dependable, high-end transportation. We understand the importance of timing, privacy, and presentation, which is why our chauffeurs are trained to provide a polished and discreet service tailored to executive travel. Whether you are coordinating client arrivals, corporate aviation logistics, or important guest transportation, our service supports a smooth and professional journey.
 
 We offer a luxury fleet of sedans and SUVs equipped to provide maximum comfort and privacy. Our service connects Signature Flight Support with major business destinations including Downtown Dallas, Plano, Frisco, Richardson, and surrounding corporate hubs. With flexible scheduling and reliable service, we help maintain a strong professional standard from pickup to drop-off. Discover our premium <a href="/services/executive-shuttle-services-dallas/"><b>executive shuttle services in Dallas</b></a> for enhanced corporate travel support.</p>
-                    <a href="/get-a-quote/" class="btn btn-primary sm fw-medium fifa-btn-full">Request Executive Transfer Quote</a>
+                    <a href="/get-a-quote/" class="btn btn-primary sm fw-medium w-100">Request Executive Transfer Quote</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -508,7 +494,7 @@ We offer a luxury fleet of sedans and SUVs equipped to provide maximum comfort a
                     <p class="font-base text-justify">Our private transfer service from Signature Flight Support offers a personalized and stress-free travel experience for individuals, families, executives, and corporate clients. Unlike rideshare options or uncertain on-demand pickups, our private service provides direct routes, complete privacy, and a comfortable journey tailored to your schedule. Whether you are traveling from Signature Flight Support to a hotel, office, residence, event venue, or another airport, we provide reliable and efficient transportation solutions.
 
 Our chauffeurs prioritize safety, punctuality, and professional service on every trip. With door-to-door transportation and luxury vehicles, we make private aviation ground travel effortless and comfortable. We serve major destinations across Dallas, Irving, Plano, and McKinney, making us a trusted option throughout the DFW area. For a more personalized experience, explore our <a href="/services/private-car-service-in-dallas/"><b>private car service in Dallas</b></a> and enjoy premium transportation from the FBO to your final destination.</p>
-                    <a href="/booking/" class="btn btn-primary sm fw-medium fifa-btn-full">Book Private FBO Transfer</a>
+                    <a href="/booking/" class="btn btn-primary sm fw-medium w-100">Book Private FBO Transfer</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -842,20 +828,6 @@ Our chauffeurs prioritize safety, punctuality, and professional service on every
     
     
      @include('partials.testimonials')
-        <section class="bg-gray py-30 d-md-none">
-            <div class="container">
-                <div class="row">
-                    <div class="text-center col-12">
-                        <div class="fifa-image-holder">
-                            <img  loading="lazy"
-decoding="async" src="{{ asset('assets/new_theme/img/fifa-image.png') }}" class="img-fluid" alt="FIFA Image">
-                        </div>
-                        <a href="" class="btn btn-primary w-100 fw-medium text-capitalize">Visit our FIFA World Cup 2026
-                            page</a>
-                    </div>
-                </div>
-            </div>
-        </section>
           <section class="py-40 faqs-section">
             <div class="container">
                 <div class="row">

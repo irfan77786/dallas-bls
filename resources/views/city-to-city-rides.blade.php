@@ -169,7 +169,7 @@
 At Dallas Black Limo Service, we provide high-end sedans, executive SUVs, and spacious vehicles tailored for comfort, privacy, and convenience. Our <a href="/services/private-car-service-in-dallas/"><b>airport black car service in Dallas</b></a> is perfect for business travelers, families, and corporate clients seeking dependable transportation.
 
 We track flight schedules in real-time to ensure accurate pickups and drop-offs without delays. Covering Downtown Dallas, Plano, Frisco, Irving, McKinney, and the entire DFW metroplex, we guarantee safe, private, and luxury airport transportation every time.</p>
-                <a href="/booking/" class="btn btn-primary sm fw-medium fifa-btn-full">Book Reliable Airport Car Service Today</a>
+                <a href="/booking/" class="btn btn-primary sm fw-medium w-100">Book Reliable Airport Car Service Today</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -192,7 +192,7 @@ Our corporate transportation service is perfect for business meetings, executive
 
 Our experienced chauffeurs focus on punctuality, professionalism, and discretion, making us a reliable partner for corporate travel. Serving Dallas, Plano, Frisco, Irving, Richardson, and the wider DFW metroplex, we help business professionals travel with confidence while maintaining a refined and professional image.
 </p>
-                    <a href="/get-a-quote/" class="btn btn-primary sm fw-medium fifa-btn-full">Get Corporate Travel Quote Now</a>
+                    <a href="/get-a-quote/" class="btn btn-primary sm fw-medium w-100">Get Corporate Travel Quote Now</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -214,7 +214,7 @@ Our experienced chauffeurs focus on punctuality, professionalism, and discretion
 Our Dallas city-to-city transportation service is perfect for business professionals, families, and individuals who prefer a more comfortable alternative to flights or rideshare options. Whether you’re traveling from Dallas to Austin, Houston, Fort Worth, Plano, Frisco, McKinney, or surrounding areas, our premium vehicles ensure a safe and relaxing ride.
 
 With a fleet of luxury sedans and executive SUVs, we provide exceptional comfort, privacy, and convenience for long-distance travel. Our experienced chauffeurs and reliable door-to-door service guarantee a seamless and dependable travel experience every time.</p>
-                  <a href="/booking/" class="btn btn-primary sm fw-medium fifa-btn-full">Book Your City-to-City Ride Today</a>
+                  <a href="/booking/" class="btn btn-primary sm fw-medium w-100">Book Your City-to-City Ride Today</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -501,23 +501,6 @@ With a fleet of luxury sedans and executive SUVs, we provide exceptional comfort
         </div>
     </div>
 </section>
-
-    <section class="bg-gray py-30 d-md-none">
-        <div class="container">
-            <div class="row">
-                <div class="text-center col-12">
-                    <div class="fifa-image-holder">
-                        <img loading="lazy" decoding="async" src="{{ asset('assets/fifa-image.png') }}"
-                            class="img-fluid" alt="FIFA Image">
-                    </div>
-                    <a href="{{ url('/fifa-world-cup-2026-car-service-dallas') }}"
-                        class="btn btn-primary w-100 fw-medium text-capitalize">
-                        Visit our FIFA World Cup 2026 page
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <section class="faqs-section py-50 py-sm-60 py-md-70 py-lg-80">
         <div class="container">

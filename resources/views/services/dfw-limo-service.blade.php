@@ -125,7 +125,7 @@
                     <p class="font-base text-justify">Our DFW limo service provides reliable and luxury transportation for travelers heading to and from DFW Airport and Dallas Love Field Airport. Whether you are arriving in the Dallas–Fort Worth area or planning your departure, we ensure timely pickups, smooth routes, and a stress-free travel experience. Serving key locations such as Irving, Grapevine, Plano, and Downtown Dallas, our airport limo service is designed for both business and leisure travelers who value comfort and punctuality.
 
 With real-time flight tracking and professional chauffeurs, we adjust schedules based on delays or early arrivals, ensuring seamless coordination every time. Our fleet of luxury sedans and executive SUVs offers privacy, comfort, and reliability for every journey. For dependable airport transportation, explore our <a href="/airports/dfw-car-service/"><b>DFW airport car service</b></a> and enjoy a premium limo experience.</p>
-                <a href="/booking/" class="btn btn-primary sm fw-medium fifa-btn-full">Book DFW Limo Service</a>
+                <a href="/booking/" class="btn btn-primary sm fw-medium w-100">Book DFW Limo Service</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -145,7 +145,7 @@ With real-time flight tracking and professional chauffeurs, we adjust schedules 
                     <p class="font-base text-justify">Our executive DFW limo service is tailored for business professionals and corporate clients who require punctual, professional, and high-end transportation across the Dallas–Fort Worth metroplex. Whether you are attending meetings, corporate events, or hosting important clients, our chauffeur-driven limo service ensures a smooth and impressive travel experience. We cover major business hubs including Dallas, Plano, Frisco, Las Colinas, and Richardson.
 
 Our fleet includes luxury sedans and executive SUVs designed to provide a comfortable and quiet environment for work or relaxation. Our experienced chauffeurs focus on professionalism, discretion, and time management, ensuring you always arrive on schedule. With flexible booking options and reliable service, we are a trusted partner for corporate transportation. Discover our <a href="/services/corporate-transportation-dallas/"><b>corporate transportation in Dallas</b></a> for complete business travel solutions.</p>
-                    <a href="/get-a-quote/" class="btn btn-primary sm fw-medium fifa-btn-full">Get Executive Limo Quote</a>
+                    <a href="/get-a-quote/" class="btn btn-primary sm fw-medium w-100">Get Executive Limo Quote</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -166,7 +166,7 @@ Our fleet includes luxury sedans and executive SUVs designed to provide a comfor
                     <p class="font-base text-justify">Our private DFW limo service offers a personalized and luxury transportation experience for individuals, families, and travelers who prefer comfort and privacy. Whether you need transportation within Dallas–Fort Worth or long-distance travel to nearby cities like Austin, Houston, or Fort Worth, our limo service provides a reliable and stress-free solution. We serve areas including Irving, Plano, McKinney, Arlington, and surrounding cities.
 
 Unlike standard rideshare options, our limo service guarantees a dedicated vehicle, professional chauffeur, and flexible scheduling tailored to your needs. Our fleet is designed for both short and extended trips, offering maximum comfort, safety, and convenience. With a focus on customer satisfaction and premium service, we ensure every ride meets the highest standards. For more luxury travel options, visit our <a href="/services/private-car-service-in-dallas/"><b>private car service in Dallas</b></a> and experience top-tier transportation.</p>
-                    <a href="/booking/" class="btn btn-primary sm fw-medium fifa-btn-full">Book Private Limo Ride</a>
+                    <a href="/booking/" class="btn btn-primary sm fw-medium w-100">Book Private Limo Ride</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -452,23 +452,6 @@ Unlike standard rideshare options, our limo service guarantees a dedicated vehic
         </div>
     </div>
 </section>
-
-    <section class="bg-gray py-30 d-md-none">
-        <div class="container">
-            <div class="row">
-                <div class="text-center col-12">
-                    <div class="fifa-image-holder">
-                        <img loading="lazy" decoding="async" src="{{ asset('assets/fifa-image.png') }}"
-                            class="img-fluid" alt="FIFA Image">
-                    </div>
-                    <a href="{{ url('/fifa-world-cup-2026-car-service-dallas') }}"
-                        class="btn btn-primary w-100 fw-medium text-capitalize">
-                        Visit our FIFA World Cup 2026 page
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <section class="faqs-section py-50 py-sm-60 py-md-70 py-lg-80">
         <div class="container">

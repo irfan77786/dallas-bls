@@ -430,20 +430,6 @@
                     </div>
                 </div>
              </div>
-            <div class="bg-gray py-30 d-md-none">
-                <div class="container">
-                    <div class="row">
-                        <div class="text-center col-12">
-                            <div class="fifa-image-holder">
-                                <img loading="lazy" decoding="async" src="{{ asset('assets/new_theme/img/fifa-image.png') }}" class="img-fluid" alt="FIFA Image" width="380" height="100%">
-                            </div>
-                            <a href="" class="btn btn-primary w-100 fw-medium text-capitalize">Visit our FIFA World
-                                Cup 2026
-                                page</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
         </section>
    
@@ -462,7 +448,7 @@
                 <div class="col-12 col-md-6 pr-xl-50">
                     <h3 class="h5 fw-semibold">Private Dallas to College Station Car Service for Business, University, and Family Travel</h3>
                     <p class="font-base text-justify">Our Dallas to College Station black car service is built for travelers who want a direct, professional, and comfortable alternative to self-driving. This route is frequently booked by business travelers, Texas A&amp;M visitors, parents, students, faculty members, and families who need dependable long-distance transportation with a higher standard of service. Instead of dealing with traffic fatigue, rental cars, or inconsistent rideshare availability, you get a scheduled chauffeur, a clean luxury vehicle, and a smooth point-to-point trip planned around your timing. We serve Dallas, Plano, Frisco, Allen, Irving, and nearby areas, making it easy to arrange pickup anywhere across the metroplex. If your trip begins after a flight, we also support connections from our <a href="https://www.dallasblacklimoservice.com/services/airport-transfers-dallas/"><b>airport car service</b></a> options for a seamless transfer from airport to highway. This service is ideal for travelers who value privacy, punctuality, and a better travel experience from departure to arrival in College Station.</p>
-                <a href="/booking/" class="btn btn-primary sm fw-medium fifa-btn-full">Book Dallas to College Station Car Service</a>
+                <a href="/booking/" class="btn btn-primary sm fw-medium w-100">Book Dallas to College Station Car Service</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -480,7 +466,7 @@
                 <div class="mb-20 col-12 col-md-6 pr-xl-50">
                     <h3 class="h5 fw-semibold">Executive Chauffeur Service from Dallas to College Station with Premium Vehicles and Professional Support</h3>
                     <p class="font-base text-justify">For executives, professionals, and managed travelers, our Dallas to College Station chauffeur service provides a more polished way to handle regional transportation. This route often involves time-sensitive meetings, campus events, corporate visits, and guest transportation where timing and presentation matter. Our chauffeurs are trained to deliver discreet, professional service, and our fleet includes executive sedans and luxury SUVs suited for private business travel. Instead of navigating the drive yourself, you can stay focused, make calls, review schedules, or simply relax during the ride. We also support travelers arriving through Dallas airports who need direct transportation onward to College Station without switching vehicles. For clients who want elevated service standards throughout the metroplex, our <a href="https://www.dallasblacklimoservice.com/services/chauffeur-service-dallas/"><b>chauffeur service Dallas</b></a> solutions connect city transportation with dependable long-distance travel. From downtown offices to suburban pickups in Plano, Frisco, and Allen, every reservation is handled with attention to comfort, punctuality, and professional consistency.</p>
-                    <a href="/get-a-quote/" class="btn btn-primary sm fw-medium fifa-btn-full">Request Long-Distance Chauffeur Quote</a>
+                    <a href="/get-a-quote/" class="btn btn-primary sm fw-medium w-100">Request Long-Distance Chauffeur Quote</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -499,7 +485,7 @@
                 <div class="col-12 col-md-6 pr-xl-50">
                     <h3 class="h5 fw-semibold">Reliable City-to-City Black Car Service from Dallas to College Station with Direct Scheduling</h3>
                     <p class="font-base text-justify">Our Dallas to College Station route is part of our premium <a href="https://www.dallasblacklimoservice.com/city-to-city-rides/"><b>city to city rides</b></a> service, created for travelers who need direct transportation between major Texas destinations. This is not a generic local ride stretched into a highway trip. It is a professionally managed city-to-city reservation with a dedicated vehicle, an experienced chauffeur, and scheduling built around long-distance comfort. Whether you are traveling one-way or arranging round-trip service, we make the process simple and dependable. The route is especially useful for Texas A&amp;M campus visits, university events, medical travel, family transportation, and private regional trips that need more comfort than standard car service. We keep the trip private, efficient, and predictable, while allowing travelers to avoid parking, fuel stops, and the fatigue of driving long distance. If you are comparing city-to-city transportation options from Dallas, our service stands out for its direct routing, luxury fleet quality, and professionally coordinated travel support from pickup through arrival.</p>
-                    <a href="/booking/" class="btn btn-primary sm fw-medium fifa-btn-full">Reserve Your City-to-City Ride</a>
+                    <a href="/booking/" class="btn btn-primary sm fw-medium w-100">Reserve Your City-to-City Ride</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -832,20 +818,6 @@
     
     
      @include('partials.testimonials')
-        <section class="bg-gray py-30 d-md-none">
-            <div class="container">
-                <div class="row">
-                    <div class="text-center col-12">
-                        <div class="fifa-image-holder">
-                            <img  loading="lazy"
-decoding="async" src="{{ asset('assets/new_theme/img/fifa-image.png') }}" class="img-fluid" alt="FIFA Image">
-                        </div>
-                        <a href="" class="btn btn-primary w-100 fw-medium text-capitalize">Visit our FIFA World Cup 2026
-                            page</a>
-                    </div>
-                </div>
-            </div>
-        </section>
           <section class="py-40 faqs-section">
             <div class="container">
                 <div class="row">

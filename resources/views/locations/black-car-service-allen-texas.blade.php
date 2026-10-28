@@ -415,20 +415,6 @@
                     </div>
                 </div>
              </div>
-            <div class="bg-gray py-30 d-md-none">
-                <div class="container">
-                    <div class="row">
-                        <div class="text-center col-12">
-                            <div class="fifa-image-holder">
-                                <img loading="lazy" decoding="async" src="{{ asset('assets/new_theme/img/fifa-image.png') }}" class="img-fluid" alt="FIFA Image" width="380" height="100%">
-                            </div>
-                            <a href="" class="btn btn-primary w-100 fw-medium text-capitalize">Visit our FIFA World
-                                Cup 2026
-                                page</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
         </section>
    
@@ -447,7 +433,7 @@
                 <div class="col-12 col-md-6 pr-xl-50">
                     <h3 class="h5 fw-semibold">Allen Airport Car Service for DFW Airport and Dallas Love Field</h3>
                     <p class="font-base text-justify">Our airport car service in Allen is built for travelers who need dependable transportation to and from the region’s busiest airports. Whether you are catching a business flight, returning home from a long trip, or arranging executive travel for a guest, we provide a smooth and professional ride experience from Allen to both DFW International Airport and Dallas Love Field. This service is ideal for residents, corporate clients, families, and frequent flyers who value clean vehicles, punctual scheduling, and a more refined alternative to ordinary rideshare options. We focus on direct, comfortable transportation with professional chauffeurs and luxury sedans or SUVs suited for airport travel. If you are comparing airport transportation options in North Texas, our <a href="/airports/dfw-car-service/"><b>DFW airport car service</b></a> and <a href="/airports/dallas-love-field-airport-car-service/"><b>Dallas Love Field airport car service</b></a> pages offer more details about airport-specific service, while our <a href="/services/airport-transfers-dallas/"><b>airport transfers in Dallas</b></a> page explains how we support reliable airport rides across the DFW metroplex.</p>
-                <a href="/booking/" class="btn btn-primary sm fw-medium fifa-btn-full">Book Allen Airport Car Service</a>
+                <a href="/booking/" class="btn btn-primary sm fw-medium w-100">Book Allen Airport Car Service</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -465,7 +451,7 @@
                 <div class="mb-20 col-12 col-md-6 pr-xl-50">
                     <h3 class="h5 fw-semibold">Executive and Private Car Service in Allen for Business, Events, and Daily Travel</h3>
                     <p class="font-base text-justify">Our black car service in Allen is not limited to airport transportation. We also provide executive and private rides for corporate meetings, client pickups, dinner reservations, hotel transfers, special events, and everyday premium transportation throughout Allen and nearby cities. This makes our service a strong fit for professionals commuting to Dallas, families wanting private transportation without stress, and companies arranging polished transportation for guests or team members. Every ride is handled with attention to comfort, privacy, and consistency, with luxury sedans and SUVs that maintain a professional appearance from pickup to drop-off. We frequently serve business and residential travel needs across Allen, Plano, Frisco, McKinney, Richardson, and Downtown Dallas. For travelers looking for broader transportation solutions, our <a href="/services/chauffeur-service-dallas/"><b>chauffeur service Dallas</b></a> and <a href="/services/private-car-service-in-dallas/"><b>private car service in Dallas</b></a> pages explain how our service supports both executive and personal travel with the same high standard of reliability and care.</p>
-                    <a href="/get-a-quote/" class="btn btn-primary sm fw-medium fifa-btn-full">Request Allen Car Service Quote</a>
+                    <a href="/get-a-quote/" class="btn btn-primary sm fw-medium w-100">Request Allen Car Service Quote</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -484,7 +470,7 @@
                 <div class="col-12 col-md-6 pr-xl-50">
                     <h3 class="h5 fw-semibold">City-to-City Transportation from Allen to Dallas, Austin, Houston, and More</h3>
                     <p class="font-base text-justify">For travelers who prefer comfort, privacy, and door-to-door reliability, our Allen car service also supports long-distance and regional transportation throughout Texas and beyond. Instead of dealing with the inconvenience of driving yourself, waiting on uncertain app-based rides, or managing multiple stops in shared transportation, you can book a direct black car ride from Allen to Dallas, Fort Worth, Austin, Houston, Waco, Tyler, College Station, or Oklahoma City. This option works especially well for executives, families, and travelers with flexible itineraries who want dependable transportation without interruptions. Our chauffeurs maintain a professional pace, our vehicles are selected for comfort on longer rides, and every trip is scheduled around your timing. To learn more about regional travel options, visit our <a href="/city-to-city-rides/"><b>city-to-city rides</b></a> page. If your trip includes airport travel at the start or end of the journey, you can also connect naturally with our <a href="/airports/dfw-car-service/"><b>DFW airport car service</b></a> for a fully coordinated travel experience from Allen.</p>
-                    <a href="/booking/" class="btn btn-primary sm fw-medium fifa-btn-full">Book Allen Long Distance Ride</a>
+                    <a href="/booking/" class="btn btn-primary sm fw-medium w-100">Book Allen Long Distance Ride</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -818,20 +804,6 @@
     
     
      @include('partials.testimonials')
-        <section class="bg-gray py-30 d-md-none">
-            <div class="container">
-                <div class="row">
-                    <div class="text-center col-12">
-                        <div class="fifa-image-holder">
-                            <img  loading="lazy"
-decoding="async" src="{{ asset('assets/new_theme/img/fifa-image.png') }}" class="img-fluid" alt="FIFA Image">
-                        </div>
-                        <a href="" class="btn btn-primary w-100 fw-medium text-capitalize">Visit our FIFA World Cup 2026
-                            page</a>
-                    </div>
-                </div>
-            </div>
-        </section>
           <section class="py-40 faqs-section">
             <div class="container">
                 <div class="row">

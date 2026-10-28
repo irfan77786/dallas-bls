@@ -412,18 +412,6 @@
                 </div>
             </div>
         </div>
-        <div class="bg-gray py-30 d-md-none">
-            <div class="container">
-                <div class="row">
-                    <div class="text-center col-12">
-                        <div class="fifa-image-holder">
-                            <img loading="lazy" decoding="async" src="{{ asset('assets/new_theme/img/fifa-image.png') }}" class="img-fluid" alt="FIFA Image" width="380" height="100%">
-                        </div>
-                        <a href="" class="btn btn-primary w-100 fw-medium text-capitalize">Visit our FIFA World Cup 2026 page</a>
-                    </div>
-                </div>
-            </div>
-        </div>
     </section>
 
     <section class="detail-content-section bg-gray py-40 py-sm-50 py-md-50 py-lg-40 seciononeheading">
@@ -440,7 +428,7 @@
                     <p class="font-base text-justify">Professional airport transportation in Waco is essential for travelers who value punctuality, comfort, and reliability. Whether you are flying for business, university-related travel, or personal trips, our Waco Regional Airport car service ensures a smooth and stress-free experience from pickup to drop-off. We provide timely transfers to and from Waco Regional Airport with a strong focus on schedule protection, comfort, and dependable service.
 
 Our luxury fleet includes executive sedans and spacious SUVs designed for privacy, comfort, and efficiency. With real-time flight tracking and experienced chauffeurs, we manage delays and early arrivals without confusion. Serving Waco, Woodway, Hewitt, Bellmead, Baylor University, and nearby communities, our service gives travelers a dependable airport transportation solution every time.</p>
-                    <a href="/booking/" class="btn btn-primary sm fw-medium fifa-btn-full">Book Waco Airport Transfer</a>
+                    <a href="/booking/" class="btn btn-primary sm fw-medium w-100">Book Waco Airport Transfer</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -460,7 +448,7 @@ Our luxury fleet includes executive sedans and spacious SUVs designed for privac
                     <p class="font-base text-justify">Our executive airport chauffeur service in Waco is designed for business professionals, university administrators, VIP guests, and corporate travelers who require dependable, polished transportation. We understand how important punctuality and presentation are, which is why our chauffeurs are trained to deliver discreet, professional service tailored to your travel needs. Whether you are arriving for meetings, campus visits, private aviation connections, or hosted client travel, our airport service supports a smooth and impressive journey.
 
 We offer a fleet of luxury vehicles, including executive sedans and premium SUVs, built for privacy, comfort, and efficient transportation. With flexible scheduling and real-time trip oversight, we help maintain your schedule without the uncertainty of rideshare or unmanaged transport.</p>
-                    <a href="/get-a-quote/" class="btn btn-primary sm fw-medium fifa-btn-full">Request Executive Transfer Quote</a>
+                    <a href="/get-a-quote/" class="btn btn-primary sm fw-medium w-100">Request Executive Transfer Quote</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -481,7 +469,7 @@ We offer a fleet of luxury vehicles, including executive sedans and premium SUVs
                     <p class="font-base text-justify">Our private airport transfer service in Waco offers a personalized and stress-free travel experience for individuals, families, and corporate travelers. Unlike shared transportation or app-based ride services, our private service offers direct routes, full privacy, and a comfortable ride tailored to your schedule. Whether you are traveling to or from Waco Regional Airport, a hotel, a residence, Baylor University, or a business location, we provide reliable and efficient transportation throughout the area.
 
 Our chauffeurs prioritize safety, punctuality, and consistent service standards, ensuring every ride is handled professionally. With door-to-door service and luxury vehicles, airport travel becomes easier, smoother, and more dependable for every type of passenger.</p>
-                    <a href="/booking/" class="btn btn-primary sm fw-medium fifa-btn-full">Book Private Airport Transfer</a>
+                    <a href="/booking/" class="btn btn-primary sm fw-medium w-100">Book Private Airport Transfer</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -794,19 +782,6 @@ Our chauffeurs prioritize safety, punctuality, and consistent service standards,
     </section>
 
     @include('partials.testimonials')
-
-    <section class="bg-gray py-30 d-md-none">
-        <div class="container">
-            <div class="row">
-                <div class="text-center col-12">
-                    <div class="fifa-image-holder">
-                        <img loading="lazy" decoding="async" src="{{ asset('assets/new_theme/img/fifa-image.png') }}" class="img-fluid" alt="FIFA Image">
-                    </div>
-                    <a href="" class="btn btn-primary w-100 fw-medium text-capitalize">Visit our FIFA World Cup 2026 page</a>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <section class="py-40 faqs-section">
         <div class="container">

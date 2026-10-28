@@ -416,20 +416,6 @@
                     </div>
                 </div>
              </div>
-            <div class="bg-gray py-30 d-md-none">
-                <div class="container">
-                    <div class="row">
-                        <div class="text-center col-12">
-                            <div class="fifa-image-holder">
-                                <img loading="lazy" decoding="async" src="{{ asset('assets/new_theme/img/fifa-image.png') }}" class="img-fluid" alt="FIFA Image" width="380" height="100%">
-                            </div>
-                            <a href="" class="btn btn-primary w-100 fw-medium text-capitalize">Visit our FIFA World
-                                Cup 2026
-                                page</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
         </section>
    
@@ -448,7 +434,7 @@
                 <div class="col-12 col-md-6 pr-xl-50">
                     <h3 class="h5 fw-semibold">Private Car Service from Dallas to College Station for Comfortable Long-Distance Travel</h3>
                     <p class="font-base text-justify">Our private car service from Dallas to College Station is designed for travelers who want a direct, comfortable, and professionally managed ride between these two major Texas destinations. Whether you are traveling for a university visit, business appointment, family trip, or event in Aggieland, our service gives you a private alternative to driving yourself or relying on inconsistent transportation options. You get a clean luxury vehicle, a professional chauffeur, and a schedule built around your pickup and arrival needs. This route is a strong fit for solo travelers, parents visiting students, professionals, and families who want a smooth city-to-city ride with no shared stops. If you also need airport coordination before or after your trip, explore our <a href="/airports/dfw-car-service/"><b>DFW airport car service</b></a> and <a href="/services/airport-transfers-dallas/"><b>airport transfers Dallas</b></a> pages for connected travel options.</p>
-                <a href="/booking/" class="btn btn-primary sm fw-medium fifa-btn-full">Book Dallas to College Station Ride</a>
+                <a href="/booking/" class="btn btn-primary sm fw-medium w-100">Book Dallas to College Station Ride</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -466,7 +452,7 @@
                 <div class="mb-20 col-12 col-md-6 pr-xl-50">
                     <h3 class="h5 fw-semibold">Dallas to College Station Transportation for Business, University, and Family Travel</h3>
                     <p class="font-base text-justify">This route is not only for leisure travelers. Our Dallas to College Station transportation is also a dependable option for business travel, student transportation, family visits, academic events, and university-related rides. We regularly assist clients who need a more polished and reliable option than rental cars, rideshare apps, or last-minute travel arrangements. Professional chauffeurs, private vehicles, and flexible scheduling make this route ideal for important trips where comfort and timing matter. Whether you are visiting Texas A&amp;M, arranging transportation for a family member, or traveling to meetings and events in College Station, our service is built to make the journey easier. For clients who need executive-level transportation beyond this route, visit our <a href="/services/chauffeur-service-dallas/"><b>chauffeur service Dallas</b></a> and <a href="/services/private-car-service-in-dallas/"><b>private car service in Dallas</b></a> pages for additional luxury transportation options.</p>
-                    <a href="/get-a-quote/" class="btn btn-primary sm fw-medium fifa-btn-full">Request College Station Transfer Quote</a>
+                    <a href="/get-a-quote/" class="btn btn-primary sm fw-medium w-100">Request College Station Transfer Quote</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -485,7 +471,7 @@
                 <div class="col-12 col-md-6 pr-xl-50">
                     <h3 class="h5 fw-semibold">City-to-City Ride Service with Direct Transportation to College Station</h3>
                     <p class="font-base text-justify">Our city-to-city ride service gives travelers a private and efficient way to reach College Station from Dallas without the inconvenience of driving themselves for hours. Instead of dealing with traffic fatigue, parking, and unpredictable travel conditions, you can reserve a direct ride in a professionally chauffeured vehicle and focus on the purpose of your trip. This option works well for one-way rides, return travel, scheduled appointments, university moves, and pre-arranged transportation for guests or family members. We keep the process simple, private, and comfortable from start to finish. If you are comparing regional ride options, visit our <a href="/city-to-city-rides/"><b>city-to-city rides</b></a> page to explore more direct transportation services. You can also connect this route with our <a href="/airports/dallas-love-field-airport-car-service/"><b>Dallas Love Field airport car service</b></a> if your travel begins or ends at the airport.</p>
-                    <a href="/booking/" class="btn btn-primary sm fw-medium fifa-btn-full">Book Direct College Station Transfer</a>
+                    <a href="/booking/" class="btn btn-primary sm fw-medium w-100">Book Direct College Station Transfer</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -807,20 +793,6 @@
     
     
      @include('partials.testimonials')
-        <section class="bg-gray py-30 d-md-none">
-            <div class="container">
-                <div class="row">
-                    <div class="text-center col-12">
-                        <div class="fifa-image-holder">
-                            <img  loading="lazy"
-decoding="async" src="{{ asset('assets/new_theme/img/fifa-image.png') }}" class="img-fluid" alt="FIFA Image">
-                        </div>
-                        <a href="" class="btn btn-primary w-100 fw-medium text-capitalize">Visit our FIFA World Cup 2026
-                            page</a>
-                    </div>
-                </div>
-            </div>
-        </section>
           <section class="py-40 faqs-section">
             <div class="container">
                 <div class="row">

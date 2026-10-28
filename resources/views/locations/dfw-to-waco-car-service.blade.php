@@ -414,20 +414,6 @@
                     </div>
                 </div>
              </div>
-            <div class="bg-gray py-30 d-md-none">
-                <div class="container">
-                    <div class="row">
-                        <div class="text-center col-12">
-                            <div class="fifa-image-holder">
-                                <img loading="lazy" decoding="async" src="{{ asset('assets/new_theme/img/fifa-image.png') }}" class="img-fluid" alt="FIFA Image" width="380" height="100%">
-                            </div>
-                            <a href="" class="btn btn-primary w-100 fw-medium text-capitalize">Visit our FIFA World
-                                Cup 2026
-                                page</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
         </section>
    
@@ -448,7 +434,7 @@
                     <p class="font-base text-justify">Our DFW to Waco black car service is built for travelers who want dependable airport transportation with privacy, comfort, and professional support. Whether you are flying in for business, visiting Baylor University, attending an event, or heading home, our service ensures a smooth ride from the airport directly to Waco. We provide scheduled pickups at Dallas Fort Worth International Airport with professional chauffeurs who focus on timing, comfort, and a stress-free experience.
 
 Our luxury fleet includes executive sedans and premium SUVs suited for airport transfers, family travel, and private long-distance transportation. With real-time flight tracking and chauffeur coordination, early arrivals and delays are handled without confusion. For travelers who need a more dependable alternative to rental cars or rideshare, our <a href="/services/airport-transfers-dallas/"><b>DFW airport car service</b></a> provides a premium solution from airport pickup through final drop-off in Waco.</p>
-                <a href="/booking/" class="btn btn-primary sm fw-medium fifa-btn-full">Book DFW to Waco Car Service</a>
+                <a href="/booking/" class="btn btn-primary sm fw-medium w-100">Book DFW to Waco Car Service</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -468,7 +454,7 @@ Our luxury fleet includes executive sedans and premium SUVs suited for airport t
                     <p class="font-base text-justify">Our executive chauffeur service from DFW to Waco is ideal for corporate travelers, business meetings, and professional airport transfers that require punctuality and presentation. We understand the importance of a smooth arrival, which is why our chauffeurs deliver reliable service with professional conduct and route awareness. Whether you are traveling to meetings, company offices, university events, or private appointments in Waco, our service helps maintain a polished travel experience from beginning to end.
 
 We offer luxury sedans and SUVs designed for comfort, privacy, and efficient long-distance transportation. Service is structured for solo travelers, executives, assistants arranging travel, and business visitors who need dependable airport pickup and direct service to Waco. For clients seeking a higher standard of corporate transportation, explore our <a href="/services/executive-shuttle-services-dallas/"><b>executive shuttle services in Dallas</b></a> as part of a broader premium travel solution.</p>
-                    <a href="/get-a-quote/" class="btn btn-primary sm fw-medium fifa-btn-full">Request Executive Travel Quote</a>
+                    <a href="/get-a-quote/" class="btn btn-primary sm fw-medium w-100">Request Executive Travel Quote</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -489,7 +475,7 @@ We offer luxury sedans and SUVs designed for comfort, privacy, and efficient lon
                     <p class="font-base text-justify">Our private long-distance car service from DFW to Waco offers a personalized alternative to rideshare, shuttle service, or rental cars. Instead of waiting, navigating, or dealing with inconsistent transportation, you receive direct, private service in a clean luxury vehicle with a professional chauffeur. This makes our service an excellent option for families, university visitors, business travelers, and anyone who wants a more comfortable ride between DFW Airport and Waco.
 
 Each trip is scheduled for convenience and supported with real-time travel awareness, giving you confidence from pickup through arrival. Our chauffeurs prioritize safety, comfort, and smooth coordination throughout the journey. If you prefer private premium transportation beyond standard airport transfers, our <a href="/services/private-car-service-in-dallas/"><b>private car service in Dallas</b></a> reflects the same level of quality and professionalism used for DFW to Waco travel.</p>
-                    <a href="/booking/" class="btn btn-primary sm fw-medium fifa-btn-full">Book Private Waco Transfer</a>
+                    <a href="/booking/" class="btn btn-primary sm fw-medium w-100">Book Private Waco Transfer</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -808,20 +794,6 @@ Each trip is scheduled for convenience and supported with real-time travel aware
     
     
      @include('partials.testimonials')
-        <section class="bg-gray py-30 d-md-none">
-            <div class="container">
-                <div class="row">
-                    <div class="text-center col-12">
-                        <div class="fifa-image-holder">
-                            <img  loading="lazy"
-decoding="async" src="{{ asset('assets/new_theme/img/fifa-image.png') }}" class="img-fluid" alt="FIFA Image">
-                        </div>
-                        <a href="" class="btn btn-primary w-100 fw-medium text-capitalize">Visit our FIFA World Cup 2026
-                            page</a>
-                    </div>
-                </div>
-            </div>
-        </section>
           <section class="py-40 faqs-section">
             <div class="container">
                 <div class="row">

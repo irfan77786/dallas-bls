@@ -346,18 +346,6 @@
                 </div>
             </div>
         </div>
-        <div class="bg-gray py-30 d-md-none">
-            <div class="container">
-                <div class="row">
-                    <div class="text-center col-12">
-                        <div class="fifa-image-holder">
-                            <img loading="lazy" decoding="async" src="{{ asset('assets/new_theme/img/fifa-image.png') }}" class="img-fluid" alt="FIFA Image" width="380" height="100%">
-                        </div>
-                        <a href="" class="btn btn-primary w-100 fw-medium text-capitalize">Visit our FIFA World Cup 2026 page</a>
-                    </div>
-                </div>
-            </div>
-        </div>
     </section>
 
     <section class="detail-content-section bg-gray py-40 py-sm-50 py-md-50 py-lg-40 seciononeheading">
@@ -372,7 +360,7 @@
                 <div class="col-12 col-md-6 pr-xl-50">
                     <h3 class="h5 fw-semibold">Addison Airport Car Service for Executives, Private Flyers, and Travelers Who Need Dependable Ground Transportation</h3>
                     <p class="font-base text-justify">Our Addison Airport Car Service is built for travelers who expect privacy, punctuality, and a professional experience from pickup to drop-off. Addison Airport serves a unique travel profile compared with commercial terminals, and that means transportation must be handled with more precision, stronger communication, and a higher level of service. We work with executives, private aviation passengers, corporate guests, and local travelers who need a polished ride to or from Addison Airport without depending on rideshare uncertainty. Whether you are heading to a hotel in Dallas, a meeting in Plano, an office in Frisco, or a residence in Allen, our chauffeurs provide a premium transfer that feels calm, efficient, and professionally managed. This page is also optimized for local intent around Black Car Service Dallas, airport car service, and airport car service me so the content matches what nearby clients are actually searching for. If you also need service to major regional airports, you can explore our <a href="https://www.dallasblacklimoservice.com/airports/dfw-car-service/"><b>dfw car service DFW</b></a> page for commercial airport transportation options across the Dallas area.</p>
-                    <a href="/booking/" class="btn btn-primary sm fw-medium fifa-btn-full">Book Addison Airport Car Service</a>
+                    <a href="/booking/" class="btn btn-primary sm fw-medium w-100">Book Addison Airport Car Service</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -390,7 +378,7 @@
                 <div class="mb-20 col-12 col-md-6 pr-xl-50">
                     <h3 class="h5 fw-semibold">Professional Airport Car Service in Addison with Luxury Vehicles, Private Transfers, and Local Coverage Across Dallas, Plano, Frisco, and Allen</h3>
                     <p class="font-base text-justify">Travelers booking airport transportation in Addison are often looking for more than a simple ride. They want a vehicle that arrives on time, a chauffeur who knows the area, and a service that reflects the professionalism of their schedule. That is exactly where our airport car service stands apart. We provide executive sedans, luxury SUVs, and larger vehicles for travelers who need comfortable and direct transportation from Addison Airport to Dallas business districts, nearby suburbs, hotels, event venues, and residential communities. Our service is especially useful for business travelers, corporate pickups, VIP guests, and clients arranging transportation for visiting executives. Because many users search for airport car service me when they need a trusted option nearby, this page is written to match that real local demand while still supporting strong on-page SEO. Clients who need broader luxury transportation beyond airport pickups can also review our <a href="https://www.dallasblacklimoservice.com/services/chauffeur-service-dallas/"><b>chauffeur service dallas</b></a> page and our <a href="https://www.dallasblacklimoservice.com/services/private-car-service-in-dallas/"><b>private car service in Dallas</b></a> page for additional premium travel solutions.</p>
-                    <a href="/get-a-quote/" class="btn btn-primary sm fw-medium fifa-btn-full">Request Addison Airport Quote</a>
+                    <a href="/get-a-quote/" class="btn btn-primary sm fw-medium w-100">Request Addison Airport Quote</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -409,7 +397,7 @@
                 <div class="col-12 col-md-6 pr-xl-50">
                     <h3 class="h5 fw-semibold">Black Car Service Dallas Connections for Addison Airport Transfers, Regional Airport Rides, and City to City Transportation</h3>
                     <p class="font-base text-justify">Addison Airport transportation often connects to a broader travel plan, which is why this page is structured to support both airport-specific bookings and wider regional service needs. Some travelers need a quick executive transfer into Dallas, while others need a luxury ride to Plano, Frisco, Allen, Irving, or even a longer intercity route. Our Black Car Service Dallas is designed to support those needs with the same professional standard across every route. We provide private airport transfers, executive pickups, and scheduled rides for business meetings, private aviation arrivals, hotel transportation, and local events. That makes this page useful for clients searching airport car service, private airport transportation, or a dependable chauffeur alternative near Addison Airport. We also strengthen internal linking for on-page SEO by connecting this page with core service pages such as <a href="https://www.dallasblacklimoservice.com/services/airport-transfers-dallas/"><b>airport transfers Dallas</b></a> and our <a href="https://www.dallasblacklimoservice.com/city-to-city-rides/"><b>city to city rides</b></a> page. If your itinerary includes another airport in the area, you can also visit our <a href="https://www.dallasblacklimoservice.com/airports/dallas-love-field-airport-car-service/"><b>Dallas Love Field Airport car service</b></a> page for another airport-focused option.</p>
-                    <a href="/booking/" class="btn btn-primary sm fw-medium fifa-btn-full">Reserve Your Airport Car Service</a>
+                    <a href="/booking/" class="btn btn-primary sm fw-medium w-100">Reserve Your Airport Car Service</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -724,19 +712,6 @@
     </section>
 
     @include('partials.testimonials')
-
-    <section class="bg-gray py-30 d-md-none">
-        <div class="container">
-            <div class="row">
-                <div class="text-center col-12">
-                    <div class="fifa-image-holder">
-                        <img loading="lazy" decoding="async" src="{{ asset('assets/new_theme/img/fifa-image.png') }}" class="img-fluid" alt="FIFA Image">
-                    </div>
-                    <a href="" class="btn btn-primary w-100 fw-medium text-capitalize">Visit our FIFA World Cup 2026 page</a>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <section class="py-40 faqs-section">
         <div class="container">

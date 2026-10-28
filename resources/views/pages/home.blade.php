@@ -50,25 +50,6 @@
         </div>
     </section>
 
-    <section class="fifa-main-banner" style="background-image: url('https://dallasblackcarslimoservice.com/img/dallas-fifa-world-cup-black-car-service.webp'); background-position: center top; background-size: cover; background-repeat: no-repeat; min-height: 210px;">
-        <div class="container h-100">
-            <div class="row h-100">
-                <div class="col-md-12 h-100">
-                  <a href="/fifa-world-cup-2026-car-service-dallas/" class="d-block w-100 h-100"> </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="fifa-btnss text-center my-4">
-                    <a href="/fifa-world-cup-2026-car-service-dallas/" class="btn btn-primary">Visit FIFA World Cup 2026 Page</a>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <section class="detail-content-section pt-40 pb-20">
         <div class="container">
@@ -249,11 +230,11 @@
                 </div>
                 <div class="col-12 col-sm-6 col-lg-4 d-none d-sm-block">
                     <article class="we-serve-item text-md-center mb-30 mb-md-35">
-                        <a href="/fifa-world-cup-2026-car-service-dallas/" class=" mb-15 mx-auto d-block">
+                        <a href="/booking/" class=" mb-15 mx-auto d-block">
                             <img width="407" height="210" loading="lazy" decoding="async"
                                 src="{{ asset('assets/new_theme/img/sports-and-entertainment-venues.webp') }}" alt="Premium black sedan with chauffeur in Dallas" class="img-fluid">
                         </a>
-                        <h3 class="h6 fw-semibold mb-10"><a href="/fifa-world-cup-2026-car-service-dallas/">VIP Events & Sports Transportation</a></h3>
+                        <h3 class="h6 fw-semibold mb-10"><a href="/booking/">VIP Events & Sports Transportation</a></h3>
                         <p class="font-base">Professional black car service for executives and VIP guests attending high-profile events and major sports venues, including AT&T Stadium, American Airlines Center, Globe Life Field, Toyota Stadium, and Dos Equis Pavilion.</p>
                     </article>
                 </div>
@@ -610,7 +591,7 @@
 At Dallas Black Limo Service, we provide high-end sedans, executive SUVs, and spacious vehicles tailored for comfort, privacy, and convenience. Our <a href="/services/private-car-service-in-dallas/"><b>airport black car service in Dallas</b></a> is perfect for business travelers, families, and corporate clients seeking dependable transportation.
 
 We track flight schedules in real-time to ensure accurate pickups and drop-offs without delays. Covering Downtown Dallas, Plano, Frisco, Irving, McKinney, and the entire DFW metroplex, we guarantee safe, private, and luxury airport transportation every time.</p>
-                <a href="/booking/" class="btn btn-primary sm fw-medium fifa-btn-full">Book Reliable Airport Car Service Today</a>
+                <a href="/booking/" class="btn btn-primary sm fw-medium w-100">Book Reliable Airport Car Service Today</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -633,7 +614,7 @@ Our corporate transportation service is perfect for business meetings, executive
 
 Our experienced chauffeurs focus on punctuality, professionalism, and discretion, making us a reliable partner for corporate travel. Serving Dallas, Plano, Frisco, Irving, Richardson, and the wider DFW metroplex, we help business professionals travel with confidence while maintaining a refined and professional image.
 </p>
-                    <a href="/get-a-quote/" class="btn btn-primary sm fw-medium fifa-btn-full">Get Corporate Travel Quote Now</a>
+                    <a href="/get-a-quote/" class="btn btn-primary sm fw-medium w-100">Get Corporate Travel Quote Now</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -655,7 +636,7 @@ Our experienced chauffeurs focus on punctuality, professionalism, and discretion
 Our Dallas city-to-city transportation service is perfect for business professionals, families, and individuals who prefer a more comfortable alternative to flights or rideshare options. Whether you’re traveling from Dallas to Austin, Houston, Fort Worth, Plano, Frisco, McKinney, or surrounding areas, our premium vehicles ensure a safe and relaxing ride.
 
 With a fleet of luxury sedans and executive SUVs, we provide exceptional comfort, privacy, and convenience for long-distance travel. Our experienced chauffeurs and reliable door-to-door service guarantee a seamless and dependable travel experience every time.</p>
-                  <a href="/booking/" class="btn btn-primary sm fw-medium fifa-btn-full">Book Your City-to-City Ride Today</a>
+                  <a href="/booking/" class="btn btn-primary sm fw-medium w-100">Book Your City-to-City Ride Today</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">

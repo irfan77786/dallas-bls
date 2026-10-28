@@ -433,20 +433,6 @@
                     </div>
                 </div>
              </div>
-            <div class="bg-gray py-30 d-md-none">
-                <div class="container">
-                    <div class="row">
-                        <div class="text-center col-12">
-                            <div class="fifa-image-holder">
-                                <img loading="lazy" decoding="async" src="{{ asset('assets/new_theme/img/fifa-image.png') }}" class="img-fluid" alt="FIFA Image" width="380" height="100%">
-                            </div>
-                            <a href="" class="btn btn-primary w-100 fw-medium text-capitalize">Visit our FIFA World
-                                Cup 2026
-                                page</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
         </section>
    
@@ -467,7 +453,7 @@
                     <p class="font-base text-justify">Dallas executive airport car service is essential for professionals who value punctuality, privacy, and reliability on every trip. Whether you are traveling for board meetings, investor meetings, conferences, or high-level client appointments, our executive airport transportation ensures a smooth and efficient experience across the Dallas–Fort Worth metroplex. We provide timely pickups and drop-offs at DFW Airport, Dallas Love Field, and select private aviation facilities, with a strong focus on business travel precision and customer confidence.
 
 Our luxury fleet includes executive sedans and premium SUVs designed for comfort, quiet travel, and professional presentation. With real-time flight tracking and experienced chauffeurs, delays and early arrivals are managed seamlessly. Serving Dallas, Plano, Frisco, Allen, Irving, and nearby cities, we provide dependable executive transportation every time. For travelers seeking a refined airport solution, explore our <a href="https://www.dallasblacklimoservice.com/airports/dfw-car-service/"><b>DFW airport car service</b></a> and experience premium airport travel built for business.</p>
-                <a href="/booking/" class="btn btn-primary sm fw-medium fifa-btn-full">Book Executive Airport Car Service</a>
+                <a href="/booking/" class="btn btn-primary sm fw-medium w-100">Book Executive Airport Car Service</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -487,7 +473,7 @@ Our luxury fleet includes executive sedans and premium SUVs designed for comfort
                     <p class="font-base text-justify">Our executive chauffeur airport service in Dallas is built for business professionals, corporate teams, and VIP travelers who require polished, dependable transportation. We understand the importance of punctuality, presentation, and discretion, which is why our chauffeurs are trained to deliver a refined service experience tailored to executive schedules. Whether you are attending a conference, meeting a client, or arranging transportation for visiting leadership, our airport car service helps every trip begin and end professionally.
 
 We offer a premium fleet of executive sedans and luxury SUVs equipped to provide comfort, privacy, and a strong professional impression. Our service connects major business hubs including Downtown Dallas, Uptown, Plano, Frisco, Richardson, and Las Colinas, making regional executive transportation seamless and efficient. With flexible scheduling and consistent service standards, we help protect your time and your image. Discover our premium <a href="https://www.dallasblacklimoservice.com/services/chauffeur-service-dallas/"><b>chauffeur service in Dallas</b></a> for executive travel beyond the airport as well.</p>
-                    <a href="/get-a-quote/" class="btn btn-primary sm fw-medium fifa-btn-full">Request Executive Transfer Quote</a>
+                    <a href="/get-a-quote/" class="btn btn-primary sm fw-medium w-100">Request Executive Transfer Quote</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -508,7 +494,7 @@ We offer a premium fleet of executive sedans and luxury SUVs equipped to provide
                     <p class="font-base text-justify">Our private executive airport transportation service in Dallas offers a more controlled and stress-free travel experience for corporate clients, private travelers, and executive assistants arranging important rides. Unlike shared transportation or standard rideshare options, our private service provides direct routing, quiet interiors, and schedule-based coordination designed around your exact pickup and drop-off requirements. Whether you are traveling from DFW Airport, Love Field, or a nearby aviation facility, we provide efficient and dependable executive transportation solutions.
 
 Our chauffeurs prioritize discretion, punctuality, and professional service on every ride. With door-to-door support and luxury vehicles, executive airport travel becomes easier, more comfortable, and better aligned with business needs. We serve major areas including Dallas, Irving, Plano, Allen, McKinney, and Frisco, making us a trusted executive transportation choice across the region. For a more personalized ride experience, explore our <a href="https://www.dallasblacklimoservice.com/services/private-car-service-in-dallas/"><b>private car service in Dallas</b></a> and enjoy premium airport transportation tailored to you.</p>
-                    <a href="/booking/" class="btn btn-primary sm fw-medium fifa-btn-full">Book Private Executive Transfer</a>
+                    <a href="/booking/" class="btn btn-primary sm fw-medium w-100">Book Private Executive Transfer</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -844,20 +830,6 @@ Our chauffeurs prioritize discretion, punctuality, and professional service on e
     
     
      @include('partials.testimonials')
-        <section class="bg-gray py-30 d-md-none">
-            <div class="container">
-                <div class="row">
-                    <div class="text-center col-12">
-                        <div class="fifa-image-holder">
-                            <img  loading="lazy"
-decoding="async" src="{{ asset('assets/new_theme/img/fifa-image.png') }}" class="img-fluid" alt="FIFA Image">
-                        </div>
-                        <a href="" class="btn btn-primary w-100 fw-medium text-capitalize">Visit our FIFA World Cup 2026
-                            page</a>
-                    </div>
-                </div>
-            </div>
-        </section>
           <section class="py-40 faqs-section">
             <div class="container">
                 <div class="row">

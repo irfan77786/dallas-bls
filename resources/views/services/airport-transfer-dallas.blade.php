@@ -433,20 +433,6 @@
                     </div>
                 </div>
              </div>
-            <div class="bg-gray py-30 d-md-none">
-                <div class="container">
-                    <div class="row">
-                        <div class="text-center col-12">
-                            <div class="fifa-image-holder">
-                                <img loading="lazy" decoding="async" src="{{ asset('assets/new_theme/img/fifa-image.png') }}" class="img-fluid" alt="FIFA Image" width="380" height="100%">
-                            </div>
-                            <a href="" class="btn btn-primary w-100 fw-medium text-capitalize">Visit our FIFA World
-                                Cup 2026
-                                page</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
         </section>
    
@@ -467,7 +453,7 @@
                     <p class="font-base text-justify">Professional airport transfers in Dallas are essential for travelers who value punctuality, comfort, and reliability. Whether you are traveling for business or leisure, our airport transfer service ensures a smooth and stress-free experience across the entire Dallas–Fort Worth metroplex. We provide timely pickups and drop-offs at major airports, including DFW International Airport and Dallas Love Field, with a strong focus on customer satisfaction and convenience.
 
 Our luxury fleet includes premium sedans and executive SUVs designed for comfort, privacy, and efficiency. With real-time flight tracking and experienced chauffeurs, we ensure that delays and early arrivals are managed seamlessly. Serving Dallas, Plano, Frisco, Irving, and nearby cities, our service guarantees dependable transportation every time. For travelers seeking a reliable solution, explore our <a href="/airports/dfw-car-service/"><b>DFW airport car service</b></a> and enjoy a premium airport transfer experience.</p>
-                <a href="/booking/" class="btn btn-primary sm fw-medium fifa-btn-full">Book Professional Airport Transfer</a>
+                <a href="/booking/" class="btn btn-primary sm fw-medium w-100">Book Professional Airport Transfer</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -487,7 +473,7 @@ Our luxury fleet includes premium sedans and executive SUVs designed for comfort
                     <p class="font-base text-justify">Our executive airport chauffeur service in Dallas is designed for business professionals and VIP travelers who require high-end, dependable transportation. We understand the importance of punctuality and presentation, which is why our chauffeurs are trained to deliver a professional and discreet service tailored to your needs. Whether you are attending corporate meetings, conferences, or hosting important clients, our airport transfer service ensures a smooth and impressive journey.
 
 We offer a fleet of luxury vehicles, including executive sedans and SUVs, equipped to provide maximum comfort and privacy. Our service covers all major business hubs, including Downtown Dallas, Plano, Frisco, and Richardson, ensuring seamless connectivity throughout the region. With flexible scheduling and reliable service, we help you maintain your professional image. Discover our premium <a href="/services/executive-shuttle-services-dallas/"><b>executive shuttle services in Dallas</b></a> for enhanced corporate travel solutions.</p>
-                    <a href="/get-a-quote/" class="btn btn-primary sm fw-medium fifa-btn-full">Request Executive Transfer Quote</a>
+                    <a href="/get-a-quote/" class="btn btn-primary sm fw-medium w-100">Request Executive Transfer Quote</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -508,7 +494,7 @@ We offer a fleet of luxury vehicles, including executive sedans and SUVs, equipp
                     <p class="font-base text-justify">Our private airport transfer service in Dallas offers a personalized and stress-free travel experience for individuals, families, and corporate clients. Unlike shared transportation or rideshare options, our private service ensures complete privacy, direct routes, and a comfortable journey tailored to your schedule. Whether you are traveling to or from Dallas Love Field, Addison Airport, or DFW Airport, we provide reliable and efficient transportation solutions.
 
 Our chauffeurs prioritize safety, punctuality, and customer satisfaction, ensuring every ride meets the highest standards. With door-to-door service and luxury vehicles, we make airport travel effortless and enjoyable. We serve all major areas, including Dallas, Irving, Plano, and McKinney, making us a trusted choice across the DFW metroplex. For a more personalized experience, check our <a href="/services/private-car-service-in-dallas/"><b>private car service in Dallas</b></a> and enjoy premium airport transportation.</p>
-                    <a href="/booking/" class="btn btn-primary sm fw-medium fifa-btn-full">Book Private Airport Transfer</a>
+                    <a href="/booking/" class="btn btn-primary sm fw-medium w-100">Book Private Airport Transfer</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -844,20 +830,6 @@ Our chauffeurs prioritize safety, punctuality, and customer satisfaction, ensuri
     
     
      @include('partials.testimonials')
-        <section class="bg-gray py-30 d-md-none">
-            <div class="container">
-                <div class="row">
-                    <div class="text-center col-12">
-                        <div class="fifa-image-holder">
-                            <img  loading="lazy"
-decoding="async" src="{{ asset('assets/new_theme/img/fifa-image.png') }}" class="img-fluid" alt="FIFA Image">
-                        </div>
-                        <a href="" class="btn btn-primary w-100 fw-medium text-capitalize">Visit our FIFA World Cup 2026
-                            page</a>
-                    </div>
-                </div>
-            </div>
-        </section>
           <section class="py-40 faqs-section">
             <div class="container">
                 <div class="row">

@@ -415,20 +415,6 @@
                     </div>
                 </div>
              </div>
-            <div class="bg-gray py-30 d-md-none">
-                <div class="container">
-                    <div class="row">
-                        <div class="text-center col-12">
-                            <div class="fifa-image-holder">
-                                <img loading="lazy" decoding="async" src="{{ asset('assets/new_theme/img/fifa-image.png') }}" class="img-fluid" alt="FIFA Image" width="380" height="100%">
-                            </div>
-                            <a href="" class="btn btn-primary w-100 fw-medium text-capitalize">Visit our FIFA World
-                                Cup 2026
-                                page</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
         </section>
    
@@ -447,7 +433,7 @@
                 <div class="col-12 col-md-6 pr-xl-50">
                     <h3 class="h5 fw-semibold">Reliable Black Car Service from Oklahoma City to Dallas</h3>
                     <p class="font-base text-justify">Our Black Car Service Oklahoma City to Dallas is designed for travelers who want more than basic transportation. Whether you are planning a business trip, private travel, or a direct transfer into the Dallas–Fort Worth metroplex, we provide a smooth and dependable ride with professional chauffeur service from pickup to drop-off. This route is ideal for executives, families, and frequent travelers who need privacy, punctuality, and a stress-free experience without relying on shared rides or short-haul flights. Our service is especially valuable for clients traveling to Downtown Dallas, Plano, Frisco, Allen, Irving, or corporate destinations throughout the region. We focus on comfort, direct routing, and reliable timing so your schedule stays protected. If your trip connects to the airport, our service also works seamlessly with our <a href="https://www.dallasblacklimoservice.com/airports/dfw-car-service/"><b>DFW airport car service</b></a>, giving you a dependable option for long-distance luxury transportation with executive-level service and real convenience.</p>
-                <a href="/booking/" class="btn btn-primary sm fw-medium fifa-btn-full">Book Black Car Service Now</a>
+                <a href="/booking/" class="btn btn-primary sm fw-medium w-100">Book Black Car Service Now</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -465,7 +451,7 @@
                 <div class="mb-20 col-12 col-md-6 pr-xl-50">
                     <h3 class="h5 fw-semibold">Airport Car Service for DFW Airport and Dallas Love Field</h3>
                     <p class="font-base text-justify">When your trip includes a flight, our airport car service gives you a reliable way to travel from Oklahoma City to Dallas with timing built around real airport conditions. We serve travelers heading to DFW International Airport and Dallas Love Field Airport with professional scheduling, direct transportation, and luxury vehicles suited for longer rides. Instead of managing parking, rental cars, or unpredictable rideshare options, you can travel in comfort while our chauffeurs handle the route and timing. This is a practical option for travelers searching for airport car service, dfw car service DFW, or airport car service me who need dependable service with a professional standard. We support individuals, families, and executives with scheduled drop-offs and private airport pickups across the Dallas area. For travelers using Love Field, our <a href="https://www.dallasblacklimoservice.com/airports/dallas-love-field-airport-car-service/"><b>Dallas Love Field airport car service</b></a> provides the same smooth experience, helping you arrive on time and continue your trip without unnecessary delays or confusion.</p>
-                    <a href="/get-a-quote/" class="btn btn-primary sm fw-medium fifa-btn-full">Request Airport Transfer Quote</a>
+                    <a href="/get-a-quote/" class="btn btn-primary sm fw-medium w-100">Request Airport Transfer Quote</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -484,7 +470,7 @@
                 <div class="col-12 col-md-6 pr-xl-50">
                     <h3 class="h5 fw-semibold">Private Chauffeur Service for Comfortable Long-Distance Travel</h3>
                     <p class="font-base text-justify">Our private chauffeur service between Oklahoma City and Dallas is ideal for clients who value privacy, flexibility, and a higher level of comfort on the road. Whether you are traveling for a corporate meeting, heading to a hotel, attending an event, or continuing to another city, we provide a direct and polished alternative to shared transportation. Luxury sedans and executive SUVs give you the space to relax, work, or travel quietly without disruptions. This service fits business travelers, VIP guests, and families who need dependable interstate transportation into Dallas, Plano, Frisco, Allen, or Fort Worth. Because we also provide connected services across the metroplex, it is easy to continue your trip through our <a href="https://www.dallasblacklimoservice.com/services/private-car-service-in-dallas/"><b>private car service in Dallas</b></a>, <a href="https://www.dallasblacklimoservice.com/services/chauffeur-service-dallas/"><b>chauffeur service Dallas</b></a>, or <a href="https://www.dallasblacklimoservice.com/city-to-city-rides/"><b>city to city rides</b></a>. This makes the page stronger for on-page SEO while giving users clear internal paths to related services they may also need.</p>
-                    <a href="/booking/" class="btn btn-primary sm fw-medium fifa-btn-full">Book Private Chauffeur Service</a>
+                    <a href="/booking/" class="btn btn-primary sm fw-medium w-100">Book Private Chauffeur Service</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -818,20 +804,6 @@
     
     
      @include('partials.testimonials')
-        <section class="bg-gray py-30 d-md-none">
-            <div class="container">
-                <div class="row">
-                    <div class="text-center col-12">
-                        <div class="fifa-image-holder">
-                            <img  loading="lazy"
-decoding="async" src="{{ asset('assets/new_theme/img/fifa-image.png') }}" class="img-fluid" alt="FIFA Image">
-                        </div>
-                        <a href="" class="btn btn-primary w-100 fw-medium text-capitalize">Visit our FIFA World Cup 2026
-                            page</a>
-                    </div>
-                </div>
-            </div>
-        </section>
           <section class="py-40 faqs-section">
             <div class="container">
                 <div class="row">

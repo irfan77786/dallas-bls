@@ -717,8 +717,6 @@
       </div>
     </div>
 
-    @include('pdfs.partials.fifa-2026-event-policy')
-
     <div class="sections section-light">
       <h2>Thank you for choosing Dallas Black Limo Service.</h2>
       <div class="section-content">

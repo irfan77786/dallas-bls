@@ -431,20 +431,6 @@
                     </div>
                 </div>
              </div>
-            <div class="bg-gray py-30 d-md-none">
-                <div class="container">
-                    <div class="row">
-                        <div class="text-center col-12">
-                            <div class="fifa-image-holder">
-                                <img loading="lazy" decoding="async" src="{{ asset('assets/new_theme/img/fifa-image.png') }}" class="img-fluid" alt="FIFA Image" width="380" height="100%">
-                            </div>
-                            <a href="" class="btn btn-primary w-100 fw-medium text-capitalize">Visit our FIFA World
-                                Cup 2026
-                                page</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
         </section>
    
@@ -463,7 +449,7 @@
                 <div class="col-12 col-md-6 pr-xl-50">
                     <h3 class="h5 fw-semibold">Dallas to Austin Black Car Service for Private and Executive Travel</h3>
                     <p class="font-base text-justify">Our Dallas to Austin black car service is designed for travelers who want a private, dependable, and more comfortable alternative to flying, rideshare apps, or self-driving. This route is popular with executives, families, professionals, and visitors who need direct transportation between two major Texas cities without interruptions or uncertainty. Whether you are heading to corporate meetings, a hotel, a private residence, a university visit, or a special event in Austin, we provide a polished ride with professional chauffeur service from start to finish. Our luxury sedans and SUVs give you the space to relax, work, or travel quietly while we manage the road and timing. Because many travelers begin their trip from the airport, we also support seamless connections through our <a href="https://www.dallasblacklimoservice.com/airports/dfw-car-service/"><b>DFW car service</b></a>. This creates a stronger internal linking structure while giving users a direct path to airport-related transportation if their Dallas to Austin ride begins at DFW or another major pickup point.</p>
-                <a href="/booking/" class="btn btn-primary sm fw-medium fifa-btn-full">Book Dallas to Austin Ride</a>
+                <a href="/booking/" class="btn btn-primary sm fw-medium w-100">Book Dallas to Austin Ride</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -481,7 +467,7 @@
                 <div class="mb-20 col-12 col-md-6 pr-xl-50">
                     <h3 class="h5 fw-semibold">Luxury Intercity Transportation with Professional Chauffeurs</h3>
                     <p class="font-base text-justify">Luxury intercity transportation between Dallas and Austin should feel smooth, professional, and fully tailored to your schedule. That is exactly what our chauffeur-driven service provides. Instead of dealing with crowded terminals, rental cars, or the unpredictability of app-based rides, you can travel in a clean executive vehicle with a dedicated chauffeur focused on punctuality, comfort, and privacy. This makes the service ideal for business travel, client transportation, executive road travel, leisure trips, and premium family transportation. Our chauffeurs understand the expectations of long-distance private travel and deliver a polished experience throughout the journey. For users exploring related services, this page also connects naturally to our <a href="https://www.dallasblacklimoservice.com/services/chauffeur-service-dallas/"><b>chauffeur service Dallas</b></a> and <a href="https://www.dallasblacklimoservice.com/services/private-car-service-in-dallas/"><b>private car service in Dallas</b></a> pages. Those internal links help strengthen on-page SEO while giving visitors additional service options if they need local Dallas transportation before or after their Austin trip.</p>
-                    <a href="/get-a-quote/" class="btn btn-primary sm fw-medium fifa-btn-full">Request City-to-City Quote</a>
+                    <a href="/get-a-quote/" class="btn btn-primary sm fw-medium w-100">Request City-to-City Quote</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -500,7 +486,7 @@
                 <div class="col-12 col-md-6 pr-xl-50">
                     <h3 class="h5 fw-semibold">Airport Connections and Flexible Travel from Dallas to Austin</h3>
                     <p class="font-base text-justify">Many travelers booking a Dallas to Austin black car service are also managing airport arrivals, return flights, or connecting travel plans in Dallas. That is why our service works well for more than simple point-to-point transportation. We can coordinate pickups from homes, offices, hotels, and major airports, making the ride especially useful for travelers arriving through DFW Airport or Dallas Love Field before continuing south to Austin. If your itinerary involves air travel, our internal links to <a href="https://www.dallasblacklimoservice.com/airports/dallas-love-field-airport-car-service/"><b>Dallas Love Field airport car service</b></a> and <a href="https://www.dallasblacklimoservice.com/services/airport-transfers-dallas/"><b>airport transfers Dallas</b></a> pages make the site more helpful while improving internal relevance for airport car service keywords. This section also supports answer-engine optimization by clearly explaining how the service works for business travelers, leisure clients, and those searching for flexible private transportation between Dallas and Austin with direct service, comfortable vehicles, and professional planning from beginning to end.</p>
-                    <a href="/booking/" class="btn btn-primary sm fw-medium fifa-btn-full">Book Private Black Car Service</a>
+                    <a href="/booking/" class="btn btn-primary sm fw-medium w-100">Book Private Black Car Service</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -834,20 +820,6 @@
     
     
      @include('partials.testimonials')
-        <section class="bg-gray py-30 d-md-none">
-            <div class="container">
-                <div class="row">
-                    <div class="text-center col-12">
-                        <div class="fifa-image-holder">
-                            <img  loading="lazy"
-decoding="async" src="{{ asset('assets/new_theme/img/fifa-image.png') }}" class="img-fluid" alt="FIFA Image">
-                        </div>
-                        <a href="" class="btn btn-primary w-100 fw-medium text-capitalize">Visit our FIFA World Cup 2026
-                            page</a>
-                    </div>
-                </div>
-            </div>
-        </section>
           <section class="py-40 faqs-section">
             <div class="container">
                 <div class="row">

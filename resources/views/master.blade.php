@@ -250,11 +250,6 @@
                                         href="/our-fleet">Our
                                         Fleet</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link {{ request()->is('fifa-world-cup-2026-car-service-dallas') ? 'active' : '' }}"
-                                        href="/fifa-world-cup-2026-car-service-dallas">FIFA
-                                        World Cup 26</a>
-                                </li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownHelp" role="button"
                                         data-bs-toggle="dropdown" aria-expanded="false">

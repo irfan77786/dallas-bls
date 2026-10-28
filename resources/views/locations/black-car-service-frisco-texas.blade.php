@@ -433,20 +433,6 @@
                     </div>
                 </div>
              </div>
-            <div class="bg-gray py-30 d-md-none">
-                <div class="container">
-                    <div class="row">
-                        <div class="text-center col-12">
-                            <div class="fifa-image-holder">
-                                <img loading="lazy" decoding="async" src="{{ asset('assets/new_theme/img/fifa-image.png') }}" class="img-fluid" alt="FIFA Image" width="380" height="100%">
-                            </div>
-                            <a href="" class="btn btn-primary w-100 fw-medium text-capitalize">Visit our FIFA World
-                                Cup 2026
-                                page</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
         </section>
    
@@ -465,7 +451,7 @@
                 <div class="col-12 col-md-6 pr-xl-50">
                     <h3 class="h5 fw-semibold">Frisco Airport Car Service for DFW Airport and Dallas Love Field</h3>
                     <p class="font-base text-justify">Our airport car service in Frisco is designed for travelers who need dependable transportation to and from the region’s busiest airports. Whether you are leaving for a business trip, returning from a family vacation, or arranging executive airport transportation for a client or guest, we provide a smooth and polished ride experience from Frisco to DFW International Airport and Dallas Love Field. This service works well for residents, corporate travelers, hotel guests, and frequent flyers who want something more refined than standard rideshare options. We focus on direct routes, luxury vehicles, punctual pickups, and professional chauffeurs who understand airport timing and North Texas traffic flow. If you are planning airport transportation in the metroplex, explore our <a href="/airports/dfw-car-service/"><b>DFW airport car service</b></a> and <a href="/airports/dallas-love-field-airport-car-service/"><b>Dallas Love Field airport car service</b></a> pages for airport-specific details, or visit our <a href="/services/airport-transfers-dallas/"><b>airport transfers Dallas</b></a> page to see how we support premium airport rides across the region.</p>
-                <a href="/booking/" class="btn btn-primary sm fw-medium fifa-btn-full">Book Frisco Airport Car Service</a>
+                <a href="/booking/" class="btn btn-primary sm fw-medium w-100">Book Frisco Airport Car Service</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -483,7 +469,7 @@
                 <div class="mb-20 col-12 col-md-6 pr-xl-50">
                     <h3 class="h5 fw-semibold">Executive and Private Car Service in Frisco for Business, Events, and Daily Travel</h3>
                     <p class="font-base text-justify">Our black car service in Frisco supports much more than airport transportation. We also provide executive and private rides for corporate meetings, hotel transfers, client pickups, special events, dinners, and everyday premium travel throughout Frisco and nearby cities. This service is a strong fit for professionals traveling to offices and business districts, companies arranging transportation for important guests, and individuals who prefer private, chauffeur-driven transportation instead of app-based uncertainty. Every ride is handled with close attention to privacy, comfort, and consistency, with luxury sedans and SUVs that create the right impression from pickup to drop-off. We frequently serve Frisco business zones, The Star, Plano, Legacy West, Addison, Richardson, and Downtown Dallas. For broader transportation options, visit our <a href="/services/chauffeur-service-dallas/"><b>chauffeur service Dallas</b></a> and <a href="/services/private-car-service-in-dallas/"><b>private car service in Dallas</b></a> pages to see how our service supports both executive and personal travel with the same high standard.</p>
-                    <a href="/get-a-quote/" class="btn btn-primary sm fw-medium fifa-btn-full">Request Frisco Car Service Quote</a>
+                    <a href="/get-a-quote/" class="btn btn-primary sm fw-medium w-100">Request Frisco Car Service Quote</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -502,7 +488,7 @@
                 <div class="col-12 col-md-6 pr-xl-50">
                     <h3 class="h5 fw-semibold">City-to-City Transportation from Frisco to Dallas, Austin, Houston, and More</h3>
                     <p class="font-base text-justify">For travelers who value privacy, comfort, and dependable door-to-door service, our Frisco car service also supports long-distance and regional transportation across Texas and beyond. Instead of driving yourself for hours, depending on inconsistent rideshare options, or dealing with shared transportation, you can book a direct black car ride from Frisco to Dallas, Austin, Houston, Waco, Tyler, College Station, or Oklahoma City. This option is ideal for executives, families, and private travelers who want a smooth ride, professional chauffeur, and flexible scheduling for important trips. Our vehicles are selected for comfort on longer journeys, and every route is planned around timing, traffic, and ride efficiency. To learn more about regional travel options, visit our <a href="/city-to-city-rides/"><b>city-to-city rides</b></a> page. If your trip begins or ends with airport travel, you can also connect your ride with our <a href="/airports/dfw-car-service/"><b>DFW airport car service</b></a> for a fully coordinated experience from Frisco.</p>
-                    <a href="/booking/" class="btn btn-primary sm fw-medium fifa-btn-full">Book Frisco Long Distance Ride</a>
+                    <a href="/booking/" class="btn btn-primary sm fw-medium w-100">Book Frisco Long Distance Ride</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -838,20 +824,6 @@
     
     
      @include('partials.testimonials')
-        <section class="bg-gray py-30 d-md-none">
-            <div class="container">
-                <div class="row">
-                    <div class="text-center col-12">
-                        <div class="fifa-image-holder">
-                            <img  loading="lazy"
-decoding="async" src="{{ asset('assets/new_theme/img/fifa-image.png') }}" class="img-fluid" alt="FIFA Image">
-                        </div>
-                        <a href="" class="btn btn-primary w-100 fw-medium text-capitalize">Visit our FIFA World Cup 2026
-                            page</a>
-                    </div>
-                </div>
-            </div>
-        </section>
           <section class="py-40 faqs-section">
             <div class="container">
                 <div class="row">

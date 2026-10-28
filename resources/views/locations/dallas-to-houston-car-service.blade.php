@@ -433,20 +433,6 @@
                     </div>
                 </div>
              </div>
-            <div class="bg-gray py-30 d-md-none">
-                <div class="container">
-                    <div class="row">
-                        <div class="text-center col-12">
-                            <div class="fifa-image-holder">
-                                <img loading="lazy" decoding="async" src="{{ asset('assets/new_theme/img/fifa-image.png') }}" class="img-fluid" alt="FIFA Image" width="380" height="100%">
-                            </div>
-                            <a href="" class="btn btn-primary w-100 fw-medium text-capitalize">Visit our FIFA World
-                                Cup 2026
-                                page</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
         </section>
    
@@ -465,7 +451,7 @@
                 <div class="col-12 col-md-6 pr-xl-50">
                     <h3 class="h5 fw-semibold">Dallas to Houston Black Car Service for Private and Executive Travel</h3>
                     <p class="font-base text-justify">Our Dallas to Houston black car service is designed for travelers who want more comfort, privacy, and reliability than standard transportation options can provide. Instead of dealing with crowded airports, rental counters, shared rides, or the stress of driving a long distance yourself, you can enjoy a direct, private ride with a professional chauffeur and a luxury vehicle tailored to your trip. This route is ideal for business professionals, executives, families, VIP guests, and private travelers who need consistent transportation between two major Texas cities. Whether your destination is a corporate office, hotel, private residence, event venue, or meeting location in Houston, our service gives you a polished and dependable travel experience from start to finish. If your trip begins at the airport, our <a href="https://www.dallasblacklimoservice.com/airports/dfw-car-service/"><b>DFW airport car service</b></a> offers a strong airport connection and helpful internal linking for users arriving through Dallas before continuing to Houston.</p>
-                <a href="/booking/" class="btn btn-primary sm fw-medium fifa-btn-full">Book Dallas to Houston Ride</a>
+                <a href="/booking/" class="btn btn-primary sm fw-medium w-100">Book Dallas to Houston Ride</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -483,7 +469,7 @@
                 <div class="mb-20 col-12 col-md-6 pr-xl-50">
                     <h3 class="h5 fw-semibold">Luxury Intercity Transportation with Professional Chauffeurs</h3>
                     <p class="font-base text-justify">Luxury intercity transportation from Dallas to Houston should be simple, private, and professionally managed. Our chauffeur-driven service gives you exactly that. Instead of settling for inconsistent rides or wasting valuable time with travel disruptions, you can ride in a clean executive sedan or SUV with a dedicated chauffeur focused on timing, safety, and customer service. This makes the route especially useful for executive travel, client pickups, business road travel, family transportation, and private long-distance journeys throughout Texas. Our chauffeurs understand how to deliver a polished experience over longer routes, making each ride more comfortable and efficient. To improve on-page SEO and support users exploring related services, this page also connects naturally to our <a href="https://www.dallasblacklimoservice.com/services/chauffeur-service-dallas/"><b>chauffeur service Dallas</b></a> and <a href="https://www.dallasblacklimoservice.com/services/private-car-service-in-dallas/"><b>private car service in Dallas</b></a> pages, creating useful internal linking while helping visitors discover related premium transportation options in Dallas.</p>
-                    <a href="/get-a-quote/" class="btn btn-primary sm fw-medium fifa-btn-full">Request City-to-City Quote</a>
+                    <a href="/get-a-quote/" class="btn btn-primary sm fw-medium w-100">Request City-to-City Quote</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -502,7 +488,7 @@
                 <div class="col-12 col-md-6 pr-xl-50">
                     <h3 class="h5 fw-semibold">Airport Connections and Flexible Travel from Dallas to Houston</h3>
                     <p class="font-base text-justify">Many travelers booking a Dallas to Houston black car service are also managing airport arrivals, return flights, client travel plans, or multi-stop itineraries in Dallas before beginning the drive south. That is why this service works well for more than just basic point-to-point transportation. We can coordinate pickups from homes, offices, hotels, airports, and private locations across Dallas, making the route practical for both business and leisure travelers. If your journey starts with air travel, our internal links to <a href="https://www.dallasblacklimoservice.com/airports/dallas-love-field-airport-car-service/"><b>Dallas Love Field airport car service</b></a> and <a href="https://www.dallasblacklimoservice.com/services/airport-transfers-dallas/"><b>airport transfers Dallas</b></a> help strengthen internal relevance while also giving visitors direct access to useful airport transportation pages. This section also supports answer engine optimization by clearly explaining how the service works for executives, private travelers, and anyone looking for direct, flexible, and comfortable transportation between Dallas and Houston.</p>
-                    <a href="/booking/" class="btn btn-primary sm fw-medium fifa-btn-full">Book Private Black Car Service</a>
+                    <a href="/booking/" class="btn btn-primary sm fw-medium w-100">Book Private Black Car Service</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -838,20 +824,6 @@
     
     
      @include('partials.testimonials')
-        <section class="bg-gray py-30 d-md-none">
-            <div class="container">
-                <div class="row">
-                    <div class="text-center col-12">
-                        <div class="fifa-image-holder">
-                            <img  loading="lazy"
-decoding="async" src="{{ asset('assets/new_theme/img/fifa-image.png') }}" class="img-fluid" alt="FIFA Image">
-                        </div>
-                        <a href="" class="btn btn-primary w-100 fw-medium text-capitalize">Visit our FIFA World Cup 2026
-                            page</a>
-                    </div>
-                </div>
-            </div>
-        </section>
           <section class="py-40 faqs-section">
             <div class="container">
                 <div class="row">

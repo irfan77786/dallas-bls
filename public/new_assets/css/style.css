@@ -6188,14 +6188,6 @@ li {
     -webkit-box-orient: vertical;
 }
 
-.fifa-image-holder {
-    padding: 30px 0;
-    background: #fff;
-    max-width: 380px;
-    overflow: hidden;
-    border-radius: 12px;
-    margin: 0 auto 30px;
-}
 
 .form-label {
     font-size: 0.875rem;

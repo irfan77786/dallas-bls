@@ -402,7 +402,7 @@
                     <p class="font-base text-justify">Our private car service in Dallas provides reliable and luxury transportation to and from DFW Airport and Dallas Love Field Airport, ensuring a smooth and stress-free travel experience. Whether you are traveling for business or leisure, we offer timely pickups, professional chauffeurs, and comfortable vehicles designed to meet your needs. Serving Dallas, Irving, Plano, Frisco, and the entire DFW metroplex, we make airport travel convenient and efficient.
 
 With real-time flight tracking and experienced drivers, we adjust schedules based on delays or early arrivals, ensuring you are never left waiting. Our fleet includes premium sedans and executive SUVs that offer privacy, comfort, and reliability. Whether heading to DFW or Love Field, we deliver a seamless travel experience. For dependable airport transportation, explore our <a href="/airports/dfw-car-service/"><b>DFW airport car service</b></a> for premium travel solutions.</p>
-                <a href="/booking/" class="btn btn-primary sm fw-medium fifa-btn-full">Book Private Car Now</a>
+                <a href="/booking/" class="btn btn-primary sm fw-medium w-100">Book Private Car Now</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -422,7 +422,7 @@ With real-time flight tracking and experienced drivers, we adjust schedules base
                     <p class="font-base text-justify">Our professional private car service in Dallas is designed for individuals and business professionals who require reliable, comfortable, and high-quality transportation for daily travel. Whether you need a ride to meetings, corporate offices, events, or personal appointments, we provide a seamless and stress-free experience. We serve key areas including Downtown Dallas, Plano, Frisco, Richardson, and Las Colinas, ensuring smooth connectivity across the DFW region.
 
 Our luxury fleet includes well-maintained sedans and SUVs that provide a quiet and comfortable environment for work or relaxation during your journey. Our experienced chauffeurs focus on punctuality, safety, and professionalism, ensuring you always arrive on time. With flexible scheduling and dependable service, we are a trusted choice for daily transportation needs. Learn more about our <a href="/services/corporate-transportation-dallas/"><b>corporate transportation in Dallas</b></a> for business travel solutions.</p>
-                    <a href="/get-a-quote/" class="btn btn-primary sm fw-medium fifa-btn-full">Get Private Car Quote</a>
+                    <a href="/get-a-quote/" class="btn btn-primary sm fw-medium w-100">Get Private Car Quote</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -443,7 +443,7 @@ Our luxury fleet includes well-maintained sedans and SUVs that provide a quiet a
                     <p class="font-base text-justify">Our luxury private car service in Dallas offers a personalized and comfortable transportation solution for both city travel and long-distance journeys. Whether you need a ride within Dallas or are traveling to nearby cities like Fort Worth, Austin, Houston, or McKinney, we provide a reliable and hassle-free experience. We cover all major areas including Irving, Plano, Frisco, and surrounding cities across the DFW metroplex.
 
 Unlike rideshare services, our private car service ensures a dedicated vehicle, professional chauffeur, and flexible scheduling tailored to your needs. Our premium sedans and SUVs are designed for maximum comfort, privacy, and safety for both short and extended trips. With a strong focus on customer satisfaction, we deliver a consistent and high-quality experience every time. To explore more premium travel options, visit our <a href="/services/chauffeur-service-dallas/"><b>chauffeur service in Dallas</b></a> for reliable luxury transportation.</p>
-                    <a href="/booking/" class="btn btn-primary sm fw-medium fifa-btn-full">Book Luxury Car Service</a>
+                    <a href="/booking/" class="btn btn-primary sm fw-medium w-100">Book Luxury Car Service</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -729,23 +729,6 @@ Unlike rideshare services, our private car service ensures a dedicated vehicle, 
         </div>
     </div>
 </section>
-
-    <section class="bg-gray py-30 d-md-none">
-        <div class="container">
-            <div class="row">
-                <div class="text-center col-12">
-                    <div class="fifa-image-holder">
-                        <img loading="lazy" decoding="async" src="{{ asset('assets/fifa-image.png') }}"
-                            class="img-fluid" alt="FIFA Image">
-                    </div>
-                    <a href="{{ url('/fifa-world-cup-2026-car-service-dallas') }}"
-                        class="btn btn-primary w-100 fw-medium text-capitalize">
-                        Visit our FIFA World Cup 2026 page
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <section class="faqs-section py-50 py-sm-60 py-md-70 py-lg-80">
         <div class="container">

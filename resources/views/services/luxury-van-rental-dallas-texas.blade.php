@@ -404,7 +404,7 @@
                     <p class="font-base text-justify">Our luxury Sprinter services in Dallas are the perfect solution for group airport transfers to and from DFW Airport and Dallas Love Field Airport. Designed for comfort, space, and reliability, our Sprinter vans provide a premium travel experience for families, corporate teams, and group travelers across the Dallas–Fort Worth metroplex. Whether you are arriving in Dallas or heading to catch a flight, we ensure timely pickups and smooth transportation every time.
 
 We serve major locations including Irving, Plano, Frisco, Arlington, and Downtown Dallas, making airport travel convenient and efficient for groups of all sizes. Our professional chauffeurs monitor flight schedules in real time, ensuring accurate pickups without delays. With spacious interiors, comfortable seating, and modern amenities, our Sprinter service delivers both luxury and practicality. For seamless airport transfers, explore our <a href="/airports/dfw-car-service/"><b>DFW airport car service</b></a> and upgrade your group travel experience.</p>
-                <a href="/booking/" class="btn btn-primary sm fw-medium fifa-btn-full">Book Sprinter Service Now</a>
+                <a href="/booking/" class="btn btn-primary sm fw-medium w-100">Book Sprinter Service Now</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -424,7 +424,7 @@ We serve major locations including Irving, Plano, Frisco, Arlington, and Downtow
                     <p class="font-base text-justify">Our executive Sprinter van service in Dallas is ideal for corporate groups, business teams, and event transportation. Whether you need reliable travel for conferences, meetings, or corporate events, our Sprinter vans provide a comfortable and professional group transportation solution. We serve key business areas including Plano, Frisco, Las Colinas, Richardson, and Downtown Dallas, ensuring seamless travel across the DFW metroplex.
 
 Our fleet features luxury Sprinter vans equipped with spacious seating, climate control, and modern amenities to ensure maximum comfort for every passenger. Our professional chauffeurs are trained to handle group logistics efficiently, ensuring punctual arrivals and smooth coordination. Whether transporting employees or VIP clients, we maintain a high standard of service and reliability. Learn more about our <a href="/services/executive-shuttle-services-dallas/"><b>executive shuttle services in Dallas</b></a> for additional corporate group transportation options.</p>
-                    <a href="/get-a-quote/" class="btn btn-primary sm fw-medium fifa-btn-full">Get Sprinter Quote</a>
+                    <a href="/get-a-quote/" class="btn btn-primary sm fw-medium w-100">Get Sprinter Quote</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -445,7 +445,7 @@ Our fleet features luxury Sprinter vans equipped with spacious seating, climate 
                     <p class="font-base text-justify">Our private luxury Sprinter services in Dallas offer a premium transportation solution for group events and long-distance travel. Whether you are planning transportation for weddings, parties, sports events, or trips to nearby cities like Austin, Houston, or Fort Worth, our Sprinter vans provide a comfortable and efficient travel experience. We serve Dallas, Irving, Plano, McKinney, and surrounding areas across the DFW region.
 
 Unlike standard group transport options, our Sprinter service ensures a private vehicle, professional chauffeur, and flexible scheduling tailored to your needs. Our vans are designed to accommodate groups comfortably while maintaining luxury and convenience throughout the journey. With a strong focus on safety, punctuality, and customer satisfaction, we deliver a premium group travel experience every time. For more group travel options, visit our <a href="/services/luxury-van-rental-dallas/"><b>luxury van rental in Dallas</b></a> and enhance your travel experience.</p>
-                    <a href="/booking/" class="btn btn-primary sm fw-medium fifa-btn-full">Book Private Sprinter</a>
+                    <a href="/booking/" class="btn btn-primary sm fw-medium w-100">Book Private Sprinter</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -731,23 +731,6 @@ Unlike standard group transport options, our Sprinter service ensures a private 
         </div>
     </div>
 </section>
-
-    <section class="bg-gray py-30 d-md-none">
-        <div class="container">
-            <div class="row">
-                <div class="text-center col-12">
-                    <div class="fifa-image-holder">
-                        <img loading="lazy" decoding="async" src="{{ asset('assets/fifa-image.png') }}"
-                            class="img-fluid" alt="FIFA Image">
-                    </div>
-                    <a href="{{ url('/fifa-world-cup-2026-car-service-dallas') }}"
-                        class="btn btn-primary w-100 fw-medium text-capitalize">
-                        Visit our FIFA World Cup 2026 page
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <section class="faqs-section py-50 py-sm-60 py-md-70 py-lg-80">
         <div class="container">

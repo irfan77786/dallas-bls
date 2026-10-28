@@ -433,20 +433,6 @@
                     </div>
                 </div>
              </div>
-            <div class="bg-gray py-30 d-md-none">
-                <div class="container">
-                    <div class="row">
-                        <div class="text-center col-12">
-                            <div class="fifa-image-holder">
-                                <img loading="lazy" decoding="async" src="{{ asset('assets/new_theme/img/fifa-image.png') }}" class="img-fluid" alt="FIFA Image" width="380" height="100%">
-                            </div>
-                            <a href="" class="btn btn-primary w-100 fw-medium text-capitalize">Visit our FIFA World
-                                Cup 2026
-                                page</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
         </section>
    
@@ -465,7 +451,7 @@
                 <div class="col-12 col-md-6 pr-xl-50">
                     <h3 class="h5 fw-semibold">Fort Worth Airport Car Service for DFW Airport and Dallas Love Field</h3>
                     <p class="font-base text-justify">Our airport car service in Fort Worth is designed for travelers who need dependable transportation to and from the region’s busiest airports. Whether you are flying for business, returning from a family trip, or arranging professional airport transportation for an executive or client, we provide a smooth and refined ride experience from Fort Worth to DFW International Airport and Dallas Love Field. This service is ideal for residents, business professionals, hotel guests, and frequent flyers who want something more dependable and polished than standard rideshare options. We focus on direct routes, luxury vehicles, punctual pickups, and professional chauffeurs who understand airport timing and regional travel flow. If you are planning airport transportation in North Texas, explore our <a href="/airports/dfw-car-service/"><b>DFW airport car service</b></a> and <a href="/airports/dallas-love-field-airport-car-service/"><b>Dallas Love Field airport car service</b></a> pages for airport-specific details, or visit our <a href="/services/airport-transfers-dallas/"><b>airport transfers Dallas</b></a> page to see how we support smooth airport rides across the metroplex.</p>
-                <a href="/booking/" class="btn btn-primary sm fw-medium fifa-btn-full">Book Fort Worth Airport Car Service</a>
+                <a href="/booking/" class="btn btn-primary sm fw-medium w-100">Book Fort Worth Airport Car Service</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -483,7 +469,7 @@
                 <div class="mb-20 col-12 col-md-6 pr-xl-50">
                     <h3 class="h5 fw-semibold">Executive and Private Car Service in Fort Worth for Business, Events, and Daily Travel</h3>
                     <p class="font-base text-justify">Our black car service in Fort Worth is built for more than airport transfers. We also provide executive and private transportation for corporate meetings, hotel transfers, client pickups, special events, dinner reservations, and everyday premium travel throughout Fort Worth and surrounding cities. This service is a strong fit for professionals traveling between downtown offices, companies arranging polished transportation for guests, and individuals who prefer private, chauffeur-driven service instead of app-based uncertainty. Every ride is handled with close attention to comfort, privacy, and consistency, with luxury sedans and SUVs that create the right impression from pickup to drop-off. We frequently serve Downtown Fort Worth, the Cultural District, Sundance Square, Arlington, Grapevine, Southlake, and Dallas-area business destinations. For broader transportation options, visit our <a href="/services/chauffeur-service-dallas/"><b>chauffeur service Dallas</b></a> and <a href="/services/private-car-service-in-dallas/"><b>private car service in Dallas</b></a> pages to see how our service supports both executive and personal travel with the same premium standard.</p>
-                    <a href="/get-a-quote/" class="btn btn-primary sm fw-medium fifa-btn-full">Request Fort Worth Car Service Quote</a>
+                    <a href="/get-a-quote/" class="btn btn-primary sm fw-medium w-100">Request Fort Worth Car Service Quote</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -502,7 +488,7 @@
                 <div class="col-12 col-md-6 pr-xl-50">
                     <h3 class="h5 fw-semibold">City-to-City Transportation from Fort Worth to Dallas, Austin, Houston, and More</h3>
                     <p class="font-base text-justify">For travelers who value comfort, privacy, and dependable door-to-door service, our Fort Worth car service also supports long-distance and regional transportation across Texas and beyond. Instead of driving yourself for hours, dealing with inconsistent rideshare options, or managing multiple stops in shared transportation, you can book a direct black car ride from Fort Worth to Dallas, Austin, Houston, Waco, Tyler, College Station, or Oklahoma City. This option is especially useful for executives, families, and private travelers who want a smooth ride, professional chauffeur, and flexible scheduling for important trips. Our vehicles are selected for comfort on longer journeys, and every route is planned around timing, traffic, and overall ride efficiency. To learn more about regional travel options, visit our <a href="/city-to-city-rides/"><b>city-to-city rides</b></a> page. If your trip includes airport transportation before or after a long-distance journey, you can also connect your reservation with our <a href="/airports/dfw-car-service/"><b>DFW airport car service</b></a> for a fully coordinated experience from Fort Worth.</p>
-                    <a href="/booking/" class="btn btn-primary sm fw-medium fifa-btn-full">Book Fort Worth Long Distance Ride</a>
+                    <a href="/booking/" class="btn btn-primary sm fw-medium w-100">Book Fort Worth Long Distance Ride</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -838,20 +824,6 @@
     
     
      @include('partials.testimonials')
-        <section class="bg-gray py-30 d-md-none">
-            <div class="container">
-                <div class="row">
-                    <div class="text-center col-12">
-                        <div class="fifa-image-holder">
-                            <img  loading="lazy"
-decoding="async" src="{{ asset('assets/new_theme/img/fifa-image.png') }}" class="img-fluid" alt="FIFA Image">
-                        </div>
-                        <a href="" class="btn btn-primary w-100 fw-medium text-capitalize">Visit our FIFA World Cup 2026
-                            page</a>
-                    </div>
-                </div>
-            </div>
-        </section>
           <section class="py-40 faqs-section">
             <div class="container">
                 <div class="row">

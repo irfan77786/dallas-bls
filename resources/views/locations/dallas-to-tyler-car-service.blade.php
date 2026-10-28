@@ -353,18 +353,6 @@
                 </div>
             </div>
         </div>
-        <div class="bg-gray py-30 d-md-none">
-            <div class="container">
-                <div class="row">
-                    <div class="text-center col-12">
-                        <div class="fifa-image-holder">
-                            <img loading="lazy" decoding="async" src="{{ asset('assets/new_theme/img/fifa-image.png') }}" class="img-fluid" alt="FIFA Image" width="380" height="100%">
-                        </div>
-                        <a href="" class="btn btn-primary w-100 fw-medium text-capitalize">Visit our FIFA World Cup 2026 page</a>
-                    </div>
-                </div>
-            </div>
-        </div>
     </section>
 
 
@@ -383,7 +371,7 @@
                     <p class="font-base text-justify">Our Dallas to Tyler black car service is built for travelers who want a more comfortable alternative to driving themselves or relying on inconsistent transportation. Whether you are heading to Tyler for business, medical appointments, family visits, university travel, or a weekend trip, we provide a direct and professionally managed city-to-city ride.
 
 Our service focuses on comfort, privacy, and reliability from pickup to drop-off. Luxury sedans and SUVs offer a clean, quiet environment for long-distance travel, while professional chauffeurs manage the route and timing with care. If you need dependable private transportation between cities, our <a href="/services/private-car-service-in-dallas/"><b>private car service in Dallas</b></a> provides a premium solution for Dallas to Tyler transportation.</p>
-                    <a href="/booking/" class="btn btn-primary sm fw-medium fifa-btn-full">Book Dallas to Tyler Ride</a>
+                    <a href="/booking/" class="btn btn-primary sm fw-medium w-100">Book Dallas to Tyler Ride</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -403,7 +391,7 @@ Our service focuses on comfort, privacy, and reliability from pickup to drop-off
                     <p class="font-base text-justify">Business travelers need transportation they can count on. Our Dallas to Tyler executive car service is ideal for professionals traveling between meetings, offices, healthcare facilities, client locations, and regional business centers. We provide quiet, punctual transportation that supports a productive and polished travel experience.
 
 Executive sedans and SUVs offer privacy and comfort, while our chauffeurs maintain professional standards throughout the ride. Whether you are traveling alone or arranging transportation for a colleague or client, our city-to-city chauffeur service helps maintain your schedule and presentation. For premium business transportation, explore our <a href="/services/executive-shuttle-services-dallas/"><b>executive shuttle services in Dallas</b></a> for dependable long-distance travel support.</p>
-                    <a href="/get-a-quote/" class="btn btn-primary sm fw-medium fifa-btn-full">Request Executive Travel Quote</a>
+                    <a href="/get-a-quote/" class="btn btn-primary sm fw-medium w-100">Request Executive Travel Quote</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -424,7 +412,7 @@ Executive sedans and SUVs offer privacy and comfort, while our chauffeurs mainta
                     <p class="font-base text-justify">Our luxury city-to-city service from Dallas to Tyler is designed for travelers who prefer a smooth, private ride over the stress of self-driving. Instead of dealing with traffic, navigation, or multiple stops, you can travel in a professionally chauffeured vehicle with direct service tailored to your schedule.
 
 This service is a practical choice for families, professionals, couples, and anyone seeking dependable regional transportation with higher comfort standards. We serve Dallas, Plano, Frisco, Irving, and surrounding areas with direct trips to Tyler and nearby destinations. If you need a dependable ride between cities, our <a href="/dallas-to-tyler-car-service"><b>Dallas to Tyler car service</b></a> provides a premium travel option with comfort and consistency built in.</p>
-                    <a href="/booking/" class="btn btn-primary sm fw-medium fifa-btn-full">Reserve City-to-City Service</a>
+                    <a href="/booking/" class="btn btn-primary sm fw-medium w-100">Reserve City-to-City Service</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -740,19 +728,6 @@ This service is a practical choice for families, professionals, couples, and any
 
 
     @include('partials.testimonials')
-
-    <section class="bg-gray py-30 d-md-none">
-        <div class="container">
-            <div class="row">
-                <div class="text-center col-12">
-                    <div class="fifa-image-holder">
-                        <img loading="lazy" decoding="async" src="{{ asset('assets/new_theme/img/fifa-image.png') }}" class="img-fluid" alt="FIFA Image">
-                    </div>
-                    <a href="" class="btn btn-primary w-100 fw-medium text-capitalize">Visit our FIFA World Cup 2026 page</a>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <section class="py-40 faqs-section">
         <div class="container">

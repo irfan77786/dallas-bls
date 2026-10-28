@@ -353,18 +353,6 @@
                 </div>
             </div>
         </div>
-        <div class="bg-gray py-30 d-md-none">
-            <div class="container">
-                <div class="row">
-                    <div class="text-center col-12">
-                        <div class="fifa-image-holder">
-                            <img loading="lazy" decoding="async" src="{{ asset('assets/new_theme/img/fifa-image.png') }}" class="img-fluid" alt="FIFA Image" width="380" height="100%">
-                        </div>
-                        <a href="" class="btn btn-primary w-100 fw-medium text-capitalize">Visit our FIFA World Cup 2026 page</a>
-                    </div>
-                </div>
-            </div>
-        </div>
     </section>
 
 
@@ -384,7 +372,7 @@
                     <p class="font-base text-justify">Traveling from Dallas to Oklahoma City should feel easy, private, and professionally managed from start to finish. Our black car service offers a premium alternative to driving yourself or relying on inconsistent ride options. Whether you are traveling for business, family visits, medical appointments, or special events, we provide a smooth long-distance ride with luxury vehicles and experienced chauffeurs.
 
 Our service is ideal for travelers who prefer direct transportation, dependable timing, and a higher standard of comfort. With executive sedans, premium SUVs, and larger vehicles available, every trip is tailored to your travel needs. For clients who need a dependable private ride, our <a href="/services/private-car-service-in-dallas/"><b>private car service in Dallas</b></a> delivers a refined intercity travel experience.</p>
-                    <a href="/booking/" class="btn btn-primary sm fw-medium fifa-btn-full">Book Dallas to Oklahoma City Ride</a>
+                    <a href="/booking/" class="btn btn-primary sm fw-medium w-100">Book Dallas to Oklahoma City Ride</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -404,7 +392,7 @@ Our service is ideal for travelers who prefer direct transportation, dependable 
                     <p class="font-base text-justify">Our Dallas to Oklahoma City chauffeur service is well-suited for executives, business travelers, and assistants arranging professional intercity transportation. Instead of dealing with airport timing, rental cars, or long drives, clients can travel in comfort while maintaining focus on meetings, calls, or quiet preparation during the ride.
 
 We provide discreet service, polished vehicles, and flexible scheduling for one-way and round-trip bookings. Whether the destination is downtown Oklahoma City, a corporate office, a hotel, or a conference venue, our chauffeurs support a timely and smooth arrival. For broader business transportation support, explore our <a href="/services/executive-shuttle-services-dallas/"><b>executive shuttle services in Dallas</b></a> for premium corporate travel solutions.</p>
-                    <a href="/get-a-quote/" class="btn btn-primary sm fw-medium fifa-btn-full">Request Executive Travel Quote</a>
+                    <a href="/get-a-quote/" class="btn btn-primary sm fw-medium w-100">Request Executive Travel Quote</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -425,7 +413,7 @@ We provide discreet service, polished vehicles, and flexible scheduling for one-
                     <p class="font-base text-justify">Our city-to-city black car service between Dallas and Oklahoma City is a convenient option for travelers who want privacy, direct routing, and a premium ride experience. Perfect for couples, solo travelers, professionals, and families, this service removes the inconvenience of airports, parking, and multiple travel connections.
 
 Every ride is scheduled around your pickup location, preferred timing, and destination needs. From residential pickups in Dallas to hotel arrivals in Oklahoma City, we manage the full trip with care and consistency. If you are looking for refined long-distance transportation, our <a href="/dallas-to-austin-car-service"><b>city-to-city black car service</b></a> offers a better way to travel between major regional destinations.</p>
-                    <a href="/booking/" class="btn btn-primary sm fw-medium fifa-btn-full">Reserve City-to-City Black Car</a>
+                    <a href="/booking/" class="btn btn-primary sm fw-medium w-100">Reserve City-to-City Black Car</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -741,19 +729,6 @@ Every ride is scheduled around your pickup location, preferred timing, and desti
 
 
     @include('partials.testimonials')
-
-    <section class="bg-gray py-30 d-md-none">
-        <div class="container">
-            <div class="row">
-                <div class="text-center col-12">
-                    <div class="fifa-image-holder">
-                        <img loading="lazy" decoding="async" src="{{ asset('assets/new_theme/img/fifa-image.png') }}" class="img-fluid" alt="FIFA Image">
-                    </div>
-                    <a href="" class="btn btn-primary w-100 fw-medium text-capitalize">Visit our FIFA World Cup 2026 page</a>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <section class="py-40 faqs-section">
         <div class="container">

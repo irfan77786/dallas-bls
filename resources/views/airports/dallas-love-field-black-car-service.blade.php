@@ -416,20 +416,6 @@
                     </div>
                 </div>
              </div>
-            <div class="bg-gray py-30 d-md-none">
-                <div class="container">
-                    <div class="row">
-                        <div class="text-center col-12">
-                            <div class="fifa-image-holder">
-                                <img loading="lazy" decoding="async" src="{{ asset('assets/new_theme/img/fifa-image.png') }}" class="img-fluid" alt="FIFA Image" width="380" height="100%">
-                            </div>
-                            <a href="" class="btn btn-primary w-100 fw-medium text-capitalize">Visit our FIFA World
-                                Cup 2026
-                                page</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </section>
    
 <section class="detail-content-section bg-gray py-40 py-sm-50 py-md-50 py-lg-40 seciononeheading">
@@ -447,7 +433,7 @@
                     <p class="font-base text-justify">Professional airport transportation to and from Dallas Love Field Airport is essential for travelers who value punctuality, comfort, and reliability. Whether you are flying for business or personal travel, our Love Field airport car service provides a smooth, stress-free experience across Dallas and the surrounding metro area. We handle timely pickups and drop-offs with a strong focus on professional service, schedule protection, and rider convenience.
 
 Our luxury fleet includes premium sedans and executive SUVs designed for comfort, privacy, and efficiency. With real-time flight tracking and experienced chauffeurs, delays and early arrivals are handled smoothly without unnecessary follow-up. Serving Dallas, Plano, Frisco, Irving, Highland Park, and nearby cities, our service provides dependable airport transportation every time. For travelers seeking premium airport travel, our Dallas Love Field airport car service delivers a reliable solution from curb to destination.</p>
-                <a href="/booking/" class="btn btn-primary sm fw-medium fifa-btn-full">Book Love Field Airport Car Service</a>
+                <a href="/booking/" class="btn btn-primary sm fw-medium w-100">Book Love Field Airport Car Service</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -467,7 +453,7 @@ Our luxury fleet includes premium sedans and executive SUVs designed for comfort
                     <p class="font-base text-justify">Our executive Love Field airport transportation service is designed for business professionals, executives, and VIP travelers who require dependable, discreet, and high-quality service. We understand the importance of punctuality and presentation, which is why our chauffeurs are trained to provide a polished experience built around professional expectations. Whether you are attending meetings, hosting clients, or managing a tight itinerary, our Love Field airport car service helps keep every trip efficient and well-coordinated.
 
 We offer a luxury fleet of executive sedans and SUVs equipped for comfort, privacy, and productive travel. Our service supports major business areas including Downtown Dallas, Uptown, Plano, Frisco, Las Colinas, and Richardson. With flexible scheduling, real-time ride oversight, and reliable chauffeur service, we help protect your schedule and professional image throughout every airport transfer.</p>
-                    <a href="/get-a-quote/" class="btn btn-primary sm fw-medium fifa-btn-full">Request Executive Airport Quote</a>
+                    <a href="/get-a-quote/" class="btn btn-primary sm fw-medium w-100">Request Executive Airport Quote</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -488,7 +474,7 @@ We offer a luxury fleet of executive sedans and SUVs equipped for comfort, priva
                     <p class="font-base text-justify">Our private Love Field airport transfer service offers a personalized and stress-free travel experience for individuals, families, and corporate travelers. Unlike shared transportation or standard rideshare options, our private service provides direct routing, privacy, and a comfortable ride tailored to your schedule. Whether you are heading to or from Dallas Love Field Airport, we provide reliable transportation with professional chauffeurs and well-maintained luxury vehicles.
 
 Our chauffeurs prioritize safety, punctuality, and customer service, ensuring every ride meets the highest standards. With door-to-door airport transportation and experienced local drivers, we make Dallas airport travel easier and more comfortable. We serve Dallas, Irving, Plano, Highland Park, University Park, and surrounding areas, making us a trusted choice for private airport transportation throughout the metroplex.</p>
-                    <a href="/booking/" class="btn btn-primary sm fw-medium fifa-btn-full">Book Private Love Field Transfer</a>
+                    <a href="/booking/" class="btn btn-primary sm fw-medium w-100">Book Private Love Field Transfer</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -806,20 +792,6 @@ Our chauffeurs prioritize safety, punctuality, and customer service, ensuring ev
     </section>
     
      @include('partials.testimonials')
-        <section class="bg-gray py-30 d-md-none">
-            <div class="container">
-                <div class="row">
-                    <div class="text-center col-12">
-                        <div class="fifa-image-holder">
-                            <img  loading="lazy"
-decoding="async" src="{{ asset('assets/new_theme/img/fifa-image.png') }}" class="img-fluid" alt="FIFA Image">
-                        </div>
-                        <a href="" class="btn btn-primary w-100 fw-medium text-capitalize">Visit our FIFA World Cup 2026
-                            page</a>
-                    </div>
-                </div>
-            </div>
-        </section>
           <section class="py-40 faqs-section">
             <div class="container">
                 <div class="row">

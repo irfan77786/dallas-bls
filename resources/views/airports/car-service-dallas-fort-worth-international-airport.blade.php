@@ -433,20 +433,6 @@
                     </div>
                 </div>
              </div>
-            <div class="bg-gray py-30 d-md-none">
-                <div class="container">
-                    <div class="row">
-                        <div class="text-center col-12">
-                            <div class="fifa-image-holder">
-                                <img loading="lazy" decoding="async" src="{{ asset('assets/new_theme/img/fifa-image.png') }}" class="img-fluid" alt="FIFA Image" width="380" height="100%">
-                            </div>
-                            <a href="" class="btn btn-primary w-100 fw-medium text-capitalize">Visit our FIFA World
-                                Cup 2026
-                                page</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
         </section>
    
@@ -465,7 +451,7 @@
                 <div class="col-12 col-md-6 pr-xl-50">
                     <h3 class="h5 fw-semibold">DFW Airport Car Service for Business Travelers, Families, and On-Time Airport Transportation Across Dallas</h3>
                     <p class="font-base text-justify">Our DFW airport car service is designed for travelers who want dependable transportation, comfortable vehicles, and a smoother airport experience from the moment a reservation is placed. Dallas Fort Worth International Airport is one of the busiest travel hubs in the region, so airport transportation needs to be organized with precision, strong route awareness, and professional chauffeur service. We provide direct transportation for business travelers, families, executives, and visitors who need timely pickups and drop-offs between DFW and Dallas, Plano, Frisco, Allen, Irving, and surrounding areas. This page is optimized around the search intent behind terms like Black Car Service Dallas, airport car service, and dfw car service DFW, helping local and arriving travelers find a premium alternative to standard rideshare options. If you want a professional airport car service me experience with privacy, comfort, and a cleaner executive-level presentation, this service is built for that purpose. For broader airport-related transportation options, you can also review our <a href="https://www.dallasblacklimoservice.com/services/airport-transfers-dallas/"><b>airport transfers Dallas</b></a> page for additional service coverage and internal route options.</p>
-                <a href="/booking/" class="btn btn-primary sm fw-medium fifa-btn-full">Book DFW Airport Car Service</a>
+                <a href="/booking/" class="btn btn-primary sm fw-medium w-100">Book DFW Airport Car Service</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -483,7 +469,7 @@
                 <div class="mb-20 col-12 col-md-6 pr-xl-50">
                     <h3 class="h5 fw-semibold">Executive DFW Airport Chauffeur Service with Luxury Sedans, SUVs, and Private Transportation for Dallas Area Travelers</h3>
                     <p class="font-base text-justify">Our executive DFW airport chauffeur service is built for clients who care about timing, professionalism, and a polished arrival or departure experience. Corporate travelers, executive assistants, VIP guests, and families often choose private airport transportation because they need more consistency than app-based rides can provide. We offer luxury sedans and premium SUVs that are well-suited for solo executive transportation, airport pickups, client travel, and comfortable family transfers with luggage. Chauffeurs are trained to handle airport logistics, terminal timing, and local route planning across Dallas and the surrounding metroplex. That makes this page highly relevant for users searching airport car service, Black Car Service Dallas, and dfw car service DFW while also supporting local intent in Plano, Frisco, Allen, and nearby business corridors. For clients who need extended executive transportation beyond airport travel, internal links also guide users toward our <a href="https://www.dallasblacklimoservice.com/services/chauffeur-service-dallas/"><b>chauffeur service dallas</b></a> page and our <a href="https://www.dallasblacklimoservice.com/services/private-car-service-in-dallas/"><b>private car service in Dallas</b></a> page. If your itinerary uses another airport, our <a href="https://www.dallasblacklimoservice.com/airports/dallas-love-field-airport-car-service/"><b>Dallas Love Field Airport car service</b></a> page is also available.</p>
-                    <a href="/get-a-quote/" class="btn btn-primary sm fw-medium fifa-btn-full">Request DFW Airport Transfer Quote</a>
+                    <a href="/get-a-quote/" class="btn btn-primary sm fw-medium w-100">Request DFW Airport Transfer Quote</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -502,7 +488,7 @@
                 <div class="col-12 col-md-6 pr-xl-50">
                     <h3 class="h5 fw-semibold">Private DFW Airport Transportation Serving Dallas, Plano, Frisco, Allen, and More with Strong Local SEO and Internal Linking</h3>
                     <p class="font-base text-justify">Our private DFW airport transportation service supports travelers across Dallas and the wider metroplex with direct, comfortable, and professionally managed airport rides. Whether you are traveling from a hotel in Downtown Dallas, a residence in Plano, an office in Frisco, or a pickup location in Allen, we provide private airport transportation that matches your schedule and reduces unnecessary stress. This page is intentionally written to support on-page SEO with local relevance, keyword variation, and practical internal linking rather than generic filler content. That means the content naturally supports search phrases like airport car service me, airport car service, and Black Car Service Dallas while keeping the main page focus on DFW airport travel. Our service also connects well with broader local and regional transportation needs, including one-way bookings, round trips, and longer rides from the airport to nearby cities. For additional route-based transportation, travelers can visit our <a href="https://www.dallasblacklimoservice.com/city-to-city-rides/"><b>city to city rides</b></a> page. Travelers comparing airport transfer options may also review our <a href="https://www.dallasblacklimoservice.com/services/airport-transfers-dallas/"><b>airport transfers Dallas</b></a> page for more service-specific information.</p>
-                    <a href="/booking/" class="btn btn-primary sm fw-medium fifa-btn-full">Reserve Your Private DFW Airport Ride</a>
+                    <a href="/booking/" class="btn btn-primary sm fw-medium w-100">Reserve Your Private DFW Airport Ride</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
@@ -838,20 +824,6 @@
     
     
      @include('partials.testimonials')
-        <section class="bg-gray py-30 d-md-none">
-            <div class="container">
-                <div class="row">
-                    <div class="text-center col-12">
-                        <div class="fifa-image-holder">
-                            <img  loading="lazy"
-decoding="async" src="{{ asset('assets/new_theme/img/fifa-image.png') }}" class="img-fluid" alt="FIFA Image">
-                        </div>
-                        <a href="" class="btn btn-primary w-100 fw-medium text-capitalize">Visit our FIFA World Cup 2026
-                            page</a>
-                    </div>
-                </div>
-            </div>
-        </section>
           <section class="py-40 faqs-section">
             <div class="container">
                 <div class="row">

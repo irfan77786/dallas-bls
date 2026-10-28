@@ -6113,14 +6113,6 @@ li {
   -webkit-box-orient: vertical;
 }
 
-.fifa-image-holder {
-  padding: 30px 0;
-  background: #fff;
-  max-width: 380px;
-  overflow: hidden;
-  border-radius: 12px;
-  margin: 0 auto 30px;
-}
 
 .form-label {
   font-size: 0.875rem;
@@ -6320,13 +6312,7 @@ h1.h1.fw-bold.text-white.mb-15 {
         display:none !important;
     }
     
-    .fifa-btnss.text-center.my-4 a {
-    width:100% !important;
-}
- .fifa-btnss.text-center.my-4 {
-    margin-top: 5px !important;
-    margin-bottom: 0px !important;
-}
+
 p.font-md.mb-0.justify-mobile {
     text-align: justify;
 }
@@ -6382,9 +6368,6 @@ h2.h2.fw-bold.home-heading-style.home-heading-style {
     border-radius: 7px;
 }
     
-  .fifa-btnss.text-center.my-4 a {
-    width: 430px;
-}  
     
     .only-m {
         display:none ;
