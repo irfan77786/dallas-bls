@@ -420,11 +420,30 @@ div.search-tab-wrap ul.nav-tabs li.nav-item a.nav-link:focus {
 }
 
 .rlx-select .rlx-trigger {
+  display: flex;
+  align-items: center;
   font-size: 16px;
-  min-height: 42px;
-  padding-left: 0 !important;
+  min-height: 46px;
   text-align: left;
-  padding-bottom: 10px !important;
+}
+
+.floating-bordered-input.rlx-theme .rlx-select .rlx-trigger {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start;
+  min-height: 46px !important;
+  height: 46px;
+  padding: 0 38px 0 40px !important;
+  margin-top: 10px !important;
+  margin-bottom: 0 !important;
+  line-height: 1.2 !important;
+}
+
+.floating-bordered-input.rlx-theme .rlx-select .rlx-value {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  line-height: 1.2;
 }
 
 .hours-space {
@@ -750,6 +769,18 @@ span.pricing_summary_price {
 .ah-container {
   padding-left: 18px !important;
   padding-right: 18px !important;
+}
+
+/* Hero banner: full-bleed width on desktop (override ah-container max-width) */
+@media (min-width: 768px) {
+  .home-banner-section,
+  .home-banner-section #hero-banner-container.ah-container,
+  .home-banner-section .hero-banner-container.ah-container {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
 }
 
 /* =========================

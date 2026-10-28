@@ -251,8 +251,7 @@ $tabSuffix = $id_suffix ?? '';
                         <div class="rlx-select" id="rlx-hours{{ $tabSuffix }}" data-name="select_hours"
                             data-initial="{{ session('select_hours') ?? '' }}">
                             <button type="button" class="rlx-trigger" aria-haspopup="listbox" aria-expanded="false">
-                                <span class="rlx-value">{{ session('select_hours') ? session('select_hours').'
-                                    hour'.(session('select_hours') > 1 ? 's' : '') : '' }}</span>
+                                <span class="rlx-value">@if(session('select_hours')){{ session('select_hours') }} hour{{ session('select_hours') > 1 ? 's' : '' }}@endif</span>
                                 <svg class="rlx-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none"
                                     aria-hidden="true">
                                     <path
@@ -345,10 +344,12 @@ $tabSuffix = $id_suffix ?? '';
     }
 
     .floating-bordered-input.rlx-theme .rlx-select .rlx-trigger {
-        display: flex;
-        align-items: center;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-start;
         width: 100%;
-        min-height: 46px;
+        min-height: 46px !important;
+        height: 46px;
         padding: 0 38px 0 40px !important;
         margin-top: 10px !important;
         margin-bottom: 0 !important;
@@ -357,7 +358,7 @@ $tabSuffix = $id_suffix ?? '';
         background: transparent;
         color: #1f2937;
         font-size: 16px;
-        line-height: 1.45;
+        line-height: 1.2 !important;
         text-align: left;
         box-sizing: border-box;
         cursor: pointer;
@@ -365,6 +366,10 @@ $tabSuffix = $id_suffix ?? '';
 
     .rlx-select .rlx-value {
         pointer-events: none;
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        line-height: 1.2;
     }
 
     .floating-bordered-input.rlx-theme .rlx-select .rlx-arrow {

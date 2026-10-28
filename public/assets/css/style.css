@@ -5540,10 +5540,17 @@ li {
   background-size: cover;
   background-position: 0 40%;
   z-index: 1;
+  width: 100%;
 }
-.home-banner-section .ah-container {
+.home-banner-section .ah-container,
+.home-banner-section #hero-banner-container,
+.home-banner-section .hero-banner-container {
   background-size: cover;
   z-index: 1;
+  max-width: 100%;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
 }
 .home-banner-section .ah-container:after {
   position: absolute;
