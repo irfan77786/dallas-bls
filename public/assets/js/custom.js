@@ -27,6 +27,20 @@ function getHomeSearchMapSinglePlaceZoom() {
 
 function geolocate() {}
 
+/** Show/hide banner headline when map covers the hero (same on every page). */
+function setBannerTextForMap(mapVisible) {
+    var $text = $("#home-text-content, .banner-text-content");
+    if (mapVisible) {
+        $text.css({ visibility: "hidden", pointerEvents: "none" });
+        $(".hero-banner-container").addClass("map-active");
+        $("#hide_on_map").hide();
+    } else {
+        $text.css({ visibility: "visible", pointerEvents: "auto" });
+        $(".hero-banner-container").removeClass("map-active");
+        $("#hide_on_map").show();
+    }
+}
+
 function resetMap() {
     const mapElement = document.getElementById("map");
     $(window).width() < 768 ? $(".mobile-hero").show() : $(".web-hero").show();
@@ -82,21 +96,13 @@ function resetMap() {
         mapElement.style.removeProperty("display");
     }
 
-    // Show the header text content again
-    $("#home-text-content").css("visibility", "visible");
-    $("#home-text-content").css("pointer-events", "auto");
+    setBannerTextForMap(false);
 
     pickupPlacePoint = null;
     dropoffPlacePoint = null;
 
     const infoBox = document.getElementById("route-info-box");
     if (infoBox) infoBox.style.display = "none";
-
-    if (typeof $ !== "undefined") {
-        try {
-            $("#hide_on_map").show();
-        } catch (e) {}
-    }
 }
 
 window.resetMap = resetMap;
@@ -265,14 +271,7 @@ function triggerPlaceChangedIfPrefilled() {
 
                 document.getElementById("map").style.display = "block";
                 // Hide header text when map is shown via prefill
-                if (document.getElementById("home-text-content")) {
-                    document.getElementById(
-                        "home-text-content",
-                    ).style.visibility = "hidden";
-                    document.getElementById(
-                        "home-text-content",
-                    ).style.pointerEvents = "none";
-                }
+                setBannerTextForMap(true);
 
                 initMap(pickupPlace, dropoffPlace); // Show whatever location is available
             });
@@ -630,7 +629,11 @@ let dropoffPlacePoint = null;
 
 function handlePointToPointUpdate() {
     if (pickupPlacePoint || dropoffPlacePoint) {
-        document.getElementById("map").style.display = "block";
+        var mapEl = document.getElementById("map");
+        if (mapEl) {
+            mapEl.style.display = "block";
+            setBannerTextForMap(true);
+        }
         initMap(pickupPlacePoint, dropoffPlacePoint);
     }
 }
@@ -839,20 +842,14 @@ function onLocationChanged() {
         if (mapElement) {
             // Fade out effect
             $(mapElement).fadeOut(animationDuration);
-            $("#hide_on_map").fadeIn(animationDuration);
-            // Show header text
-            $("#home-text-content").css("visibility", "visible");
-            $("#home-text-content").css("pointer-events", "auto");
+            setBannerTextForMap(false);
         }
     } else if (map) {
         // Ensure map is visible
         if (mapElement.style.display === "none") {
             mapElement.style.display = "block";
-            $("#hide_on_map").hide();
             $(mapElement).hide().fadeIn(animationDuration);
-            // Hide header text
-            $("#home-text-content").css("visibility", "hidden");
-            $("#home-text-content").css("pointer-events", "none");
+            setBannerTextForMap(true);
         }
 
         // Animate to the appropriate marker
@@ -1010,7 +1007,9 @@ function initMap(pickupPlace, dropoffPlace) {
         mapElement.style.removeProperty("background-size");
         mapElement.style.removeProperty("background-position");
         mapElement.style.removeProperty("background-repeat");
+        mapElement.style.display = "block";
         $(".below-map").removeClass("main-hero");
+        setBannerTextForMap(true);
     }
 
     const mapStyle = [
@@ -1428,8 +1427,7 @@ function calculateRoute(swapped = false) {
     const mapDisplayElement = document.getElementById("map");
     if (mapDisplayElement) {
         mapDisplayElement.style.display = "block";
-        $("#home-text-content").css("visibility", "hidden");
-        $("#home-text-content").css("pointer-events", "none");
+        setBannerTextForMap(true);
     }
 
     // Get and display the route
@@ -1843,8 +1841,6 @@ $(document).ready(function () {
         $(".input-icon-left").on("click", function () {
             $(this).next("input").focus();
         });
-    } else {
-        console.error("bootstrapMaterialDatePicker plugin is not loaded");
     }
 
     /** Home banner / search forms: today + time must be at least 2 hours from now */
@@ -1947,3 +1943,59 @@ $(document).ready(function () {
         },
     );
 });
+
+/** Lazy-load Google Maps Places only when needed (major PageSpeed win). */
+(function () {
+    var PLACE_INPUTS =
+        "#pickup-location,#dropoff-location,#pickup-location_mobile,#dropoff-location_mobile," +
+        "#pickup-location-hourly,#pickup-location-hourly_mobile," +
+        "#pickup-location_form,#dropoff-location_form,#pickup-location-hourly_form," +
+        "#pickup-location_hero,#dropoff-location_hero," +
+        "#pickup_address,#dropoff_address";
+
+    window.loadGoogleMapsPlaces = function () {
+        if (window.google && window.google.maps && window.google.maps.places) {
+            if (typeof initAutocomplete === "function") {
+                initAutocomplete();
+            }
+            return;
+        }
+        if (window.__gmapsLoading) {
+            return;
+        }
+        var key = window.APP_MAPS_KEY;
+        if (!key) {
+            return;
+        }
+        window.__gmapsLoading = true;
+        var s = document.createElement("script");
+        s.src =
+            "https://maps.googleapis.com/maps/api/js?key=" +
+            encodeURIComponent(key) +
+            "&libraries=places&callback=initAutocomplete";
+        s.async = true;
+        document.head.appendChild(s);
+    };
+
+    function bindLazyMaps() {
+        var inputs = document.querySelectorAll(PLACE_INPUTS);
+        if (!inputs.length) {
+            return;
+        }
+        var load = function () {
+            window.loadGoogleMapsPlaces();
+        };
+        // Load Maps only on interaction so PageSpeed/LCP are not blocked by ~4MB Maps JS.
+        inputs.forEach(function (el) {
+            el.addEventListener("focus", load, { once: true });
+            el.addEventListener("touchstart", load, { once: true, passive: true });
+            el.addEventListener("keydown", load, { once: true });
+        });
+    }
+
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", bindLazyMaps);
+    } else {
+        bindLazyMaps();
+    }
+})();

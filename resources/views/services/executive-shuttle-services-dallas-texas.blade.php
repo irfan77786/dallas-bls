@@ -11,7 +11,7 @@
 
     <section class="home-banner-section">
         <div class="hero-banner-container py-60 ah-container position-relative py-sm-70 py-md-80 py-lg-100"
-            style="z-index: 2; background-image: url('{{ asset('assets/new_theme/img/banner-1.webp') }}'); background-size: cover; background-position: center;">
+            style="z-index: 2; ">
 
             <div id="map" class="position-absolute w-100 h-100" style="top:0; left:0; z-index: 1; display:none;"></div>
 
@@ -388,7 +388,7 @@
                 
                 <div class="col-12 col-md-6 pr-xl-50">
                     <h3 class="h5 fw-semibold">Executive Shuttle Services in Dallas for DFW Airport & Love Field Transfers</h3>
-                    <p class="font-base text-justify">Our executive shuttle services in Dallas provide reliable and professional group transportation to and from DFW Airport and Dallas Love Field Airport. Designed for corporate teams, business travelers, and group transfers, our shuttle service ensures timely pickups, smooth travel, and a stress-free experience across the Dallasâ€“Fort Worth metroplex. Whether you are coordinating airport transfers for employees or welcoming clients, we deliver efficient and comfortable transportation solutions.
+                    <p class="font-base text-justify">Our executive shuttle services in Dallas provide reliable and professional group transportation to and from DFW Airport and Dallas Love Field Airport. Designed for corporate teams, business travelers, and group transfers, our shuttle service ensures timely pickups, smooth travel, and a stress-free experience across the Dallas–Fort Worth metroplex. Whether you are coordinating airport transfers for employees or welcoming clients, we deliver efficient and comfortable transportation solutions.
 
 We serve major locations including Irving, Plano, Frisco, Arlington, and Downtown Dallas, offering spacious and well-maintained executive shuttle vehicles. With real-time flight tracking and experienced chauffeurs, we ensure your group arrives on time without delays. Our focus on punctuality and professionalism makes us a trusted choice for airport group travel. For seamless airport transfers, explore our <a href="/airports/dfw-car-service/"><b>DFW airport car service</b></a> and enhance your group transportation experience.</p>
                 <a href="/booking/" class="btn btn-primary sm fw-medium w-100">Book Executive Shuttle Now</a>
@@ -431,7 +431,7 @@ Our fleet includes spacious executive vans and shuttle vehicles designed to ensu
                     <h3 class="h5 fw-semibold">Private Executive Shuttle Services in Dallas for Group and City-to-City Travel</h3>
                     <p class="font-base text-justify">Our private executive shuttle services in Dallas provide a comfortable and efficient solution for group travel within the city and between nearby destinations. Whether you are organizing transportation for corporate teams, special events, or long-distance trips to cities like Fort Worth, Austin, or Houston, our shuttle service ensures a smooth and stress-free journey. We serve Dallas, Irving, Plano, McKinney, and surrounding areas across the DFW metroplex.
 
-Unlike standard transportation options, our executive shuttle service offers dedicated vehicles, professional chauffeurs, and flexible scheduling tailored to your groupâ€™s needs. Our spacious vehicles are designed for comfort and convenience, making them ideal for both short and long-distance travel. With a focus on reliability and customer satisfaction, we deliver premium group transportation every time. For more travel options, visit our <a href="/services/luxury-van-rental-dallas/"><b>luxury van rental in Dallas</b></a> for enhanced group mobility solutions.</p>
+Unlike standard transportation options, our executive shuttle service offers dedicated vehicles, professional chauffeurs, and flexible scheduling tailored to your group’s needs. Our spacious vehicles are designed for comfort and convenience, making them ideal for both short and long-distance travel. With a focus on reliability and customer satisfaction, we deliver premium group transportation every time. For more travel options, visit our <a href="/services/luxury-van-rental-dallas/"><b>luxury van rental in Dallas</b></a> for enhanced group mobility solutions.</p>
                     <a href="/booking/" class="btn btn-primary sm fw-medium w-100">Book Private Shuttle</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
@@ -465,7 +465,7 @@ Unlike standard transportation options, our executive shuttle service offers ded
                         </span>
                         <h3 class="text-white h6 fw-semibold">Upfront Flat-Rate Pricing</h3>
                         <p class="text-white font-md">
-                            Clear, pre-set pricing with no hidden fees â€”
+                            Clear, pre-set pricing with no hidden fees —
                             <b>ideal for airport transfers, chauffeur service, executive shuttle transportation, and corporate travel planning.</b>
                         </p>
                     </article>
@@ -877,7 +877,7 @@ Unlike standard transportation options, our executive shuttle service offers ded
                             data-bs-parent="#faqAccordion">
                             <div class="pt-0 pr-0 pl-0 accordion-body">
                                 <p class="font-base">
-                                    For most scheduled bookings, the chauffeur typically arrives <b>10â€“15 minutes early</b> to ensure the vehicle is ready and your ride begins on time.<br>
+                                    For most scheduled bookings, the chauffeur typically arrives <b>10–15 minutes early</b> to ensure the vehicle is ready and your ride begins on time.<br>
                                     For <b>airport pickups, executive transportation, or complex itineraries</b>, arrival timing may be adjusted based on location, traffic, or trip requirements.
                                 </p>
                             </div>

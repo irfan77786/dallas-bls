@@ -11,7 +11,7 @@
 
     <section class="home-banner-section">
         <div class="hero-banner-container py-60 ah-container position-relative py-sm-70 py-md-80 py-lg-100"
-             style="z-index: 2; background-image: url('{{ asset('assets/new_theme/img/banner-1.webp') }}'); background-size: cover; background-position: center;">
+             style="z-index: 2; ">
             <div id="map" class="position-absolute w-100 h-100" style="top:0; left:0; z-index: 1; display:none;"></div>
 
             <div class="row" style="pointer-events: none;">
@@ -341,7 +341,7 @@
                         </li>
                         <li>
                             <p class="mb-0 justify-mobile">
-                                <strong class="br-css-tts">Private Ride Without Disruptions:</strong> No shared passengers, no multiple stops, and no app-based uncertaintyâ€”just reserved transportation managed around your schedule.
+                                <strong class="br-css-tts">Private Ride Without Disruptions:</strong> No shared passengers, no multiple stops, and no app-based uncertainty—just reserved transportation managed around your schedule.
                             </p>
                         </li>
                     </ul>

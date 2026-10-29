@@ -11,7 +11,7 @@
 
     <section class="home-banner-section">
         <div class="hero-banner-container py-60 ah-container position-relative py-sm-70 py-md-80 py-lg-100"
-             style="z-index: 2; background-image: url('{{ asset('assets/new_theme/img/banner-1.webp') }}'); background-size: cover; background-position: center;">
+             style="z-index: 2; ">
             <div id="map" class="position-absolute w-100 h-100" style="top:0; left:0; z-index: 1; display:none;"></div>
 
             <div class="row" style="pointer-events: none;">
@@ -403,7 +403,7 @@
                             </li>
                             <li>
                                 <p class="mb-0 justify-mobile">
-                                    <strong class="br-css-tts">Dependable Airport Car Service:</strong> A trusted option for anyone searching for airport car service, airport car service me, or private transportation into the Dallasâ€“Fort Worth region.
+                                    <strong class="br-css-tts">Dependable Airport Car Service:</strong> A trusted option for anyone searching for airport car service, airport car service me, or private transportation into the Dallas–Fort Worth region.
                                 </p>
                             </li>
                         </ul>
@@ -432,7 +432,7 @@
                 
                 <div class="col-12 col-md-6 pr-xl-50">
                     <h3 class="h5 fw-semibold">Reliable Black Car Service from Oklahoma City to Dallas</h3>
-                    <p class="font-base text-justify">Our Black Car Service Oklahoma City to Dallas is designed for travelers who want more than basic transportation. Whether you are planning a business trip, private travel, or a direct transfer into the Dallasâ€“Fort Worth metroplex, we provide a smooth and dependable ride with professional chauffeur service from pickup to drop-off. This route is ideal for executives, families, and frequent travelers who need privacy, punctuality, and a stress-free experience without relying on shared rides or short-haul flights. Our service is especially valuable for clients traveling to Downtown Dallas, Plano, Frisco, Allen, Irving, or corporate destinations throughout the region. We focus on comfort, direct routing, and reliable timing so your schedule stays protected. If your trip connects to the airport, our service also works seamlessly with our <a href="https://www.dallasblacklimoservice.com/airports/dfw-car-service/"><b>DFW airport car service</b></a>, giving you a dependable option for long-distance luxury transportation with executive-level service and real convenience.</p>
+                    <p class="font-base text-justify">Our Black Car Service Oklahoma City to Dallas is designed for travelers who want more than basic transportation. Whether you are planning a business trip, private travel, or a direct transfer into the Dallas–Fort Worth metroplex, we provide a smooth and dependable ride with professional chauffeur service from pickup to drop-off. This route is ideal for executives, families, and frequent travelers who need privacy, punctuality, and a stress-free experience without relying on shared rides or short-haul flights. Our service is especially valuable for clients traveling to Downtown Dallas, Plano, Frisco, Allen, Irving, or corporate destinations throughout the region. We focus on comfort, direct routing, and reliable timing so your schedule stays protected. If your trip connects to the airport, our service also works seamlessly with our <a href="https://www.dallasblacklimoservice.com/airports/dfw-car-service/"><b>DFW airport car service</b></a>, giving you a dependable option for long-distance luxury transportation with executive-level service and real convenience.</p>
                 <a href="/booking/" class="btn btn-primary sm fw-medium w-100">Book Black Car Service Now</a>
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
@@ -522,7 +522,7 @@
                 <div class="row justify-content-center">
                     <div class="text-center col-12 col-lg-11 col-xl-10 mb-25 mb-md-30 mb-lg-40">
                         <h2 class="h2 fw-bold mb-15 mb-sm-20 mb-lg-25">Where We <span class="theme-color"> Serve</span></h2>
-                        <p class="font-md">Providing professional black car service from Oklahoma City to Dallasâ€“Fort Worth and throughout the metroplex. Our service covers:</p>
+                        <p class="font-md">Providing professional black car service from Oklahoma City to Dallas–Fort Worth and throughout the metroplex. Our service covers:</p>
                     </div>
                 </div>
                 <div class="row">

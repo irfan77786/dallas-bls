@@ -11,7 +11,13 @@
 
     <section class="home-banner-section">
         <div id="hero-banner-container" class="hero-banner-container py-60 ah-container position-relative py-sm-70 py-md-80 py-lg-100"
-             style="z-index: 2; background-image: url('{{ asset('assets/new_theme/img/banner-1.webp') }}'); background-size: cover; background-position: center;">
+             style="z-index: 2;">
+            <picture>
+                <source media="(max-width: 767px)" srcset="{{ asset('assets/new_theme/img/banner-1-mobile.webp') }}" type="image/webp">
+                <img class="hero-lcp-img" src="{{ asset('assets/new_theme/img/banner-1.webp') }}"
+                    alt="Dallas black car and limousine service"
+                    width="1000" height="523" fetchpriority="high" decoding="async">
+            </picture>
             <!-- Map Container (Initially hidden, shows up when location is selected) -->
             <div id="map" class="position-absolute w-100 h-100" style="top:0; left:0; z-index: 1; display:none;">
             </div>
@@ -62,7 +68,7 @@
             <div class="row py-20">
                 <div class="col-12 col-md-6 h-100 only-m">
                     <div class="ms-md-auto">
-                        <img loading="lazy" decoding="async" src="{{ asset('/img/black-car-service-dallas-mobile.webp') }}" width="100%" height="auto" class="img-fluid" alt="Uniformed chauffeur for executive travel Dallas">
+                        <img loading="lazy" decoding="async" src="{{ asset('/img/black-car-service-dallas-mobile.webp') }}" width="600" height="400" class="img-fluid" alt="Uniformed chauffeur for executive travel Dallas">
                     </div>
                 </div>
                 
@@ -95,7 +101,7 @@
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="ms-md-auto">
-                        <img loading="lazy" decoding="async" src="{{ asset('/img/black-car-service-dallas.webp') }}" width="100%" height="auto" class="img-fluid" alt="Uniformed chauffeur for executive travel Dallas">
+                        <img loading="lazy" decoding="async" src="{{ asset('/img/black-car-service-dallas.webp') }}" width="800" height="533" class="img-fluid" alt="Uniformed chauffeur for executive travel Dallas">
                     </div>
                 </div>
             </div>
@@ -136,13 +142,13 @@
                 
                 <div class="col-12 col-md-6 h-100 d-none d-md-flex">
                     <div class="only-d">
-                        <img loading="lazy" decoding="async" src="{{ asset('/img/dallas-limo-service.webp') }}" width="100%" height="auto" class="img-fluid" alt="Black car service Dallas city transportation">
+                        <img loading="lazy" decoding="async" src="{{ asset('/img/dallas-limo-service.webp') }}" width="800" height="533" class="img-fluid" alt="Black car service Dallas city transportation">
                     </div>
                 </div>
                 
                 <div class="col-12 col-md-6 h-100 d-none d-md-flex">
                     <div class="only-m">
-                        <img loading="lazy" decoding="async" src="{{ asset('/img/dallas-limo-service-mobile.webp') }}" width="100%" height="auto" class="img-fluid" alt="Black car service Dallas city transportation">
+                        <img loading="lazy" decoding="async" src="{{ asset('/img/dallas-limo-service-mobile.webp') }}" width="600" height="400" class="img-fluid" alt="Black car service Dallas city transportation">
                     </div>
                 </div>
                 
@@ -933,9 +939,11 @@ With a fleet of luxury sedans and executive SUVs, we provide exceptional comfort
 @endsection
 
 @section('scripts')
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+@if (session('corporate_support_success') || session('corporate_support_error') || $errors->any())
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
 <script>
-(function () {
+document.addEventListener('DOMContentLoaded', function () {
+    if (typeof Swal === 'undefined') return;
     @if (session('corporate_support_success'))
     Swal.fire({
         title: 'Success!',
@@ -972,6 +980,7 @@ With a fleet of luxury sedans and executive SUVs, we provide exceptional comfort
         confirmButtonText: 'OK'
     });
     @endif
-})();
+});
 </script>
+@endif
 @endsection

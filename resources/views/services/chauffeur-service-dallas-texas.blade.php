@@ -11,7 +11,7 @@
 
     <section class="home-banner-section">
         <div class="hero-banner-container py-60 ah-container position-relative py-sm-70 py-md-80 py-lg-100"
-            style="z-index: 2; background-image: url('{{ asset('assets/new_theme/img/banner-1.webp') }}'); background-size: cover; background-position: center;">
+            style="z-index: 2; ">
 
             <div id="map" class="position-absolute w-100 h-100" style="top:0; left:0; z-index: 1; display:none;"></div>
 
@@ -274,7 +274,7 @@
                 
                 <div class="col-12 col-md-6 pr-xl-50">
                     <h3 class="h5 fw-semibold">Professional Chauffeur Service in Dallas for DFW Airport & Love Field Transfers</h3>
-                    <p class="font-base text-justify">Our professional chauffeur service in Dallas offers reliable and luxury transportation to and from DFW Airport and Dallas Love Field Airport. Whether you are traveling for business or leisure, we ensure timely pickups, smooth routes, and a stress-free experience across the entire Dallasâ€“Fort Worth metroplex. We serve key areas including Irving, Plano, Frisco, and Downtown Dallas, making airport travel convenient and efficient.
+                    <p class="font-base text-justify">Our professional chauffeur service in Dallas offers reliable and luxury transportation to and from DFW Airport and Dallas Love Field Airport. Whether you are traveling for business or leisure, we ensure timely pickups, smooth routes, and a stress-free experience across the entire Dallas–Fort Worth metroplex. We serve key areas including Irving, Plano, Frisco, and Downtown Dallas, making airport travel convenient and efficient.
 
 With real-time flight tracking, our chauffeurs adjust schedules based on delays or early arrivals, ensuring you are never left waiting. Our luxury fleet includes executive sedans and SUVs designed for comfort and privacy. Whether you are heading to DFW or Love Field, we guarantee a premium experience. For reliable airport transportation, explore our <a href="/airports/dfw-car-service/"><b>DFW airport car service</b></a> for seamless and professional travel.</p>
                 <a href="/booking/" class="btn btn-primary sm fw-medium w-100">Book Chauffeur Service Now</a>
@@ -357,7 +357,7 @@ We provide door-to-door service across Dallas, Irving, Plano, McKinney, and surr
                         </span>
                         <h3 class="text-white h6 fw-semibold">Upfront Corporate Pricing</h3>
                         <p class="text-white font-md">
-                            Flat, pre-set rates with no surge fees or hidden charges â€”
+                            Flat, pre-set rates with no surge fees or hidden charges —
                             <b>clear invoicing designed for corporate travel approvals and expense reporting.</b>
                         </p>
                     </article>
@@ -405,7 +405,7 @@ We provide door-to-door service across Dallas, Irving, Plano, McKinney, and surr
                         Areas We <span class="theme-color">Serve</span>
                     </h2>
                     <p class="font-md">
-                        Providing professional transportation services across the Dallasâ€“Fort Worth Metroplex.
+                        Providing professional transportation services across the Dallas–Fort Worth Metroplex.
                         Throughout the region our service covers:
                     </p>
                 </div>
@@ -548,7 +548,7 @@ We provide door-to-door service across Dallas, Irving, Plano, McKinney, and surr
                             <div class="testimonial-slider-item">
                                 <blockquote class="mb-20 mb-md-30">
                                     <p class="font-lg fw-medium text-center text-white">
-                                        We use them every week for Dallas area corporate travel, including airport runs. Same standards every ride â€“ no surprises, no follow-ups.
+                                        We use them every week for Dallas area corporate travel, including airport runs. Same standards every ride – no surprises, no follow-ups.
                                     </p>
                                 </blockquote>
                                 <cite class="name fw-semibold font-lg text-center d-block text-white"> - James Sasser, Managing Partner</cite>
@@ -560,7 +560,7 @@ We provide door-to-door service across Dallas, Irving, Plano, McKinney, and surr
                             <div class="testimonial-slider-item">
                                 <blockquote class="mb-20 mb-md-30">
                                     <p class="font-lg fw-medium text-center text-white">
-                                        Early departures or delayed arrivals â€“ they adjust without calls or confusion, which is why we trust them for executive transportation in Dallas.
+                                        Early departures or delayed arrivals – they adjust without calls or confusion, which is why we trust them for executive transportation in Dallas.
                                     </p>
                                 </blockquote>
                                 <cite class="name fw-semibold font-lg text-center d-block text-white">- David Ramirez, VP of Operations</cite>
@@ -638,7 +638,7 @@ We provide door-to-door service across Dallas, Irving, Plano, McKinney, and surr
                             <div class="pt-0 pr-0 pl-0 accordion-body">
                                 <p class="font-base">
                                     Chauffeur Service is <b>as-directed and schedule-based</b>, allowing multiple
-                                    stops, on-demand changes, and continuous availabilityâ€”rather than single trips or
+                                    stops, on-demand changes, and continuous availability—rather than single trips or
                                     event transportation.
                                 </p>
                             </div>
@@ -724,7 +724,7 @@ We provide door-to-door service across Dallas, Irving, Plano, McKinney, and surr
                             <div class="pt-0 pr-0 pl-0 accordion-body">
                                 <p class="font-base">
                                     Yes. Chauffeur Service allows <b>real-time adjustments</b> to routes, timing, and
-                                    stops without disrupting serviceâ€”ideal for evolving executive schedules.
+                                    stops without disrupting service—ideal for evolving executive schedules.
                                 </p>
                             </div>
                         </div>
@@ -783,7 +783,7 @@ We provide door-to-door service across Dallas, Irving, Plano, McKinney, and surr
                             data-bs-parent="#faqAccordion">
                             <div class="pt-0 pr-0 pl-0 accordion-body">
                                 <p class="font-base">
-                                    For standard chauffeur bookings, the chauffeur typically arrives <b>10â€“15 minutes
+                                    For standard chauffeur bookings, the chauffeur typically arrives <b>10–15 minutes
                                         before</b> the scheduled start to stage the vehicle, review the itinerary, and
                                     be fully ready when service begins.<br>
                                     For <b>executive, VIP, or assistant-managed itineraries</b>, arrival buffers may be

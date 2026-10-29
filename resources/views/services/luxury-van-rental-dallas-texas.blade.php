@@ -11,7 +11,7 @@
 
     <section class="home-banner-section">
         <div class="hero-banner-container py-60 ah-container position-relative py-sm-70 py-md-80 py-lg-100"
-            style="z-index: 2; background-image: url('{{ asset('assets/new_theme/img/banner-1.webp') }}'); background-size: cover; background-position: center;">
+            style="z-index: 2; ">
 
             <div id="map" class="position-absolute w-100 h-100" style="top:0; left:0; z-index: 1; display:none;"></div>
 
@@ -401,7 +401,7 @@
                 
                 <div class="col-12 col-md-6 pr-xl-50">
                     <h3 class="h5 fw-semibold">Luxury Sprinter Services in Dallas for DFW Airport & Love Field Transfers</h3>
-                    <p class="font-base text-justify">Our luxury Sprinter services in Dallas are the perfect solution for group airport transfers to and from DFW Airport and Dallas Love Field Airport. Designed for comfort, space, and reliability, our Sprinter vans provide a premium travel experience for families, corporate teams, and group travelers across the Dallasâ€“Fort Worth metroplex. Whether you are arriving in Dallas or heading to catch a flight, we ensure timely pickups and smooth transportation every time.
+                    <p class="font-base text-justify">Our luxury Sprinter services in Dallas are the perfect solution for group airport transfers to and from DFW Airport and Dallas Love Field Airport. Designed for comfort, space, and reliability, our Sprinter vans provide a premium travel experience for families, corporate teams, and group travelers across the Dallas–Fort Worth metroplex. Whether you are arriving in Dallas or heading to catch a flight, we ensure timely pickups and smooth transportation every time.
 
 We serve major locations including Irving, Plano, Frisco, Arlington, and Downtown Dallas, making airport travel convenient and efficient for groups of all sizes. Our professional chauffeurs monitor flight schedules in real time, ensuring accurate pickups without delays. With spacious interiors, comfortable seating, and modern amenities, our Sprinter service delivers both luxury and practicality. For seamless airport transfers, explore our <a href="/airports/dfw-car-service/"><b>DFW airport car service</b></a> and upgrade your group travel experience.</p>
                 <a href="/booking/" class="btn btn-primary sm fw-medium w-100">Book Sprinter Service Now</a>
@@ -478,7 +478,7 @@ Unlike standard group transport options, our Sprinter service ensures a private 
                         </span>
                         <h3 class="text-white h6 fw-semibold">Upfront Flat-Rate Pricing</h3>
                         <p class="text-white font-md">
-                            Clear, pre-set pricing with no hidden fees â€”
+                            Clear, pre-set pricing with no hidden fees —
                             <b>ideal for airport groups, business travel, and luxury Sprinter transportation planning.</b>
                         </p>
                     </article>
@@ -525,7 +525,7 @@ Unlike standard group transport options, our Sprinter service ensures a private 
                         Where We <span class="theme-color">Serve</span>
                     </h2>
                     <p class="font-md">
-                        Providing luxury Sprinter service across the Dallasâ€“Fort Worth Metroplex.
+                        Providing luxury Sprinter service across the Dallas–Fort Worth Metroplex.
                         Throughout the region our service covers:
                     </p>
                 </div>
@@ -890,7 +890,7 @@ Unlike standard group transport options, our Sprinter service ensures a private 
                             data-bs-parent="#faqAccordion">
                             <div class="pt-0 pr-0 pl-0 accordion-body">
                                 <p class="font-base">
-                                    For most scheduled bookings, the driver typically arrives <b>10â€“15 minutes early</b> to ensure the vehicle is ready and your group trip begins on time.<br>
+                                    For most scheduled bookings, the driver typically arrives <b>10–15 minutes early</b> to ensure the vehicle is ready and your group trip begins on time.<br>
                                     For <b>airport pickups, executive groups, weddings, or complex itineraries</b>, arrival timing may be adjusted based on location, flight status, or trip requirements.
                                 </p>
                             </div>

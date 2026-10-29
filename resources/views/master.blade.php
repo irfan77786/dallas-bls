@@ -31,72 +31,122 @@
     <meta name="twitter:description"
         content="{{ $seo['og_description'] ?? $seo['description'] ?? 'Premium black car and limousine service in Dallas, Texas.' }}">
     <meta name="twitter:image" content="{{ $seo['og_image'] ?? asset('assets/new_theme/img/logo.png') }}">
+    @php
+        $isHome = request()->is('/');
+        $needsBookingPicker = request()->is('booking*') || request()->is('bookRide*') || request()->is('submit-passengerInfo*');
+        $needsIntlTel = $isHome || request()->is('contact-us*');
+        $needsSwiper = $isHome || request()->is('about-us*') || request()->is('our-fleet*') || request()->is('services*') || request()->is('airports*') || request()->is('locations*') || request()->is('cities*') || request()->is('city-to-city*');
+    @endphp
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    <link rel="preconnect" href="https://maps.googleapis.com" crossorigin>
+    <link rel="dns-prefetch" href="https://maps.googleapis.com">
 
-    {{-- Preload LCP hero image (responsive) --}}
-    <link rel="preload" as="image" href="{{ asset('assets/new_theme/img/banner-1-mobile.webp') }}"
-        media="(max-width: 767px)" fetchpriority="high">
-    <link rel="preload" as="image" href="{{ asset('assets/new_theme/img/banner-1.webp') }}"
-        media="(min-width: 768px)" fetchpriority="high">
-    <link rel="preload" as="image" href="{{ asset('assets/new_theme/img/logo.webp') }}" type="image/webp">
+    {{-- Preload LCP hero (mobile-first) + visible logo only --}}
+    <link rel="preload" as="image" type="image/webp" href="{{ asset('assets/new_theme/img/banner-1-mobile.webp') }}" fetchpriority="high">
+    <link rel="preload" as="image" type="image/webp" href="{{ asset('assets/new_theme/img/banner-1.webp') }}" media="(min-width: 768px)" fetchpriority="high">
+    <link rel="preload" as="image" type="image/webp" href="{{ asset('img/dallas-black-limo-service-logo.webp') }}" media="(max-width: 767px)">
+    <link rel="preload" as="image" type="image/webp" href="{{ asset('assets/new_theme/img/logo.webp') }}" media="(min-width: 768px)">
 
-    {{-- Critical CSS only (render path) --}}
+    {{-- Critical CSS --}}
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap-min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}">
 
-    {{-- Non-critical CSS: load async so they don't block first paint --}}
+    {{-- Non-critical CSS (async) --}}
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
         media="print" onload="this.media='all'">
+    @if ($needsSwiper)
     <link rel="stylesheet" href="{{ asset('assets/css/swiper-min.css') }}" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="{{ asset('assets/css/slick.css') }}" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap-material-datetimepicker.css') }}" media="print"
-        onload="this.media='all'">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css"
-        media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" media="print"
-        onload="this.media='all'">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-        media="print" onload="this.media='all'">
+    @endif
+    @if ($needsBookingPicker)
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap-material-datetimepicker.css') }}" media="print" onload="this.media='all'">
+    @endif
+    @if ($needsIntlTel)
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css" media="print" onload="this.media='all'">
+    @endif
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'">
     <noscript>
-        <link rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap">
+        @if ($needsSwiper)
         <link rel="stylesheet" href="{{ asset('assets/css/swiper-min.css') }}">
-        <link rel="stylesheet" href="{{ asset('assets/css/slick.css') }}">
-        <link rel="stylesheet" href="{{ asset('assets/css/bootstrap-material-datetimepicker.css') }}">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        @endif
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     </noscript>
 
     <!-- Page banner responsive styles (matches home screen design) -->
     <style>
-        /* Responsive LCP hero — class only so pages with custom #hero banners stay intact */
+        /* Responsive LCP hero */
         .hero-banner-container {
-            background-image: url('{{ asset('assets/new_theme/img/banner-1-mobile.webp') }}') !important;
-            background-size: cover !important;
-            background-position: center center !important;
-            background-repeat: no-repeat !important;
+            position: relative;
+            overflow: hidden;
+            background-color: #0b0b0b;
+            background-image: url('{{ asset('assets/new_theme/img/banner-1-mobile.webp') }}');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+        .hero-banner-container .hero-lcp-img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+            pointer-events: none;
+            /* Same look as About Us rgba(0,0,0,0.7) overlay */
+            opacity: 0.3;
+        }
+        .hero-banner-container:has(.hero-lcp-img) {
+            background-image: none !important;
+            background-color: #000 !important;
+        }
+        /* Dark shade for CSS-background banners (About Us, etc.) */
+        .home-banner-section .hero-banner-container::after,
+        .home-banner-section .ah-container::after {
+            position: absolute;
+            content: "";
+            inset: 0;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1;
+            pointer-events: none;
+        }
+        /* Home uses img opacity + black bg instead of ::after */
+        .hero-banner-container:has(.hero-lcp-img)::after,
+        .hero-banner-overlay {
+            display: none !important;
+        }
+        .hero-banner-container > .row {
+            position: relative;
+            z-index: 2;
+        }
+        /* Map must stay absolute so it covers banner like home */
+        .hero-banner-container > #map {
+            position: absolute !important;
+            inset: 0;
+            width: 100% !important;
+            height: 100% !important;
+            z-index: 1 !important;
+        }
+        .hero-banner-container.map-active .hero-lcp-img {
+            opacity: 0 !important;
+        }
+        .hero-banner-container.map-active::after {
+            display: none !important;
         }
 
         @media (min-width: 768px) {
             .hero-banner-container {
-                background-image: url('{{ asset('assets/new_theme/img/banner-1.webp') }}') !important;
+                background-image: url('{{ asset('assets/new_theme/img/banner-1.webp') }}');
                 min-height: 570px;
             }
-
-            #home-text-content {
-                margin-top: 130px;
-            }
-
+            #home-text-content { margin-top: 130px; }
             .search-form-wrapper-desktop {
                 position: absolute;
                 width: 100%;
@@ -109,7 +159,6 @@
                 overflow-x: hidden;
                 max-width: 100%;
             }
-
             #hero-banner-container,
             .hero-banner-container {
                 min-height: 300px !important;
@@ -121,7 +170,6 @@
                 max-width: calc(100% - 36px) !important;
                 box-sizing: border-box !important;
             }
-
             #hero-banner-container .row,
             .hero-banner-container .row {
                 width: 100%;
@@ -130,7 +178,6 @@
                 justify-content: center !important;
                 align-items: center !important;
             }
-
             #home-text-content,
             .banner-text-content {
                 justify-content: center !important;
@@ -138,7 +185,6 @@
                 text-align: center !important;
                 max-width: 100%;
             }
-
             #home-text-content h1,
             .banner-text-content h1 {
                 text-align: center !important;
@@ -198,9 +244,7 @@
                     <div class="logo">
                         <a href="/">
                             <img src="{{ asset('assets/new_theme/img/logo.webp') }}" width="200" height="72"
-                                alt="DALLAS LIMOS AND BLACK CAR SERVICE" class="img-fluid d-none d-md-block" fetchpriority="high" decoding="async">
-                            
-                            
+                                alt="DALLAS LIMOS AND BLACK CAR SERVICE" class="img-fluid d-none d-md-block" decoding="async" loading="eager">
                             <img src="{{ asset('img/dallas-black-limo-service-logo.webp') }}" width="200" height="72"
                                 alt="DALLAS LIMOS AND BLACK CAR SERVICE" class="img-fluid d-md-none" fetchpriority="high" decoding="async">
                         </a>
@@ -412,39 +456,51 @@
         </div>
     </footer>
 
-    {{-- Single jQuery + booking/map logic (no duplicate DataTables / jQuery / custom.js) --}}
+    <script>
+        window.APP_MAPS_KEY = @json(config('services.google_maps.api_key'));
+    </script>
+
+    {{-- Defer core JS so HTML/LCP are not blocked --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="{{ asset('assets/js/custom.js') }}?v={{ filemtime(public_path('assets/js/custom.js')) }}"></script>
-
-    {{-- Maps async so it does not block parsing; callback needs custom.js already loaded --}}
-    <script
-        src="https://maps.googleapis.com/maps/api/js?key={{ config('services.google_maps.api_key') }}&libraries=places&loading=async&callback=initAutocomplete"
-        async defer></script>
-
+        crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+    <script src="{{ asset('assets/js/custom.js') }}?v={{ filemtime(public_path('assets/js/custom.js')) }}" defer></script>
     <script src="{{ asset('assets/js/bootstrap-min.js') }}" defer></script>
+    @if ($needsSwiper)
     <script src="{{ asset('assets/js/swiper-min.js') }}" defer></script>
+    @endif
+    @if ($needsIntlTel)
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js" defer></script>
-    <script src="{{ asset('assets/js/slick-min.js') }}" defer></script>
+    @endif
+    @if ($needsBookingPicker)
     <script src="https://cdn.jsdelivr.net/npm/moment@2.29.4/min/moment.min.js" defer></script>
     <script src="{{ asset('assets/js/bootstrap-material-datetimepicker.js') }}" defer></script>
-    <script src="{{ asset('assets/js/custom_new.js') }}?v={{ filemtime(public_path('assets/js/custom_new.js')) }}"
-        defer></script>
+    @endif
+    <script src="{{ asset('assets/js/custom_new.js') }}?v={{ filemtime(public_path('assets/js/custom_new.js')) }}" defer></script>
 
+    {{-- Analytics after idle so it does not compete with LCP --}}
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-D87H3B4PXN');
-        const originalWarn = console.warn;
-        console.warn = function(msg, ...args) {
-            if (typeof msg === 'string' && (msg.includes('google.maps.places.PlacesService') || msg.includes('google.maps.places.AutocompleteService') || msg.includes('google.maps.Marker'))) {
-                return;
-            }
-            originalWarn.apply(console, [msg, ...args]);
-        };
+        function gtag(){dataLayer.push(arguments);}
+        function loadGtag() {
+            if (window.__gtagLoaded) return;
+            window.__gtagLoaded = true;
+            var s = document.createElement('script');
+            s.src = 'https://www.googletagmanager.com/gtag/js?id=G-D87H3B4PXN';
+            s.async = true;
+            s.onload = function () {
+                gtag('js', new Date());
+                gtag('config', 'G-D87H3B4PXN', { send_page_view: true });
+            };
+            document.head.appendChild(s);
+        }
+        if ('requestIdleCallback' in window) {
+            requestIdleCallback(loadGtag, { timeout: 4000 });
+        } else {
+            window.addEventListener('load', function () { setTimeout(loadGtag, 2000); });
+        }
     </script>
+    @stack('scripts')
     @yield('scripts')
 </body>
 

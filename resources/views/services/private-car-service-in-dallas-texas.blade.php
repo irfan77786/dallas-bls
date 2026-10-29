@@ -11,7 +11,7 @@
 
     <section class="home-banner-section">
         <div class="hero-banner-container py-60 ah-container position-relative py-sm-70 py-md-80 py-lg-100"
-            style="z-index: 2; background-image: url('{{ asset('assets/new_theme/img/banner-1.webp') }}'); background-size: cover; background-position: center;">
+            style="z-index: 2; ">
 
             <div id="map" class="position-absolute w-100 h-100" style="top:0; left:0; z-index: 1; display:none;"></div>
 
@@ -476,7 +476,7 @@ Unlike rideshare services, our private car service ensures a dedicated vehicle, 
                         </span>
                         <h3 class="text-white h6 fw-semibold">Upfront Flat-Rate Pricing</h3>
                         <p class="text-white font-md">
-                            Clear, pre-set pricing with no hidden fees â€”
+                            Clear, pre-set pricing with no hidden fees —
                             <b>ideal for airport rides, business travel, and private transportation planning.</b>
                         </p>
                     </article>
@@ -523,7 +523,7 @@ Unlike rideshare services, our private car service ensures a dedicated vehicle, 
                         Where We <span class="theme-color">Serve</span>
                     </h2>
                     <p class="font-md">
-                        Providing private car service across the Dallasâ€“Fort Worth Metroplex.
+                        Providing private car service across the Dallas–Fort Worth Metroplex.
                         Throughout the region our service covers:
                     </p>
                 </div>
@@ -888,7 +888,7 @@ Unlike rideshare services, our private car service ensures a dedicated vehicle, 
                             data-bs-parent="#faqAccordion">
                             <div class="pt-0 pr-0 pl-0 accordion-body">
                                 <p class="font-base">
-                                    For most scheduled bookings, the driver typically arrives <b>10â€“15 minutes early</b> to ensure the vehicle is ready and your trip begins on time.<br>
+                                    For most scheduled bookings, the driver typically arrives <b>10–15 minutes early</b> to ensure the vehicle is ready and your trip begins on time.<br>
                                     For <b>airport pickups, executive travel, or complex itineraries</b>, arrival timing may be adjusted based on location, flight status, or trip requirements.
                                 </p>
                             </div>

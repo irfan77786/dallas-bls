@@ -11,7 +11,7 @@
 
     <section class="home-banner-section">
         <div class="hero-banner-container py-60 ah-container position-relative py-sm-70 py-md-80 py-lg-100"
-             style="z-index: 2; background-image: url('{{ asset('assets/new_theme/img/banner-1.webp') }}'); background-size: cover; background-position: center;">
+             style="z-index: 2; ">
             <div id="map" class="position-absolute w-100 h-100" style="top:0; left:0; z-index: 1; display:none;"></div>
 
             <div class="row" style="pointer-events: none;">
@@ -447,7 +447,7 @@
             <div class="row justify-content-center">
                 <div class="text-center col-12 col-lg-11 col-xl-10 mb-25 mb-md-30 mb-lg-40">
                     <h2 class="h2 fw-bold mb-15 mb-sm-20 mb-lg-25">Where We <span class="theme-color"> Serve</span></h2>
-                    <p class="font-md">Providing professional transportation services across the Dallasâ€“Fort Worth Metroplex. Throughout the region our service covers:</p>
+                    <p class="font-md">Providing professional transportation services across the Dallas–Fort Worth Metroplex. Throughout the region our service covers:</p>
                 </div>
             </div>
             <div class="row">
@@ -760,7 +760,7 @@
                         </h2>
                         <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
                             <div class="pt-0 pr-0 pl-0 accordion-body">
-                                <p class="font-base">We serve Dallas, Addison, Plano, Frisco, Allen, Irving, Richardson, McKinney, Fort Worth, and nearby communities across the Dallasâ€“Fort Worth metroplex.</p>
+                                <p class="font-base">We serve Dallas, Addison, Plano, Frisco, Allen, Irving, Richardson, McKinney, Fort Worth, and nearby communities across the Dallas–Fort Worth metroplex.</p>
                             </div>
                         </div>
                     </div>

@@ -11,7 +11,7 @@
 
     <section class="home-banner-section">
         <div class="hero-banner-container py-60 ah-container position-relative py-sm-70 py-md-80 py-lg-100"
-            style="z-index: 2; background-image: url('{{ asset('assets/new_theme/img/banner-1.webp') }}'); background-size: cover; background-position: center;">
+            style="z-index: 2; ">
 
             <div id="map" class="position-absolute w-100 h-100" style="top:0; left:0; z-index: 1; display:none;"></div>
 
@@ -399,7 +399,7 @@
                 
                 <div class="col-12 col-md-6 pr-xl-50">
                     <h3 class="h5 fw-semibold">Private Aviation Dallas Transportation for DFW & Love Field Airport Transfers</h3>
-                    <p class="font-base text-justify">Private aviation travelers in Dallas require transportation that matches the luxury, efficiency, and exclusivity of their flights. Our private aviation transportation in Dallas is designed specifically for clients using DFW Airport and Dallas Love Field Airport, ensuring seamless ground transfers to and from private terminals and FBOs. Whether you are arriving on a private jet or departing for a business trip, we provide reliable, discreet, and high-end chauffeur service across the Dallasâ€“Fort Worth metroplex.
+                    <p class="font-base text-justify">Private aviation travelers in Dallas require transportation that matches the luxury, efficiency, and exclusivity of their flights. Our private aviation transportation in Dallas is designed specifically for clients using DFW Airport and Dallas Love Field Airport, ensuring seamless ground transfers to and from private terminals and FBOs. Whether you are arriving on a private jet or departing for a business trip, we provide reliable, discreet, and high-end chauffeur service across the Dallas–Fort Worth metroplex.
 
 We serve key locations including Downtown Dallas, Irving, Plano, Frisco, and surrounding cities, offering luxury sedans and executive SUVs tailored for comfort and privacy. Our chauffeurs monitor flight schedules in real time, ensuring precise coordination with private aviation arrivals and departures. With a strong focus on punctuality and professionalism, we deliver a first-class experience. For premium airport transfers, explore our <a href="/airports/addison-airport-car-service/"><b>Addison Airport car service</b></a> and enjoy seamless private aviation travel.</p>
                 <a href="/booking/" class="btn btn-primary sm fw-medium w-100">Book Private Aviation Transfer</a>
@@ -475,7 +475,7 @@ Unlike standard transportation options, our service is tailored specifically for
                         </span>
                         <h3 class="text-white h6 fw-semibold">Upfront Flat-Rate Pricing</h3>
                         <p class="text-white font-md">
-                            Clear, pre-set pricing with no hidden fees â€”
+                            Clear, pre-set pricing with no hidden fees —
                             <b>ideal for airport rides, executive travel, and private aviation transportation planning.</b>
                         </p>
                     </article>
@@ -889,7 +889,7 @@ Unlike standard transportation options, our service is tailored specifically for
                             data-bs-parent="#faqAccordion">
                             <div class="pt-0 pr-0 pl-0 accordion-body">
                                 <p class="font-base">
-                                    For most scheduled bookings, the chauffeur typically arrives <b>10â€“15 minutes early</b> to ensure the vehicle is ready and your trip begins on time.<br>
+                                    For most scheduled bookings, the chauffeur typically arrives <b>10–15 minutes early</b> to ensure the vehicle is ready and your trip begins on time.<br>
                                     For <b>airport pickups, private flight schedules, or complex itineraries</b>, arrival timing may be adjusted based on location, flight status, or trip requirements.
                                 </p>
                             </div>
