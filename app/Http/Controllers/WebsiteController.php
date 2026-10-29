@@ -9,6 +9,7 @@ use App\Mail\ContactMail;
 use App\Mail\QuoteMail;
 use App\Models\Contact;
 use App\Models\Quote;
+use App\Services\TurnstileService;
 
 class WebsiteController extends Controller
 {
@@ -169,7 +170,14 @@ class WebsiteController extends Controller
             'phone' => 'required|string|max:20',
             'message' => 'required|string|min:10',
             'sms_consent' => 'required|accepted',
+            'cf-turnstile-response' => 'required|string',
         ]);
+
+        if (!TurnstileService::verify($request->input('cf-turnstile-response'), $request->ip())) {
+            return redirect()->back()
+                ->withInput()
+                ->withErrors(['cf-turnstile-response' => 'Captcha verification failed. Please try again.']);
+        }
 
         try {
             $contactData = [
@@ -206,12 +214,19 @@ class WebsiteController extends Controller
             'full_name' => 'required|string|max:255',
             'email' => 'required|email|max:255',
             'message' => 'nullable|string|min:5',
+            'cf-turnstile-response' => 'required|string',
         ]);
 
         if ($validator->fails()) {
             return redirect()->route('get_a_quote_thank_you')
                 ->withErrors($validator)
                 ->withInput();
+        }
+
+        if (!TurnstileService::verify($request->input('cf-turnstile-response'), $request->ip())) {
+            return redirect()->route('get_a_quote')
+                ->withInput()
+                ->withErrors(['cf-turnstile-response' => 'Captcha verification failed. Please try again.']);
         }
 
         $validated = $validator->validated();
@@ -256,7 +271,14 @@ class WebsiteController extends Controller
             'email' => 'required|email|max:255',
             'phone' => 'required|string|max:20',
             'message' => 'required|string|min:10',
+            'cf-turnstile-response' => 'required|string',
         ]);
+
+        if (!TurnstileService::verify($request->input('cf-turnstile-response'), $request->ip())) {
+            return redirect()->back()
+                ->withInput()
+                ->withErrors(['cf-turnstile-response' => 'Captcha verification failed. Please try again.']);
+        }
 
         try {
             $contactData = [

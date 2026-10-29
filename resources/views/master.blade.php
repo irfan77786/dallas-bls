@@ -31,83 +31,65 @@
     <meta name="twitter:description"
         content="{{ $seo['og_description'] ?? $seo['description'] ?? 'Premium black car and limousine service in Dallas, Texas.' }}">
     <meta name="twitter:image" content="{{ $seo['og_image'] ?? asset('assets/new_theme/img/logo.png') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css" />
-    <link rel="stylesheet" href="{{ asset('assets/css/swiper-min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/slick.css') }}">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://maps.googleapis.com" crossorigin>
+
+    {{-- Preload LCP hero image (responsive) --}}
+    <link rel="preload" as="image" href="{{ asset('assets/new_theme/img/banner-1-mobile.webp') }}"
+        media="(max-width: 767px)" fetchpriority="high">
+    <link rel="preload" as="image" href="{{ asset('assets/new_theme/img/banner-1.webp') }}"
+        media="(min-width: 768px)" fetchpriority="high">
+    <link rel="preload" as="image" href="{{ asset('assets/new_theme/img/logo.webp') }}" type="image/webp">
+
+    {{-- Critical CSS only (render path) --}}
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap-min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-
-    <!-- Old Custom CSS (for form styles) -->
     <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap-material-datetimepicker.css') }}">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/confirmDate/confirmDate.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link href="https://cdn.datatables.net/1.11.4/css/dataTables.bootstrap5.min.css" rel="stylesheet">
-    <link href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.bootstrap5.min.css" rel="stylesheet">
+
+    {{-- Non-critical CSS: load async so they don't block first paint --}}
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="{{ asset('assets/css/swiper-min.css') }}" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="{{ asset('assets/css/slick.css') }}" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap-material-datetimepicker.css') }}" media="print"
+        onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css"
+        media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" media="print"
+        onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+        media="print" onload="this.media='all'">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <!-- Preload critical JavaScript files -->
-    <link rel="preload" href="{{ asset('assets/js/custom.js') }}" as="script">
-    <link rel="preload" href="{{ asset('assets/js/jquery.js') }}" as="script">
-
-    <!-- Preload logo image for faster rendering -->
-    <link rel="preload" href="{{ asset('assets/new_theme/img/logo.png') }}" as="image">
+        crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap">
+        <link rel="stylesheet" href="{{ asset('assets/css/swiper-min.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/slick.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/css/bootstrap-material-datetimepicker.css') }}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    </noscript>
 
     <!-- Page banner responsive styles (matches home screen design) -->
     <style>
-        @media (max-width: 767px) {
-
-            #hero-banner-container,
-            .hero-banner-container {
-                min-height: 300px !important;
-                height: 300px !important;
-                background-size: cover !important;
-                background-position: center center !important;
-                background-repeat: no-repeat !important;
-                display: flex !important;
-                align-items: center !important;
-                justify-content: center !important;
-            }
-
-            #hero-banner-container .row,
-            .hero-banner-container .row {
-                width: 100%;
-                margin: 0;
-                justify-content: center !important;
-                align-items: center !important;
-            }
-
-            #home-text-content,
-            .banner-text-content {
-                justify-content: center !important;
-                align-items: center !important;
-                text-align: center !important;
-            }
-
-            #home-text-content h1,
-            .banner-text-content h1 {
-                text-align: center !important;
-                white-space: nowrap !important;
-            }
+        /* Responsive LCP hero — class only so pages with custom #hero banners stay intact */
+        .hero-banner-container {
+            background-image: url('{{ asset('assets/new_theme/img/banner-1-mobile.webp') }}') !important;
+            background-size: cover !important;
+            background-position: center center !important;
+            background-repeat: no-repeat !important;
         }
 
- 
-
         @media (min-width: 768px) {
-     
-    
- 
-            #hero-banner-container,
             .hero-banner-container {
+                background-image: url('{{ asset('assets/new_theme/img/banner-1.webp') }}') !important;
                 min-height: 570px;
             }
 
@@ -119,6 +101,49 @@
                 position: absolute;
                 width: 100%;
                 z-index: 10;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .home-banner-section {
+                overflow-x: hidden;
+                max-width: 100%;
+            }
+
+            #hero-banner-container,
+            .hero-banner-container {
+                min-height: 300px !important;
+                height: 300px !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                width: calc(100% - 36px) !important;
+                max-width: calc(100% - 36px) !important;
+                box-sizing: border-box !important;
+            }
+
+            #hero-banner-container .row,
+            .hero-banner-container .row {
+                width: 100%;
+                max-width: 100%;
+                margin: 0;
+                justify-content: center !important;
+                align-items: center !important;
+            }
+
+            #home-text-content,
+            .banner-text-content {
+                justify-content: center !important;
+                align-items: center !important;
+                text-align: center !important;
+                max-width: 100%;
+            }
+
+            #home-text-content h1,
+            .banner-text-content h1 {
+                text-align: center !important;
+                white-space: normal !important;
+                max-width: 100%;
             }
         }
 
@@ -173,11 +198,11 @@
                     <div class="logo">
                         <a href="/">
                             <img src="{{ asset('assets/new_theme/img/logo.webp') }}" width="200" height="72"
-                                alt="DALLAS LIMOS AND BLACK CAR SERVICE" class="img-fluid d-none d-md-block">
+                                alt="DALLAS LIMOS AND BLACK CAR SERVICE" class="img-fluid d-none d-md-block" fetchpriority="high" decoding="async">
                             
                             
-                            <img src="{{ ('/img/dallas-black-limo-service-logo.png') }}" width="200" height="72"
-                                alt="DALLAS LIMOS AND BLACK CAR SERVICE" class="img-fluid d-md-none">
+                            <img src="{{ asset('img/dallas-black-limo-service-logo.webp') }}" width="200" height="72"
+                                alt="DALLAS LIMOS AND BLACK CAR SERVICE" class="img-fluid d-md-none" fetchpriority="high" decoding="async">
                         </a>
                     </div>
                 </div>
@@ -387,231 +412,38 @@
         </div>
     </footer>
 
-    <!-- Critical Scripts - Load First -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.11.4/js/dataTables.bootstrap5.min.js"></script>
-    <script src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
-    <script src="https://cdn.datatables.net/responsive/2.2.9/js/responsive.bootstrap5.min.js"></script>
-
-    <!-- Load custom.js immediately after jQuery (contains map functions) -->
-    <script src="{{ asset('assets/js/custom.js') }}"></script>
-
-    {{-- <script>
-        (function() {
-            function isAirportText(text) {
-                if (!text) return false;
-                const value = String(text).toLowerCase();
-                return value.includes('airport') || value.includes('airfield') || value.includes('terminal');
-            }
-
-            function createSuggestionButton(prediction, onSelect) {
-                const button = document.createElement('button');
-                button.type = 'button';
-                button.className = 'suggestion-item';
-                button.textContent = prediction.description;
-                button.addEventListener('click', function() {
-                    onSelect(prediction);
-                });
-                return button;
-            }
-
-            function setupAutocompleteForInput(config, autocompleteService, placesService) {
-                const selector = 'input[id^="' + config.inputPrefix + '"]';
-                const inputs = document.querySelectorAll(selector);
-
-                inputs.forEach(function(input) {
-                    if (input.dataset.autocompleteBound === '1') return;
-                    input.dataset.autocompleteBound = '1';
-
-                    const suffix = input.id.slice(config.inputPrefix.length);
-                    const suggestionsBox = document.getElementById(config.suggestionsPrefix + suffix);
-                    const airportField = document.getElementById(config.airportPrefix + suffix);
-                    let debounceTimer = null;
-
-                    if (!suggestionsBox) return;
-
-                    function clearSuggestions() {
-                        suggestionsBox.innerHTML = '';
-                        suggestionsBox.style.display = 'none';
-                    }
-
-                    function showSuggestions() {
-                        suggestionsBox.style.display = 'block';
-                    }
-
-                    function selectPrediction(prediction) {
-                        input.value = prediction.description;
-                        if (airportField) {
-                            airportField.value = isAirportText(prediction.description) ? '1' : '0';
-                        }
-
-                        placesService.getDetails(
-                            {
-                                placeId: prediction.place_id,
-                                fields: ['formatted_address', 'name', 'geometry', 'address_components']
-                            },
-                            function(place) {
-                                if (config.onPlaceResolved) {
-                                    config.onPlaceResolved(place || null);
-                                }
-                            }
-                        );
-
-                        clearSuggestions();
-                    }
-
-                    input.addEventListener('input', function() {
-                        const query = input.value.trim();
-                        clearTimeout(debounceTimer);
-
-                        if (airportField && query.length === 0) {
-                            airportField.value = '0';
-                        }
-
-                        if (query.length < 2) {
-                            clearSuggestions();
-                            return;
-                        }
-
-                        debounceTimer = setTimeout(function() {
-                            autocompleteService.getPlacePredictions(
-                                {
-                                    input: query,
-                                    componentRestrictions: { country: 'us' },
-                                    types: ['geocode']
-                                },
-                                function(predictions, status) {
-                                    clearSuggestions();
-
-                                    if (status !== google.maps.places.PlacesServiceStatus.OK || !predictions || !predictions.length) {
-                                        return;
-                                    }
-
-                                    predictions.slice(0, 6).forEach(function(prediction) {
-                                        suggestionsBox.appendChild(
-                                            createSuggestionButton(prediction, selectPrediction)
-                                        );
-                                    });
-
-                                    showSuggestions();
-                                }
-                            );
-                        }, 250);
-                    });
-
-                    input.addEventListener('focus', function() {
-                        if (input.value.trim().length >= 2) {
-                            input.dispatchEvent(new Event('input'));
-                        }
-                    });
-
-                    document.addEventListener('click', function(event) {
-                        if (!suggestionsBox.contains(event.target) && event.target !== input) {
-                            clearSuggestions();
-                        }
-                    });
-                });
-            }
-
-            function bindAutocompleteInputs() {
-                if (!window.google || !google.maps || !google.maps.places) return;
-
-                const autocompleteService = new google.maps.places.AutocompleteService();
-                const placesService = new google.maps.places.PlacesService(document.createElement('div'));
-
-                const fieldConfigs = [
-                    {
-                        inputPrefix: 'pickup-location-hourly',
-                        suggestionsPrefix: 'pickup-location-hourly-suggestions',
-                        airportPrefix: 'is-airport-hourly',
-                        onPlaceResolved: function(place) {
-                            window.pickupPlaceHourly = place;
-                        }
-                    },
-                    {
-                        inputPrefix: 'pickup-location',
-                        suggestionsPrefix: 'pickup-suggestions',
-                        airportPrefix: 'is-airport',
-                        onPlaceResolved: function(place) {
-                            window.pickupPlacePoint = place;
-                        }
-                    },
-                    {
-                        inputPrefix: 'dropoff-location',
-                        suggestionsPrefix: 'dropoff-suggestions',
-                        airportPrefix: 'is-airport-dropoff',
-                        onPlaceResolved: function(place) {
-                            window.dropoffPlacePoint = place;
-                        }
-                    }
-                ];
-
-                fieldConfigs.forEach(function(config) {
-                    setupAutocompleteForInput(config, autocompleteService, placesService);
-                });
-            }
-
-            window.initAutocomplete = function() {
-                if (document.readyState === 'loading') {
-                    document.addEventListener('DOMContentLoaded', bindAutocompleteInputs, { once: true });
-                    return;
-                }
-
-                bindAutocompleteInputs();
-            };
-
-            document.addEventListener('DOMContentLoaded', function() {
-                if (window.google && google.maps && google.maps.places) {
-                    bindAutocompleteInputs();
-                }
-            });
-        })();
-    </script> --}}
-
-    <!-- Google Maps - Load after custom.js so initAutocomplete can find the functions -->
-    <script src="{{ asset('assets/js/jquery.js') }}"></script>
-    <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.11.4/js/dataTables.bootstrap5.min.js"></script>
-    <script src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
-    <script src="https://cdn.datatables.net/responsive/2.2.9/js/responsive.bootstrap5.min.js"></script>
-
-    <!-- Load custom.js immediately after jQuery (contains map functions) -->
+    {{-- Single jQuery + booking/map logic (no duplicate DataTables / jQuery / custom.js) --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="{{ asset('assets/js/custom.js') }}?v={{ filemtime(public_path('assets/js/custom.js')) }}"></script>
 
-    <!-- Google Maps - Load after custom.js so initAutocomplete can find the functions -->
+    {{-- Maps async so it does not block parsing; callback needs custom.js already loaded --}}
     <script
-        src="https://maps.googleapis.com/maps/api/js?key={{ config('services.google_maps.api_key') }}&libraries=places&callback=initAutocomplete">
-    </script>
+        src="https://maps.googleapis.com/maps/api/js?key={{ config('services.google_maps.api_key') }}&libraries=places&loading=async&callback=initAutocomplete"
+        async defer></script>
 
-    <!-- Other Scripts - Can be deferred -->
     <script src="{{ asset('assets/js/bootstrap-min.js') }}" defer></script>
     <script src="{{ asset('assets/js/swiper-min.js') }}" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js" defer></script>
     <script src="{{ asset('assets/js/slick-min.js') }}" defer></script>
-    <script src="{{ asset('assets/js/custom_new.js') }}" defer></script>
-
-    <!-- Date/Time Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.4/min/moment-with-locales.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.4/min/moment.min.js" defer></script>
     <script src="{{ asset('assets/js/bootstrap-material-datetimepicker.js') }}" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/confirmDate/confirmDate.js" defer></script>
+    <script src="{{ asset('assets/js/custom_new.js') }}?v={{ filemtime(public_path('assets/js/custom_new.js')) }}"
+        defer></script>
+
     <script>
         window.dataLayer = window.dataLayer || [];
-
-            function gtag() {
-            dataLayer.push(arguments);
-            }
-            gtag('js', new Date());
-            gtag('config', 'G-D87H3B4PXN');
-            const originalWarn = console.warn;
-            console.warn = function(msg, ...args) {
-            if (typeof msg === 'string' && msg.includes('google.maps.places.PlacesService') || msg.includes('google.maps.places.AutocompleteService') || msg.includes('google.maps.Marker')) {
-                // Suppress this specific warning
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-D87H3B4PXN');
+        const originalWarn = console.warn;
+        console.warn = function(msg, ...args) {
+            if (typeof msg === 'string' && (msg.includes('google.maps.places.PlacesService') || msg.includes('google.maps.places.AutocompleteService') || msg.includes('google.maps.Marker'))) {
                 return;
             }
             originalWarn.apply(console, [msg, ...args]);
-            };
+        };
     </script>
     @yield('scripts')
 </body>

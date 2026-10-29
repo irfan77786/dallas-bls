@@ -100,9 +100,11 @@ jQuery(document).ready(function ($) {
 
 const input = document.querySelector("#contact_no");
 
-window.intlTelInput(input, {
-    initialCountry: "us",
-    separateDialCode: true,
-    preferredCountries: ["us", "gb", "ca", "pk"],
-    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js"
-});
+if (input && window.intlTelInput) {
+    window.intlTelInput(input, {
+        initialCountry: "us",
+        separateDialCode: true,
+        preferredCountries: ["us", "gb", "ca", "pk"],
+        utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js"
+    });
+}

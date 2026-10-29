@@ -23,7 +23,8 @@
         }
         #home-text-content h1 {
             text-align: center !important;
-            white-space: nowrap !important;
+            white-space: normal !important;
+            max-width: 100%;
         }
     }
     @media (min-width: 768px) {

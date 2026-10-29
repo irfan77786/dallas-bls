@@ -580,7 +580,7 @@
             <div class="py-20 row align-items-center">
                 <div class="col-12 col-md-6 h-100 only-m">
                     <div class="service-image">
-                        <img src="/img/premier-black-car-service-for-dfw-and-love-field-airport-transfers-mobile.webp" class="img-fluid" alt="luxury black car service in Dallas Texas with professional chauffeur">
+                        <img loading="lazy" decoding="async" width="600" height="400" src="/img/premier-black-car-service-for-dfw-and-love-field-airport-transfers-mobile.webp" class="img-fluid" alt="luxury black car service in Dallas Texas with professional chauffeur">
                     </div>
                 </div>
                 
@@ -595,7 +595,7 @@ We track flight schedules in real-time to ensure accurate pickups and drop-offs 
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
-                        <img src="/img/premier-black-car-service-for-dfw-and-love-field-airport-transfers.webp" class="img-fluid" alt="premium Dallas limo and black car airport transfer service">
+                        <img loading="lazy" decoding="async" width="800" height="500" src="/img/premier-black-car-service-for-dfw-and-love-field-airport-transfers.webp" class="img-fluid" alt="premium Dallas limo and black car airport transfer service">
                     </div>
                 </div>
             </div>
@@ -603,7 +603,7 @@ We track flight schedules in real-time to ensure accurate pickups and drop-offs 
             <div class="flex-row-reverse py-20 row align-items-center">
                 <div class="col-12 col-md-6 h-100 only-m">
                     <div class="service-image">
-                        <img src="/img/luxury-executive-corporate-travel-with-professional-chauffeur-service-mobile.webp" class="img-fluid" alt="DFW airport black car service luxury chauffeur pickup">
+                        <img loading="lazy" decoding="async" width="600" height="400" src="/img/luxury-executive-corporate-travel-with-professional-chauffeur-service-mobile.webp" class="img-fluid" alt="DFW airport black car service luxury chauffeur pickup">
                     </div>
                 </div>
                 <div class="mb-20 col-12 col-md-6 pr-xl-50">
@@ -618,14 +618,14 @@ Our experienced chauffeurs focus on punctuality, professionalism, and discretion
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
-                        <img src="/img/luxury-executive-corporate-travel-with-professional-chauffeur-service.webp" class="img-fluid" alt="luxury chauffeur service for business meetings Dallas">
+                        <img loading="lazy" decoding="async" width="800" height="500" src="/img/luxury-executive-corporate-travel-with-professional-chauffeur-service.webp" class="img-fluid" alt="luxury chauffeur service for business meetings Dallas">
                     </div>
                 </div>
             </div>
                <div class="py-20 row align-items-center">
                   <div class="col-12 col-md-6 h-100 only-m">
                     <div class="service-image">
-                        <img src="/img/private-city-to-city-black-car-service-from-dallas-mobile.webp" class="img-fluid" alt="luxury sedan black car service Dallas Texas">
+                        <img loading="lazy" decoding="async" width="600" height="400" src="/img/private-city-to-city-black-car-service-from-dallas-mobile.webp" class="img-fluid" alt="luxury sedan black car service Dallas Texas">
                     </div>
                 </div>
                 
@@ -640,7 +640,7 @@ With a fleet of luxury sedans and executive SUVs, we provide exceptional comfort
                 </div>
                 <div class="col-12 col-md-6 h-100 only-d">
                     <div class="service-image">
-                        <img src="/img/private-city-to-city-black-car-service-from-dallas.webp" class="img-fluid" alt="stretch limousine service Dallas Texas luxury limo ride">
+                        <img loading="lazy" decoding="async" width="800" height="500" src="/img/private-city-to-city-black-car-service-from-dallas.webp" class="img-fluid" alt="stretch limousine service Dallas Texas luxury limo ride">
                     </div>
                 </div>
             </div>
@@ -714,6 +714,9 @@ With a fleet of luxury sedans and executive SUVs, we provide exceptional comfort
                                 @error('message')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
+                            </div>
+                            <div class="col-12">
+                                @include('partials.turnstile')
                             </div>
                             <div class="col-12 text-end">
                                 <button type="submit" class="btn btn-primary btn-sm">Submit</button>

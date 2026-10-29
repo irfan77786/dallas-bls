@@ -59,7 +59,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="img-holder">
-                    <img src="{{ asset('new_assets/assets/fleet-img.webp') }}" alt="Fleet Image" class="img-fluid">
+                    <img loading="lazy" decoding="async" src="{{ asset('new_assets/assets/fleet-img.webp') }}" alt="Fleet Image" class="img-fluid">
                 </div>
             </div>
             <div class="text-center col-12 pt-15">
@@ -114,7 +114,7 @@
             </div>
             <div class="col-12 col-md-6 h-100">
                 <div class="img-holder ms-md-auto">
-                    <img src="{{ asset('new_assets/assets/airport-transfer.JPG') }}" class="img-fluid" alt="">
+                    <img loading="lazy" decoding="async" src="{{ asset('new_assets/assets/airport-transfer.webp') }}" class="img-fluid" alt="">
                 </div>
             </div>
         </div>
@@ -172,7 +172,7 @@
             </div>
             <div class="col-12 col-md-6 h-100">
                 <div class="img-holder ms-md-auto">
-                    <img src="{{ asset('new_assets/assets/image-01.png') }}" class="img-fluid" alt="">
+                    <img loading="lazy" decoding="async" src="{{ asset('new_assets/assets/image-01.webp') }}" class="img-fluid" alt="">
                 </div>
             </div>
         </div>
@@ -188,7 +188,7 @@
             </div>
             <div class="col-12 col-md-6 h-100">
                 <div class="img-holder">
-                    <img src="{{ asset('new_assets/assets/image-02.png') }}" class="img-fluid" alt="">
+                    <img loading="lazy" decoding="async" src="{{ asset('new_assets/assets/image-02.webp') }}" class="img-fluid" alt="">
                 </div>
             </div>
         </div>
