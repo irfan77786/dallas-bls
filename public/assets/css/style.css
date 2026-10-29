@@ -5560,6 +5560,18 @@ li {
   z-index: 1;
   pointer-events: none;
 }
+/* Banner copy/form must sit above the dark shade (beats inline z-index:0) */
+.home-banner-section #hero-banner-container > .row,
+.home-banner-section .hero-banner-container > .row,
+.home-banner-section .ah-container > .row {
+  position: relative;
+  z-index: 2 !important;
+}
+.home-banner-section #home-text-content,
+.home-banner-section .banner-text-content {
+  position: relative;
+  z-index: 2 !important;
+}
 
 .ah-container {
   max-width: 1500px;

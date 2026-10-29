@@ -10,13 +10,13 @@
 </section>
 
 <section class="home-banner-section">
-    <div id="hero-banner-container" class="py-60 ah-container position-relative py-sm-70 py-md-80 py-lg-100"
+    <div id="hero-banner-container" class="hero-banner-container py-60 ah-container position-relative py-sm-70 py-md-80 py-lg-100"
         style="z-index: 2; background-image: url('https://dallaslimoandblackcars.com/img/dallas-limo-and-black-cars-banner.webp');">
         <div id="map" class="position-absolute w-100 h-100" style="top:0; left:0; z-index: 1; display:none;"></div>
 
-        <div class="row" style="pointer-events: none;">
+        <div class="row" style="pointer-events: none; position: relative; z-index: 2;">
             <div id="home-text-content" class="col-12 col-md-6 d-flex flex-column justify-content-center"
-                style="pointer-events: auto; position: relative; z-index: 0;">
+                style="pointer-events: auto; position: relative; z-index: 2;">
                 <h1 class="text-white h1 fw-bold mb-15">Get A Quote</h1>
                 <div class="d-none d-md-block">
                     <p class="text-white font-lg fw-medium mb-30">Luxury chauffeur-driven rides for airport transfers, corporate travel & special events across Dallas–Fort Worth.</p>

@@ -3,7 +3,7 @@
          style="z-index: 2;">
         <div id="map" class="position-absolute w-100 h-100" style="top:0; left:0; z-index: 1; display:none;"></div>
         <div class="row">
-            <div id="home-text-content" class="banner-text-content col-12 d-flex flex-column justify-content-center text-center" style="pointer-events: auto; position: relative; z-index: 0;">
+            <div id="home-text-content" class="banner-text-content col-12 d-flex flex-column justify-content-center text-center" style="pointer-events: auto; position: relative; z-index: 2;">
                 <h1 class="h1 fw-bold text-white mb-15">{{ $title ?? 'Dallas Black Car Service' }}</h1>
                 <p class="font-lg fw-medium text-white mb-0">24/7 Service Available – Professional chauffeurs for airport transfers, corporate travel & city-to-city rides.</p>
                 <p class="text-white font-base d-flex align-items-center justify-content-center my-15 mb-md-0">

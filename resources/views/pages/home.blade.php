@@ -13,10 +13,15 @@
         <div id="hero-banner-container" class="hero-banner-container py-60 ah-container position-relative py-sm-70 py-md-80 py-lg-100"
              style="z-index: 2;">
             <picture>
-                <source media="(max-width: 767px)" srcset="{{ asset('assets/new_theme/img/banner-1-mobile.webp') }}" type="image/webp">
+                <source media="(max-width: 767px)"
+                    srcset="{{ asset('assets/new_theme/img/banner-1-mobile.webp') }}"
+                    type="image/webp"
+                    sizes="(max-width: 767px) calc(100vw - 36px), 100vw">
                 <img class="hero-lcp-img" src="{{ asset('assets/new_theme/img/banner-1.webp') }}"
                     alt="Dallas black car and limousine service"
-                    width="1000" height="523" fetchpriority="high" decoding="async">
+                    width="1000" height="523"
+                    sizes="(max-width: 767px) calc(100vw - 36px), 100vw"
+                    fetchpriority="high" decoding="async">
             </picture>
             <!-- Map Container (Initially hidden, shows up when location is selected) -->
             <div id="map" class="position-absolute w-100 h-100" style="top:0; left:0; z-index: 1; display:none;">
